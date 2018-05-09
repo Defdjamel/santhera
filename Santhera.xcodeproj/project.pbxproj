@@ -13,6 +13,11 @@
 		274D09A92099F29000765337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274D09A72099F29000765337 /* Main.storyboard */; };
 		274D09AB2099F29200765337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 274D09AA2099F29200765337 /* Assets.xcassets */; };
 		274D09AE2099F29200765337 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274D09AC2099F29200765337 /* LaunchScreen.storyboard */; };
+		277CB93420A326BF00525DCC /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CB93320A326BF00525DCC /* HistoryViewController.swift */; };
+		277CB93720A32B1400525DCC /* SantheraModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 277CB93520A32B1400525DCC /* SantheraModel.xcdatamodeld */; };
+		277CB94220A32D0400525DCC /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CB94020A32D0400525DCC /* Image+CoreDataClass.swift */; };
+		277CB94720A32D9000525DCC /* CoreDataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CB94620A32D9000525DCC /* CoreDataLayer.swift */; };
+		277CB94D20A32FB300525DCC /* PersistanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CB94C20A32FB200525DCC /* PersistanceController.swift */; };
 		2788573920A2EB51003F3147 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2788573820A2EB51003F3147 /* opencv2.framework */; };
 		27E5C42D209B3E99006BEFFA /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E5C42C209B3E99006BEFFA /* AssetsLibrary.framework */; };
 		27E5C42F209B3EA3006BEFFA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E5C42E209B3EA3006BEFFA /* CoreGraphics.framework */; };
@@ -36,6 +41,11 @@
 		274D09AA2099F29200765337 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		274D09AD2099F29200765337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		274D09AF2099F29200765337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		277CB93320A326BF00525DCC /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		277CB93620A32B1400525DCC /* SantheraModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SantheraModel.xcdatamodel; sourceTree = "<group>"; };
+		277CB94020A32D0400525DCC /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
+		277CB94620A32D9000525DCC /* CoreDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataLayer.swift; sourceTree = "<group>"; };
+		277CB94C20A32FB200525DCC /* PersistanceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistanceController.swift; sourceTree = "<group>"; };
 		2788573820A2EB51003F3147 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		27E5C42C209B3E99006BEFFA /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		27E5C42E209B3EA3006BEFFA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -95,19 +105,56 @@
 			isa = PBXGroup;
 			children = (
 				274D09A32099F29000765337 /* AppDelegate.swift */,
-				274D09A52099F29000765337 /* ViewController.swift */,
-				27387CB1209C8D71000AE197 /* ResultViewController.swift */,
-				27E5C445209B60F8006BEFFA /* CameraController.swift */,
 				274D09A72099F29000765337 /* Main.storyboard */,
 				274D09AC2099F29200765337 /* LaunchScreen.storyboard */,
 				274D09AA2099F29200765337 /* Assets.xcassets */,
 				274D09AF2099F29200765337 /* Info.plist */,
-				27E5C43F209B3F81006BEFFA /* OpenCVWrapper.h */,
-				27E5C440209B3F81006BEFFA /* OpenCVWrapper.mm */,
 				27E5C43E209B3F81006BEFFA /* Santhera-Bridging-Header.h */,
 				27E5C442209B3FF2006BEFFA /* PrefixHeader.pch */,
+				277CB94B20A32F3E00525DCC /* Camera */,
+				277CB94920A32DFA00525DCC /* OpenCV */,
+				277CB94820A32DEB00525DCC /* Model */,
+				277CB94A20A32F2300525DCC /* ViewControllers */,
 			);
 			path = Santhera;
+			sourceTree = "<group>";
+		};
+		277CB94820A32DEB00525DCC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				277CB94620A32D9000525DCC /* CoreDataLayer.swift */,
+				277CB94C20A32FB200525DCC /* PersistanceController.swift */,
+				277CB93520A32B1400525DCC /* SantheraModel.xcdatamodeld */,
+				277CB94020A32D0400525DCC /* Image+CoreDataClass.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		277CB94920A32DFA00525DCC /* OpenCV */ = {
+			isa = PBXGroup;
+			children = (
+				27E5C43F209B3F81006BEFFA /* OpenCVWrapper.h */,
+				27E5C440209B3F81006BEFFA /* OpenCVWrapper.mm */,
+			);
+			path = OpenCV;
+			sourceTree = "<group>";
+		};
+		277CB94A20A32F2300525DCC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				274D09A52099F29000765337 /* ViewController.swift */,
+				27387CB1209C8D71000AE197 /* ResultViewController.swift */,
+				277CB93320A326BF00525DCC /* HistoryViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		277CB94B20A32F3E00525DCC /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				27E5C445209B60F8006BEFFA /* CameraController.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 		27E5C427209B3D51006BEFFA /* Frameworks */ = {
@@ -201,7 +248,12 @@
 			files = (
 				27387CB2209C8D71000AE197 /* ResultViewController.swift in Sources */,
 				274D09A62099F29000765337 /* ViewController.swift in Sources */,
+				277CB93720A32B1400525DCC /* SantheraModel.xcdatamodeld in Sources */,
 				274D09A42099F29000765337 /* AppDelegate.swift in Sources */,
+				277CB93420A326BF00525DCC /* HistoryViewController.swift in Sources */,
+				277CB94D20A32FB300525DCC /* PersistanceController.swift in Sources */,
+				277CB94220A32D0400525DCC /* Image+CoreDataClass.swift in Sources */,
+				277CB94720A32D9000525DCC /* CoreDataLayer.swift in Sources */,
 				27E5C446209B60F8006BEFFA /* CameraController.swift in Sources */,
 				27E5C441209B3F81006BEFFA /* OpenCVWrapper.mm in Sources */,
 			);
@@ -416,6 +468,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		277CB93520A32B1400525DCC /* SantheraModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				277CB93620A32B1400525DCC /* SantheraModel.xcdatamodel */,
+			);
+			currentVersion = 277CB93620A32B1400525DCC /* SantheraModel.xcdatamodel */;
+			path = SantheraModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 274D09982099F29000765337 /* Project object */;
 }

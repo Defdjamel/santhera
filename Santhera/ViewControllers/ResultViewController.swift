@@ -21,7 +21,6 @@ extension ResultViewController {
         super.viewDidLoad()
 
         navigationController?.setNavigationBarHidden(false, animated: true)
-        //resultImageView.image = image
         let processedImage = wrapper.processImage(image)
         resultImageView.image = processedImage?.rotate(radians: .pi/2)
     }

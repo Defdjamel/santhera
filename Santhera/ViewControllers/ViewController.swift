@@ -55,6 +55,10 @@ extension ViewController {
                 print(error ?? "Image capture error")
                 return
             }
+            guard let _ = PersistanceController.shared.createImage(picture: image) else {
+                print("Image saving error")
+                return
+            }
             
             let resultVC = self.storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
             resultVC.image = image
