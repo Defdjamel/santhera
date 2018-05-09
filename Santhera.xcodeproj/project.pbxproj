@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27387CB2209C8D71000AE197 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27387CB1209C8D71000AE197 /* ResultViewController.swift */; };
+		274D09A42099F29000765337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274D09A32099F29000765337 /* AppDelegate.swift */; };
+		274D09A62099F29000765337 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274D09A52099F29000765337 /* ViewController.swift */; };
+		274D09A92099F29000765337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274D09A72099F29000765337 /* Main.storyboard */; };
+		274D09AB2099F29200765337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 274D09AA2099F29200765337 /* Assets.xcassets */; };
+		274D09AE2099F29200765337 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274D09AC2099F29200765337 /* LaunchScreen.storyboard */; };
+		2788573920A2EB51003F3147 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2788573820A2EB51003F3147 /* opencv2.framework */; };
+		27E5C42D209B3E99006BEFFA /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E5C42C209B3E99006BEFFA /* AssetsLibrary.framework */; };
+		27E5C42F209B3EA3006BEFFA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E5C42E209B3EA3006BEFFA /* CoreGraphics.framework */; };
+		27E5C431209B3EAB006BEFFA /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E5C430209B3EAB006BEFFA /* CoreMedia.framework */; };
+		27E5C433209B3EB1006BEFFA /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E5C432209B3EB1006BEFFA /* CoreFoundation.framework */; };
+		27E5C435209B3EBA006BEFFA /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E5C434209B3EBA006BEFFA /* Accelerate.framework */; };
+		27E5C437209B3EC6006BEFFA /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E5C436209B3EC5006BEFFA /* CoreImage.framework */; };
+		27E5C439209B3ECF006BEFFA /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E5C438209B3ECF006BEFFA /* CoreVideo.framework */; };
+		27E5C43B209B3ED5006BEFFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E5C43A209B3ED5006BEFFA /* Foundation.framework */; };
+		27E5C43D209B3EDA006BEFFA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E5C43C209B3EDA006BEFFA /* UIKit.framework */; };
+		27E5C441209B3F81006BEFFA /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 27E5C440209B3F81006BEFFA /* OpenCVWrapper.mm */; };
+		27E5C446209B60F8006BEFFA /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E5C445209B60F8006BEFFA /* CameraController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		27387CB1209C8D71000AE197 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		274D09A02099F29000765337 /* Santhera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Santhera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		274D09A32099F29000765337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		274D09A52099F29000765337 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		274D09A82099F29000765337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		274D09AA2099F29200765337 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		274D09AD2099F29200765337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		274D09AF2099F29200765337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2788573820A2EB51003F3147 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		27E5C42C209B3E99006BEFFA /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		27E5C42E209B3EA3006BEFFA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		27E5C430209B3EAB006BEFFA /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		27E5C432209B3EB1006BEFFA /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		27E5C434209B3EBA006BEFFA /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		27E5C436209B3EC5006BEFFA /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		27E5C438209B3ECF006BEFFA /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		27E5C43A209B3ED5006BEFFA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		27E5C43C209B3EDA006BEFFA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		27E5C43E209B3F81006BEFFA /* Santhera-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Santhera-Bridging-Header.h"; sourceTree = "<group>"; };
+		27E5C43F209B3F81006BEFFA /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
+		27E5C440209B3F81006BEFFA /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
+		27E5C442209B3FF2006BEFFA /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		27E5C445209B60F8006BEFFA /* CameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		274D099D2099F29000765337 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27E5C43D209B3EDA006BEFFA /* UIKit.framework in Frameworks */,
+				27E5C43B209B3ED5006BEFFA /* Foundation.framework in Frameworks */,
+				27E5C439209B3ECF006BEFFA /* CoreVideo.framework in Frameworks */,
+				27E5C437209B3EC6006BEFFA /* CoreImage.framework in Frameworks */,
+				27E5C435209B3EBA006BEFFA /* Accelerate.framework in Frameworks */,
+				27E5C433209B3EB1006BEFFA /* CoreFoundation.framework in Frameworks */,
+				27E5C431209B3EAB006BEFFA /* CoreMedia.framework in Frameworks */,
+				27E5C42F209B3EA3006BEFFA /* CoreGraphics.framework in Frameworks */,
+				2788573920A2EB51003F3147 /* opencv2.framework in Frameworks */,
+				27E5C42D209B3E99006BEFFA /* AssetsLibrary.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		274D09972099F29000765337 = {
+			isa = PBXGroup;
+			children = (
+				274D09A22099F29000765337 /* Santhera */,
+				274D09A12099F29000765337 /* Products */,
+				27E5C427209B3D51006BEFFA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		274D09A12099F29000765337 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				274D09A02099F29000765337 /* Santhera.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		274D09A22099F29000765337 /* Santhera */ = {
+			isa = PBXGroup;
+			children = (
+				274D09A32099F29000765337 /* AppDelegate.swift */,
+				274D09A52099F29000765337 /* ViewController.swift */,
+				27387CB1209C8D71000AE197 /* ResultViewController.swift */,
+				27E5C445209B60F8006BEFFA /* CameraController.swift */,
+				274D09A72099F29000765337 /* Main.storyboard */,
+				274D09AC2099F29200765337 /* LaunchScreen.storyboard */,
+				274D09AA2099F29200765337 /* Assets.xcassets */,
+				274D09AF2099F29200765337 /* Info.plist */,
+				27E5C43F209B3F81006BEFFA /* OpenCVWrapper.h */,
+				27E5C440209B3F81006BEFFA /* OpenCVWrapper.mm */,
+				27E5C43E209B3F81006BEFFA /* Santhera-Bridging-Header.h */,
+				27E5C442209B3FF2006BEFFA /* PrefixHeader.pch */,
+			);
+			path = Santhera;
+			sourceTree = "<group>";
+		};
+		27E5C427209B3D51006BEFFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2788573820A2EB51003F3147 /* opencv2.framework */,
+				27E5C43C209B3EDA006BEFFA /* UIKit.framework */,
+				27E5C43A209B3ED5006BEFFA /* Foundation.framework */,
+				27E5C438209B3ECF006BEFFA /* CoreVideo.framework */,
+				27E5C436209B3EC5006BEFFA /* CoreImage.framework */,
+				27E5C434209B3EBA006BEFFA /* Accelerate.framework */,
+				27E5C432209B3EB1006BEFFA /* CoreFoundation.framework */,
+				27E5C430209B3EAB006BEFFA /* CoreMedia.framework */,
+				27E5C42E209B3EA3006BEFFA /* CoreGraphics.framework */,
+				27E5C42C209B3E99006BEFFA /* AssetsLibrary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		274D099F2099F29000765337 /* Santhera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 274D09B22099F29200765337 /* Build configuration list for PBXNativeTarget "Santhera" */;
+			buildPhases = (
+				274D099C2099F29000765337 /* Sources */,
+				274D099D2099F29000765337 /* Frameworks */,
+				274D099E2099F29000765337 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Santhera;
+			productName = Santhera;
+			productReference = 274D09A02099F29000765337 /* Santhera.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		274D09982099F29000765337 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Bien Ouej";
+				TargetAttributes = {
+					274D099F2099F29000765337 = {
+						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
+					};
+				};
+			};
+			buildConfigurationList = 274D099B2099F29000765337 /* Build configuration list for PBXProject "Santhera" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 274D09972099F29000765337;
+			productRefGroup = 274D09A12099F29000765337 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				274D099F2099F29000765337 /* Santhera */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		274D099E2099F29000765337 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				274D09AE2099F29200765337 /* LaunchScreen.storyboard in Resources */,
+				274D09AB2099F29200765337 /* Assets.xcassets in Resources */,
+				274D09A92099F29000765337 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		274D099C2099F29000765337 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27387CB2209C8D71000AE197 /* ResultViewController.swift in Sources */,
+				274D09A62099F29000765337 /* ViewController.swift in Sources */,
+				274D09A42099F29000765337 /* AppDelegate.swift in Sources */,
+				27E5C446209B60F8006BEFFA /* CameraController.swift in Sources */,
+				27E5C441209B3F81006BEFFA /* OpenCVWrapper.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		274D09A72099F29000765337 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				274D09A82099F29000765337 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		274D09AC2099F29200765337 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				274D09AD2099F29200765337 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		274D09B02099F29200765337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Santhera/PrefixHeader.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		274D09B12099F29200765337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Santhera/PrefixHeader.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		274D09B32099F29200765337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y9A47D95QF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Santhera/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bienouej.Santhera;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Santhera/Santhera-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		274D09B42099F29200765337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y9A47D95QF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Santhera/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bienouej.Santhera;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Santhera/Santhera-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		274D099B2099F29000765337 /* Build configuration list for PBXProject "Santhera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				274D09B02099F29200765337 /* Debug */,
+				274D09B12099F29200765337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		274D09B22099F29200765337 /* Build configuration list for PBXNativeTarget "Santhera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				274D09B32099F29200765337 /* Debug */,
+				274D09B42099F29200765337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 274D09982099F29000765337 /* Project object */;
+}
