@@ -20,6 +20,35 @@ class HistoryViewController: UIViewController {
             self.images = fetchedImages
         }
     }
+    
+    @IBAction func mergeImages(_ sender: Any) {
+        var backgroundImage: UIImage?
+        for image in images {
+            if backgroundImage == nil {
+                guard let path = image.path else { continue }
+                backgroundImage = PersistanceController.shared.getPicture(Key: path)
+                continue
+            }
+            
+            guard let path = image.path else { continue }
+            let frontImage = PersistanceController.shared.getPicture(Key: path)
+            
+            let size = view.frame.size
+            UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
+            
+            backgroundImage?.draw(in: CGRect.init(x: 0, y: 0, width: size.width, height: size.height))
+            frontImage?.draw(in: CGRect.init(x: 0, y: 0, width: size.width, height: size.height))
+            
+            let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+            
+            backgroundImage = newImage
+        }
+        
+        let resultVC = self.storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
+        resultVC.image = backgroundImage?.rotate(radians: -.pi/2)
+        self.navigationController?.pushViewController(resultVC, animated: true)
+    }
 }
 
 extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {

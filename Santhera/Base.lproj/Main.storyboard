@@ -116,7 +116,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z6f-Ns-Y8U">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="542"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -162,13 +162,29 @@
                                     <outlet property="delegate" destination="Dxg-85-oDK" id="Jfm-Y2-9yQ"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxI-51-GWh">
+                                <rect key="frame" x="16" y="550" width="343" height="45"/>
+                                <color key="backgroundColor" red="0.054901960780000002" green="0.71372549019999998" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="LHI-5O-fq5"/>
+                                </constraints>
+                                <state key="normal" title="Comparer les images">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="mergeImages:" destination="Dxg-85-oDK" eventType="touchUpInside" id="KEw-S1-QbA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="h3X-wj-WVF" firstAttribute="bottom" secondItem="Z6f-Ns-Y8U" secondAttribute="bottom" id="0lp-ku-joL"/>
+                            <constraint firstItem="dxI-51-GWh" firstAttribute="top" secondItem="Z6f-Ns-Y8U" secondAttribute="bottom" constant="8" id="7gK-V4-Pdk"/>
                             <constraint firstItem="Z6f-Ns-Y8U" firstAttribute="top" secondItem="h3X-wj-WVF" secondAttribute="top" id="BmL-wc-WOb"/>
+                            <constraint firstItem="dxI-51-GWh" firstAttribute="leading" secondItem="h3X-wj-WVF" secondAttribute="leading" constant="16" id="Rrl-If-5Pj"/>
                             <constraint firstItem="Z6f-Ns-Y8U" firstAttribute="leading" secondItem="h3X-wj-WVF" secondAttribute="leading" id="T47-na-rua"/>
+                            <constraint firstItem="h3X-wj-WVF" firstAttribute="trailing" secondItem="dxI-51-GWh" secondAttribute="trailing" constant="16" id="brT-LL-mEy"/>
                             <constraint firstItem="h3X-wj-WVF" firstAttribute="trailing" secondItem="Z6f-Ns-Y8U" secondAttribute="trailing" id="ckQ-Ux-FlY"/>
+                            <constraint firstItem="h3X-wj-WVF" firstAttribute="bottom" secondItem="dxI-51-GWh" secondAttribute="bottom" constant="8" id="dlF-rH-zDm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h3X-wj-WVF"/>
                     </view>

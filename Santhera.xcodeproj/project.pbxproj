@@ -104,11 +104,11 @@
 		274D09A22099F29000765337 /* Santhera */ = {
 			isa = PBXGroup;
 			children = (
-				274D09A32099F29000765337 /* AppDelegate.swift */,
 				274D09A72099F29000765337 /* Main.storyboard */,
 				274D09AC2099F29200765337 /* LaunchScreen.storyboard */,
 				274D09AA2099F29200765337 /* Assets.xcassets */,
 				274D09AF2099F29200765337 /* Info.plist */,
+				274D09A32099F29000765337 /* AppDelegate.swift */,
 				27E5C43E209B3F81006BEFFA /* Santhera-Bridging-Header.h */,
 				27E5C442209B3FF2006BEFFA /* PrefixHeader.pch */,
 				277CB94B20A32F3E00525DCC /* Camera */,
