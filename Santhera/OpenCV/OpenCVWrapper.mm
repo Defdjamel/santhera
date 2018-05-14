@@ -14,6 +14,9 @@
 #include <string>
 #include <vector>
 
+using namespace cv;
+using namespace std;
+
 @implementation OpenCVWrapper {
     cv::Mat gtpl;
 }
@@ -43,6 +46,20 @@
     cv::addWeighted(lowerRedHueRange, 1.0, upperRedHueRange, 1.0, 0.0, redHueImage);
 
     //cv::GaussianBlur(redHueImage, redHueImage, cv::Size(9, 9), 2, 2);
+    
+    /// Find contours
+    vector<vector<Point2i> > contours;
+    vector<Vec4i> hierarchy;
+    findContours( redHueImage, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point2i(0, 0) );
+    
+    for (unsigned int i = 0;  i < contours.size();  i++) {
+        std::cout << "# of contour points: " << contours[i].size() << std::endl;
+        
+        for (unsigned int j=0;  j<contours[i].size();  j++) {
+            std::cout << "Point(x,y)=" << contours[i][j] << std::endl;
+        }
+        std::cout << " Area: " << contourArea(contours[i]) << std::endl;
+    }
     
     return MatToUIImage(redHueImage);
 }
