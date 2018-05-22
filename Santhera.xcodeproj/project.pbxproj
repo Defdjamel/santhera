@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		27387CB2209C8D71000AE197 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27387CB1209C8D71000AE197 /* ResultViewController.swift */; };
+		2738F52220AC173D004774AF /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2738F52020AC173D004774AF /* Fabric.framework */; };
+		2738F52320AC173D004774AF /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2738F52120AC173D004774AF /* Crashlytics.framework */; };
 		274D09A42099F29000765337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274D09A32099F29000765337 /* AppDelegate.swift */; };
 		274D09A62099F29000765337 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274D09A52099F29000765337 /* ViewController.swift */; };
 		274D09A92099F29000765337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274D09A72099F29000765337 /* Main.storyboard */; };
@@ -18,7 +20,7 @@
 		277CB94220A32D0400525DCC /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CB94020A32D0400525DCC /* Image+CoreDataClass.swift */; };
 		277CB94720A32D9000525DCC /* CoreDataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CB94620A32D9000525DCC /* CoreDataLayer.swift */; };
 		277CB94D20A32FB300525DCC /* PersistanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CB94C20A32FB200525DCC /* PersistanceController.swift */; };
-		2788573920A2EB51003F3147 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2788573820A2EB51003F3147 /* opencv2.framework */; };
+		278101C920AC160B00F503FC /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 278101C820AC160B00F503FC /* opencv2.framework */; };
 		27E5C42D209B3E99006BEFFA /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E5C42C209B3E99006BEFFA /* AssetsLibrary.framework */; };
 		27E5C42F209B3EA3006BEFFA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E5C42E209B3EA3006BEFFA /* CoreGraphics.framework */; };
 		27E5C431209B3EAB006BEFFA /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E5C430209B3EAB006BEFFA /* CoreMedia.framework */; };
@@ -34,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		27387CB1209C8D71000AE197 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		2738F52020AC173D004774AF /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
+		2738F52120AC173D004774AF /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
 		274D09A02099F29000765337 /* Santhera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Santhera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		274D09A32099F29000765337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		274D09A52099F29000765337 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +50,7 @@
 		277CB94020A32D0400525DCC /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
 		277CB94620A32D9000525DCC /* CoreDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataLayer.swift; sourceTree = "<group>"; };
 		277CB94C20A32FB200525DCC /* PersistanceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistanceController.swift; sourceTree = "<group>"; };
+		278101C820AC160B00F503FC /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		2788573820A2EB51003F3147 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		27E5C42C209B3E99006BEFFA /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		27E5C42E209B3EA3006BEFFA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -76,8 +81,10 @@
 				27E5C433209B3EB1006BEFFA /* CoreFoundation.framework in Frameworks */,
 				27E5C431209B3EAB006BEFFA /* CoreMedia.framework in Frameworks */,
 				27E5C42F209B3EA3006BEFFA /* CoreGraphics.framework in Frameworks */,
-				2788573920A2EB51003F3147 /* opencv2.framework in Frameworks */,
 				27E5C42D209B3E99006BEFFA /* AssetsLibrary.framework in Frameworks */,
+				278101C920AC160B00F503FC /* opencv2.framework in Frameworks */,
+				2738F52320AC173D004774AF /* Crashlytics.framework in Frameworks */,
+				2738F52220AC173D004774AF /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +111,9 @@
 		274D09A22099F29000765337 /* Santhera */ = {
 			isa = PBXGroup;
 			children = (
+				2738F52120AC173D004774AF /* Crashlytics.framework */,
+				2738F52020AC173D004774AF /* Fabric.framework */,
+				278101C820AC160B00F503FC /* opencv2.framework */,
 				274D09A72099F29000765337 /* Main.storyboard */,
 				274D09AC2099F29200765337 /* LaunchScreen.storyboard */,
 				274D09AA2099F29200765337 /* Assets.xcassets */,
@@ -184,6 +194,7 @@
 				274D099C2099F29000765337 /* Sources */,
 				274D099D2099F29000765337 /* Frameworks */,
 				274D099E2099F29000765337 /* Resources */,
+				2738F51F20AC1714004774AF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -240,6 +251,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2738F51F20AC1714004774AF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run f177a7b6420cda3a7516673e502392fec8c60040 cc5e82acbc97173d884018a4933227d9773f0f213aa2f8d424a0eb6968de32e6";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		274D099C2099F29000765337 /* Sources */ = {
@@ -402,19 +429,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y9A47D95QF;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = VLMBA8Q5QL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Santhera",
 				);
 				INFOPLIST_FILE = Santhera/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bienouej.Santhera;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wopata.santhera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "be8ea12b-89d6-4bc4-89ac-50e075f5d9f2";
+				PROVISIONING_PROFILE_SPECIFIER = "Santhera InHouse Distribution";
 				SWIFT_OBJC_BRIDGING_HEADER = "Santhera/Santhera-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -427,19 +459,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y9A47D95QF;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = VLMBA8Q5QL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Santhera",
 				);
 				INFOPLIST_FILE = Santhera/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bienouej.Santhera;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wopata.santhera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "be8ea12b-89d6-4bc4-89ac-50e075f5d9f2";
+				PROVISIONING_PROFILE_SPECIFIER = "Santhera InHouse Distribution";
 				SWIFT_OBJC_BRIDGING_HEADER = "Santhera/Santhera-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
