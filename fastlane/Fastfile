@@ -1,0 +1,146 @@
+### Fastlane's configuration
+fastlane_version "2.96.1"
+default_platform :ios
+
+
+### Project's configuration
+PROJECT = {
+    scheme: "Santhera",
+    uses_cocoapods: true,
+    use_testflight_for_release_branch: false,
+}
+
+IN_HOUSE = {
+    crashlytics_token: 'f177a7b6420cda3a7516673e502392fec8c60040',
+    crashlytics_secret: 'cc5e82acbc97173d884018a4933227d9773f0f213aa2f8d424a0eb6968de32e6',
+    crashlytics_testers: {
+        'Wopata Test': 'wopata.test@gmail.com',
+    },
+
+    configurations: {
+        'master' => 'InHouse'
+    },
+    uses_entreprise_account: false,
+}
+
+APP_STORE = {
+    configuration: 'Release',
+    team_name: 'Client Team Name',
+    username: 'prod@wopata.com',
+}
+
+TESTS = {
+  device: 'iPhone 6s',
+}
+
+
+### Lanes
+platform :ios do
+
+    # Fastlane handlers
+    before_all do
+    end
+
+    after_all do |lane|
+    end
+
+    error do |lane, exception|
+    end
+
+    # Lanes
+    desc "Generates an IPA file"
+    lane :build do
+        if releases_to_store
+            build_number = build_number(including_branch: false)
+            configuration = APP_STORE[:configuration]
+            export_mode = 'app-store'
+        else
+            build_number = build_number(including_branch: true)
+            configuration = IN_HOUSE[:configurations].fetch(normalized_branch, 'master')
+            export_mode = (IN_HOUSE[:uses_entreprise_account] ? 'enterprise' : 'ad-hoc')
+        end
+
+        ensure_git_status_clean
+        changelog("changelog.txt")
+        increment_build_number(build_number: build_number)
+        cocoapods(repo_update: true) if PROJECT[:uses_cocoapods]
+        gym(
+            scheme: PROJECT[:scheme],
+            configuration: configuration,
+            export_method: export_mode,
+            clean: true,
+            output_directory: "./fastlane/ipa/",
+        )
+    end
+
+    desc "Deploys the latest IPA (and rebuilds if needed)"
+    lane :deploy do |options|
+        ipa_path = options[:ipa_path] || build
+        changelog_path = options[:changelog_path]
+
+        if releases_to_store
+            pilot(
+                team_name: APP_STORE[:team_name],
+                username: APP_STORE[:username],
+                skip_waiting_for_build_processing: true,
+                ipa: ipa_path,
+            )
+        else
+            crashlytics_options = {
+                api_token: IN_HOUSE[:crashlytics_token],
+                build_secret: IN_HOUSE[:crashlytics_secret],
+                emails: (options[:crashlytics_testers] || IN_HOUSE[:crashlytics_testers].values.join(",")),
+                notifications: true,
+                ipa_path: ipa_path,
+            }
+            if changelog_path
+                crashlytics_options[:notes_path] = changelog_path
+            else
+                crashlytics_options[:notes] = changelog(nil)
+            end
+            crashlytics(crashlytics_options)
+        end
+    end
+
+    desc "Run the unit tests"
+    lane :test do
+        scan(
+            scheme: PROJECT[:scheme],
+            skip_build: true,
+            device: TESTS[:device],
+            derived_data_path: 'DerivedData',
+            custom_report_file_name: 'junit.xml'
+        )
+    end
+
+    # Custom private getters
+    def releases_to_store
+        PROJECT[:use_testflight_for_release_branch] && normalized_branch == 'release'
+    end
+
+    def normalized_branch
+        ENV.fetch('bamboo_repository_branch_name', git_branch).gsub("/", "_")
+    end
+
+    def build_number(options = {})
+        including_branch = options[:including_branch]
+        return including_branch ? "#{number_of_commits}.#{normalized_branch}" : number_of_commits
+    end
+
+    def changelog(output)
+        commits = [
+            ENV['bamboo_repository_previous_revision_number'],
+            ENV['bamboo_repository_revision_number']
+        ]
+        if commits.any?(&:nil?)
+            res = "Changelog couldn't be generated because the last release couldn't be found"
+        else
+            res = changelog_from_git_commits(between: commits, pretty: '- [%ae] %s')
+        end
+        if output
+            File.open(output, 'w') { |file| file.write(res) }
+        end
+        res
+    end
+
+end

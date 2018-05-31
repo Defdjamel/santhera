@@ -1,0 +1,7 @@
+{
+    "name": "MyAppName",
+    "main": "poolstrings.js",
+    "dependencies": {
+        "localize-with-spreadsheet": "git://github.com/aardouin/localize-with-spreadsheet#1.1"
+    }
+}

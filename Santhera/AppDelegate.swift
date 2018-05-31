@@ -3,7 +3,7 @@
 //  Santhera
 //
 //  Created by Santhera on 02/05/2018.
-//  Copyright © 2018 Bien Ouej. All rights reserved.
+//  Copyright © 2018 Wopata. All rights reserved.
 //
 
 import UIKit
