@@ -20,7 +20,7 @@ IN_HOUSE = {
     configurations: {
         'master' => 'InHouse'
     },
-    uses_entreprise_account: false,
+    uses_entreprise_account: true,
 }
 
 APP_STORE = {
@@ -60,7 +60,7 @@ platform :ios do
             export_mode = (IN_HOUSE[:uses_entreprise_account] ? 'enterprise' : 'ad-hoc')
         end
 
-        ensure_git_status_clean
+#ensure_git_status_clean
         changelog("changelog.txt")
         increment_build_number(build_number: build_number)
         cocoapods(repo_update: true) if PROJECT[:uses_cocoapods]
@@ -109,7 +109,7 @@ platform :ios do
             skip_build: true,
             device: TESTS[:device],
             derived_data_path: 'DerivedData',
-            custom_report_file_name: 'junit.xml'
+            output_files: 'junit.xml'
         )
     end
 
