@@ -109,7 +109,8 @@ platform :ios do
             skip_build: true,
             device: TESTS[:device],
             derived_data_path: 'DerivedData',
-            output_files: 'junit.xml'
+            output_files: 'junit.xml',
+            clean: true
         )
     end
 
