@@ -57,7 +57,6 @@
 		EAA5AAA520C1708F0020464C /* SHUIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5AA6820C1708F0020464C /* SHUIScreenExtension.swift */; };
 		EAA5AAA620C1708F0020464C /* SHNavigationControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5AA6920C1708F0020464C /* SHNavigationControllerExtention.swift */; };
 		EAA5AAA720C1708F0020464C /* SHUIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5AA6A20C1708F0020464C /* SHUIButtonExtension.swift */; };
-		EAA5AAA820C1708F0020464C /* SHGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5AA6B20C1708F0020464C /* SHGradientView.swift */; };
 		EAA5AAA920C1708F0020464C /* SHUITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5AA6C20C1708F0020464C /* SHUITextFieldExtension.swift */; };
 		EAA5AAAA20C1708F0020464C /* SHGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5AA6D20C1708F0020464C /* SHGif.swift */; };
 		EAA5AAAB20C1708F0020464C /* SHTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5AA6E20C1708F0020464C /* SHTextField.swift */; };
@@ -68,7 +67,6 @@
 		EAA5AAB020C1708F0020464C /* NumbersConvertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5AA7520C1708F0020464C /* NumbersConvertion.swift */; };
 		EAA5AAB120C1708F0020464C /* SHArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5AA7620C1708F0020464C /* SHArrayExtension.swift */; };
 		EAA5AAB320C1708F0020464C /* SHIntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5AA7820C1708F0020464C /* SHIntExtension.swift */; };
-		EAA5AAB420C1708F0020464C /* SHStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5AA7920C1708F0020464C /* SHStringExtension.swift */; };
 		EAA5AAB520C1708F0020464C /* SHNumberExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5AA7A20C1708F0020464C /* SHNumberExtension.swift */; };
 		EAA5AAB620C1708F0020464C /* SHDeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5AA7B20C1708F0020464C /* SHDeviceType.swift */; };
 		EAA5AAB720C1708F0020464C /* SHOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5AA7C20C1708F0020464C /* SHOperation.swift */; };
@@ -168,7 +166,6 @@
 		EAA5AA6820C1708F0020464C /* SHUIScreenExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHUIScreenExtension.swift; sourceTree = "<group>"; };
 		EAA5AA6920C1708F0020464C /* SHNavigationControllerExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHNavigationControllerExtention.swift; sourceTree = "<group>"; };
 		EAA5AA6A20C1708F0020464C /* SHUIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHUIButtonExtension.swift; sourceTree = "<group>"; };
-		EAA5AA6B20C1708F0020464C /* SHGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHGradientView.swift; sourceTree = "<group>"; };
 		EAA5AA6C20C1708F0020464C /* SHUITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHUITextFieldExtension.swift; sourceTree = "<group>"; };
 		EAA5AA6D20C1708F0020464C /* SHGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHGif.swift; sourceTree = "<group>"; };
 		EAA5AA6E20C1708F0020464C /* SHTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHTextField.swift; sourceTree = "<group>"; };
@@ -179,7 +176,6 @@
 		EAA5AA7520C1708F0020464C /* NumbersConvertion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumbersConvertion.swift; sourceTree = "<group>"; };
 		EAA5AA7620C1708F0020464C /* SHArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHArrayExtension.swift; sourceTree = "<group>"; };
 		EAA5AA7820C1708F0020464C /* SHIntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHIntExtension.swift; sourceTree = "<group>"; };
-		EAA5AA7920C1708F0020464C /* SHStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHStringExtension.swift; sourceTree = "<group>"; };
 		EAA5AA7A20C1708F0020464C /* SHNumberExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHNumberExtension.swift; sourceTree = "<group>"; };
 		EAA5AA7B20C1708F0020464C /* SHDeviceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHDeviceType.swift; sourceTree = "<group>"; };
 		EAA5AA7C20C1708F0020464C /* SHOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHOperation.swift; sourceTree = "<group>"; };
@@ -376,7 +372,6 @@
 				EAA5AA6820C1708F0020464C /* SHUIScreenExtension.swift */,
 				EAA5AA6920C1708F0020464C /* SHNavigationControllerExtention.swift */,
 				EAA5AA6A20C1708F0020464C /* SHUIButtonExtension.swift */,
-				EAA5AA6B20C1708F0020464C /* SHGradientView.swift */,
 				EAA5AA6C20C1708F0020464C /* SHUITextFieldExtension.swift */,
 				EAA5AA6D20C1708F0020464C /* SHGif.swift */,
 				EAA5AA6E20C1708F0020464C /* SHTextField.swift */,
@@ -401,7 +396,6 @@
 				EAA5AA7520C1708F0020464C /* NumbersConvertion.swift */,
 				EAA5AA7620C1708F0020464C /* SHArrayExtension.swift */,
 				EAA5AA7820C1708F0020464C /* SHIntExtension.swift */,
-				EAA5AA7920C1708F0020464C /* SHStringExtension.swift */,
 				EAA5AA7A20C1708F0020464C /* SHNumberExtension.swift */,
 				EAA5AA7B20C1708F0020464C /* SHDeviceType.swift */,
 				EAA5AA7C20C1708F0020464C /* SHOperation.swift */,
@@ -672,7 +666,6 @@
 				EAA5AAB720C1708F0020464C /* SHOperation.swift in Sources */,
 				EAA5AAC020C1708F0020464C /* SHMulticastDelegate.swift in Sources */,
 				EAA5AA9320C1708F0020464C /* SHUIFontExtension.swift in Sources */,
-				EAA5AAA820C1708F0020464C /* SHGradientView.swift in Sources */,
 				EAA5AAB820C1708F0020464C /* SHDegreesToRadiansExtension.swift in Sources */,
 				EAA5AAB620C1708F0020464C /* SHDeviceType.swift in Sources */,
 				274D09A42099F29000765337 /* AppDelegate.swift in Sources */,
@@ -687,7 +680,6 @@
 				EAA5AA9920C1708F0020464C /* SHCALayerExtension.swift in Sources */,
 				EAA5AAAC20C1708F0020464C /* SHNSDateFormatterExtension.swift in Sources */,
 				EAA5AABE20C1708F0020464C /* SHNSObjectExtension.swift in Sources */,
-				EAA5AAB420C1708F0020464C /* SHStringExtension.swift in Sources */,
 				EAA5AA9820C1708F0020464C /* SHDatePickerController.swift in Sources */,
 				EAA5AA9E20C1708F0020464C /* SHAttributedLabel.swift in Sources */,
 				EAA5AA9620C1708F0020464C /* SHPagedScrollView.swift in Sources */,
