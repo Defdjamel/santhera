@@ -39,6 +39,7 @@ platform :ios do
 
     # Fastlane handlers
     before_all do
+        xcode_select '/Applications/Xcode9.app'
     end
 
     after_all do |lane|
