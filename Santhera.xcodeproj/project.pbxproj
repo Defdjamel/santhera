@@ -25,7 +25,7 @@
 		84092CCEA1E78491F768E908 /* Pods_SantheraTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11E9DAA1D10BF2392F839B08 /* Pods_SantheraTests.framework */; };
 		EA52280620BFEFDF00752C29 /* SantheraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52280520BFEFDF00752C29 /* SantheraTests.swift */; };
 		EA52281520BFEFF900752C29 /* SantheraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52281420BFEFF900752C29 /* SantheraUITests.swift */; };
-		EA52281E20BFF0C000752C29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52281D20BFF0C000752C29 /* ViewController.swift */; };
+		EA52281E20BFF0C000752C29 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52281D20BFF0C000752C29 /* HomeViewController.swift */; };
 		EA52282020BFF2EB00752C29 /* fastlane in Resources */ = {isa = PBXBuildFile; fileRef = EA52281F20BFF2EB00752C29 /* fastlane */; };
 		EA52282220BFF47B00752C29 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = EA52282120BFF47B00752C29 /* .gitignore */; };
 		EA52282720BFF85B00752C29 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA52282520BFF85B00752C29 /* Localizable.strings */; };
@@ -133,7 +133,7 @@
 		EA52281220BFEFF900752C29 /* SantheraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SantheraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA52281420BFEFF900752C29 /* SantheraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SantheraUITests.swift; sourceTree = "<group>"; };
 		EA52281620BFEFF900752C29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA52281D20BFF0C000752C29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA52281D20BFF0C000752C29 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EA52281F20BFF2EB00752C29 /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fastlane; sourceTree = "<group>"; };
 		EA52282120BFF47B00752C29 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		EA52282620BFF85B00752C29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -230,6 +230,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A2D984220F4AB4D0022288F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EA52281D20BFF0C000752C29 /* HomeViewController.swift */,
+			);
+			name = Controllers;
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1A2D984320F4AF9F0022288F /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				EA52282520BFF85B00752C29 /* Localizable.strings */,
+				274D09AA2099F29200765337 /* Assets.xcassets */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		1A2D984420F4AFB90022288F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A2D984820F4B20D0022288F /* Xibs */,
+				1A2D984720F4B2020022288F /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1A2D984520F4AFCA0022288F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1A2D984620F4B1250022288F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		1A2D984720F4B2020022288F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				274D09AC2099F29200765337 /* LaunchScreen.storyboard */,
+				274D09A72099F29000765337 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		1A2D984820F4B20D0022288F /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
 		274D09972099F29000765337 = {
 			isa = PBXGroup;
 			children = (
@@ -257,14 +314,14 @@
 		274D09A22099F29000765337 /* Santhera */ = {
 			isa = PBXGroup;
 			children = (
+				1A2D984220F4AB4D0022288F /* Controllers */,
+				1A2D984420F4AFB90022288F /* Views */,
+				1A2D984620F4B1250022288F /* Components */,
+				1A2D984520F4AFCA0022288F /* Models */,
 				EAA5AA4C20C1708F0020464C /* Helpers */,
-				274D09A72099F29000765337 /* Main.storyboard */,
-				274D09AC2099F29200765337 /* LaunchScreen.storyboard */,
-				274D09AA2099F29200765337 /* Assets.xcassets */,
+				1A2D984320F4AF9F0022288F /* Ressources */,
 				274D09AF2099F29200765337 /* Info.plist */,
 				274D09A32099F29000765337 /* AppDelegate.swift */,
-				EA52281D20BFF0C000752C29 /* ViewController.swift */,
-				EA52282520BFF85B00752C29 /* Localizable.strings */,
 			);
 			path = Santhera;
 			sourceTree = "<group>";
@@ -433,6 +490,7 @@
 				274D099D2099F29000765337 /* Frameworks */,
 				274D099E2099F29000765337 /* Resources */,
 				2738F51F20AC1714004774AF /* ShellScript */,
+				1A2D984920F4B2BD0022288F /* Warning Script */,
 			);
 			buildRules = (
 			);
@@ -575,6 +633,20 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		1A2D984920F4B2BD0022288F /* Warning Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Warning Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"TODO:|FIXME:|WARNING:\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"| perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"";
+		};
 		2738F51F20AC1714004774AF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -645,7 +717,7 @@
 				EAA5AA9520C1708F0020464C /* SHUIAlertController.swift in Sources */,
 				EAA5AAAD20C1708F0020464C /* SHDateFormatterProximity.swift in Sources */,
 				EAA5AAA120C1708F0020464C /* SHCircleView.swift in Sources */,
-				EA52281E20BFF0C000752C29 /* ViewController.swift in Sources */,
+				EA52281E20BFF0C000752C29 /* HomeViewController.swift in Sources */,
 				EAA5AAB020C1708F0020464C /* NumbersConvertion.swift in Sources */,
 				EAA5AA8F20C1708F0020464C /* SHKeyboardViewController.swift in Sources */,
 				EAA5AAA720C1708F0020464C /* SHUIButtonExtension.swift in Sources */,

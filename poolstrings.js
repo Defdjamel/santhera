@@ -11,11 +11,11 @@ spreadsheet.setKeyCol('key');
 
 
 LANGUAGES.forEach(function(lang){
-  spreadsheet.save(PROJECT_NAME + "/" + lang + ".lproj" + "/Localizable.strings", {
+  spreadsheet.save(PROJECT_NAME + "/Ressources/" + lang + ".lproj" + "/Localizable.strings", {
     valueCol: lang, format: 'ios'
   });
 });
 
-spreadsheet.save(PROJECT_NAME + "/Base.lproj" + "/Localizable.strings", {
+spreadsheet.save(PROJECT_NAME + "/Ressources/Base.lproj" + "/Localizable.strings", {
   valueCol: 'fr', format: 'ios'
 });
