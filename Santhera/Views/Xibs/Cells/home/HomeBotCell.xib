@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="140" id="KGk-i7-Jjw" customClass="HomeBotCell" customModule="Santhera" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="351" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="351" height="139.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVb-c2-Kyl">
+                        <rect key="frame" x="20" y="20" width="311" height="99.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRM-Oq-YkC">
+                                <rect key="frame" x="20" y="20" width="60" height="60"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icCompendreMaladie" translatesAutoresizingMaskIntoConstraints="NO" id="WuV-jk-LPw">
+                                        <rect key="frame" x="15" y="16.5" width="30" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="27" id="IQc-Q4-RXu"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="8F0-BW-w7c"/>
+                                    <constraint firstAttribute="width" constant="60" id="NIk-fl-vS1"/>
+                                    <constraint firstItem="WuV-jk-LPw" firstAttribute="centerX" secondItem="hRM-Oq-YkC" secondAttribute="centerX" id="RLj-57-o5P"/>
+                                    <constraint firstItem="WuV-jk-LPw" firstAttribute="centerY" secondItem="hRM-Oq-YkC" secondAttribute="centerY" id="nBG-l2-BPO"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="cobalt"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fDS-z9-jno">
+                                <rect key="frame" x="100" y="30.5" width="203" height="39"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[home_bot_title]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7g-NF-fX5">
+                                        <rect key="frame" x="0.0" y="0.0" width="203" height="17"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" name="windowsBlue"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="home_bot_title"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[home_bot_subtitle]" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sja-6p-YD7">
+                                        <rect key="frame" x="0.0" y="22" width="203" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" name="windowsBlue"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="home_bot_subtitle"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="sja-6p-YD7" secondAttribute="bottom" id="2UV-6X-6qj"/>
+                                    <constraint firstItem="j7g-NF-fX5" firstAttribute="top" secondItem="fDS-z9-jno" secondAttribute="top" id="GZb-Xk-Bit"/>
+                                    <constraint firstAttribute="trailing" secondItem="j7g-NF-fX5" secondAttribute="trailing" id="Gbb-KT-oNM"/>
+                                    <constraint firstItem="sja-6p-YD7" firstAttribute="top" secondItem="j7g-NF-fX5" secondAttribute="bottom" constant="5" id="KMd-6n-CZI"/>
+                                    <constraint firstItem="j7g-NF-fX5" firstAttribute="leading" secondItem="fDS-z9-jno" secondAttribute="leading" id="bKH-UE-5wN"/>
+                                    <constraint firstAttribute="trailing" secondItem="sja-6p-YD7" secondAttribute="trailing" id="o20-3A-TF1"/>
+                                    <constraint firstItem="sja-6p-YD7" firstAttribute="leading" secondItem="fDS-z9-jno" secondAttribute="leading" id="tWU-QA-9i2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="paleBlue"/>
+                        <constraints>
+                            <constraint firstItem="hRM-Oq-YkC" firstAttribute="centerY" secondItem="NVb-c2-Kyl" secondAttribute="centerY" id="2bl-K9-IE5"/>
+                            <constraint firstItem="hRM-Oq-YkC" firstAttribute="leading" secondItem="NVb-c2-Kyl" secondAttribute="leading" constant="20" id="KUZ-Z7-ccr"/>
+                            <constraint firstItem="fDS-z9-jno" firstAttribute="centerY" secondItem="NVb-c2-Kyl" secondAttribute="centerY" id="RAo-2B-wJy"/>
+                            <constraint firstAttribute="trailing" secondItem="fDS-z9-jno" secondAttribute="trailing" constant="8" id="aeo-qb-WaS"/>
+                            <constraint firstItem="fDS-z9-jno" firstAttribute="leading" secondItem="hRM-Oq-YkC" secondAttribute="trailing" constant="20" id="dna-jo-Ynr"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" name="windowsBlue"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" red="0.2590000033" green="0.54500001669999998" blue="0.79199999570000001" alpha="0.2516056365030675" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="1" height="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layerMasksToBounds" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5cm-YW-CYJ" userLabel="separator">
+                        <rect key="frame" x="0.0" y="138.5" width="351" height="1"/>
+                        <color key="backgroundColor" red="0.1330000013" green="0.22699999809999999" blue="0.53299999239999996" alpha="0.20334068250000001" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="9GE-qS-RVM"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="NVb-c2-Kyl" secondAttribute="trailing" constant="20" id="Gci-8T-mxw"/>
+                    <constraint firstAttribute="bottom" secondItem="5cm-YW-CYJ" secondAttribute="bottom" id="LBG-uN-4LC"/>
+                    <constraint firstAttribute="trailing" secondItem="5cm-YW-CYJ" secondAttribute="trailing" id="ll4-tn-EwC"/>
+                    <constraint firstItem="NVb-c2-Kyl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="ntT-LZ-prJ"/>
+                    <constraint firstAttribute="bottom" secondItem="NVb-c2-Kyl" secondAttribute="bottom" constant="20" id="t9Z-8K-zmp"/>
+                    <constraint firstItem="5cm-YW-CYJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ueo-fJ-aBA"/>
+                    <constraint firstItem="NVb-c2-Kyl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="zgX-SR-nK6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="18.5" y="180"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icCompendreMaladie" width="30" height="30"/>
+        <namedColor name="cobalt">
+            <color red="0.1330000013" green="0.22699999809999999" blue="0.53299999239999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="paleBlue">
+            <color red="0.88200002908706665" green="0.94099998474121094" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="windowsBlue">
+            <color red="0.25900000333786011" green="0.54500001668930054" blue="0.79199999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="windowsBlue">
+            <color red="0.2590000033" green="0.54500001669999998" blue="0.79199999570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "documents": [
+      {
+        "type": "pdf",
+        "name": "pdf_1.pdf",
+        "thumbnail": "pdf_thumb.png",
+        "isActive": true
+      },
+      {
+        "type": "pdf",
+        "name": "pdf_2.pdf",
+        "thumbnail": "pdf_thumb.png",
+        "isActive": true
+      },
+      {
+        "type": "pdf",
+        "name": "pdf_3.pdf",
+        "thumbnail": "pdf_thumb.png",
+        "isActive": true
+      },
+      {
+        "type": "image",
+        "name": "image_1.jpg",
+        "thumbnail": "pdf_thumb.png",
+        "isActive": true
+      }
+    ]
+}
