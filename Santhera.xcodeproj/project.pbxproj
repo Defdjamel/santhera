@@ -25,6 +25,10 @@
 		1A2D987220F79AD00022288F /* HomeBotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D987020F79AD00022288F /* HomeBotCell.xib */; };
 		1A2D987620F7A23D0022288F /* HomeAccuityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2D987420F7A23D0022288F /* HomeAccuityCell.swift */; };
 		1A2D987720F7A23D0022288F /* HomeAccuityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D987520F7A23D0022288F /* HomeAccuityCell.xib */; };
+		1A2D987B20F7AF700022288F /* HomeDocumentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2D987920F7AF700022288F /* HomeDocumentsCell.swift */; };
+		1A2D987C20F7AF700022288F /* HomeDocumentsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D987A20F7AF700022288F /* HomeDocumentsCell.xib */; };
+		1A2D987F20F88DA80022288F /* HomeDocumentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2D987D20F88DA80022288F /* HomeDocumentCollectionViewCell.swift */; };
+		1A2D988020F88DA80022288F /* HomeDocumentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D987E20F88DA80022288F /* HomeDocumentCollectionViewCell.xib */; };
 		274D09A42099F29000765337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274D09A32099F29000765337 /* AppDelegate.swift */; };
 		274D09A92099F29000765337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274D09A72099F29000765337 /* Main.storyboard */; };
 		274D09AB2099F29200765337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 274D09AA2099F29200765337 /* Assets.xcassets */; };
@@ -142,6 +146,10 @@
 		1A2D987020F79AD00022288F /* HomeBotCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeBotCell.xib; sourceTree = "<group>"; };
 		1A2D987420F7A23D0022288F /* HomeAccuityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAccuityCell.swift; sourceTree = "<group>"; };
 		1A2D987520F7A23D0022288F /* HomeAccuityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeAccuityCell.xib; sourceTree = "<group>"; };
+		1A2D987920F7AF700022288F /* HomeDocumentsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDocumentsCell.swift; sourceTree = "<group>"; };
+		1A2D987A20F7AF700022288F /* HomeDocumentsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeDocumentsCell.xib; sourceTree = "<group>"; };
+		1A2D987D20F88DA80022288F /* HomeDocumentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDocumentCollectionViewCell.swift; sourceTree = "<group>"; };
+		1A2D987E20F88DA80022288F /* HomeDocumentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeDocumentCollectionViewCell.xib; sourceTree = "<group>"; };
 		1C9F21C47809DA59B38CBCBC /* Pods-Santhera.inhouse.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Santhera.inhouse.xcconfig"; path = "Pods/Target Support Files/Pods-Santhera/Pods-Santhera.inhouse.xcconfig"; sourceTree = "<group>"; };
 		274D09A02099F29000765337 /* Santhera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Santhera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		274D09A32099F29000765337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -371,6 +379,7 @@
 		1A2D987320F7A14E0022288F /* home */ = {
 			isa = PBXGroup;
 			children = (
+				1A2D987820F7AF0E0022288F /* HomeDocuments */,
 				1A2D986E20F79A4B0022288F /* HomeRecentsPatients */,
 				1A2D986F20F79AD00022288F /* HomeBotCell.swift */,
 				1A2D987020F79AD00022288F /* HomeBotCell.xib */,
@@ -378,6 +387,17 @@
 				1A2D987520F7A23D0022288F /* HomeAccuityCell.xib */,
 			);
 			path = home;
+			sourceTree = "<group>";
+		};
+		1A2D987820F7AF0E0022288F /* HomeDocuments */ = {
+			isa = PBXGroup;
+			children = (
+				1A2D987920F7AF700022288F /* HomeDocumentsCell.swift */,
+				1A2D987A20F7AF700022288F /* HomeDocumentsCell.xib */,
+				1A2D987D20F88DA80022288F /* HomeDocumentCollectionViewCell.swift */,
+				1A2D987E20F88DA80022288F /* HomeDocumentCollectionViewCell.xib */,
+			);
+			path = HomeDocuments;
 			sourceTree = "<group>";
 		};
 		274D09972099F29000765337 = {
@@ -686,6 +706,7 @@
 			files = (
 				EA52282220BFF47B00752C29 /* .gitignore in Resources */,
 				1A2D984D20F7403F0022288F /* documents.json in Resources */,
+				1A2D987C20F7AF700022288F /* HomeDocumentsCell.xib in Resources */,
 				1A2D985620F743970022288F /* image_1.jpg in Resources */,
 				EA52282720BFF85B00752C29 /* Localizable.strings in Resources */,
 				274D09AE2099F29200765337 /* LaunchScreen.storyboard in Resources */,
@@ -699,6 +720,7 @@
 				1A2D985E20F77BC40022288F /* pdf_thumb.png in Resources */,
 				274D09A92099F29000765337 /* Main.storyboard in Resources */,
 				1A2D985420F742EA0022288F /* pdf_3.pdf in Resources */,
+				1A2D988020F88DA80022288F /* HomeDocumentCollectionViewCell.xib in Resources */,
 				1A2D986B20F78B2F0022288F /* HomePatientCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -842,6 +864,7 @@
 				EAA5AAC220C1708F0020464C /* SHManagedObjectContext+CascadeSave.swift in Sources */,
 				EAA5AAA320C1708F0020464C /* SHUIImageExtension.swift in Sources */,
 				EAA5AA9520C1708F0020464C /* SHUIAlertController.swift in Sources */,
+				1A2D987F20F88DA80022288F /* HomeDocumentCollectionViewCell.swift in Sources */,
 				EAA5AAAD20C1708F0020464C /* SHDateFormatterProximity.swift in Sources */,
 				EAA5AAA120C1708F0020464C /* SHCircleView.swift in Sources */,
 				EA52281E20BFF0C000752C29 /* HomeViewController.swift in Sources */,
@@ -869,6 +892,7 @@
 				EAA5AA9020C1708F0020464C /* SHLocalizationHelper.swift in Sources */,
 				EAA5AAB720C1708F0020464C /* SHOperation.swift in Sources */,
 				EAA5AAC020C1708F0020464C /* SHMulticastDelegate.swift in Sources */,
+				1A2D987B20F7AF700022288F /* HomeDocumentsCell.swift in Sources */,
 				EAA5AA9320C1708F0020464C /* SHUIFontExtension.swift in Sources */,
 				EAA5AAB820C1708F0020464C /* SHDegreesToRadiansExtension.swift in Sources */,
 				EAA5AAB620C1708F0020464C /* SHDeviceType.swift in Sources */,
@@ -1077,7 +1101,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 9.master;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1095,8 +1119,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wopata.santhera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "be8ea12b-89d6-4bc4-89ac-50e075f5d9f2";
-				PROVISIONING_PROFILE_SPECIFIER = "Santhera InHouse Distribution";
+				PROVISIONING_PROFILE = "2afbfd7a-9a89-48f8-959e-337dcbb5af5e";
+				PROVISIONING_PROFILE_SPECIFIER = "santhera-dev";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

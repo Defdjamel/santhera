@@ -15,11 +15,13 @@ class HomeViewController: UIViewController {
     private let homePatientRecentCellId = "HomePatientRecentCell"
     private let homeBotCellId = "HomeBotCell"
     private let homeAccuityCellId = "HomeAccuityCell"
+      private let homeDocumentsCellId = "HomeDocumentsCell"
     
     override func viewDidLoad() {
         self.tableView.register(UINib.init(nibName: homePatientRecentCellId, bundle: Bundle.main), forCellReuseIdentifier: homePatientRecentCellId)
         self.tableView.register(UINib.init(nibName: homeBotCellId, bundle: Bundle.main), forCellReuseIdentifier: homeBotCellId)
         self.tableView.register(UINib.init(nibName: homeAccuityCellId, bundle: Bundle.main), forCellReuseIdentifier: homeAccuityCellId)
+        self.tableView.register(UINib.init(nibName: homeDocumentsCellId, bundle: Bundle.main), forCellReuseIdentifier: homeDocumentsCellId)
         
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -68,6 +70,13 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
             // Configure the cell...
             return cell
         }
+        if indexPath.row == 3 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: homeDocumentsCellId, for: indexPath) as! HomeDocumentsCell
+            // Configure the cell...
+            cell.documents = DataManager.sharedInstance.getAllDocuments()
+            
+            return cell
+        }
         
         return UITableViewCell.init()
     }
@@ -88,6 +97,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
             return HomeBotCell.getHeight()
         case 2:
             return HomeAccuityCell.getHeight()
+        case 3:
+            return HomeDocumentsCell.getHeight()
         default:
              return 0
         }

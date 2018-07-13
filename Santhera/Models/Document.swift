@@ -11,7 +11,8 @@ import RealmSwift
 class Document: Object {
      @objc dynamic var type = DocumentType.image.rawValue
      @objc dynamic var name = ""
-     @objc dynamic var preview = ""
+     @objc dynamic var file_url = ""
+     @objc dynamic var thumb_url = ""
      @objc dynamic var isReaded = false
 }
 

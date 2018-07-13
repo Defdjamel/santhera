@@ -31,8 +31,15 @@ class DataManager: NSObject {
             if let name = item.object(forKey: "name") as? String {
                     document.name =  name
             }
+            if let file_name = item.object(forKey: "file") as? String {
+                document.file_url =   Bundle.main.path(forResource: file_name, ofType: nil)!
+            }
+            if let thumb_name = item.object(forKey: "thumbnail") as? String {
+                document.thumb_url =  Bundle.main.path(forResource: thumb_name, ofType: nil)!
+            }
+        
         try! realm.commitWrite()
-       return document
+        return document
     }
     func removeAllDocuments(){
         let realm = try! Realm()
