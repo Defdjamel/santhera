@@ -25,9 +25,20 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfQ-JS-4xN">
                                 <rect key="frame" x="50" y="20" width="50" height="50"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icPatient" translatesAutoresizingMaskIntoConstraints="NO" id="vQb-XV-s4P">
+                                        <rect key="frame" x="15" y="15" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="GdR-gG-2M9"/>
+                                            <constraint firstAttribute="width" constant="20" id="iYD-di-DWH"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" name="paleBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="3Kx-oO-07m"/>
+                                    <constraint firstItem="vQb-XV-s4P" firstAttribute="centerY" secondItem="bfQ-JS-4xN" secondAttribute="centerY" id="4vN-YL-Ca4"/>
+                                    <constraint firstItem="vQb-XV-s4P" firstAttribute="centerX" secondItem="bfQ-JS-4xN" secondAttribute="centerX" id="epy-YB-SrU"/>
                                     <constraint firstAttribute="height" constant="50" id="jug-lI-EUF"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -155,6 +166,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="icPatient" width="20" height="20"/>
         <namedColor name="greyblue15">
             <color red="0.48199999329999998" green="0.61599999670000005" blue="0.72899997230000002" alpha="0.15000000599999999" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
