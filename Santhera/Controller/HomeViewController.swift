@@ -109,6 +109,8 @@ extension HomeViewController : HomeDocumentCellDelegate {
             openPDF(document: document)
         }
         else  if document.type == DocumentType.image.rawValue {
+            showAlertDocumentInvalid()
+            return
             let image =  UIImage.init(named: document.file_url)
             let appImage = ViewerImage.appImage(forImage:image!)
             let viewer = AppImageViewer(originImage: image!, photos: [appImage], animatedFromView: cell)

@@ -311,6 +311,7 @@
 		1A2D984220F4AB4D0022288F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1ABAAE1B20FCE1290098B22B /* popup */,
 				EA52281D20BFF0C000752C29 /* HomeViewController.swift */,
 			);
 			name = Controllers;
@@ -461,8 +462,6 @@
 			isa = PBXGroup;
 			children = (
 				1ABAAE1A20FCCF5D0098B22B /* base */,
-				1ABAAE1420FCC7F00098B22B /* PopupInfoViewController.swift */,
-				1ABAAE1520FCC7F00098B22B /* PopupInfoViewController.xib */,
 			);
 			path = Popup;
 			sourceTree = "<group>";
@@ -473,6 +472,15 @@
 				1ABAAE1820FCC9510098B22B /* PopupBaseViewController.swift */,
 			);
 			path = base;
+			sourceTree = "<group>";
+		};
+		1ABAAE1B20FCE1290098B22B /* popup */ = {
+			isa = PBXGroup;
+			children = (
+				1ABAAE1420FCC7F00098B22B /* PopupInfoViewController.swift */,
+				1ABAAE1520FCC7F00098B22B /* PopupInfoViewController.xib */,
+			);
+			path = popup;
 			sourceTree = "<group>";
 		};
 		274D09972099F29000765337 = {
