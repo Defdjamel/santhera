@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import PDFKit
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
@@ -74,7 +75,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
             let cell = tableView.dequeueReusableCell(withIdentifier: homeDocumentsCellId, for: indexPath) as! HomeDocumentsCell
             // Configure the cell...
             cell.documents = DataManager.sharedInstance.getAllDocuments()
-            
+            cell.delegate = self
             return cell
         }
         
@@ -82,10 +83,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-       
-        
-        
     }
   
     
@@ -102,6 +99,27 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
         default:
              return 0
         }
+       
+    }
+}
+
+extension HomeViewController : HomeDocumentCellDelegate {
+    func HomeDocumentCellDelegate_DidSelectDocument(document: Document){
+        if document.type == DocumentType.pdf.rawValue {
+            openPDF(document: document)
+        }
+    }
+     func openPDF(document: Document) {
+         let urlString = document.file_url
+        print(urlString)
+        let url = URL.init(fileURLWithPath: urlString)
+        let pdfDocument = PDFDocument.init(url: url)
+        let storyBoard : UIStoryboard = UIStoryboard(name: "PdfReader", bundle:nil)
+        let pdfReaderNC = storyBoard.instantiateViewController(withIdentifier: "pdfReaderNC") as! UINavigationController
+        let pdfReaderVC = pdfReaderNC.viewControllers.first as! PdfReaderViewController
+        pdfReaderVC.pdfDocument = pdfDocument
+        pdfReaderVC.isShareable = true
+        self.navigationController?.show(pdfReaderVC, sender: self)
        
     }
 }

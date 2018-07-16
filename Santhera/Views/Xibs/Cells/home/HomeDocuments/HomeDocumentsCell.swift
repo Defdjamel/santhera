@@ -7,6 +7,10 @@
 //
 
 import UIKit
+protocol HomeDocumentCellDelegate {
+    func HomeDocumentCellDelegate_DidSelectDocument(document: Document)
+}
+
 private var HomeDocumentCollectionViewCellId = "HomeDocumentCollectionViewCell"
 private let heightCell = 140.0
 private let widthCell = 100.0
@@ -14,6 +18,7 @@ class HomeDocumentsCell: UITableViewCell, UICollectionViewDataSource,UICollectio
 
     @IBOutlet weak var collectionView: UICollectionView!
     var documents : Array<Document> = []
+    var delegate : HomeDocumentCellDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -68,6 +73,8 @@ class HomeDocumentsCell: UITableViewCell, UICollectionViewDataSource,UICollectio
         return 20
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let doc = documents[indexPath.row]
+        self.delegate?.HomeDocumentCellDelegate_DidSelectDocument(document: doc)
         
     }
 }

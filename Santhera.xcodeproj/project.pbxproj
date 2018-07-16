@@ -29,6 +29,20 @@
 		1A2D987C20F7AF700022288F /* HomeDocumentsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D987A20F7AF700022288F /* HomeDocumentsCell.xib */; };
 		1A2D987F20F88DA80022288F /* HomeDocumentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2D987D20F88DA80022288F /* HomeDocumentCollectionViewCell.swift */; };
 		1A2D988020F88DA80022288F /* HomeDocumentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D987E20F88DA80022288F /* HomeDocumentCollectionViewCell.xib */; };
+		1ABAAE0420FC9AEB0098B22B /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAADF620FC9AEA0098B22B /* BookmarkViewController.swift */; };
+		1ABAAE0520FC9AEB0098B22B /* PdfSearchResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAADF720FC9AEA0098B22B /* PdfSearchResultsCell.swift */; };
+		1ABAAE0620FC9AEB0098B22B /* PdfReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAADF820FC9AEA0098B22B /* PdfReaderViewController.swift */; };
+		1ABAAE0720FC9AEB0098B22B /* PdfSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAADF920FC9AEA0098B22B /* PdfSearchViewController.swift */; };
+		1ABAAE0820FC9AEB0098B22B /* ThumbnailGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAADFA20FC9AEA0098B22B /* ThumbnailGridCell.swift */; };
+		1ABAAE0920FC9AEB0098B22B /* SearchResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABAADFB20FC9AEA0098B22B /* SearchResultsCell.xib */; };
+		1ABAAE0A20FC9AEB0098B22B /* PdfReader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABAADFC20FC9AEA0098B22B /* PdfReader.storyboard */; };
+		1ABAAE0B20FC9AEB0098B22B /* ThumbnailGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABAADFD20FC9AEA0098B22B /* ThumbnailGridCell.xib */; };
+		1ABAAE0C20FC9AEB0098B22B /* OutlineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAADFE20FC9AEA0098B22B /* OutlineCell.swift */; };
+		1ABAAE0D20FC9AEB0098B22B /* iconPdfReader.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ABAADFF20FC9AEA0098B22B /* iconPdfReader.xcassets */; };
+		1ABAAE0E20FC9AEB0098B22B /* ThumbnailGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAAE0020FC9AEA0098B22B /* ThumbnailGridViewController.swift */; };
+		1ABAAE0F20FC9AEB0098B22B /* OutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAAE0120FC9AEA0098B22B /* OutlineViewController.swift */; };
+		1ABAAE1020FC9AEB0098B22B /* ActionMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAAE0220FC9AEA0098B22B /* ActionMenuViewController.swift */; };
+		1ABAAE1120FC9AEB0098B22B /* AppearanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAAE0320FC9AEA0098B22B /* AppearanceViewController.swift */; };
 		274D09A42099F29000765337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274D09A32099F29000765337 /* AppDelegate.swift */; };
 		274D09A92099F29000765337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274D09A72099F29000765337 /* Main.storyboard */; };
 		274D09AB2099F29200765337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 274D09AA2099F29200765337 /* Assets.xcassets */; };
@@ -150,6 +164,20 @@
 		1A2D987A20F7AF700022288F /* HomeDocumentsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeDocumentsCell.xib; sourceTree = "<group>"; };
 		1A2D987D20F88DA80022288F /* HomeDocumentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDocumentCollectionViewCell.swift; sourceTree = "<group>"; };
 		1A2D987E20F88DA80022288F /* HomeDocumentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeDocumentCollectionViewCell.xib; sourceTree = "<group>"; };
+		1ABAADF620FC9AEA0098B22B /* BookmarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		1ABAADF720FC9AEA0098B22B /* PdfSearchResultsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfSearchResultsCell.swift; sourceTree = "<group>"; };
+		1ABAADF820FC9AEA0098B22B /* PdfReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfReaderViewController.swift; sourceTree = "<group>"; };
+		1ABAADF920FC9AEA0098B22B /* PdfSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfSearchViewController.swift; sourceTree = "<group>"; };
+		1ABAADFA20FC9AEA0098B22B /* ThumbnailGridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailGridCell.swift; sourceTree = "<group>"; };
+		1ABAADFB20FC9AEA0098B22B /* SearchResultsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultsCell.xib; sourceTree = "<group>"; };
+		1ABAADFC20FC9AEA0098B22B /* PdfReader.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PdfReader.storyboard; sourceTree = "<group>"; };
+		1ABAADFD20FC9AEA0098B22B /* ThumbnailGridCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThumbnailGridCell.xib; sourceTree = "<group>"; };
+		1ABAADFE20FC9AEA0098B22B /* OutlineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutlineCell.swift; sourceTree = "<group>"; };
+		1ABAADFF20FC9AEA0098B22B /* iconPdfReader.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = iconPdfReader.xcassets; sourceTree = "<group>"; };
+		1ABAAE0020FC9AEA0098B22B /* ThumbnailGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailGridViewController.swift; sourceTree = "<group>"; };
+		1ABAAE0120FC9AEA0098B22B /* OutlineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutlineViewController.swift; sourceTree = "<group>"; };
+		1ABAAE0220FC9AEA0098B22B /* ActionMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionMenuViewController.swift; sourceTree = "<group>"; };
+		1ABAAE0320FC9AEA0098B22B /* AppearanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceViewController.swift; sourceTree = "<group>"; };
 		1C9F21C47809DA59B38CBCBC /* Pods-Santhera.inhouse.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Santhera.inhouse.xcconfig"; path = "Pods/Target Support Files/Pods-Santhera/Pods-Santhera.inhouse.xcconfig"; sourceTree = "<group>"; };
 		274D09A02099F29000765337 /* Santhera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Santhera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		274D09A32099F29000765337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -316,6 +344,7 @@
 		1A2D984620F4B1250022288F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1ABAADF520FC9AEA0098B22B /* PdfReader */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -398,6 +427,27 @@
 				1A2D987E20F88DA80022288F /* HomeDocumentCollectionViewCell.xib */,
 			);
 			path = HomeDocuments;
+			sourceTree = "<group>";
+		};
+		1ABAADF520FC9AEA0098B22B /* PdfReader */ = {
+			isa = PBXGroup;
+			children = (
+				1ABAADF620FC9AEA0098B22B /* BookmarkViewController.swift */,
+				1ABAADF720FC9AEA0098B22B /* PdfSearchResultsCell.swift */,
+				1ABAADF820FC9AEA0098B22B /* PdfReaderViewController.swift */,
+				1ABAADF920FC9AEA0098B22B /* PdfSearchViewController.swift */,
+				1ABAADFA20FC9AEA0098B22B /* ThumbnailGridCell.swift */,
+				1ABAADFB20FC9AEA0098B22B /* SearchResultsCell.xib */,
+				1ABAADFC20FC9AEA0098B22B /* PdfReader.storyboard */,
+				1ABAADFD20FC9AEA0098B22B /* ThumbnailGridCell.xib */,
+				1ABAADFE20FC9AEA0098B22B /* OutlineCell.swift */,
+				1ABAADFF20FC9AEA0098B22B /* iconPdfReader.xcassets */,
+				1ABAAE0020FC9AEA0098B22B /* ThumbnailGridViewController.swift */,
+				1ABAAE0120FC9AEA0098B22B /* OutlineViewController.swift */,
+				1ABAAE0220FC9AEA0098B22B /* ActionMenuViewController.swift */,
+				1ABAAE0320FC9AEA0098B22B /* AppearanceViewController.swift */,
+			);
+			path = PdfReader;
 			sourceTree = "<group>";
 		};
 		274D09972099F29000765337 = {
@@ -704,9 +754,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ABAAE0A20FC9AEB0098B22B /* PdfReader.storyboard in Resources */,
 				EA52282220BFF47B00752C29 /* .gitignore in Resources */,
 				1A2D984D20F7403F0022288F /* documents.json in Resources */,
 				1A2D987C20F7AF700022288F /* HomeDocumentsCell.xib in Resources */,
+				1ABAAE0B20FC9AEB0098B22B /* ThumbnailGridCell.xib in Resources */,
 				1A2D985620F743970022288F /* image_1.jpg in Resources */,
 				EA52282720BFF85B00752C29 /* Localizable.strings in Resources */,
 				274D09AE2099F29200765337 /* LaunchScreen.storyboard in Resources */,
@@ -714,10 +766,12 @@
 				1A2D985120F742BF0022288F /* pdf_2.pdf in Resources */,
 				1A2D985220F742BF0022288F /* pdf_1.pdf in Resources */,
 				274D09AB2099F29200765337 /* Assets.xcassets in Resources */,
+				1ABAAE0D20FC9AEB0098B22B /* iconPdfReader.xcassets in Resources */,
 				1A2D987720F7A23D0022288F /* HomeAccuityCell.xib in Resources */,
 				EA52282020BFF2EB00752C29 /* fastlane in Resources */,
 				1A2D987220F79AD00022288F /* HomeBotCell.xib in Resources */,
 				1A2D985E20F77BC40022288F /* pdf_thumb.png in Resources */,
+				1ABAAE0920FC9AEB0098B22B /* SearchResultsCell.xib in Resources */,
 				274D09A92099F29000765337 /* Main.storyboard in Resources */,
 				1A2D985420F742EA0022288F /* pdf_3.pdf in Resources */,
 				1A2D988020F88DA80022288F /* HomeDocumentCollectionViewCell.xib in Resources */,
@@ -859,9 +913,11 @@
 				EAA5AABD20C1708F0020464C /* Debounce+Throttle.swift in Sources */,
 				EAA5AAA520C1708F0020464C /* SHUIScreenExtension.swift in Sources */,
 				EAA5AA9B20C1708F0020464C /* SHNoBackTitleViewController.swift in Sources */,
+				1ABAAE0420FC9AEB0098B22B /* BookmarkViewController.swift in Sources */,
 				EAA5AA8D20C1708F0020464C /* SHCreditCardValidator.swift in Sources */,
 				EAA5AAAF20C1708F0020464C /* SHNSTimeIntervalExtension.swift in Sources */,
 				EAA5AAC220C1708F0020464C /* SHManagedObjectContext+CascadeSave.swift in Sources */,
+				1ABAAE0820FC9AEB0098B22B /* ThumbnailGridCell.swift in Sources */,
 				EAA5AAA320C1708F0020464C /* SHUIImageExtension.swift in Sources */,
 				EAA5AA9520C1708F0020464C /* SHUIAlertController.swift in Sources */,
 				1A2D987F20F88DA80022288F /* HomeDocumentCollectionViewCell.swift in Sources */,
@@ -878,6 +934,7 @@
 				EAA5AA9120C1708F0020464C /* SHRightImageButton.swift in Sources */,
 				EAA5AAA620C1708F0020464C /* SHNavigationControllerExtention.swift in Sources */,
 				EAA5AA8C20C1708F0020464C /* SHSKProductExtension.swift in Sources */,
+				1ABAAE1020FC9AEB0098B22B /* ActionMenuViewController.swift in Sources */,
 				EAA5AA9220C1708F0020464C /* SHUINavigationBarExtension.swift in Sources */,
 				EAA5AAB520C1708F0020464C /* SHNumberExtension.swift in Sources */,
 				EAA5AAC320C1708F0020464C /* SHNamedEntity.swift in Sources */,
@@ -885,8 +942,12 @@
 				EAA5AABA20C1708F0020464C /* SHComparisonHelpers.swift in Sources */,
 				EAA5AAA420C1708F0020464C /* SHUIViewExtension.swift in Sources */,
 				EAA5AAB920C1708F0020464C /* SHNSDataExtension.swift in Sources */,
+				1ABAAE0F20FC9AEB0098B22B /* OutlineViewController.swift in Sources */,
+				1ABAAE0E20FC9AEB0098B22B /* ThumbnailGridViewController.swift in Sources */,
 				EAA5AAAE20C1708F0020464C /* SHNSDateExtension.swift in Sources */,
+				1ABAAE0620FC9AEB0098B22B /* PdfReaderViewController.swift in Sources */,
 				EAA5AA9A20C1708F0020464C /* SHIBInspectableExtension.swift in Sources */,
+				1ABAAE0720FC9AEB0098B22B /* PdfSearchViewController.swift in Sources */,
 				EAA5AA9C20C1708F0020464C /* SHUIScrollViewExtension.swift in Sources */,
 				EAA5AAAB20C1708F0020464C /* SHTextField.swift in Sources */,
 				EAA5AA9020C1708F0020464C /* SHLocalizationHelper.swift in Sources */,
@@ -900,10 +961,12 @@
 				EAA5AABF20C1708F0020464C /* SHNSTimerExtension.swift in Sources */,
 				EAA5AAA920C1708F0020464C /* SHUITextFieldExtension.swift in Sources */,
 				EAA5AAAA20C1708F0020464C /* SHGif.swift in Sources */,
+				1ABAAE0C20FC9AEB0098B22B /* OutlineCell.swift in Sources */,
 				EAA5AA9720C1708F0020464C /* SHStatusBarNavigationController.swift in Sources */,
 				1A2D987620F7A23D0022288F /* HomeAccuityCell.swift in Sources */,
 				EAA5AABC20C1708F0020464C /* URLRequestExtension.swift in Sources */,
 				EAA5AAA220C1708F0020464C /* SHPopupPresentationController.swift in Sources */,
+				1ABAAE1120FC9AEB0098B22B /* AppearanceViewController.swift in Sources */,
 				EAA5AA8E20C1708F0020464C /* SHNotificationExtension.swift in Sources */,
 				EAA5AAB320C1708F0020464C /* SHIntExtension.swift in Sources */,
 				EAA5AA9920C1708F0020464C /* SHCALayerExtension.swift in Sources */,
@@ -914,6 +977,7 @@
 				EAA5AA9620C1708F0020464C /* SHPagedScrollView.swift in Sources */,
 				EAA5AA9420C1708F0020464C /* SHCommonInitView.swift in Sources */,
 				EAA5AAA020C1708F0020464C /* SHUIViewControllerExtension.swift in Sources */,
+				1ABAAE0520FC9AEB0098B22B /* PdfSearchResultsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

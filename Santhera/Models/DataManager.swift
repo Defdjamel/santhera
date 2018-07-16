@@ -37,6 +37,14 @@ class DataManager: NSObject {
             if let thumb_name = item.object(forKey: "thumbnail") as? String {
                 document.thumb_url =  Bundle.main.path(forResource: thumb_name, ofType: nil)!
             }
+            if let type = item.object(forKey: "type") as? String {
+                if type ==  DocumentType.image.rawValue {
+                    document.type = DocumentType.image.rawValue
+                }
+                if type ==  DocumentType.pdf.rawValue {
+                    document.type = DocumentType.pdf.rawValue
+                }
+            }
         
         try! realm.commitWrite()
         return document
