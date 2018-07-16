@@ -16,7 +16,8 @@ class HomeViewController: UIViewController {
     private let homePatientRecentCellId = "HomePatientRecentCell"
     private let homeBotCellId = "HomeBotCell"
     private let homeAccuityCellId = "HomeAccuityCell"
-      private let homeDocumentsCellId = "HomeDocumentsCell"
+    private let homeDocumentsCellId = "HomeDocumentsCell"
+    //var popvc : PopupInfoViewController!
     
     override func viewDidLoad() {
         self.tableView.register(UINib.init(nibName: homePatientRecentCellId, bundle: Bundle.main), forCellReuseIdentifier: homePatientRecentCellId)
@@ -99,7 +100,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
         default:
              return 0
         }
-       
     }
 }
 
@@ -108,10 +108,20 @@ extension HomeViewController : HomeDocumentCellDelegate {
         if document.type == DocumentType.pdf.rawValue {
             openPDF(document: document)
         }
+        else  if document.type == DocumentType.pdf.rawValue {
+        
+        }
+        else {
+            showAlertDocumentInvalid()
+        }
     }
-     func openPDF(document: Document) {
-         let urlString = document.file_url
-        print(urlString)
+    func showAlertDocumentInvalid(){
+        let  popvc = PopupInfoViewController()
+        popvc.showViewFromCtrl(controller: self)
+        
+    }
+    func openPDF(document: Document) {
+        let urlString = document.file_url
         let url = URL.init(fileURLWithPath: urlString)
         let pdfDocument = PDFDocument.init(url: url)
         let storyBoard : UIStoryboard = UIStoryboard(name: "PdfReader", bundle:nil)
@@ -120,6 +130,5 @@ extension HomeViewController : HomeDocumentCellDelegate {
         pdfReaderVC.pdfDocument = pdfDocument
         pdfReaderVC.isShareable = true
         self.navigationController?.show(pdfReaderVC, sender: self)
-       
     }
 }

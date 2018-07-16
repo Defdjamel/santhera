@@ -43,6 +43,9 @@
 		1ABAAE0F20FC9AEB0098B22B /* OutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAAE0120FC9AEA0098B22B /* OutlineViewController.swift */; };
 		1ABAAE1020FC9AEB0098B22B /* ActionMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAAE0220FC9AEA0098B22B /* ActionMenuViewController.swift */; };
 		1ABAAE1120FC9AEB0098B22B /* AppearanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAAE0320FC9AEA0098B22B /* AppearanceViewController.swift */; };
+		1ABAAE1620FCC7F00098B22B /* PopupInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAAE1420FCC7F00098B22B /* PopupInfoViewController.swift */; };
+		1ABAAE1720FCC7F00098B22B /* PopupInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABAAE1520FCC7F00098B22B /* PopupInfoViewController.xib */; };
+		1ABAAE1920FCC9510098B22B /* PopupBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAAE1820FCC9510098B22B /* PopupBaseViewController.swift */; };
 		274D09A42099F29000765337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274D09A32099F29000765337 /* AppDelegate.swift */; };
 		274D09A92099F29000765337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274D09A72099F29000765337 /* Main.storyboard */; };
 		274D09AB2099F29200765337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 274D09AA2099F29200765337 /* Assets.xcassets */; };
@@ -178,6 +181,9 @@
 		1ABAAE0120FC9AEA0098B22B /* OutlineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutlineViewController.swift; sourceTree = "<group>"; };
 		1ABAAE0220FC9AEA0098B22B /* ActionMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionMenuViewController.swift; sourceTree = "<group>"; };
 		1ABAAE0320FC9AEA0098B22B /* AppearanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceViewController.swift; sourceTree = "<group>"; };
+		1ABAAE1420FCC7F00098B22B /* PopupInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupInfoViewController.swift; sourceTree = "<group>"; };
+		1ABAAE1520FCC7F00098B22B /* PopupInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupInfoViewController.xib; sourceTree = "<group>"; };
+		1ABAAE1820FCC9510098B22B /* PopupBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupBaseViewController.swift; sourceTree = "<group>"; };
 		1C9F21C47809DA59B38CBCBC /* Pods-Santhera.inhouse.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Santhera.inhouse.xcconfig"; path = "Pods/Target Support Files/Pods-Santhera/Pods-Santhera.inhouse.xcconfig"; sourceTree = "<group>"; };
 		274D09A02099F29000765337 /* Santhera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Santhera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		274D09A32099F29000765337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -344,6 +350,7 @@
 		1A2D984620F4B1250022288F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1ABAAE1320FCC7A30098B22B /* Popup */,
 				1ABAADF520FC9AEA0098B22B /* PdfReader */,
 			);
 			path = Components;
@@ -432,13 +439,13 @@
 		1ABAADF520FC9AEA0098B22B /* PdfReader */ = {
 			isa = PBXGroup;
 			children = (
+				1ABAADFC20FC9AEA0098B22B /* PdfReader.storyboard */,
 				1ABAADF620FC9AEA0098B22B /* BookmarkViewController.swift */,
 				1ABAADF720FC9AEA0098B22B /* PdfSearchResultsCell.swift */,
 				1ABAADF820FC9AEA0098B22B /* PdfReaderViewController.swift */,
 				1ABAADF920FC9AEA0098B22B /* PdfSearchViewController.swift */,
 				1ABAADFA20FC9AEA0098B22B /* ThumbnailGridCell.swift */,
 				1ABAADFB20FC9AEA0098B22B /* SearchResultsCell.xib */,
-				1ABAADFC20FC9AEA0098B22B /* PdfReader.storyboard */,
 				1ABAADFD20FC9AEA0098B22B /* ThumbnailGridCell.xib */,
 				1ABAADFE20FC9AEA0098B22B /* OutlineCell.swift */,
 				1ABAADFF20FC9AEA0098B22B /* iconPdfReader.xcassets */,
@@ -448,6 +455,24 @@
 				1ABAAE0320FC9AEA0098B22B /* AppearanceViewController.swift */,
 			);
 			path = PdfReader;
+			sourceTree = "<group>";
+		};
+		1ABAAE1320FCC7A30098B22B /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				1ABAAE1A20FCCF5D0098B22B /* base */,
+				1ABAAE1420FCC7F00098B22B /* PopupInfoViewController.swift */,
+				1ABAAE1520FCC7F00098B22B /* PopupInfoViewController.xib */,
+			);
+			path = Popup;
+			sourceTree = "<group>";
+		};
+		1ABAAE1A20FCCF5D0098B22B /* base */ = {
+			isa = PBXGroup;
+			children = (
+				1ABAAE1820FCC9510098B22B /* PopupBaseViewController.swift */,
+			);
+			path = base;
 			sourceTree = "<group>";
 		};
 		274D09972099F29000765337 = {
@@ -761,6 +786,7 @@
 				1ABAAE0B20FC9AEB0098B22B /* ThumbnailGridCell.xib in Resources */,
 				1A2D985620F743970022288F /* image_1.jpg in Resources */,
 				EA52282720BFF85B00752C29 /* Localizable.strings in Resources */,
+				1ABAAE1720FCC7F00098B22B /* PopupInfoViewController.xib in Resources */,
 				274D09AE2099F29200765337 /* LaunchScreen.storyboard in Resources */,
 				1A2D986720F7860B0022288F /* HomePatientRecentCell.xib in Resources */,
 				1A2D985120F742BF0022288F /* pdf_2.pdf in Resources */,
@@ -910,6 +936,7 @@
 				EAA5AA9F20C1708F0020464C /* SHSeparatorView.swift in Sources */,
 				1A2D985820F744A50022288F /* Document.swift in Sources */,
 				1A2D985C20F757DE0022288F /* UIColor+Additions.swift in Sources */,
+				1ABAAE1920FCC9510098B22B /* PopupBaseViewController.swift in Sources */,
 				EAA5AABD20C1708F0020464C /* Debounce+Throttle.swift in Sources */,
 				EAA5AAA520C1708F0020464C /* SHUIScreenExtension.swift in Sources */,
 				EAA5AA9B20C1708F0020464C /* SHNoBackTitleViewController.swift in Sources */,
@@ -973,6 +1000,7 @@
 				EAA5AAAC20C1708F0020464C /* SHNSDateFormatterExtension.swift in Sources */,
 				EAA5AABE20C1708F0020464C /* SHNSObjectExtension.swift in Sources */,
 				EAA5AA9820C1708F0020464C /* SHDatePickerController.swift in Sources */,
+				1ABAAE1620FCC7F00098B22B /* PopupInfoViewController.swift in Sources */,
 				EAA5AA9E20C1708F0020464C /* SHAttributedLabel.swift in Sources */,
 				EAA5AA9620C1708F0020464C /* SHPagedScrollView.swift in Sources */,
 				EAA5AA9420C1708F0020464C /* SHCommonInitView.swift in Sources */,
