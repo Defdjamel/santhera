@@ -1,6 +1,7 @@
 {
     "version": 1,
     "documents": [
+     
       {
         "type": "pdf",
         "name": "Génétique",
@@ -26,7 +27,7 @@
         "type": "image",
         "name": "Autres",
         "file": "image_1.jpg",
-        "thumbnail": "pdf_thumb.png",
+        "thumbnail": "image_1.jpg",
         "isActive": true
       }
     ]

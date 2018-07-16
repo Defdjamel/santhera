@@ -8,7 +8,7 @@
 
 import UIKit
 protocol HomeDocumentCellDelegate {
-    func HomeDocumentCellDelegate_DidSelectDocument(document: Document)
+    func HomeDocumentCellDelegate_DidSelectDocument(document: Document, cell: UICollectionViewCell)
 }
 
 private var HomeDocumentCollectionViewCellId = "HomeDocumentCollectionViewCell"
@@ -74,7 +74,8 @@ class HomeDocumentsCell: UITableViewCell, UICollectionViewDataSource,UICollectio
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let doc = documents[indexPath.row]
-        self.delegate?.HomeDocumentCellDelegate_DidSelectDocument(document: doc)
+        self.delegate?.HomeDocumentCellDelegate_DidSelectDocument(document: doc,cell:  collectionView.cellForItem(at: indexPath)!)
+       
         
     }
 }

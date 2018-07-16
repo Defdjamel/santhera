@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import PDFKit
-
+import AppImageViewer
 class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
@@ -104,12 +104,16 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
 }
 
 extension HomeViewController : HomeDocumentCellDelegate {
-    func HomeDocumentCellDelegate_DidSelectDocument(document: Document){
+    func HomeDocumentCellDelegate_DidSelectDocument(document: Document, cell: UICollectionViewCell){
         if document.type == DocumentType.pdf.rawValue {
             openPDF(document: document)
         }
-        else  if document.type == DocumentType.pdf.rawValue {
-        
+        else  if document.type == DocumentType.image.rawValue {
+            let image =  UIImage.init(named: document.file_url)
+            let appImage = ViewerImage.appImage(forImage:image!)
+            let viewer = AppImageViewer(originImage: image!, photos: [appImage], animatedFromView: cell)
+            viewer.isCustomShare = true
+            present(viewer, animated: true, completion: nil)
         }
         else {
             showAlertDocumentInvalid()
