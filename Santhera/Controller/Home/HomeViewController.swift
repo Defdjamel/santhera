@@ -33,6 +33,7 @@ class HomeViewController: UIViewController {
     
     func setNavLogo(){
         let nav = self.navigationController?.navigationBar
+       
         nav?.barStyle = UIBarStyle.default
         nav?.barTintColor = UIColor.white
         
@@ -60,6 +61,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
             let cell = tableView.dequeueReusableCell(withIdentifier: homePatientRecentCellId, for: indexPath) as! HomePatientRecentCell
             // Configure the cell...
             cell.patients = DataManager.sharedInstance.getRecentPatients()
+            cell.delegate = self
             return cell
         }
         if indexPath.row == 1 {
@@ -109,8 +111,6 @@ extension HomeViewController : HomeDocumentCellDelegate {
             openPDF(document: document)
         }
         else  if document.type == DocumentType.image.rawValue {
-            showAlertDocumentInvalid()
-            return
             let image =  UIImage.init(named: document.file_url)
             let appImage = ViewerImage.appImage(forImage:image!)
             let viewer = AppImageViewer(originImage: image!, photos: [appImage], animatedFromView: cell)
@@ -137,4 +137,10 @@ extension HomeViewController : HomeDocumentCellDelegate {
         pdfReaderVC.isShareable = true
         self.navigationController?.show(pdfReaderVC, sender: self)
     }
+}
+extension HomeViewController : HomePatientRecentCellDelegate {
+    func HomePatientRecentCellDelegate_DidSelectMore() {
+        self.performSegue(withIdentifier: "HomePatients", sender: self)
+    }
+    
 }

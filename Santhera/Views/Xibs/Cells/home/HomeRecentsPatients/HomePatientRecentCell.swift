@@ -10,10 +10,16 @@ import UIKit
 private var HomePatientCollectionViewCellId = "HomePatientCollectionViewCell"
 private let heightPatientCell = 150.0
 
+protocol HomePatientRecentCellDelegate {
+    func HomePatientRecentCellDelegate_DidSelectMore()
+}
+
+
 class HomePatientRecentCell: UITableViewCell , UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout{
 
     @IBOutlet weak var collectionView: UICollectionView!
     var patients : Array<Patient> = []
+    var delegate : HomePatientRecentCellDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -30,6 +36,10 @@ class HomePatientRecentCell: UITableViewCell , UICollectionViewDataSource,UIColl
         return CGFloat(heightPatientCell + 60.0)
     }
     
+    //MARK: - Action -
+    @IBAction func onClickSeeMore(_ sender: Any) {
+        self.delegate?.HomePatientRecentCellDelegate_DidSelectMore()
+    }
     
     //MARK: - UICollectionViewDataSource -
     func numberOfSections(in collectionView: UICollectionView) -> Int {

@@ -80,6 +80,17 @@ class DataManager: NSObject {
         let p = realm.objects(Patient.self)
         return Array(p)
     }
+    func getAllPatients() -> Array<Patient> {
+        let realm = try! Realm()
+        let p = realm.objects(Patient.self).sorted(byKeyPath: "lastname", ascending: false)
+        return Array(p)
+    }
+    func getAllPatientsFilterText(text: String) -> Array<Patient> {
+        let realm = try! Realm()
+        let predicate =  NSPredicate(format: "self.lastname contains [cd] '\(text)' or self.firstname contains [cd] '\(text)' ")
+        let p = realm.objects(Patient.self).filter(predicate).sorted(byKeyPath: "lastname", ascending: false)
+        return Array(p)
+    }
     
     func createTestUsers(){
         removeAllPatients()

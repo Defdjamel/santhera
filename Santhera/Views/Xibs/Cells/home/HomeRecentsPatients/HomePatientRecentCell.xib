@@ -47,6 +47,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="see_more"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onClickSeeMore:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0x2-PK-Puw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
