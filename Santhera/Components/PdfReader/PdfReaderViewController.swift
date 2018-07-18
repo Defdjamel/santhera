@@ -348,7 +348,6 @@ class PdfReaderViewController: UIViewController, UIPopoverPresentationController
             if bookmarkButton != nil {
                 bookmarkButton.image = bookmarks.contains(index) ? #imageLiteral(resourceName: "Bookmark-P") : #imageLiteral(resourceName: "Bookmark-N")
             }
-            
         }
     }
     

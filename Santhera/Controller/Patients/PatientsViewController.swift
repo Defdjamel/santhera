@@ -81,17 +81,22 @@ class PatientsViewController: UIViewController, UICollectionViewDataSource,UICol
         return 20
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        self.performSegue(withIdentifier: "patientDetails", sender: self)
     }
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if let vc = segue.destination as? PaitentDetailsViewController {
+            if let indexPath = self.collectionView.indexPathsForSelectedItems?.first {
+               vc.currentPatient = patients[indexPath.row]
+            }
+        }
     }
-    */
+    
     func resetFilter(){
         patients = DataManager.sharedInstance.getAllPatients()
         self.collectionView.reloadData()

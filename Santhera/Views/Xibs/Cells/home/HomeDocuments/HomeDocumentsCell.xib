@@ -19,26 +19,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="254.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="orW-nw-EoE">
-                        <rect key="frame" x="0.0" y="47.5" width="320" height="180"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="180" id="2cx-ij-NXB"/>
-                        </constraints>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PiQ-en-aGq">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="layerMasksToBounds" value="NO"/>
-                        </userDefinedRuntimeAttributes>
-                        <connections>
-                            <outlet property="dataSource" destination="KGk-i7-Jjw" id="DYf-au-Fxc"/>
-                            <outlet property="delegate" destination="KGk-i7-Jjw" id="Gsh-Xm-Pun"/>
-                        </connections>
-                    </collectionView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TIh-ds-0cJ" userLabel="containerHeaderLbl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="47.5"/>
                         <subviews>
@@ -60,6 +40,26 @@
                             <constraint firstItem="LOz-HX-8xf" firstAttribute="centerY" secondItem="TIh-ds-0cJ" secondAttribute="centerY" id="hfM-om-iN1"/>
                         </constraints>
                     </view>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="orW-nw-EoE">
+                        <rect key="frame" x="0.0" y="47.5" width="320" height="180"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="180" id="2cx-ij-NXB"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PiQ-en-aGq">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layerMasksToBounds" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="dataSource" destination="KGk-i7-Jjw" id="DYf-au-Fxc"/>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="Gsh-Xm-Pun"/>
+                        </connections>
+                    </collectionView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="orW-nw-EoE" firstAttribute="top" secondItem="TIh-ds-0cJ" secondAttribute="bottom" id="F4w-aM-OYc"/>

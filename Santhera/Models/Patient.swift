@@ -9,7 +9,9 @@
 import UIKit
 import RealmSwift
 class Patient: Object {
+    let tests = LinkingObjects(fromType: Test.self, property: "patient")
     @objc dynamic var firstname = ""
     @objc dynamic var lastname = ""
+   
 
 }
