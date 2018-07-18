@@ -17,17 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icSantheraLogo" translatesAutoresizingMaskIntoConstraints="NO" id="KdA-Qd-DIW">
-                                <rect key="frame" x="62.5" y="294" width="250" height="78"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icSantheraLogo" translatesAutoresizingMaskIntoConstraints="NO" id="hgT-N1-TQ7">
+                                <rect key="frame" x="47" y="298.5" width="280" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="FES-zk-iEw"/>
+                                    <constraint firstAttribute="width" constant="280" id="3Ct-8M-1Iy"/>
+                                    <constraint firstAttribute="height" constant="70" id="WXo-Uo-cTM"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="KdA-Qd-DIW" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="npi-Sn-vGs"/>
-                            <constraint firstItem="KdA-Qd-DIW" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="vHU-ep-R2x"/>
+                            <constraint firstItem="hgT-N1-TQ7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="4W0-df-EWX"/>
+                            <constraint firstItem="hgT-N1-TQ7" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="REh-6T-bjf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

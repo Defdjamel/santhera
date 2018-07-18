@@ -7,6 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A2D984D20F7403F0022288F /* documents.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D984C20F7403F0022288F /* documents.json */; };
+		1A2D985120F742BF0022288F /* pdf_2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D984F20F742BE0022288F /* pdf_2.pdf */; };
+		1A2D985220F742BF0022288F /* pdf_1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D985020F742BE0022288F /* pdf_1.pdf */; };
+		1A2D985420F742EA0022288F /* pdf_3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D985320F742EA0022288F /* pdf_3.pdf */; };
+		1A2D985620F743970022288F /* image_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D985520F743970022288F /* image_1.jpg */; };
+		1A2D985820F744A50022288F /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2D985720F744A50022288F /* Document.swift */; };
+		1A2D985A20F744B30022288F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2D985920F744B30022288F /* DataManager.swift */; };
+		1A2D985C20F757DE0022288F /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2D985B20F757DE0022288F /* UIColor+Additions.swift */; };
+		1A2D985E20F77BC40022288F /* pdf_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D985D20F77BC40022288F /* pdf_thumb.png */; };
+		1A2D986620F7860B0022288F /* HomePatientRecentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2D986420F7860B0022288F /* HomePatientRecentCell.swift */; };
+		1A2D986720F7860B0022288F /* HomePatientRecentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D986520F7860B0022288F /* HomePatientRecentCell.xib */; };
+		1A2D986A20F78B2F0022288F /* HomePatientCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2D986820F78B2F0022288F /* HomePatientCollectionViewCell.swift */; };
+		1A2D986B20F78B2F0022288F /* HomePatientCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D986920F78B2F0022288F /* HomePatientCollectionViewCell.xib */; };
+		1A2D986D20F78D620022288F /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2D986C20F78D620022288F /* Patient.swift */; };
+		1A2D987120F79AD00022288F /* HomeBotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2D986F20F79AD00022288F /* HomeBotCell.swift */; };
+		1A2D987220F79AD00022288F /* HomeBotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D987020F79AD00022288F /* HomeBotCell.xib */; };
+		1A2D987620F7A23D0022288F /* HomeAccuityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2D987420F7A23D0022288F /* HomeAccuityCell.swift */; };
+		1A2D987720F7A23D0022288F /* HomeAccuityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D987520F7A23D0022288F /* HomeAccuityCell.xib */; };
+		1A2D987B20F7AF700022288F /* HomeDocumentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2D987920F7AF700022288F /* HomeDocumentsCell.swift */; };
+		1A2D987C20F7AF700022288F /* HomeDocumentsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D987A20F7AF700022288F /* HomeDocumentsCell.xib */; };
+		1A2D987F20F88DA80022288F /* HomeDocumentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2D987D20F88DA80022288F /* HomeDocumentCollectionViewCell.swift */; };
+		1A2D988020F88DA80022288F /* HomeDocumentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D987E20F88DA80022288F /* HomeDocumentCollectionViewCell.xib */; };
+		1ABAAE0420FC9AEB0098B22B /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAADF620FC9AEA0098B22B /* BookmarkViewController.swift */; };
+		1ABAAE0520FC9AEB0098B22B /* PdfSearchResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAADF720FC9AEA0098B22B /* PdfSearchResultsCell.swift */; };
+		1ABAAE0620FC9AEB0098B22B /* PdfReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAADF820FC9AEA0098B22B /* PdfReaderViewController.swift */; };
+		1ABAAE0720FC9AEB0098B22B /* PdfSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAADF920FC9AEA0098B22B /* PdfSearchViewController.swift */; };
+		1ABAAE0820FC9AEB0098B22B /* ThumbnailGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAADFA20FC9AEA0098B22B /* ThumbnailGridCell.swift */; };
+		1ABAAE0920FC9AEB0098B22B /* SearchResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABAADFB20FC9AEA0098B22B /* SearchResultsCell.xib */; };
+		1ABAAE0A20FC9AEB0098B22B /* PdfReader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABAADFC20FC9AEA0098B22B /* PdfReader.storyboard */; };
+		1ABAAE0B20FC9AEB0098B22B /* ThumbnailGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABAADFD20FC9AEA0098B22B /* ThumbnailGridCell.xib */; };
+		1ABAAE0C20FC9AEB0098B22B /* OutlineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAADFE20FC9AEA0098B22B /* OutlineCell.swift */; };
+		1ABAAE0D20FC9AEB0098B22B /* iconPdfReader.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ABAADFF20FC9AEA0098B22B /* iconPdfReader.xcassets */; };
+		1ABAAE0E20FC9AEB0098B22B /* ThumbnailGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAAE0020FC9AEA0098B22B /* ThumbnailGridViewController.swift */; };
+		1ABAAE0F20FC9AEB0098B22B /* OutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAAE0120FC9AEA0098B22B /* OutlineViewController.swift */; };
+		1ABAAE1020FC9AEB0098B22B /* ActionMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAAE0220FC9AEA0098B22B /* ActionMenuViewController.swift */; };
+		1ABAAE1120FC9AEB0098B22B /* AppearanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAAE0320FC9AEA0098B22B /* AppearanceViewController.swift */; };
+		1ABAAE1620FCC7F00098B22B /* PopupInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAAE1420FCC7F00098B22B /* PopupInfoViewController.swift */; };
+		1ABAAE1720FCC7F00098B22B /* PopupInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABAAE1520FCC7F00098B22B /* PopupInfoViewController.xib */; };
+		1ABAAE1920FCC9510098B22B /* PopupBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAAE1820FCC9510098B22B /* PopupBaseViewController.swift */; };
+		1ABAAE1F20FE16D60098B22B /* PatientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAAE1E20FE16D60098B22B /* PatientsViewController.swift */; };
+		1ABAAE2120FE17050098B22B /* Patients.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABAAE2020FE17050098B22B /* Patients.storyboard */; };
 		274D09A42099F29000765337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274D09A32099F29000765337 /* AppDelegate.swift */; };
 		274D09A92099F29000765337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274D09A72099F29000765337 /* Main.storyboard */; };
 		274D09AB2099F29200765337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 274D09AA2099F29200765337 /* Assets.xcassets */; };
@@ -106,6 +147,47 @@
 		11E9DAA1D10BF2392F839B08 /* Pods_SantheraTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SantheraTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17E8AA1B5CDD001048630D81 /* Pods-Santhera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Santhera.release.xcconfig"; path = "Pods/Target Support Files/Pods-Santhera/Pods-Santhera.release.xcconfig"; sourceTree = "<group>"; };
 		18C618E5233A78CBD09EC62C /* Pods-SantheraTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SantheraTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SantheraTests/Pods-SantheraTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1A2D984C20F7403F0022288F /* documents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = documents.json; sourceTree = "<group>"; };
+		1A2D984F20F742BE0022288F /* pdf_2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pdf_2.pdf; sourceTree = "<group>"; };
+		1A2D985020F742BE0022288F /* pdf_1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pdf_1.pdf; sourceTree = "<group>"; };
+		1A2D985320F742EA0022288F /* pdf_3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pdf_3.pdf; sourceTree = "<group>"; };
+		1A2D985520F743970022288F /* image_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_1.jpg; sourceTree = "<group>"; };
+		1A2D985720F744A50022288F /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		1A2D985920F744B30022288F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		1A2D985B20F757DE0022288F /* UIColor+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
+		1A2D985D20F77BC40022288F /* pdf_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pdf_thumb.png; sourceTree = "<group>"; };
+		1A2D986420F7860B0022288F /* HomePatientRecentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePatientRecentCell.swift; sourceTree = "<group>"; };
+		1A2D986520F7860B0022288F /* HomePatientRecentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePatientRecentCell.xib; sourceTree = "<group>"; };
+		1A2D986820F78B2F0022288F /* HomePatientCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePatientCollectionViewCell.swift; sourceTree = "<group>"; };
+		1A2D986920F78B2F0022288F /* HomePatientCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePatientCollectionViewCell.xib; sourceTree = "<group>"; };
+		1A2D986C20F78D620022288F /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		1A2D986F20F79AD00022288F /* HomeBotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBotCell.swift; sourceTree = "<group>"; };
+		1A2D987020F79AD00022288F /* HomeBotCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeBotCell.xib; sourceTree = "<group>"; };
+		1A2D987420F7A23D0022288F /* HomeAccuityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAccuityCell.swift; sourceTree = "<group>"; };
+		1A2D987520F7A23D0022288F /* HomeAccuityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeAccuityCell.xib; sourceTree = "<group>"; };
+		1A2D987920F7AF700022288F /* HomeDocumentsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDocumentsCell.swift; sourceTree = "<group>"; };
+		1A2D987A20F7AF700022288F /* HomeDocumentsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeDocumentsCell.xib; sourceTree = "<group>"; };
+		1A2D987D20F88DA80022288F /* HomeDocumentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDocumentCollectionViewCell.swift; sourceTree = "<group>"; };
+		1A2D987E20F88DA80022288F /* HomeDocumentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeDocumentCollectionViewCell.xib; sourceTree = "<group>"; };
+		1ABAADF620FC9AEA0098B22B /* BookmarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		1ABAADF720FC9AEA0098B22B /* PdfSearchResultsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfSearchResultsCell.swift; sourceTree = "<group>"; };
+		1ABAADF820FC9AEA0098B22B /* PdfReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfReaderViewController.swift; sourceTree = "<group>"; };
+		1ABAADF920FC9AEA0098B22B /* PdfSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfSearchViewController.swift; sourceTree = "<group>"; };
+		1ABAADFA20FC9AEA0098B22B /* ThumbnailGridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailGridCell.swift; sourceTree = "<group>"; };
+		1ABAADFB20FC9AEA0098B22B /* SearchResultsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultsCell.xib; sourceTree = "<group>"; };
+		1ABAADFC20FC9AEA0098B22B /* PdfReader.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PdfReader.storyboard; sourceTree = "<group>"; };
+		1ABAADFD20FC9AEA0098B22B /* ThumbnailGridCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThumbnailGridCell.xib; sourceTree = "<group>"; };
+		1ABAADFE20FC9AEA0098B22B /* OutlineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutlineCell.swift; sourceTree = "<group>"; };
+		1ABAADFF20FC9AEA0098B22B /* iconPdfReader.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = iconPdfReader.xcassets; sourceTree = "<group>"; };
+		1ABAAE0020FC9AEA0098B22B /* ThumbnailGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailGridViewController.swift; sourceTree = "<group>"; };
+		1ABAAE0120FC9AEA0098B22B /* OutlineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutlineViewController.swift; sourceTree = "<group>"; };
+		1ABAAE0220FC9AEA0098B22B /* ActionMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionMenuViewController.swift; sourceTree = "<group>"; };
+		1ABAAE0320FC9AEA0098B22B /* AppearanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceViewController.swift; sourceTree = "<group>"; };
+		1ABAAE1420FCC7F00098B22B /* PopupInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupInfoViewController.swift; sourceTree = "<group>"; };
+		1ABAAE1520FCC7F00098B22B /* PopupInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupInfoViewController.xib; sourceTree = "<group>"; };
+		1ABAAE1820FCC9510098B22B /* PopupBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupBaseViewController.swift; sourceTree = "<group>"; };
+		1ABAAE1E20FE16D60098B22B /* PatientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsViewController.swift; sourceTree = "<group>"; };
+		1ABAAE2020FE17050098B22B /* Patients.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Patients.storyboard; sourceTree = "<group>"; };
 		1C9F21C47809DA59B38CBCBC /* Pods-Santhera.inhouse.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Santhera.inhouse.xcconfig"; path = "Pods/Target Support Files/Pods-Santhera/Pods-Santhera.inhouse.xcconfig"; sourceTree = "<group>"; };
 		274D09A02099F29000765337 /* Santhera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Santhera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		274D09A32099F29000765337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -233,7 +315,9 @@
 		1A2D984220F4AB4D0022288F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EA52281D20BFF0C000752C29 /* HomeViewController.swift */,
+				1ABAAE1D20FE16BD0098B22B /* Home */,
+				1ABAAE1C20FE16B50098B22B /* Patients */,
+				1ABAAE1B20FCE1290098B22B /* popupInfo */,
 			);
 			name = Controllers;
 			path = Controller;
@@ -242,6 +326,8 @@
 		1A2D984320F4AF9F0022288F /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				1A2D984E20F7405A0022288F /* documents */,
+				1A2D984C20F7403F0022288F /* documents.json */,
 				EA52282520BFF85B00752C29 /* Localizable.strings */,
 				274D09AA2099F29200765337 /* Assets.xcassets */,
 			);
@@ -260,6 +346,9 @@
 		1A2D984520F4AFCA0022288F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1A2D985920F744B30022288F /* DataManager.swift */,
+				1A2D985720F744A50022288F /* Document.swift */,
+				1A2D986C20F78D620022288F /* Patient.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -267,6 +356,8 @@
 		1A2D984620F4B1250022288F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1ABAAE1320FCC7A30098B22B /* Popup */,
+				1ABAADF520FC9AEA0098B22B /* PdfReader */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -276,6 +367,7 @@
 			children = (
 				274D09AC2099F29200765337 /* LaunchScreen.storyboard */,
 				274D09A72099F29000765337 /* Main.storyboard */,
+				1ABAAE2020FE17050098B22B /* Patients.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -283,8 +375,134 @@
 		1A2D984820F4B20D0022288F /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
+				1A2D986320F785400022288F /* Views */,
+				1A2D985F20F780210022288F /* Cells */,
 			);
 			path = Xibs;
+			sourceTree = "<group>";
+		};
+		1A2D984E20F7405A0022288F /* documents */ = {
+			isa = PBXGroup;
+			children = (
+				1A2D985D20F77BC40022288F /* pdf_thumb.png */,
+				1A2D985520F743970022288F /* image_1.jpg */,
+				1A2D985320F742EA0022288F /* pdf_3.pdf */,
+				1A2D984F20F742BE0022288F /* pdf_2.pdf */,
+				1A2D985020F742BE0022288F /* pdf_1.pdf */,
+			);
+			path = documents;
+			sourceTree = "<group>";
+		};
+		1A2D985F20F780210022288F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1A2D987320F7A14E0022288F /* home */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1A2D986320F785400022288F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1A2D986E20F79A4B0022288F /* HomeRecentsPatients */ = {
+			isa = PBXGroup;
+			children = (
+				1A2D986420F7860B0022288F /* HomePatientRecentCell.swift */,
+				1A2D986520F7860B0022288F /* HomePatientRecentCell.xib */,
+				1A2D986820F78B2F0022288F /* HomePatientCollectionViewCell.swift */,
+				1A2D986920F78B2F0022288F /* HomePatientCollectionViewCell.xib */,
+			);
+			path = HomeRecentsPatients;
+			sourceTree = "<group>";
+		};
+		1A2D987320F7A14E0022288F /* home */ = {
+			isa = PBXGroup;
+			children = (
+				1A2D987820F7AF0E0022288F /* HomeDocuments */,
+				1A2D986E20F79A4B0022288F /* HomeRecentsPatients */,
+				1A2D986F20F79AD00022288F /* HomeBotCell.swift */,
+				1A2D987020F79AD00022288F /* HomeBotCell.xib */,
+				1A2D987420F7A23D0022288F /* HomeAccuityCell.swift */,
+				1A2D987520F7A23D0022288F /* HomeAccuityCell.xib */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		1A2D987820F7AF0E0022288F /* HomeDocuments */ = {
+			isa = PBXGroup;
+			children = (
+				1A2D987920F7AF700022288F /* HomeDocumentsCell.swift */,
+				1A2D987A20F7AF700022288F /* HomeDocumentsCell.xib */,
+				1A2D987D20F88DA80022288F /* HomeDocumentCollectionViewCell.swift */,
+				1A2D987E20F88DA80022288F /* HomeDocumentCollectionViewCell.xib */,
+			);
+			path = HomeDocuments;
+			sourceTree = "<group>";
+		};
+		1ABAADF520FC9AEA0098B22B /* PdfReader */ = {
+			isa = PBXGroup;
+			children = (
+				1ABAADFC20FC9AEA0098B22B /* PdfReader.storyboard */,
+				1ABAADF620FC9AEA0098B22B /* BookmarkViewController.swift */,
+				1ABAADF720FC9AEA0098B22B /* PdfSearchResultsCell.swift */,
+				1ABAADF820FC9AEA0098B22B /* PdfReaderViewController.swift */,
+				1ABAADF920FC9AEA0098B22B /* PdfSearchViewController.swift */,
+				1ABAADFA20FC9AEA0098B22B /* ThumbnailGridCell.swift */,
+				1ABAADFB20FC9AEA0098B22B /* SearchResultsCell.xib */,
+				1ABAADFD20FC9AEA0098B22B /* ThumbnailGridCell.xib */,
+				1ABAADFE20FC9AEA0098B22B /* OutlineCell.swift */,
+				1ABAADFF20FC9AEA0098B22B /* iconPdfReader.xcassets */,
+				1ABAAE0020FC9AEA0098B22B /* ThumbnailGridViewController.swift */,
+				1ABAAE0120FC9AEA0098B22B /* OutlineViewController.swift */,
+				1ABAAE0220FC9AEA0098B22B /* ActionMenuViewController.swift */,
+				1ABAAE0320FC9AEA0098B22B /* AppearanceViewController.swift */,
+			);
+			path = PdfReader;
+			sourceTree = "<group>";
+		};
+		1ABAAE1320FCC7A30098B22B /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				1ABAAE1A20FCCF5D0098B22B /* base */,
+			);
+			path = Popup;
+			sourceTree = "<group>";
+		};
+		1ABAAE1A20FCCF5D0098B22B /* base */ = {
+			isa = PBXGroup;
+			children = (
+				1ABAAE1820FCC9510098B22B /* PopupBaseViewController.swift */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		1ABAAE1B20FCE1290098B22B /* popupInfo */ = {
+			isa = PBXGroup;
+			children = (
+				1ABAAE1420FCC7F00098B22B /* PopupInfoViewController.swift */,
+				1ABAAE1520FCC7F00098B22B /* PopupInfoViewController.xib */,
+			);
+			path = popupInfo;
+			sourceTree = "<group>";
+		};
+		1ABAAE1C20FE16B50098B22B /* Patients */ = {
+			isa = PBXGroup;
+			children = (
+				1ABAAE1E20FE16D60098B22B /* PatientsViewController.swift */,
+			);
+			path = Patients;
+			sourceTree = "<group>";
+		};
+		1ABAAE1D20FE16BD0098B22B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EA52281D20BFF0C000752C29 /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		274D09972099F29000765337 = {
@@ -406,6 +624,7 @@
 		EAA5AA5320C1708F0020464C /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				1A2D985B20F757DE0022288F /* UIColor+Additions.swift */,
 				EAA5AA5420C1708F0020464C /* SHRightImageButton.swift */,
 				EAA5AA5520C1708F0020464C /* SHUINavigationBarExtension.swift */,
 				EAA5AA5620C1708F0020464C /* SHUIFontExtension.swift */,
@@ -491,6 +710,7 @@
 				274D099E2099F29000765337 /* Resources */,
 				2738F51F20AC1714004774AF /* ShellScript */,
 				1A2D984920F4B2BD0022288F /* Warning Script */,
+				6EB4D90AB2C57D408610B486 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -589,12 +809,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ABAAE0A20FC9AEB0098B22B /* PdfReader.storyboard in Resources */,
 				EA52282220BFF47B00752C29 /* .gitignore in Resources */,
+				1ABAAE2120FE17050098B22B /* Patients.storyboard in Resources */,
+				1A2D984D20F7403F0022288F /* documents.json in Resources */,
+				1A2D987C20F7AF700022288F /* HomeDocumentsCell.xib in Resources */,
+				1ABAAE0B20FC9AEB0098B22B /* ThumbnailGridCell.xib in Resources */,
+				1A2D985620F743970022288F /* image_1.jpg in Resources */,
 				EA52282720BFF85B00752C29 /* Localizable.strings in Resources */,
+				1ABAAE1720FCC7F00098B22B /* PopupInfoViewController.xib in Resources */,
 				274D09AE2099F29200765337 /* LaunchScreen.storyboard in Resources */,
+				1A2D986720F7860B0022288F /* HomePatientRecentCell.xib in Resources */,
+				1A2D985120F742BF0022288F /* pdf_2.pdf in Resources */,
+				1A2D985220F742BF0022288F /* pdf_1.pdf in Resources */,
 				274D09AB2099F29200765337 /* Assets.xcassets in Resources */,
+				1ABAAE0D20FC9AEB0098B22B /* iconPdfReader.xcassets in Resources */,
+				1A2D987720F7A23D0022288F /* HomeAccuityCell.xib in Resources */,
 				EA52282020BFF2EB00752C29 /* fastlane in Resources */,
+				1A2D987220F79AD00022288F /* HomeBotCell.xib in Resources */,
+				1A2D985E20F77BC40022288F /* pdf_thumb.png in Resources */,
+				1ABAAE0920FC9AEB0098B22B /* SearchResultsCell.xib in Resources */,
 				274D09A92099F29000765337 /* Main.storyboard in Resources */,
+				1A2D985420F742EA0022288F /* pdf_3.pdf in Resources */,
+				1A2D988020F88DA80022288F /* HomeDocumentCollectionViewCell.xib in Resources */,
+				1A2D986B20F78B2F0022288F /* HomePatientCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,6 +898,28 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" f177a7b6420cda3a7516673e502392fec8c60040 cc5e82acbc97173d884018a4933227d9773f0f213aa2f8d424a0eb6968de32e6\n";
 		};
+		6EB4D90AB2C57D408610B486 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Santhera/Pods-Santhera-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AppImageViewer/AppImageViewer.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppImageViewer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Santhera/Pods-Santhera-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7FE72B5B8399659589747712 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -707,36 +967,54 @@
 				EAA5AABB20C1708F0020464C /* SHComparisonHelper.swift in Sources */,
 				EAA5AA9D20C1708F0020464C /* SHUIColorExtension.swift in Sources */,
 				EAA5AA9F20C1708F0020464C /* SHSeparatorView.swift in Sources */,
+				1A2D985820F744A50022288F /* Document.swift in Sources */,
+				1A2D985C20F757DE0022288F /* UIColor+Additions.swift in Sources */,
+				1ABAAE1920FCC9510098B22B /* PopupBaseViewController.swift in Sources */,
 				EAA5AABD20C1708F0020464C /* Debounce+Throttle.swift in Sources */,
 				EAA5AAA520C1708F0020464C /* SHUIScreenExtension.swift in Sources */,
 				EAA5AA9B20C1708F0020464C /* SHNoBackTitleViewController.swift in Sources */,
+				1ABAAE0420FC9AEB0098B22B /* BookmarkViewController.swift in Sources */,
 				EAA5AA8D20C1708F0020464C /* SHCreditCardValidator.swift in Sources */,
 				EAA5AAAF20C1708F0020464C /* SHNSTimeIntervalExtension.swift in Sources */,
 				EAA5AAC220C1708F0020464C /* SHManagedObjectContext+CascadeSave.swift in Sources */,
+				1ABAAE0820FC9AEB0098B22B /* ThumbnailGridCell.swift in Sources */,
 				EAA5AAA320C1708F0020464C /* SHUIImageExtension.swift in Sources */,
 				EAA5AA9520C1708F0020464C /* SHUIAlertController.swift in Sources */,
+				1A2D987F20F88DA80022288F /* HomeDocumentCollectionViewCell.swift in Sources */,
 				EAA5AAAD20C1708F0020464C /* SHDateFormatterProximity.swift in Sources */,
 				EAA5AAA120C1708F0020464C /* SHCircleView.swift in Sources */,
 				EA52281E20BFF0C000752C29 /* HomeViewController.swift in Sources */,
+				1A2D987120F79AD00022288F /* HomeBotCell.swift in Sources */,
 				EAA5AAB020C1708F0020464C /* NumbersConvertion.swift in Sources */,
+				1A2D985A20F744B30022288F /* DataManager.swift in Sources */,
 				EAA5AA8F20C1708F0020464C /* SHKeyboardViewController.swift in Sources */,
+				1A2D986A20F78B2F0022288F /* HomePatientCollectionViewCell.swift in Sources */,
+				1A2D986620F7860B0022288F /* HomePatientRecentCell.swift in Sources */,
 				EAA5AAA720C1708F0020464C /* SHUIButtonExtension.swift in Sources */,
 				EAA5AA9120C1708F0020464C /* SHRightImageButton.swift in Sources */,
 				EAA5AAA620C1708F0020464C /* SHNavigationControllerExtention.swift in Sources */,
 				EAA5AA8C20C1708F0020464C /* SHSKProductExtension.swift in Sources */,
+				1ABAAE1020FC9AEB0098B22B /* ActionMenuViewController.swift in Sources */,
 				EAA5AA9220C1708F0020464C /* SHUINavigationBarExtension.swift in Sources */,
 				EAA5AAB520C1708F0020464C /* SHNumberExtension.swift in Sources */,
 				EAA5AAC320C1708F0020464C /* SHNamedEntity.swift in Sources */,
+				1A2D986D20F78D620022288F /* Patient.swift in Sources */,
 				EAA5AABA20C1708F0020464C /* SHComparisonHelpers.swift in Sources */,
 				EAA5AAA420C1708F0020464C /* SHUIViewExtension.swift in Sources */,
 				EAA5AAB920C1708F0020464C /* SHNSDataExtension.swift in Sources */,
+				1ABAAE0F20FC9AEB0098B22B /* OutlineViewController.swift in Sources */,
+				1ABAAE0E20FC9AEB0098B22B /* ThumbnailGridViewController.swift in Sources */,
 				EAA5AAAE20C1708F0020464C /* SHNSDateExtension.swift in Sources */,
+				1ABAAE0620FC9AEB0098B22B /* PdfReaderViewController.swift in Sources */,
 				EAA5AA9A20C1708F0020464C /* SHIBInspectableExtension.swift in Sources */,
+				1ABAAE0720FC9AEB0098B22B /* PdfSearchViewController.swift in Sources */,
 				EAA5AA9C20C1708F0020464C /* SHUIScrollViewExtension.swift in Sources */,
 				EAA5AAAB20C1708F0020464C /* SHTextField.swift in Sources */,
 				EAA5AA9020C1708F0020464C /* SHLocalizationHelper.swift in Sources */,
 				EAA5AAB720C1708F0020464C /* SHOperation.swift in Sources */,
 				EAA5AAC020C1708F0020464C /* SHMulticastDelegate.swift in Sources */,
+				1A2D987B20F7AF700022288F /* HomeDocumentsCell.swift in Sources */,
+				1ABAAE1F20FE16D60098B22B /* PatientsViewController.swift in Sources */,
 				EAA5AA9320C1708F0020464C /* SHUIFontExtension.swift in Sources */,
 				EAA5AAB820C1708F0020464C /* SHDegreesToRadiansExtension.swift in Sources */,
 				EAA5AAB620C1708F0020464C /* SHDeviceType.swift in Sources */,
@@ -744,19 +1022,24 @@
 				EAA5AABF20C1708F0020464C /* SHNSTimerExtension.swift in Sources */,
 				EAA5AAA920C1708F0020464C /* SHUITextFieldExtension.swift in Sources */,
 				EAA5AAAA20C1708F0020464C /* SHGif.swift in Sources */,
+				1ABAAE0C20FC9AEB0098B22B /* OutlineCell.swift in Sources */,
 				EAA5AA9720C1708F0020464C /* SHStatusBarNavigationController.swift in Sources */,
+				1A2D987620F7A23D0022288F /* HomeAccuityCell.swift in Sources */,
 				EAA5AABC20C1708F0020464C /* URLRequestExtension.swift in Sources */,
 				EAA5AAA220C1708F0020464C /* SHPopupPresentationController.swift in Sources */,
+				1ABAAE1120FC9AEB0098B22B /* AppearanceViewController.swift in Sources */,
 				EAA5AA8E20C1708F0020464C /* SHNotificationExtension.swift in Sources */,
 				EAA5AAB320C1708F0020464C /* SHIntExtension.swift in Sources */,
 				EAA5AA9920C1708F0020464C /* SHCALayerExtension.swift in Sources */,
 				EAA5AAAC20C1708F0020464C /* SHNSDateFormatterExtension.swift in Sources */,
 				EAA5AABE20C1708F0020464C /* SHNSObjectExtension.swift in Sources */,
 				EAA5AA9820C1708F0020464C /* SHDatePickerController.swift in Sources */,
+				1ABAAE1620FCC7F00098B22B /* PopupInfoViewController.swift in Sources */,
 				EAA5AA9E20C1708F0020464C /* SHAttributedLabel.swift in Sources */,
 				EAA5AA9620C1708F0020464C /* SHPagedScrollView.swift in Sources */,
 				EAA5AA9420C1708F0020464C /* SHCommonInitView.swift in Sources */,
 				EAA5AAA020C1708F0020464C /* SHUIViewControllerExtension.swift in Sources */,
+				1ABAAE0520FC9AEB0098B22B /* PdfSearchResultsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -962,7 +1245,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wopata.santhera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "29e06489-3173-45a2-b043-85cece555ace";
+				PROVISIONING_PROFILE = "2afbfd7a-9a89-48f8-959e-337dcbb5af5e";
 				PROVISIONING_PROFILE_SPECIFIER = "santhera-dev";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
