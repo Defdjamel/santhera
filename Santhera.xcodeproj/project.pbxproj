@@ -384,7 +384,6 @@
 			isa = PBXGroup;
 			children = (
 				1ABAAE3B20FF7DD30098B22B /* Views */,
-				1ABAADF520FC9AEA0098B22B /* PdfReader */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -637,6 +636,14 @@
 			path = Popup;
 			sourceTree = "<group>";
 		};
+		1ABAAE4C2100BF3F0098B22B /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1ABAADF520FC9AEA0098B22B /* PdfReader */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
 		274D09972099F29000765337 = {
 			isa = PBXGroup;
 			children = (
@@ -670,8 +677,9 @@
 				1A2D984520F4AFCA0022288F /* Models */,
 				EAA5AA4C20C1708F0020464C /* Helpers */,
 				1A2D984320F4AF9F0022288F /* Ressources */,
-				274D09AF2099F29200765337 /* Info.plist */,
+				1ABAAE4C2100BF3F0098B22B /* Libraries */,
 				274D09A32099F29000765337 /* AppDelegate.swift */,
+				274D09AF2099F29200765337 /* Info.plist */,
 			);
 			path = Santhera;
 			sourceTree = "<group>";

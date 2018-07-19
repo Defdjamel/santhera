@@ -107,7 +107,7 @@ extension HomeViewController: UITableViewDataSource {
 }
 //MARK: - HomeDocumentCellDelegate
 extension HomeViewController : HomeDocumentCellDelegate {
-    func HomeDocumentCellDelegate_DidSelectDocument(document: Document, cell: UICollectionViewCell){
+    func homeDocumentsCell(_ homeDocumentsCell: HomeDocumentsCell, DidSelectCell cell: UICollectionViewCell, document: Document) {
         if document.type == DocumentType.pdf.rawValue {
             openPDF(document: document)
         }
