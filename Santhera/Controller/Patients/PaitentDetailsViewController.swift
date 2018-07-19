@@ -12,7 +12,8 @@ class PaitentDetailsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private let PatientsListTestCellId = "PatientsListTestCell"
-       private let PatientDetailsHeaderCellId = "PatientDetailsHeaderCell"
+    private let PatientDetailsHeaderCellId = "PatientDetailsHeaderCell"
+    private let PatientResumeTestCellId = "PatientResumeTestCell"
     
     var currentPatient : Patient!
 
@@ -26,6 +27,8 @@ class PaitentDetailsViewController: UIViewController {
         self.title = L("patient_details_title")
         self.tableView.register(UINib.init(nibName: PatientsListTestCellId, bundle: Bundle.main), forCellReuseIdentifier: PatientsListTestCellId)
         self.tableView.register(UINib.init(nibName: PatientDetailsHeaderCellId, bundle: Bundle.main), forCellReuseIdentifier: PatientDetailsHeaderCellId)
+        self.tableView.register(UINib.init(nibName: PatientResumeTestCellId, bundle: Bundle.main), forCellReuseIdentifier: PatientResumeTestCellId)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,22 +42,52 @@ extension PaitentDetailsViewController: UITableViewDataSource, UITableViewDelega
    
     func numberOfSections(in tableView: UITableView) -> Int {
         
-        return 1
+        return 5
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        switch section {
+        case 3:
+            return  currentPatient.testsLeftEye.count > 0 ? 1 : 0
+        case 4:
+            return  currentPatient.testsRightEye.count > 0 ? 1 : 0
+        default:
+            return 1
+        }
+        
+        
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
+        if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: PatientDetailsHeaderCellId, for: indexPath) as! PatientDetailsHeaderCell
             // Configure the cell...
             cell.setObj(obj: currentPatient)
             return cell
         }
-        if indexPath.row == 1 {
+        if indexPath.section == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: PatientResumeTestCellId, for: indexPath) as! PatientResumeTestCell
+            // Configure the cell...
+            cell.setObj(obj: currentPatient, type: .eye)
+            return cell
+        }
+        if indexPath.section == 2 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: PatientResumeTestCellId, for: indexPath) as! PatientResumeTestCell
+            // Configure the cell...
+            cell.setObj(obj: currentPatient, type: .firstTest)
+           
+            return cell
+        }
+        if indexPath.section == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: PatientsListTestCellId, for: indexPath) as! PatientsListTestCell
             // Configure the cell...
-            
+            cell.setTests(tests: currentPatient.testsRightEye)
+            cell.lblTitle.text = L("patient_test_eye_right")
+            return cell
+        }
+        if indexPath.section == 4 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: PatientsListTestCellId, for: indexPath) as! PatientsListTestCell
+            // Configure the cell...
+             cell.lblTitle.text = L("patient_test_eye_left")
+             cell.setTests(tests: currentPatient.testsLeftEye)
             return cell
         }
         return UITableViewCell.init()
@@ -62,10 +95,16 @@ extension PaitentDetailsViewController: UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.row {
+        switch indexPath.section {
         case 0:
             return PatientDetailsHeaderCell.getHeight()
         case 1:
+            return PatientResumeTestCell.getHeight()
+        case 2:
+            return PatientResumeTestCell.getHeight()
+        case 3:
+            return PatientsListTestCell.getHeight()
+        case 4:
             return PatientsListTestCell.getHeight()
        
         default:

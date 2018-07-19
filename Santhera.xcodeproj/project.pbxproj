@@ -56,6 +56,9 @@
 		1ABAAE2F20FF41470098B22B /* PatientResumeTestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAAE2D20FF41470098B22B /* PatientResumeTestCell.swift */; };
 		1ABAAE3020FF41470098B22B /* PatientResumeTestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABAAE2E20FF41470098B22B /* PatientResumeTestCell.xib */; };
 		1ABAAE3620FF44240098B22B /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAAE3520FF44240098B22B /* Test.swift */; };
+		1ABAAE3D20FF83C30098B22B /* TestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAAE3C20FF83C30098B22B /* TestManager.swift */; };
+		1ABAAE4021007E130098B22B /* PatientTestResumeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAAE3E21007E130098B22B /* PatientTestResumeCollectionViewCell.swift */; };
+		1ABAAE4121007E130098B22B /* PatientTestResumeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABAAE3F21007E130098B22B /* PatientTestResumeCollectionViewCell.xib */; };
 		274D09A42099F29000765337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274D09A32099F29000765337 /* AppDelegate.swift */; };
 		274D09A92099F29000765337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274D09A72099F29000765337 /* Main.storyboard */; };
 		274D09AB2099F29200765337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 274D09AA2099F29200765337 /* Assets.xcassets */; };
@@ -204,6 +207,9 @@
 		1ABAAE2D20FF41470098B22B /* PatientResumeTestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientResumeTestCell.swift; sourceTree = "<group>"; };
 		1ABAAE2E20FF41470098B22B /* PatientResumeTestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientResumeTestCell.xib; sourceTree = "<group>"; };
 		1ABAAE3520FF44240098B22B /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		1ABAAE3C20FF83C30098B22B /* TestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestManager.swift; sourceTree = "<group>"; };
+		1ABAAE3E21007E130098B22B /* PatientTestResumeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientTestResumeCollectionViewCell.swift; sourceTree = "<group>"; };
+		1ABAAE3F21007E130098B22B /* PatientTestResumeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientTestResumeCollectionViewCell.xib; sourceTree = "<group>"; };
 		1C9F21C47809DA59B38CBCBC /* Pods-Santhera.inhouse.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Santhera.inhouse.xcconfig"; path = "Pods/Target Support Files/Pods-Santhera/Pods-Santhera.inhouse.xcconfig"; sourceTree = "<group>"; };
 		274D09A02099F29000765337 /* Santhera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Santhera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		274D09A32099F29000765337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -366,6 +372,7 @@
 				1A2D985720F744A50022288F /* Document.swift */,
 				1A2D986C20F78D620022288F /* Patient.swift */,
 				1ABAAE3520FF44240098B22B /* Test.swift */,
+				1ABAAE3C20FF83C30098B22B /* TestManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -373,6 +380,7 @@
 		1A2D984620F4B1250022288F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1ABAAE3B20FF7DD30098B22B /* Views */,
 				1ABAAE1320FCC7A30098B22B /* Popup */,
 				1ABAADF520FC9AEA0098B22B /* PdfReader */,
 			);
@@ -414,7 +422,7 @@
 			isa = PBXGroup;
 			children = (
 				1ABAAE2420FF2D920098B22B /* PatientsDetails */,
-				1A2D987320F7A14E0022288F /* home */,
+				1A2D987320F7A14E0022288F /* Home */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -437,7 +445,7 @@
 			path = HomeRecentsPatients;
 			sourceTree = "<group>";
 		};
-		1A2D987320F7A14E0022288F /* home */ = {
+		1A2D987320F7A14E0022288F /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				1A2D987820F7AF0E0022288F /* HomeDocuments */,
@@ -447,7 +455,7 @@
 				1A2D987420F7A23D0022288F /* HomeAccuityCell.swift */,
 				1A2D987520F7A23D0022288F /* HomeAccuityCell.xib */,
 			);
-			path = home;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		1A2D987820F7AF0E0022288F /* HomeDocuments */ = {
@@ -464,20 +472,9 @@
 		1ABAADF520FC9AEA0098B22B /* PdfReader */ = {
 			isa = PBXGroup;
 			children = (
-				1ABAADFC20FC9AEA0098B22B /* PdfReader.storyboard */,
-				1ABAADF620FC9AEA0098B22B /* BookmarkViewController.swift */,
-				1ABAADF720FC9AEA0098B22B /* PdfSearchResultsCell.swift */,
-				1ABAADF820FC9AEA0098B22B /* PdfReaderViewController.swift */,
-				1ABAADF920FC9AEA0098B22B /* PdfSearchViewController.swift */,
-				1ABAADFA20FC9AEA0098B22B /* ThumbnailGridCell.swift */,
-				1ABAADFB20FC9AEA0098B22B /* SearchResultsCell.xib */,
-				1ABAADFD20FC9AEA0098B22B /* ThumbnailGridCell.xib */,
-				1ABAADFE20FC9AEA0098B22B /* OutlineCell.swift */,
-				1ABAADFF20FC9AEA0098B22B /* iconPdfReader.xcassets */,
-				1ABAAE0020FC9AEA0098B22B /* ThumbnailGridViewController.swift */,
-				1ABAAE0120FC9AEA0098B22B /* OutlineViewController.swift */,
-				1ABAAE0220FC9AEA0098B22B /* ActionMenuViewController.swift */,
-				1ABAAE0320FC9AEA0098B22B /* AppearanceViewController.swift */,
+				1ABAAE3920FF7D8B0098B22B /* Controllers */,
+				1ABAAE3820FF7D320098B22B /* Ressources */,
+				1ABAAE3720FF7D190098B22B /* Views */,
 			);
 			path = PdfReader;
 			sourceTree = "<group>";
@@ -485,17 +482,17 @@
 		1ABAAE1320FCC7A30098B22B /* Popup */ = {
 			isa = PBXGroup;
 			children = (
-				1ABAAE1A20FCCF5D0098B22B /* base */,
+				1ABAAE1A20FCCF5D0098B22B /* Base */,
 			);
 			path = Popup;
 			sourceTree = "<group>";
 		};
-		1ABAAE1A20FCCF5D0098B22B /* base */ = {
+		1ABAAE1A20FCCF5D0098B22B /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				1ABAAE1820FCC9510098B22B /* PopupBaseViewController.swift */,
 			);
-			path = base;
+			path = Base;
 			sourceTree = "<group>";
 		};
 		1ABAAE1B20FCE1290098B22B /* popupInfo */ = {
@@ -533,8 +530,60 @@
 				1ABAAE2A20FF3AC80098B22B /* PatientDetailsHeaderCell.xib */,
 				1ABAAE2D20FF41470098B22B /* PatientResumeTestCell.swift */,
 				1ABAAE2E20FF41470098B22B /* PatientResumeTestCell.xib */,
+				1ABAAE3E21007E130098B22B /* PatientTestResumeCollectionViewCell.swift */,
+				1ABAAE3F21007E130098B22B /* PatientTestResumeCollectionViewCell.xib */,
 			);
 			path = PatientsDetails;
+			sourceTree = "<group>";
+		};
+		1ABAAE3720FF7D190098B22B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1ABAAE3A20FF7DC00098B22B /* Xibs */,
+				1ABAADF720FC9AEA0098B22B /* PdfSearchResultsCell.swift */,
+				1ABAADFA20FC9AEA0098B22B /* ThumbnailGridCell.swift */,
+				1ABAADFE20FC9AEA0098B22B /* OutlineCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1ABAAE3820FF7D320098B22B /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				1ABAADFF20FC9AEA0098B22B /* iconPdfReader.xcassets */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		1ABAAE3920FF7D8B0098B22B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1ABAAE0120FC9AEA0098B22B /* OutlineViewController.swift */,
+				1ABAAE0220FC9AEA0098B22B /* ActionMenuViewController.swift */,
+				1ABAAE0320FC9AEA0098B22B /* AppearanceViewController.swift */,
+				1ABAAE0020FC9AEA0098B22B /* ThumbnailGridViewController.swift */,
+				1ABAADF620FC9AEA0098B22B /* BookmarkViewController.swift */,
+				1ABAADF820FC9AEA0098B22B /* PdfReaderViewController.swift */,
+				1ABAADF920FC9AEA0098B22B /* PdfSearchViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1ABAAE3A20FF7DC00098B22B /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				1ABAADFB20FC9AEA0098B22B /* SearchResultsCell.xib */,
+				1ABAADFD20FC9AEA0098B22B /* ThumbnailGridCell.xib */,
+				1ABAADFC20FC9AEA0098B22B /* PdfReader.storyboard */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
+		1ABAAE3B20FF7DD30098B22B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		274D09972099F29000765337 = {
@@ -858,6 +907,7 @@
 				274D09AB2099F29200765337 /* Assets.xcassets in Resources */,
 				1ABAAE0D20FC9AEB0098B22B /* iconPdfReader.xcassets in Resources */,
 				1A2D987720F7A23D0022288F /* HomeAccuityCell.xib in Resources */,
+				1ABAAE4121007E130098B22B /* PatientTestResumeCollectionViewCell.xib in Resources */,
 				EA52282020BFF2EB00752C29 /* fastlane in Resources */,
 				1A2D987220F79AD00022288F /* HomeBotCell.xib in Resources */,
 				1A2D985E20F77BC40022288F /* pdf_thumb.png in Resources */,
@@ -1031,6 +1081,7 @@
 				EAA5AAA620C1708F0020464C /* SHNavigationControllerExtention.swift in Sources */,
 				EAA5AA8C20C1708F0020464C /* SHSKProductExtension.swift in Sources */,
 				1ABAAE1020FC9AEB0098B22B /* ActionMenuViewController.swift in Sources */,
+				1ABAAE4021007E130098B22B /* PatientTestResumeCollectionViewCell.swift in Sources */,
 				EAA5AA9220C1708F0020464C /* SHUINavigationBarExtension.swift in Sources */,
 				EAA5AAB520C1708F0020464C /* SHNumberExtension.swift in Sources */,
 				EAA5AAC320C1708F0020464C /* SHNamedEntity.swift in Sources */,
@@ -1064,6 +1115,7 @@
 				EAA5AA9720C1708F0020464C /* SHStatusBarNavigationController.swift in Sources */,
 				1A2D987620F7A23D0022288F /* HomeAccuityCell.swift in Sources */,
 				EAA5AABC20C1708F0020464C /* URLRequestExtension.swift in Sources */,
+				1ABAAE3D20FF83C30098B22B /* TestManager.swift in Sources */,
 				EAA5AAA220C1708F0020464C /* SHPopupPresentationController.swift in Sources */,
 				1ABAAE1120FC9AEB0098B22B /* AppearanceViewController.swift in Sources */,
 				1ABAAE2720FF2F980098B22B /* PatientsListTestCell.swift in Sources */,

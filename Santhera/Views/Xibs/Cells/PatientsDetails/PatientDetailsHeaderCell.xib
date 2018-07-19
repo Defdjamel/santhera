@@ -20,6 +20,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="196.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHk-1B-X1C" userLabel="separator">
+                        <rect key="frame" x="0.0" y="195.5" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.13300000131130219" green="0.22699999809265137" blue="0.53299999237060547" alpha="0.15151696702453987" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="0Gp-b5-xja"/>
+                        </constraints>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djc-da-JwK">
                         <rect key="frame" x="20" y="20" width="280" height="156.5"/>
                         <subviews>
@@ -135,8 +142,11 @@
                 <constraints>
                     <constraint firstItem="djc-da-JwK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="2Ti-oe-eyM"/>
                     <constraint firstAttribute="trailing" secondItem="djc-da-JwK" secondAttribute="trailing" constant="20" id="5nV-LK-oCO"/>
+                    <constraint firstAttribute="bottom" secondItem="fHk-1B-X1C" secondAttribute="bottom" id="BAX-Y8-PM4"/>
                     <constraint firstAttribute="bottom" secondItem="djc-da-JwK" secondAttribute="bottom" constant="20" id="L3v-uL-gyW"/>
+                    <constraint firstAttribute="trailing" secondItem="fHk-1B-X1C" secondAttribute="trailing" id="TnI-8v-Rll"/>
                     <constraint firstItem="djc-da-JwK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="cod-4s-DTS"/>
+                    <constraint firstItem="fHk-1B-X1C" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fCe-d7-SQZ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

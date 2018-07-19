@@ -28,6 +28,7 @@ class PatientDetailsHeaderCell: UITableViewCell {
             self.lblName.text = "\(patient.firstname) \(patient.lastname)"
         }
     }
+    
     class func getHeight() -> CGFloat {
         return 180
     }

@@ -14,4 +14,22 @@ class Patient: Object {
     @objc dynamic var lastname = ""
    
 
+    var testsLeftEye: Array<Test> { // read-only properties are automatically ignored
+        let predicate =  NSPredicate(format: "isLeftEye = true ")
+        return Array(self.tests.filter(predicate))
+    }
+    var testsRightEye: Array<Test> { // read-only properties are automatically ignored
+        let predicate =  NSPredicate(format: "isLeftEye = false ")
+        return Array(self.tests.filter(predicate))
+    }
+    
+    func hasLeftEyeTest() -> Bool{
+        let predicate =  NSPredicate(format: "isLeftEye = true ")
+        return self.tests.filter(predicate).count > 0 ? true : false
+        
+    }
+    func hasRightEyeTest() -> Bool{
+        let predicate =  NSPredicate(format: "isLeftEye = false ")
+        return self.tests.filter(predicate).count > 0 ? true : false
+    }
 }
