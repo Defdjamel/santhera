@@ -19,7 +19,7 @@ class TestManager: NSObject {
             realm.beginWrite()
             realm.add(test)
             test.date =  Date().addingTimeInterval(TimeInterval(i * -60))
-            test.patient = DataManager.sharedInstance.getAllPatients().first
+            test.patient = PatientManager.sharedInstance.getAllPatients().first
             test.isLeftEye = (i % 2 == 0 ? true: false)
             try! realm.commitWrite()
         }

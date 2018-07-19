@@ -37,8 +37,13 @@ class PaitentDetailsViewController: UIViewController {
     }
     
 }
-
-extension PaitentDetailsViewController: UITableViewDataSource, UITableViewDelegate{
+//MARK: - UITableViewDelegate
+extension PaitentDetailsViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
+}
+//MARK: - UITableViewDataSource
+extension PaitentDetailsViewController: UITableViewDataSource {
    
     func numberOfSections(in tableView: UITableView) -> Int {
         
@@ -92,8 +97,7 @@ extension PaitentDetailsViewController: UITableViewDataSource, UITableViewDelega
         }
         return UITableViewCell.init()
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    }
+   
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:

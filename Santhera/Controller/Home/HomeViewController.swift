@@ -45,10 +45,13 @@ class HomeViewController: UIViewController {
         
     }
 }
-
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
- 
-    
+//MARK: - UITableViewDelegate
+extension HomeViewController:UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
+}
+//MARK: - UITableViewDataSource
+extension HomeViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
        
         return 1
@@ -60,7 +63,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: homePatientRecentCellId, for: indexPath) as! HomePatientRecentCell
             // Configure the cell...
-            cell.patients = DataManager.sharedInstance.getRecentPatients()
+            cell.patients = PatientManager.sharedInstance.getRecentPatients()
             cell.delegate = self
             return cell
         }
@@ -77,7 +80,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
         if indexPath.row == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: homeDocumentsCellId, for: indexPath) as! HomeDocumentsCell
             // Configure the cell...
-            cell.documents = DataManager.sharedInstance.getAllDocuments()
+            cell.documents = DocumentManager.sharedInstance.getAllDocuments()
             cell.delegate = self
             return cell
         }
@@ -85,9 +88,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
         return UITableViewCell.init()
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    }
-  
+   
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
@@ -104,7 +105,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
         }
     }
 }
-
+//MARK: - HomeDocumentCellDelegate
 extension HomeViewController : HomeDocumentCellDelegate {
     func HomeDocumentCellDelegate_DidSelectDocument(document: Document, cell: UICollectionViewCell){
         if document.type == DocumentType.pdf.rawValue {
@@ -138,6 +139,7 @@ extension HomeViewController : HomeDocumentCellDelegate {
         self.navigationController?.show(pdfReaderVC, sender: self)
     }
 }
+//MARK: - HomePatientRecentCellDelegate
 extension HomeViewController : HomePatientRecentCellDelegate {
     func HomePatientRecentCellDelegate_DidSelectMore() {
         self.performSegue(withIdentifier: "HomePatients", sender: self)
