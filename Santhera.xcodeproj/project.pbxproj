@@ -394,7 +394,7 @@
 		1A2D984620F4B1250022288F /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				1ABAAE3B20FF7DD30098B22B /* Views */,
+				1ABAAE3B20FF7DD30098B22B /* Cell */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -413,7 +413,6 @@
 			isa = PBXGroup;
 			children = (
 				1ABAAE462100894A0098B22B /* Controllers */,
-				1A2D986320F785400022288F /* Views */,
 				1A2D985F20F780210022288F /* Cells */,
 			);
 			path = Xibs;
@@ -438,13 +437,6 @@
 				1A2D987320F7A14E0022288F /* Home */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		1A2D986320F785400022288F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		1A2D986E20F79A4B0022288F /* HomeRecentsPatients */ = {
@@ -489,7 +481,7 @@
 		1ABAAE1320FCC7A30098B22B /* Popup */ = {
 			isa = PBXGroup;
 			children = (
-				1ABAAE1B20FCE1290098B22B /* popupInfo */,
+				1ABAAE1B20FCE1290098B22B /* PopupInfo */,
 				1ABAAE1A20FCCF5D0098B22B /* Base */,
 			);
 			path = Popup;
@@ -503,12 +495,12 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		1ABAAE1B20FCE1290098B22B /* popupInfo */ = {
+		1ABAAE1B20FCE1290098B22B /* PopupInfo */ = {
 			isa = PBXGroup;
 			children = (
 				1ABAAE1420FCC7F00098B22B /* PopupInfoViewController.swift */,
 			);
-			path = popupInfo;
+			path = PopupInfo;
 			sourceTree = "<group>";
 		};
 		1ABAAE1C20FE16B50098B22B /* Patients */ = {
@@ -582,13 +574,13 @@
 			path = Xibs;
 			sourceTree = "<group>";
 		};
-		1ABAAE3B20FF7DD30098B22B /* Views */ = {
+		1ABAAE3B20FF7DD30098B22B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				1ABAAE432100889F0098B22B /* Home */,
 				1ABAAE42210088110098B22B /* PatientDetails */,
 			);
-			path = Views;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		1ABAAE42210088110098B22B /* PatientDetails */ = {
