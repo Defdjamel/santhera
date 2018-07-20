@@ -141,8 +141,7 @@ extension HomeViewController : HomeDocumentCellDelegate {
 }
 //MARK: - HomePatientRecentCellDelegate
 extension HomeViewController : HomePatientRecentCellDelegate {
-    func HomePatientRecentCellDelegate_DidSelectMore() {
+    func HomePatientRecentCellDidSelectMore(_ homePatientRecentCell: HomePatientRecentCell) {
         self.performSegue(withIdentifier: "HomePatients", sender: self)
     }
-    
 }
