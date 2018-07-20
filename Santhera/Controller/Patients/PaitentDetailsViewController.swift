@@ -28,9 +28,22 @@ class PaitentDetailsViewController: UIViewController {
         self.tableView.register(UINib.init(nibName: PatientsListTestCellId, bundle: Bundle.main), forCellReuseIdentifier: PatientsListTestCellId)
         self.tableView.register(UINib.init(nibName: PatientDetailsHeaderCellId, bundle: Bundle.main), forCellReuseIdentifier: PatientDetailsHeaderCellId)
         self.tableView.register(UINib.init(nibName: PatientResumeTestCellId, bundle: Bundle.main), forCellReuseIdentifier: PatientResumeTestCellId)
-        
+        self.addRightButton()
     }
 
+    func addRightButton(){
+       let  menu_button_ = UIBarButtonItem(image: #imageLiteral(resourceName: "icSettings"),
+                                           style: UIBarButtonItemStyle.plain ,
+                                           target: self, action:  #selector(OnMenuClicked) )
+        menu_button_.tintColor = UIColor.cobalt
+       self.navigationItem.rightBarButtonItem =  menu_button_
+    }
+    
+    @objc func OnMenuClicked(){
+        let actionSheetCtrl =  JamActionSheetViewController()
+       
+        actionSheetCtrl.show(fromCtrl: self.navigationController!)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
