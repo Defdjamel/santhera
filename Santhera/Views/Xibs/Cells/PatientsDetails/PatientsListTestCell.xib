@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="229" id="KGk-i7-Jjw" customClass="PatientsListTestCell" customModule="Santhera" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="439" height="229"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="439" height="228.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JLO-O2-sFT" userLabel="containerHeaderLbl">
+                        <rect key="frame" x="20" y="0.0" width="399" height="47.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[patient_test_eye]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dz3-5H-rqu">
+                                <rect key="frame" x="0.0" y="10" width="205.5" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="23"/>
+                                <color key="textColor" name="cobalt"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="patient_test_eye"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQA-PB-bsO">
+                                <rect key="frame" x="298" y="9.5" width="101" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <state key="normal" title="[test_numbers]">
+                                    <color key="titleColor" name="windowsBlue"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="test_numbers"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="iQA-PB-bsO" secondAttribute="trailing" id="6XI-R7-7NN"/>
+                            <constraint firstItem="dz3-5H-rqu" firstAttribute="top" secondItem="JLO-O2-sFT" secondAttribute="top" constant="10" id="R9x-Mm-QHy"/>
+                            <constraint firstItem="dz3-5H-rqu" firstAttribute="leading" secondItem="JLO-O2-sFT" secondAttribute="leading" id="cZ3-se-dIU"/>
+                            <constraint firstItem="dz3-5H-rqu" firstAttribute="centerY" secondItem="JLO-O2-sFT" secondAttribute="centerY" id="gcK-Qk-XlJ"/>
+                            <constraint firstAttribute="height" constant="47.5" id="glt-W9-yix"/>
+                            <constraint firstItem="iQA-PB-bsO" firstAttribute="centerY" secondItem="JLO-O2-sFT" secondAttribute="centerY" id="kgs-nl-v11"/>
+                            <constraint firstAttribute="bottom" secondItem="dz3-5H-rqu" secondAttribute="bottom" constant="10" id="wyn-sM-XJf"/>
+                        </constraints>
+                    </view>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wrt-nO-ava">
+                        <rect key="frame" x="0.0" y="47.5" width="439" height="181"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mqs-4Z-B23">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layerMasksToBounds" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="dataSource" destination="KGk-i7-Jjw" id="i99-sG-OiB"/>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="eho-kU-M14"/>
+                        </connections>
+                    </collectionView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Goe-pa-Mys" userLabel="separator">
+                        <rect key="frame" x="0.0" y="227.5" width="439" height="1"/>
+                        <color key="backgroundColor" red="0.1330000013" green="0.22699999809999999" blue="0.53299999239999996" alpha="0.151516967" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="irI-EU-8js"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.97254902119999997" green="0.97647058959999999" blue="0.98039215800000001" alpha="1" colorSpace="deviceRGB"/>
+                <constraints>
+                    <constraint firstItem="JLO-O2-sFT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="6MI-JO-Wsk"/>
+                    <constraint firstItem="wrt-nO-ava" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="BPk-Rc-QWp"/>
+                    <constraint firstAttribute="trailing" secondItem="Goe-pa-Mys" secondAttribute="trailing" id="BTe-9j-b5o"/>
+                    <constraint firstAttribute="trailing" secondItem="wrt-nO-ava" secondAttribute="trailing" id="WBw-Ko-V27"/>
+                    <constraint firstItem="JLO-O2-sFT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="fh5-v4-Cq3"/>
+                    <constraint firstAttribute="bottom" secondItem="wrt-nO-ava" secondAttribute="bottom" id="g1k-bC-Nkp"/>
+                    <constraint firstAttribute="bottom" secondItem="Goe-pa-Mys" secondAttribute="bottom" id="m2a-cj-MVQ"/>
+                    <constraint firstItem="Goe-pa-Mys" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="oUi-nM-PnN"/>
+                    <constraint firstAttribute="trailing" secondItem="JLO-O2-sFT" secondAttribute="trailing" constant="20" id="r7b-mT-BNX"/>
+                    <constraint firstItem="wrt-nO-ava" firstAttribute="top" secondItem="JLO-O2-sFT" secondAttribute="bottom" id="zVK-LD-brf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnTestNumber" destination="iQA-PB-bsO" id="bCB-Jd-L46"/>
+                <outlet property="collectionView" destination="wrt-nO-ava" id="9hQ-KF-obD"/>
+                <outlet property="lblTitle" destination="dz3-5H-rqu" id="OUt-65-Cu8"/>
+            </connections>
+            <point key="canvasLocation" x="93.5" y="146.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="cobalt">
+            <color red="0.1330000013" green="0.22699999809999999" blue="0.53299999239999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="windowsBlue">
+            <color red="0.2590000033" green="0.54500001669999998" blue="0.79199999570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

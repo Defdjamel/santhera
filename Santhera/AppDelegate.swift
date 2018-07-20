@@ -11,7 +11,7 @@ import Fabric
 import Crashlytics
 import RealmSwift
 
-let schemaVersionRealm : UInt64 = 3
+let schemaVersionRealm : UInt64 = 6
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,8 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         loadRealm()
         Fabric.with([Crashlytics.self])
-        DataManager.sharedInstance.updateJsonDocuments()
-        DataManager.sharedInstance.createTestUsers()
+        DocumentManager.sharedInstance.updateJsonDocuments()
+        PatientManager.sharedInstance.createTestUsers()
+        TestManager.sharedInstance.createTestObjects()
         
         return true
     }
