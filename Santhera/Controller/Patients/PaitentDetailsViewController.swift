@@ -41,8 +41,12 @@ class PaitentDetailsViewController: UIViewController {
     
     @objc func OnMenuClicked(){
         let actionSheetCtrl =  JamActionSheetViewController()
-       
-        actionSheetCtrl.show(fromCtrl: self.navigationController!)
+        actionSheetCtrl.delegate = self
+        let object =  [jamActionSheetBtn.init(name: L("patient_edit_btn") ,colorText: UIColor.white,fontText: UIFont.systemFont(ofSize: 18, weight: .semibold ), colorBackground:UIColor.cobalt ),
+                       jamActionSheetBtn.init(name:  L("patient_delete_bnt"),colorText: UIColor.white,fontText: UIFont.systemFont(ofSize: 18, weight: .semibold ), colorBackground:UIColor.windowsBlue),
+                       jamActionSheetBtn.init(name:  L("patient_cancel_bnt"),colorText: UIColor.cobalt, fontText: UIFont.systemFont(ofSize: 18, weight: .bold ),colorBackground:UIColor.white)]
+        actionSheetCtrl.show(fromCtrl: self.navigationController!,obj:object)
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -127,5 +131,18 @@ extension PaitentDetailsViewController: UITableViewDataSource {
         default:
             return 0
         }
+    }
+}
+//MARK: - JamActionSheetDelegate
+extension PaitentDetailsViewController: JamActionSheetDelegate{
+    func JamActionSheet(_ JamActionSheet: JamActionSheetViewController, DidSelect indexPath: IndexPath) {
+        
+    }
+    
+    func jamActionSheetViewCellXibName(_ JamActionSheet: JamActionSheetViewController) -> String {
+        return "JCustomActionSheetCell"
+    }
+    func jamActionSheetViewCellHeight(_ JamActionSheet: JamActionSheetViewController, Object: Any) -> CGFloat {
+        return 60.0
     }
 }

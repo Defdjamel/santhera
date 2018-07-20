@@ -10,6 +10,7 @@ import UIKit
 
 class JActionSheetCollectionViewCell: UICollectionViewCell {
     func setObj(obj: Any){
+       
         
     }
 }

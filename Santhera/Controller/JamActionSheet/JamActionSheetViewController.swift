@@ -7,10 +7,17 @@
 //
 
 import UIKit
+struct jamActionSheetBtn {
+    public var name: String
+    public var colorText: UIColor
+    public var fontText: UIFont
+    public var colorBackground: UIColor
+}
 
 protocol JamActionSheetDelegate {
     func jamActionSheetViewCellXibName(_ JamActionSheet: JamActionSheetViewController) -> String
     func jamActionSheetViewCellHeight(_ JamActionSheet: JamActionSheetViewController, Object: Any) -> CGFloat
+    func JamActionSheet(_ JamActionSheet: JamActionSheetViewController, DidSelect indexPath: IndexPath)
 }
 
 
@@ -18,8 +25,11 @@ class JamActionSheetViewController: UIViewController {
     typealias SelectBlock = ( _ object : Any,  _ sender : JamActionSheetViewController ) -> ()
     typealias CancelBlock = (  _ sender : JamActionSheetViewController ) -> ()
 
+    @IBOutlet weak var heightActionSheetView: NSLayoutConstraint!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var actionSheetView: UIView!
+    var jamActionSheetCollectionViewCellId = ""
+    var objects : Array<Any> = []
     var delegate : JamActionSheetDelegate?
     
     override func viewDidLoad() {
@@ -27,9 +37,12 @@ class JamActionSheetViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.view.frame = (UIApplication.shared.keyWindow?.bounds)!
-        addGestureRecognizer()
+        //addGestureRecognizer()
+        jamActionSheetCollectionViewCellId = (self.delegate?.jamActionSheetViewCellXibName(self))!
+         self.collectionView.register(UINib.init(nibName: jamActionSheetCollectionViewCellId , bundle: Bundle.main), forCellWithReuseIdentifier: jamActionSheetCollectionViewCellId )
         
     }
+   
     func addGestureRecognizer(){
         let tapGestureRecognizer =  UITapGestureRecognizer(target: self, action: #selector(handleGesture(recognizer:)))
         self.view.addGestureRecognizer(tapGestureRecognizer)
@@ -41,11 +54,25 @@ class JamActionSheetViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func show(fromCtrl: UIViewController){
+    func show(fromCtrl: UIViewController, obj: Array<Any>){
+    
+        objects = obj
+       
         fromCtrl.view.addSubview(self.view)
         fromCtrl.addChildViewController(self)
         slideIn()
+       
     }
+    func updateHeightActionSheeView(){
+        self.collectionView.reloadData()
+        self.collectionView.performBatchUpdates(nil, completion: {
+            (result) in
+            self.heightActionSheetView.constant = self.collectionView.contentSize.height
+            self.actionSheetView.updateConstraints()
+        })
+      
+    }
+    
     func slideIn(){
         var frame = self.actionSheetView.frame
         frame.origin = CGPoint(x: 0, y: self.view.bounds.height)
@@ -57,6 +84,13 @@ class JamActionSheetViewController: UIViewController {
         animation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseInEaseOut)
         self.view.alpha = 1.0
         self.actionSheetView.layer.add(animation, forKey: "slideInAnimation")
+        updateHeightActionSheeView()
+        self.view.backgroundColor = UIColor.init(white: 0, alpha: 0)
+        UIView.animate(withDuration: 0.3, animations: {
+            self.view.backgroundColor = UIColor.init(white: 0, alpha: 0.3)
+        }) { (finish) in
+           
+        }
     }
     
     func slideOut(){
@@ -64,15 +98,13 @@ class JamActionSheetViewController: UIViewController {
         frame.origin = CGPoint(x: 0, y: self.view.bounds.height)
         UIView.animate(withDuration: 0.3, animations: {
             self.actionSheetView.frame = frame
+            self.view.backgroundColor = UIColor.init(white: 0, alpha: 0)
         }) { (finish) in
              self.view.removeFromSuperview()
              self.removeFromParentViewController()
         }
     }
     
-    @objc func animationDidStop(animationId: String, context: CGContext){
-        self.view.removeFromSuperview()
-    }
 
     /*
     // MARK: - Navigation
@@ -86,12 +118,51 @@ class JamActionSheetViewController: UIViewController {
 
 }
 extension JamActionSheetViewController: UICollectionViewDataSource{
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
+        return objects.count
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+          self.collectionView.register(UINib.init(nibName: jamActionSheetCollectionViewCellId , bundle: Bundle.main), forCellWithReuseIdentifier: jamActionSheetCollectionViewCellId )
+  
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: jamActionSheetCollectionViewCellId ,
+                                                      for: indexPath) as! JActionSheetCollectionViewCell
+        cell.setObj(obj: objects[indexPath.row])
+        
+        return cell
+    }
     
 }
 extension JamActionSheetViewController: UICollectionViewDelegate{
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.delegate?.JamActionSheet(self, DidSelect: indexPath)
+        self.slideOut()
+    }
 }
 extension JamActionSheetViewController: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let h = self.delegate?.jamActionSheetViewCellHeight(self, Object: objects[indexPath.row])
+        return CGSize(width: CGFloat(view.bounds.width), height: CGFloat(h!))
+    }
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0.0 , left: 0.0 , bottom: 0.0, right: 0.0)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
     
 }
 
