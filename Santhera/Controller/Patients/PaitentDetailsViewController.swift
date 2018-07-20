@@ -43,8 +43,8 @@ class PaitentDetailsViewController: UIViewController {
         let actionSheetCtrl =  JamActionSheetViewController()
         actionSheetCtrl.delegate = self
         let object =  [jamActionSheetBtn.init(name: L("patient_edit_btn") ,colorText: UIColor.white,fontText: UIFont.systemFont(ofSize: 18, weight: .semibold ), colorBackground:UIColor.cobalt ),
-                       jamActionSheetBtn.init(name:  L("patient_delete_bnt"),colorText: UIColor.white,fontText: UIFont.systemFont(ofSize: 18, weight: .semibold ), colorBackground:UIColor.windowsBlue),
-                       jamActionSheetBtn.init(name:  L("patient_cancel_bnt"),colorText: UIColor.cobalt, fontText: UIFont.systemFont(ofSize: 18, weight: .bold ),colorBackground:UIColor.white)]
+                       jamActionSheetBtn.init(name:  L("patient_delete_btn"),colorText: UIColor.white,fontText: UIFont.systemFont(ofSize: 18, weight: .semibold ), colorBackground:UIColor.windowsBlue),
+                       jamActionSheetBtn.init(name:  L("patient_cancel_btn"),colorText: UIColor.cobalt, fontText: UIFont.systemFont(ofSize: 18, weight: .bold ),colorBackground:UIColor.white)]
         actionSheetCtrl.show(fromCtrl: self.navigationController!,obj:object)
         
     }

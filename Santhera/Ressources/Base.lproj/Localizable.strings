@@ -8,3 +8,24 @@
 
 // AUTO-GENERATED
 "app_name" = "Santhera";
+"home_patient_title" = "Patients récents";
+"home_documents_title" = "Documents";
+"see_more" = "VOIR PLUS";
+"btn_new_test" = "Lancer un nouveau test";
+"last_test_date" = "Dernier test";
+"home_bot_title" = "Mieux comprendre la maladie";
+"home_bot_subtitle" = "Discutez avec notre BOT expert pour trouver vos réponses";
+"home_accuity_title" = "Calculer l’acuité visuelle";
+"home_accuity_subtitle" = "Traduisez vos résultats avec notre convertisseur logMAR";
+"patients_title" = "Mes patients";
+"patients_searchBar_placeholder" = "Rechercher un patient";
+"patient_details_title" = "Fiche patient";
+"patient_resume_eye" = "Oeil";
+"patient_resume_first_test" = "Premier test";
+"patient_test_no_eye" = "aucun test";
+"patient_test_eye_left" = "Oeil gauche";
+"patient_test_eye_right" = "Oeil droit";
+"test_numbers" = "tests";
+"patient_edit_btn" = "Modifier les informations";
+"patient_delete_btn" = "Supprimer le patient";
+"patient_cancel_btn" = "Annuler";

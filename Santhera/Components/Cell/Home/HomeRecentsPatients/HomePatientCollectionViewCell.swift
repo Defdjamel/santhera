@@ -17,9 +17,11 @@ class HomePatientCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.lblLastTestTitle.text = L("last_test_date") + " :"
     }
 
     func setObj(obj: Any){
+        
         if let patient = obj as? Patient{
             self.lblName.text = "\(patient.firstname) \(patient.lastname)"
         }
