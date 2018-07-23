@@ -32,4 +32,13 @@ class Patient: Object {
         let predicate =  NSPredicate(format: "isLeftEye = false ")
         return self.tests.filter(predicate).count > 0 ? true : false
     }
+    
+    
+    func removePatientAndData(){
+        let realm = try! Realm()
+        try! realm.write {
+            realm.delete(self.tests)
+            realm.delete(self)
+        }
+    }
 }

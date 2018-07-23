@@ -22,7 +22,6 @@ class PopupInfoViewController: PopupBaseViewController {
     }
     
     
-
     /*
     // MARK: - Navigation
 

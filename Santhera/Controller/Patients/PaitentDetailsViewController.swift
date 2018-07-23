@@ -43,8 +43,8 @@ class PaitentDetailsViewController: UIViewController {
         let actionSheetCtrl =  JamActionSheetViewController()
         actionSheetCtrl.delegate = self
         let object =  [jamActionSheetBtn.init(name: L("patient_edit_btn") ,colorText: UIColor.white,fontText: UIFont.systemFont(ofSize: 18, weight: .semibold ), colorBackground:UIColor.cobalt ),
-                       jamActionSheetBtn.init(name:  L("patient_delete_bnt"),colorText: UIColor.white,fontText: UIFont.systemFont(ofSize: 18, weight: .semibold ), colorBackground:UIColor.windowsBlue),
-                       jamActionSheetBtn.init(name:  L("patient_cancel_bnt"),colorText: UIColor.cobalt, fontText: UIFont.systemFont(ofSize: 18, weight: .bold ),colorBackground:UIColor.white)]
+                       jamActionSheetBtn.init(name:  L("patient_delete_btn"),colorText: UIColor.white,fontText: UIFont.systemFont(ofSize: 18, weight: .semibold ), colorBackground:UIColor.windowsBlue),
+                       jamActionSheetBtn.init(name:  L("patient_cancel_btn"),colorText: UIColor.cobalt, fontText: UIFont.systemFont(ofSize: 18, weight: .bold ),colorBackground:UIColor.white)]
         actionSheetCtrl.show(fromCtrl: self.navigationController!,obj:object)
         
     }
@@ -52,7 +52,23 @@ class PaitentDetailsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    func showAlertDelete(){
+      
+        let alert = PopupGenericViewController()
+        alert.showWithTitle(title: L("popup_delete_patient_title"), subtitle: L("popup_delete_patient_subtitle"), icon: #imageLiteral(resourceName: "icAlerte"),
+                        buttons: [ popupGenerecBtn.init(id: "cancel", name: L("patient_delete_cancel_btn"), colorText: UIColor.cobalt, fontText: UIFont.systemFont(ofSize: 18, weight: .bold ), colorBackground: UIColor.white), popupGenerecBtn.init(id: "delete", name: L("patient_delete_confirm_btn"), colorText: UIColor.white, fontText: UIFont.systemFont(ofSize: 18, weight: .bold ), colorBackground: UIColor.cobalt)]
+            , fromCtrl: self, done: { (buttonSelected, ctrl) in
+                
+                ctrl.dismissView()
+                if buttonSelected.id == "delete" {
+                    self.currentPatient.removePatientAndData()
+                    self.navigationController?.popToRootViewController(animated: true)
+                }
+            
+        }) { (ctrl) in
+            
+        }
+    }
 }
 //MARK: - UITableViewDelegate
 extension PaitentDetailsViewController: UITableViewDelegate{
@@ -136,7 +152,12 @@ extension PaitentDetailsViewController: UITableViewDataSource {
 //MARK: - JamActionSheetDelegate
 extension PaitentDetailsViewController: JamActionSheetDelegate{
     func JamActionSheet(_ JamActionSheet: JamActionSheetViewController, DidSelect indexPath: IndexPath) {
-        
+        switch indexPath.row {
+        case 1:
+            self.showAlertDelete()
+        default:
+           return
+        }
     }
     
     func jamActionSheetViewCellXibName(_ JamActionSheet: JamActionSheetViewController) -> String {
