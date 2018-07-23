@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1A04CE6E2105BDA300324520 /* PopupGenericViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A04CE6C2105BDA300324520 /* PopupGenericViewController.swift */; };
 		1A04CE6F2105BDA300324520 /* PopupGenericViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A04CE6D2105BDA300324520 /* PopupGenericViewController.xib */; };
+		1A04CE772105D29900324520 /* JActionSheetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A04CE752105D29900324520 /* JActionSheetCollectionViewCell.swift */; };
+		1A04CE782105D29900324520 /* JCustomActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A04CE762105D29900324520 /* JCustomActionSheetCell.swift */; };
 		1A2D984D20F7403F0022288F /* documents.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D984C20F7403F0022288F /* documents.json */; };
 		1A2D985120F742BF0022288F /* pdf_2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D984F20F742BE0022288F /* pdf_2.pdf */; };
 		1A2D985220F742BF0022288F /* pdf_1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D985020F742BE0022288F /* pdf_1.pdf */; };
@@ -64,8 +66,6 @@
 		1ABAAE4B21008E5A0098B22B /* PatientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAAE4A21008E5A0098B22B /* PatientManager.swift */; };
 		1ABAAE502101C5D00098B22B /* JamActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAAE4E2101C5D00098B22B /* JamActionSheetViewController.swift */; };
 		1ABAAE512101C5D00098B22B /* JamActionSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABAAE4F2101C5D00098B22B /* JamActionSheetViewController.xib */; };
-		1ABAAE542101DAFD0098B22B /* JActionSheetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAAE532101DAFD0098B22B /* JActionSheetCollectionViewCell.swift */; };
-		1ABAAE572101DBC30098B22B /* JCustomActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAAE552101DBC30098B22B /* JCustomActionSheetCell.swift */; };
 		1ABAAE582101DBC30098B22B /* JCustomActionSheetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABAAE562101DBC30098B22B /* JCustomActionSheetCell.xib */; };
 		274D09A42099F29000765337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274D09A32099F29000765337 /* AppDelegate.swift */; };
 		274D09A92099F29000765337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274D09A72099F29000765337 /* Main.storyboard */; };
@@ -168,6 +168,8 @@
 		18C618E5233A78CBD09EC62C /* Pods-SantheraTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SantheraTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SantheraTests/Pods-SantheraTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1A04CE6C2105BDA300324520 /* PopupGenericViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupGenericViewController.swift; sourceTree = "<group>"; };
 		1A04CE6D2105BDA300324520 /* PopupGenericViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupGenericViewController.xib; sourceTree = "<group>"; };
+		1A04CE752105D29900324520 /* JActionSheetCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JActionSheetCollectionViewCell.swift; sourceTree = "<group>"; };
+		1A04CE762105D29900324520 /* JCustomActionSheetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCustomActionSheetCell.swift; sourceTree = "<group>"; };
 		1A2D984C20F7403F0022288F /* documents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = documents.json; sourceTree = "<group>"; };
 		1A2D984F20F742BE0022288F /* pdf_2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pdf_2.pdf; sourceTree = "<group>"; };
 		1A2D985020F742BE0022288F /* pdf_1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pdf_1.pdf; sourceTree = "<group>"; };
@@ -223,8 +225,6 @@
 		1ABAAE4A21008E5A0098B22B /* PatientManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientManager.swift; sourceTree = "<group>"; };
 		1ABAAE4E2101C5D00098B22B /* JamActionSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JamActionSheetViewController.swift; sourceTree = "<group>"; };
 		1ABAAE4F2101C5D00098B22B /* JamActionSheetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JamActionSheetViewController.xib; sourceTree = "<group>"; };
-		1ABAAE532101DAFD0098B22B /* JActionSheetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JActionSheetCollectionViewCell.swift; sourceTree = "<group>"; };
-		1ABAAE552101DBC30098B22B /* JCustomActionSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCustomActionSheetCell.swift; sourceTree = "<group>"; };
 		1ABAAE562101DBC30098B22B /* JCustomActionSheetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JCustomActionSheetCell.xib; sourceTree = "<group>"; };
 		1C9F21C47809DA59B38CBCBC /* Pods-Santhera.inhouse.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Santhera.inhouse.xcconfig"; path = "Pods/Target Support Files/Pods-Santhera/Pods-Santhera.inhouse.xcconfig"; sourceTree = "<group>"; };
 		274D09A02099F29000765337 /* Santhera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Santhera.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -366,11 +366,11 @@
 			path = JactionSheet;
 			sourceTree = "<group>";
 		};
-		1A04CE732105D05A00324520 /* JamActionSheet */ = {
+		1A04CE742105D29900324520 /* JamActionSheet */ = {
 			isa = PBXGroup;
 			children = (
-				1ABAAE532101DAFD0098B22B /* JActionSheetCollectionViewCell.swift */,
-				1ABAAE552101DBC30098B22B /* JCustomActionSheetCell.swift */,
+				1A04CE752105D29900324520 /* JActionSheetCollectionViewCell.swift */,
+				1A04CE762105D29900324520 /* JCustomActionSheetCell.swift */,
 			);
 			path = JamActionSheet;
 			sourceTree = "<group>";
@@ -608,7 +608,7 @@
 		1ABAAE3B20FF7DD30098B22B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				1A04CE732105D05A00324520 /* JamActionSheet */,
+				1A04CE742105D29900324520 /* JamActionSheet */,
 				1ABAAE432100889F0098B22B /* Home */,
 				1ABAAE42210088110098B22B /* PatientDetails */,
 			);
@@ -1170,6 +1170,7 @@
 				EAA5AAAF20C1708F0020464C /* SHNSTimeIntervalExtension.swift in Sources */,
 				1ABAAE502101C5D00098B22B /* JamActionSheetViewController.swift in Sources */,
 				EAA5AAC220C1708F0020464C /* SHManagedObjectContext+CascadeSave.swift in Sources */,
+				1A04CE772105D29900324520 /* JActionSheetCollectionViewCell.swift in Sources */,
 				1ABAAE0820FC9AEB0098B22B /* ThumbnailGridCell.swift in Sources */,
 				EAA5AAA320C1708F0020464C /* SHUIImageExtension.swift in Sources */,
 				EAA5AA9520C1708F0020464C /* SHUIAlertController.swift in Sources */,
@@ -1184,6 +1185,7 @@
 				EAA5AA8F20C1708F0020464C /* SHKeyboardViewController.swift in Sources */,
 				1A2D986A20F78B2F0022288F /* HomePatientCollectionViewCell.swift in Sources */,
 				1ABAAE2F20FF41470098B22B /* PatientResumeTestCell.swift in Sources */,
+				1A04CE782105D29900324520 /* JCustomActionSheetCell.swift in Sources */,
 				1A2D986620F7860B0022288F /* HomePatientRecentCell.swift in Sources */,
 				EAA5AAA720C1708F0020464C /* SHUIButtonExtension.swift in Sources */,
 				EAA5AA9120C1708F0020464C /* SHRightImageButton.swift in Sources */,
@@ -1207,7 +1209,6 @@
 				1ABAAE2B20FF3AC80098B22B /* PatientDetailsHeaderCell.swift in Sources */,
 				EAA5AA9C20C1708F0020464C /* SHUIScrollViewExtension.swift in Sources */,
 				EAA5AAAB20C1708F0020464C /* SHTextField.swift in Sources */,
-				1ABAAE572101DBC30098B22B /* JCustomActionSheetCell.swift in Sources */,
 				1ABAAE4B21008E5A0098B22B /* PatientManager.swift in Sources */,
 				EAA5AA9020C1708F0020464C /* SHLocalizationHelper.swift in Sources */,
 				EAA5AAB720C1708F0020464C /* SHOperation.swift in Sources */,
@@ -1243,7 +1244,6 @@
 				EAA5AA9420C1708F0020464C /* SHCommonInitView.swift in Sources */,
 				EAA5AAA020C1708F0020464C /* SHUIViewControllerExtension.swift in Sources */,
 				1ABAAE0520FC9AEB0098B22B /* PdfSearchResultsCell.swift in Sources */,
-				1ABAAE542101DAFD0098B22B /* JActionSheetCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
