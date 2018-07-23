@@ -41,8 +41,16 @@ class PatientsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
- // MARK: - Navigation
-
+    func resetFilter(){
+        patients = PatientManager.sharedInstance.getAllPatients()
+        self.collectionView.reloadData()
+    }
+    func filterByText(text: String){
+        patients = PatientManager.sharedInstance.getAllPatientsFilterText(text: text)
+        self.collectionView.reloadData()
+    }
+    
+    // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
@@ -54,15 +62,6 @@ class PatientsViewController: UIViewController {
         }
     }
     
-    func resetFilter(){
-        patients = PatientManager.sharedInstance.getAllPatients()
-        self.collectionView.reloadData()
-    }
-    func filterByText(text: String){
-        patients = PatientManager.sharedInstance.getAllPatientsFilterText(text: text)
-        self.collectionView.reloadData()
-    }
-
 }
 
 //MARK: - UICollectionViewDelegateFlowLayout

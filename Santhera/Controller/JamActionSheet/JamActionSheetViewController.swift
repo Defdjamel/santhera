@@ -49,7 +49,8 @@ class JamActionSheetViewController: UIViewController {
         self.backgroundView.addGestureRecognizer(tapGestureRecognizer)
     }
    @objc func handleGesture(recognizer: UITapGestureRecognizer){
-    slideOut()
+    slideOut {
+    }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -94,7 +95,7 @@ class JamActionSheetViewController: UIViewController {
         }
     }
     
-    func slideOut(){
+    func slideOut(finishAnim: @escaping () -> Void){
         var frame = self.actionSheetView.frame
         frame.origin = CGPoint(x: 0, y: self.view.bounds.height)
         UIView.animate(withDuration: 0.3, animations: {
@@ -103,6 +104,7 @@ class JamActionSheetViewController: UIViewController {
         }) { (finish) in
              self.view.removeFromSuperview()
              self.removeFromParentViewController()
+            finishAnim()
         }
     }
     
@@ -144,8 +146,11 @@ extension JamActionSheetViewController: UICollectionViewDataSource{
 }
 extension JamActionSheetViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.delegate?.JamActionSheet(self, DidSelect: indexPath)
-        self.slideOut()
+        self.slideOut {
+            self.delegate?.JamActionSheet(self, DidSelect: indexPath)
+        }
+        
+     
     }
 }
 extension JamActionSheetViewController: UICollectionViewDelegateFlowLayout{

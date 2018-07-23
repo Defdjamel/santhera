@@ -69,6 +69,11 @@ class PaitentDetailsViewController: UIViewController {
             
         }
     }
+    func goToEditPatientCtrl(){
+        self.performSegue(withIdentifier: "editPatient", sender: self)
+    }
+    
+    
 }
 //MARK: - UITableViewDelegate
 extension PaitentDetailsViewController: UITableViewDelegate{
@@ -155,6 +160,8 @@ extension PaitentDetailsViewController: JamActionSheetDelegate{
         switch indexPath.row {
         case 1:
             self.showAlertDelete()
+        case 0:
+            self.goToEditPatientCtrl()
         default:
            return
         }

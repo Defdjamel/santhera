@@ -11,6 +11,7 @@
 		1A04CE6F2105BDA300324520 /* PopupGenericViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A04CE6D2105BDA300324520 /* PopupGenericViewController.xib */; };
 		1A04CE772105D29900324520 /* JActionSheetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A04CE752105D29900324520 /* JActionSheetCollectionViewCell.swift */; };
 		1A04CE782105D29900324520 /* JCustomActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A04CE762105D29900324520 /* JCustomActionSheetCell.swift */; };
+		1A04CE7B2105EEB400324520 /* NewPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A04CE7A2105EEB400324520 /* NewPatientViewController.swift */; };
 		1A2D984D20F7403F0022288F /* documents.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D984C20F7403F0022288F /* documents.json */; };
 		1A2D985120F742BF0022288F /* pdf_2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D984F20F742BE0022288F /* pdf_2.pdf */; };
 		1A2D985220F742BF0022288F /* pdf_1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D985020F742BE0022288F /* pdf_1.pdf */; };
@@ -170,6 +171,7 @@
 		1A04CE6D2105BDA300324520 /* PopupGenericViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupGenericViewController.xib; sourceTree = "<group>"; };
 		1A04CE752105D29900324520 /* JActionSheetCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JActionSheetCollectionViewCell.swift; sourceTree = "<group>"; };
 		1A04CE762105D29900324520 /* JCustomActionSheetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCustomActionSheetCell.swift; sourceTree = "<group>"; };
+		1A04CE7A2105EEB400324520 /* NewPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPatientViewController.swift; sourceTree = "<group>"; };
 		1A2D984C20F7403F0022288F /* documents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = documents.json; sourceTree = "<group>"; };
 		1A2D984F20F742BE0022288F /* pdf_2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pdf_2.pdf; sourceTree = "<group>"; };
 		1A2D985020F742BE0022288F /* pdf_1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pdf_1.pdf; sourceTree = "<group>"; };
@@ -375,9 +377,18 @@
 			path = JamActionSheet;
 			sourceTree = "<group>";
 		};
+		1A04CE792105E98000324520 /* newPatient */ = {
+			isa = PBXGroup;
+			children = (
+				1A04CE7A2105EEB400324520 /* NewPatientViewController.swift */,
+			);
+			path = newPatient;
+			sourceTree = "<group>";
+		};
 		1A2D984220F4AB4D0022288F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1A04CE792105E98000324520 /* newPatient */,
 				1ABAAE4D2101C3FD0098B22B /* JamActionSheet */,
 				1ABAAE1320FCC7A30098B22B /* Popup */,
 				1ABAAE1D20FE16BD0098B22B /* Home */,
@@ -1156,6 +1167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAA5AAB120C1708F0020464C /* SHArrayExtension.swift in Sources */,
+				1A04CE7B2105EEB400324520 /* NewPatientViewController.swift in Sources */,
 				EAA5AABB20C1708F0020464C /* SHComparisonHelper.swift in Sources */,
 				EAA5AA9D20C1708F0020464C /* SHUIColorExtension.swift in Sources */,
 				EAA5AA9F20C1708F0020464C /* SHSeparatorView.swift in Sources */,
