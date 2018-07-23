@@ -24,10 +24,10 @@ class HomeViewController: UIViewController {
         self.tableView.register(UINib.init(nibName: homeBotCellId, bundle: Bundle.main), forCellReuseIdentifier: homeBotCellId)
         self.tableView.register(UINib.init(nibName: homeAccuityCellId, bundle: Bundle.main), forCellReuseIdentifier: homeAccuityCellId)
         self.tableView.register(UINib.init(nibName: homeDocumentsCellId, bundle: Bundle.main), forCellReuseIdentifier: homeDocumentsCellId)
-        
+         setNavLogo()
     }
     override func viewDidAppear(_ animated: Bool) {
-        setNavLogo()
+       self.navigationController?.setNavigationBarHidden(false, animated: true)
         
     }
     

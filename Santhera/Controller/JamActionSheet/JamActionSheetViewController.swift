@@ -25,6 +25,7 @@ class JamActionSheetViewController: UIViewController {
     typealias SelectBlock = ( _ object : Any,  _ sender : JamActionSheetViewController ) -> ()
     typealias CancelBlock = (  _ sender : JamActionSheetViewController ) -> ()
 
+    @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var heightActionSheetView: NSLayoutConstraint!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var actionSheetView: UIView!
@@ -37,7 +38,7 @@ class JamActionSheetViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.view.frame = (UIApplication.shared.keyWindow?.bounds)!
-        //addGestureRecognizer()
+        addGestureRecognizer()
         jamActionSheetCollectionViewCellId = (self.delegate?.jamActionSheetViewCellXibName(self))!
          self.collectionView.register(UINib.init(nibName: jamActionSheetCollectionViewCellId , bundle: Bundle.main), forCellWithReuseIdentifier: jamActionSheetCollectionViewCellId )
         
@@ -45,7 +46,7 @@ class JamActionSheetViewController: UIViewController {
    
     func addGestureRecognizer(){
         let tapGestureRecognizer =  UITapGestureRecognizer(target: self, action: #selector(handleGesture(recognizer:)))
-        self.view.addGestureRecognizer(tapGestureRecognizer)
+        self.backgroundView.addGestureRecognizer(tapGestureRecognizer)
     }
    @objc func handleGesture(recognizer: UITapGestureRecognizer){
     slideOut()

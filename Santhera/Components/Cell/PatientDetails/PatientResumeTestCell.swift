@@ -44,7 +44,7 @@ class PatientResumeTestCell: UITableViewCell {
         self.lblTitle.text = L("patient_resume_eye")
         //eye test
         if patient.hasRightEyeTest() &&  patient.hasLeftEyeTest()  {
-            self.lblSubtitle.text = L("patient_test_eye_right") + "&" + L("patient_test_eye_left")
+            self.lblSubtitle.text = L("patient_test_eye_right") + " & " + L("patient_test_eye_left")
         }
         else if patient.hasLeftEyeTest() {
              self.lblSubtitle.text = L("patient_test_eye_left")
@@ -66,7 +66,9 @@ class PatientResumeTestCell: UITableViewCell {
         if let test  = patient.tests.first {
             self.lblSubtitle.text =  df.string(from: test.date!)
         }
-        
+        else {
+            self.lblSubtitle.text = L("patient_test_no_eye")
+        }
         
         self.imgLogo.image = #imageLiteral(resourceName: "icFirstTest")
     }

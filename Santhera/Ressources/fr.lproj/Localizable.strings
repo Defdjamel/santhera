@@ -28,8 +28,12 @@
 "test_numbers" = "tests";
 "patient_edit_btn" = "Modifier les informations";
 "patient_delete_btn" = "Supprimer le patient";
+<<<<<<< HEAD
 "patient_cancel_btn" = "Annuler";
 "popup_delete_patient_title" = "Supprimer le patient ?";
 "popup_delete_patient_subtitle" = "Attention, toutes les données de ce patients vont étres supprimées.";
 "patient_delete_cancel_btn" = "Annuler";
 "patient_delete_confirm_btn" = "Supprimer";
+=======
+"patient_cancel_btn" = "Annuler";
+>>>>>>> feature/SAN-43
