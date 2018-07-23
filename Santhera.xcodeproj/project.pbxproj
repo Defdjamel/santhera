@@ -350,6 +350,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A04CE712105D01600324520 /* JactionSheetCtrl */ = {
+			isa = PBXGroup;
+			children = (
+				1ABAAE4F2101C5D00098B22B /* JamActionSheetViewController.xib */,
+			);
+			path = JactionSheetCtrl;
+			sourceTree = "<group>";
+		};
+		1A04CE722105D03000324520 /* JactionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				1ABAAE562101DBC30098B22B /* JCustomActionSheetCell.xib */,
+			);
+			path = JactionSheet;
+			sourceTree = "<group>";
+		};
+		1A04CE732105D05A00324520 /* JamActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				1ABAAE532101DAFD0098B22B /* JActionSheetCollectionViewCell.swift */,
+				1ABAAE552101DBC30098B22B /* JCustomActionSheetCell.swift */,
+			);
+			path = JamActionSheet;
+			sourceTree = "<group>";
+		};
 		1A2D984220F4AB4D0022288F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -438,6 +463,7 @@
 		1A2D985F20F780210022288F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				1A04CE722105D03000324520 /* JactionSheet */,
 				1ABAAE2420FF2D920098B22B /* PatientsDetails */,
 				1A2D987320F7A14E0022288F /* Home */,
 			);
@@ -512,7 +538,6 @@
 			children = (
 				1ABAAE1420FCC7F00098B22B /* PopupInfoViewController.swift */,
 				1A04CE6C2105BDA300324520 /* PopupGenericViewController.swift */,
-				1A04CE6D2105BDA300324520 /* PopupGenericViewController.xib */,
 			);
 			path = popupInfo;
 			sourceTree = "<group>";
@@ -591,6 +616,7 @@
 		1ABAAE3B20FF7DD30098B22B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1A04CE732105D05A00324520 /* JamActionSheet */,
 				1ABAAE432100889F0098B22B /* Home */,
 				1ABAAE42210088110098B22B /* PatientDetails */,
 			);
@@ -640,6 +666,7 @@
 		1ABAAE462100894A0098B22B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1A04CE712105D01600324520 /* JactionSheetCtrl */,
 				1ABAAE472100895E0098B22B /* Popup */,
 			);
 			path = Controllers;
@@ -648,6 +675,7 @@
 		1ABAAE472100895E0098B22B /* Popup */ = {
 			isa = PBXGroup;
 			children = (
+				1A04CE6D2105BDA300324520 /* PopupGenericViewController.xib */,
 				1ABAAE1520FCC7F00098B22B /* PopupInfoViewController.xib */,
 			);
 			path = Popup;
@@ -664,21 +692,9 @@
 		1ABAAE4D2101C3FD0098B22B /* JamActionSheet */ = {
 			isa = PBXGroup;
 			children = (
-				1ABAAE522101DADF0098B22B /* cells */,
 				1ABAAE4E2101C5D00098B22B /* JamActionSheetViewController.swift */,
-				1ABAAE4F2101C5D00098B22B /* JamActionSheetViewController.xib */,
 			);
 			path = JamActionSheet;
-			sourceTree = "<group>";
-		};
-		1ABAAE522101DADF0098B22B /* cells */ = {
-			isa = PBXGroup;
-			children = (
-				1ABAAE532101DAFD0098B22B /* JActionSheetCollectionViewCell.swift */,
-				1ABAAE552101DBC30098B22B /* JCustomActionSheetCell.swift */,
-				1ABAAE562101DBC30098B22B /* JCustomActionSheetCell.xib */,
-			);
-			path = cells;
 			sourceTree = "<group>";
 		};
 		274D09972099F29000765337 = {
