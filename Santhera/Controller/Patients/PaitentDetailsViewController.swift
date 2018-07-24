@@ -32,6 +32,7 @@ class PaitentDetailsViewController: BaseViewController {
         self.tableView.register(UINib.init(nibName: PatientDetailsHeaderCellId, bundle: Bundle.main), forCellReuseIdentifier: PatientDetailsHeaderCellId)
         self.tableView.register(UINib.init(nibName: PatientResumeTestCellId, bundle: Bundle.main), forCellReuseIdentifier: PatientResumeTestCellId)
         self.addRightButton()
+    
     }
 
     func addRightButton(){

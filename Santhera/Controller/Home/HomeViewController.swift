@@ -17,22 +17,18 @@ class HomeViewController: BaseViewController {
     private let homeBotCellId = "HomeBotCell"
     private let homeAccuityCellId = "HomeAccuityCell"
     private let homeDocumentsCellId = "HomeDocumentsCell"
-    //var popvc : PopupInfoViewController!
     
     override func viewDidLoad() {
         self.tableView.register(UINib.init(nibName: homePatientRecentCellId, bundle: Bundle.main), forCellReuseIdentifier: homePatientRecentCellId)
         self.tableView.register(UINib.init(nibName: homeBotCellId, bundle: Bundle.main), forCellReuseIdentifier: homeBotCellId)
         self.tableView.register(UINib.init(nibName: homeAccuityCellId, bundle: Bundle.main), forCellReuseIdentifier: homeAccuityCellId)
         self.tableView.register(UINib.init(nibName: homeDocumentsCellId, bundle: Bundle.main), forCellReuseIdentifier: homeDocumentsCellId)
-         setNavLogo()
+        setNavLogo()
         configureNavBarBtn()
-       
-       
     }
   
     override func viewDidAppear(_ animated: Bool) {
        self.navigationController?.setNavigationBarHidden(false, animated: true)
-        
     }
     
     func setNavLogo(){

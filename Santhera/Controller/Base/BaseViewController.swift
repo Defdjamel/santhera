@@ -12,9 +12,9 @@ class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         configureNavBarBtn()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,13 +23,11 @@ class BaseViewController: UIViewController {
     }
     
     func configureNavBarBtn(){
-        let backIcon = #imageLiteral(resourceName: "icon_back")
-        let btn = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
-        btn.tintColor = UIColor.black
-        UINavigationBar.appearance().backIndicatorImage = backIcon
-        UINavigationBar.appearance().backIndicatorTransitionMaskImage = backIcon
-        self.navigationItem.backBarButtonItem = btn
-        
+        self.navigationController?.navigationBar.tintColor = UIColor.black
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
+       
     }
 
     /*
