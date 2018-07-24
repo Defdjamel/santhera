@@ -24,13 +24,33 @@ class PatientsViewController: UIViewController {
         addKeyboardObs()
        
     }
+    override func viewWillAppear(_ animated: Bool) {
+        if searchBar.text?.count > 0 {
+            self.filterByText(text: searchBar.text!)
+        }
+        else{
+            resetFilter()
+        }
+    }
     func configure(){
         self.title = L("patients_title")
         self.searchBar.placeholder = L("patients_searchBar_placeholder")
         patients = PatientManager.sharedInstance.getAllPatients()
         // Do any additional setup after loading the view.
         self.collectionView.register(UINib.init(nibName: HomePatientCollectionViewCellId , bundle: Bundle.main), forCellWithReuseIdentifier: HomePatientCollectionViewCellId )
+        addRightButton()
     }
+    func addRightButton(){
+        let  menu_button_ = UIBarButtonItem(image: #imageLiteral(resourceName: "icAddPatient"),
+                                            style: UIBarButtonItemStyle.plain ,
+                                            target: self, action:  #selector(OnNewPatientClicked) )
+        menu_button_.tintColor = UIColor.black
+        self.navigationItem.rightBarButtonItem =  menu_button_
+    }
+    @objc func OnNewPatientClicked(){
+        self.performSegue(withIdentifier: "newPatient", sender: self)
+    }
+    
     func addKeyboardObs(){
         NotificationCenter.default.addObserver(self, selector: #selector(SHKeyboardViewController.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(SHKeyboardViewController.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)

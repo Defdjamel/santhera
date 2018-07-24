@@ -33,6 +33,7 @@
 		1A2D987C20F7AF700022288F /* HomeDocumentsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D987A20F7AF700022288F /* HomeDocumentsCell.xib */; };
 		1A2D987F20F88DA80022288F /* HomeDocumentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2D987D20F88DA80022288F /* HomeDocumentCollectionViewCell.swift */; };
 		1A2D988020F88DA80022288F /* HomeDocumentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D987E20F88DA80022288F /* HomeDocumentCollectionViewCell.xib */; };
+		1A6D56192107170C00DA1A36 /* buttonValidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6D56182107170C00DA1A36 /* buttonValidate.swift */; };
 		1ABAAE0420FC9AEB0098B22B /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAADF620FC9AEA0098B22B /* BookmarkViewController.swift */; };
 		1ABAAE0520FC9AEB0098B22B /* PdfSearchResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAADF720FC9AEA0098B22B /* PdfSearchResultsCell.swift */; };
 		1ABAAE0620FC9AEB0098B22B /* PdfReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAADF820FC9AEA0098B22B /* PdfReaderViewController.swift */; };
@@ -193,6 +194,7 @@
 		1A2D987A20F7AF700022288F /* HomeDocumentsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeDocumentsCell.xib; sourceTree = "<group>"; };
 		1A2D987D20F88DA80022288F /* HomeDocumentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDocumentCollectionViewCell.swift; sourceTree = "<group>"; };
 		1A2D987E20F88DA80022288F /* HomeDocumentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeDocumentCollectionViewCell.xib; sourceTree = "<group>"; };
+		1A6D56182107170C00DA1A36 /* buttonValidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonValidate.swift; sourceTree = "<group>"; };
 		1ABAADF620FC9AEA0098B22B /* BookmarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
 		1ABAADF720FC9AEA0098B22B /* PdfSearchResultsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfSearchResultsCell.swift; sourceTree = "<group>"; };
 		1ABAADF820FC9AEA0098B22B /* PdfReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfReaderViewController.swift; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 			isa = PBXGroup;
 			children = (
 				1A04CE7A2105EEB400324520 /* NewPatientViewController.swift */,
+				1A6D56182107170C00DA1A36 /* buttonValidate.swift */,
 			);
 			path = newPatient;
 			sourceTree = "<group>";
@@ -1192,6 +1195,7 @@
 				1ABAAE4921008D9D0098B22B /* DocumentManager.swift in Sources */,
 				EAA5AAA120C1708F0020464C /* SHCircleView.swift in Sources */,
 				EA52281E20BFF0C000752C29 /* HomeViewController.swift in Sources */,
+				1A6D56192107170C00DA1A36 /* buttonValidate.swift in Sources */,
 				1A2D987120F79AD00022288F /* HomeBotCell.swift in Sources */,
 				EAA5AAB020C1708F0020464C /* NumbersConvertion.swift in Sources */,
 				EAA5AA8F20C1708F0020464C /* SHKeyboardViewController.swift in Sources */,

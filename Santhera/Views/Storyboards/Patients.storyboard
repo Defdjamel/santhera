@@ -62,6 +62,7 @@
                         <outlet property="collectionView" destination="o2g-Jm-9sQ" id="lfd-AY-ZLw"/>
                         <outlet property="searchBar" destination="fjb-q5-eWW" id="FP9-r3-RgU"/>
                         <segue destination="NM4-Vq-Fvm" kind="show" identifier="patientDetails" id="EKI-zy-ToE"/>
+                        <segue destination="f4D-CB-bdI" kind="show" identifier="newPatient" id="dT1-jr-kGp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cd6-AN-sGG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -79,11 +80,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gK-Uv-AVf">
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlH-Vp-pdZ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlH-Vp-pdZ" customClass="buttonValidate" customModule="Santhera" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                        <color key="backgroundColor" name="cobalt"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="[btn_edit_info]">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" red="0.71764707569999997" green="0.73333334920000004" blue="0.74509805439999999" alpha="1" colorSpace="deviceRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="btn_edit_info"/>
@@ -93,7 +98,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" name="cobalt"/>
                                 <constraints>
                                     <constraint firstItem="hlH-Vp-pdZ" firstAttribute="leading" secondItem="1gK-Uv-AVf" secondAttribute="leading" id="DaC-6o-DfW"/>
                                     <constraint firstItem="hlH-Vp-pdZ" firstAttribute="centerX" secondItem="1gK-Uv-AVf" secondAttribute="centerX" id="FL6-jl-b1V"/>
@@ -103,6 +107,20 @@
                                     <constraint firstItem="hlH-Vp-pdZ" firstAttribute="centerY" secondItem="1gK-Uv-AVf" secondAttribute="centerY" id="Zj4-Lp-wAb"/>
                                     <constraint firstAttribute="bottom" secondItem="hlH-Vp-pdZ" secondAttribute="bottom" id="eJW-wY-l4R"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.1330000013" green="0.22699999809999999" blue="0.53299999239999996" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="-4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JX2-Q5-CF9">
                                 <rect key="frame" x="20" y="50" width="335" height="173"/>
@@ -125,7 +143,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Yuc-xm-Jsv"/>
                                                 </constraints>
-                                                <color key="textColor" name="windowsBlue"/>
+                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -250,7 +268,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QyJ-1G-9gm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2220" y="-85"/>
+            <point key="canvasLocation" x="1409" y="690"/>
         </scene>
         <!--Paitent Details View Controller-->
         <scene sceneID="Qos-MB-BTe">
@@ -298,8 +316,8 @@
         <namedColor name="paleGrey">
             <color red="0.95300000905990601" green="0.96100002527236938" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="windowsBlue">
-            <color red="0.25900000333786011" green="0.54500001668930054" blue="0.79199999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="dT1-jr-kGp"/>
+    </inferredMetricsTieBreakers>
 </document>

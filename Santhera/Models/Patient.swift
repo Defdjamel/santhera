@@ -41,4 +41,12 @@ class Patient: Object {
             realm.delete(self)
         }
     }
+    
+    func updatePatient( firstName: String, lastName: String){
+        let realm = try! Realm()
+        realm.beginWrite()
+        self.lastname = lastName
+        self.firstname = firstName
+        try! realm.commitWrite()
+    }
 }

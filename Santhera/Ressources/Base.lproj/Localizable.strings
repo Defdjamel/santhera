@@ -37,3 +37,4 @@
 "new_patient_firstname" = "Prénom du patient";
 "edit_patient_title" = "Informations du patient";
 "new_patient_title" = "Informations du patient";
+"btn_edit_info" = "Enregister les modifications";

@@ -12,6 +12,19 @@ import RealmSwift
 class PatientManager: NSObject {
      static let sharedInstance = PatientManager()
     
+    func createPatient(firstName: String, lastName: String) -> Patient{
+        let patient = Patient()
+        let realm = try! Realm()
+        realm.beginWrite()
+        realm.add(patient)
+        patient.lastname = lastName
+        patient.firstname = firstName
+        
+        try! realm.commitWrite()
+        return patient
+    }
+    
+    
     func getRecentPatients() -> Array<Patient> {
         let realm = try! Realm()
         let p = realm.objects(Patient.self)
@@ -19,13 +32,13 @@ class PatientManager: NSObject {
     }
     func getAllPatients() -> Array<Patient> {
         let realm = try! Realm()
-        let p = realm.objects(Patient.self).sorted(byKeyPath: "lastname", ascending: false)
+        let p = realm.objects(Patient.self).sorted(byKeyPath: "lastname", ascending: true)
         return Array(p)
     }
     func getAllPatientsFilterText(text: String) -> Array<Patient> {
         let realm = try! Realm()
         let predicate =  NSPredicate(format: "self.lastname contains [cd] '\(text)' or self.firstname contains [cd] '\(text)' ")
-        let p = realm.objects(Patient.self).filter(predicate).sorted(byKeyPath: "lastname", ascending: false)
+        let p = realm.objects(Patient.self).filter(predicate).sorted(byKeyPath: "lastname", ascending: true)
         return Array(p)
     }
     

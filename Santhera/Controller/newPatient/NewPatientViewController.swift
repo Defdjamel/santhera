@@ -12,7 +12,7 @@ class NewPatientViewController: UIViewController {
     var currentPatient : Patient?
 
     @IBOutlet weak var btnValidateBottomConstaint: NSLayoutConstraint!
-    @IBOutlet weak var btnValidate: UIButton!
+    @IBOutlet weak var btnValidate: buttonValidate!
     @IBOutlet weak var txtfFirstName: UITextField!
     @IBOutlet weak var txtfName: UITextField!
     override func viewDidLoad() {
@@ -21,6 +21,7 @@ class NewPatientViewController: UIViewController {
         // Do any additional setup after loading the view.
         configure()
         addKeyboardObs()
+        
     }
    
     override func didReceiveMemoryWarning() {
@@ -45,9 +46,12 @@ class NewPatientViewController: UIViewController {
         }
        self .updateView()
        
+        txtfName.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        txtfFirstName.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+
     }
     func updateView(){
-        if self.txtfName.text?.count > 0  && self.txtfName.text?.count > 0 {
+        if self.txtfName.text?.count > 0  && self.txtfFirstName.text?.count > 0 {
             self.btnValidate.isEnabled = true
         }
         else {
@@ -56,7 +60,16 @@ class NewPatientViewController: UIViewController {
     }
     
     @IBAction func onClickBtnValidate(_ sender: Any) {
+        if currentPatient != nil {//edit
+            currentPatient?.updatePatient(firstName: txtfFirstName.text!, lastName: txtfName.text!)
+        }
+        else{//new
+           currentPatient =  PatientManager.sharedInstance.createPatient(firstName: txtfFirstName.text!, lastName: txtfName.text!)
+            
+        }
+        self.navigationController?.popViewController(animated: true)
     }
+    
     
     func addKeyboardObs(){
         NotificationCenter.default.addObserver(self, selector: #selector(SHKeyboardViewController.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
@@ -72,8 +85,7 @@ class NewPatientViewController: UIViewController {
         textField.layer.shadowRadius = 8
         textField.layer.shadowOffset =  CGSize(width: 4, height: 4)
         textField.layer.shadowOpacity = 0.2
-         textField.textColor = UIColor.windowsBlue
-        
+        textField.textColor = UIColor.windowsBlue
     }
     func textFieldNoEditMode(textField: UITextField){
         textField.backgroundColor = UIColor.paleGrey
@@ -108,7 +120,9 @@ extension NewPatientViewController: UITextFieldDelegate {
             self.textFieldNoEditMode(textField: textField)
         }
     }
-    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        updateView()
+    }
     
 }
 

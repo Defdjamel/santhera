@@ -22,6 +22,9 @@ class PaitentDetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
         configure()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
     
     func configure(){
         self.title = L("patient_details_title")
@@ -73,6 +76,17 @@ class PaitentDetailsViewController: UIViewController {
         self.performSegue(withIdentifier: "editPatient", sender: self)
     }
     
+    
+    // MARK: - Navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if let vc = segue.destination as? NewPatientViewController {
+                vc.currentPatient = currentPatient
+            
+        }
+    }
     
 }
 //MARK: - UITableViewDelegate
