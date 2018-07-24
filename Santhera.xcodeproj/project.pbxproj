@@ -383,7 +383,6 @@
 			isa = PBXGroup;
 			children = (
 				1A04CE7A2105EEB400324520 /* NewPatientViewController.swift */,
-				1A6D56182107170C00DA1A36 /* buttonValidate.swift */,
 			);
 			path = newPatient;
 			sourceTree = "<group>";
@@ -437,6 +436,7 @@
 		1A2D984620F4B1250022288F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1A6D561A210719E900DA1A36 /* Button */,
 				1ABAAE3B20FF7DD30098B22B /* Cell */,
 			);
 			path = Components;
@@ -510,6 +510,14 @@
 				1A2D987E20F88DA80022288F /* HomeDocumentCollectionViewCell.xib */,
 			);
 			path = HomeDocuments;
+			sourceTree = "<group>";
+		};
+		1A6D561A210719E900DA1A36 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				1A6D56182107170C00DA1A36 /* buttonValidate.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 		1ABAADF520FC9AEA0098B22B /* PdfReader */ = {

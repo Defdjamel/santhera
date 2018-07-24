@@ -15,7 +15,7 @@ class buttonValidate: UIButton {
             willSet{
                 if newValue == false {
                      UIView.animate(withDuration: 0.3) {
-                        self.setTitleColor(UIColor.gray, for: UIControlState.disabled)
+                        self.setTitleColor(UIColor.white, for: UIControlState.disabled)
                         self.alpha = 0.5
                     }
                 }
