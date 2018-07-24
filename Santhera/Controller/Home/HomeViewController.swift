@@ -94,7 +94,7 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
-             return HomePatientRecentCell.getHeight()
+            return PatientManager.sharedInstance.getRecentPatients().count > 0 ? HomePatientRecentCell.getHeight() : 0
         case 1:
             return HomeBotCell.getHeight()
         case 2:
