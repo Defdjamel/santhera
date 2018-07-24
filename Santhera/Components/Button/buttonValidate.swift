@@ -9,8 +9,6 @@
 import UIKit
 
 class buttonValidate: UIButton {
-
-    
         override open var isEnabled : Bool {
             willSet{
                 if newValue == false {
@@ -28,6 +26,4 @@ class buttonValidate: UIButton {
                 }
             }
         }
-    
-
 }

@@ -10,7 +10,7 @@ import UIKit
 private var HomePatientCollectionViewCellId = "HomePatientCollectionViewCell"
 private let heightPatientCell = 150.0
 
-class PatientsViewController: UIViewController {
+class PatientsViewController: BaseViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -46,6 +46,8 @@ class PatientsViewController: UIViewController {
                                             target: self, action:  #selector(OnNewPatientClicked) )
         menu_button_.tintColor = UIColor.black
         self.navigationItem.rightBarButtonItem =  menu_button_
+        
+       
     }
     @objc func OnNewPatientClicked(){
         self.performSegue(withIdentifier: "newPatient", sender: self)

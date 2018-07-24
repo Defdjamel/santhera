@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PaitentDetailsViewController: UIViewController {
+class PaitentDetailsViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private let PatientsListTestCellId = "PatientsListTestCell"

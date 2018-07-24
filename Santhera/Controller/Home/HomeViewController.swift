@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import PDFKit
 import AppImageViewer
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private let homePatientRecentCellId = "HomePatientRecentCell"
@@ -25,7 +25,11 @@ class HomeViewController: UIViewController {
         self.tableView.register(UINib.init(nibName: homeAccuityCellId, bundle: Bundle.main), forCellReuseIdentifier: homeAccuityCellId)
         self.tableView.register(UINib.init(nibName: homeDocumentsCellId, bundle: Bundle.main), forCellReuseIdentifier: homeDocumentsCellId)
          setNavLogo()
+        configureNavBarBtn()
+       
+       
     }
+  
     override func viewDidAppear(_ animated: Bool) {
        self.navigationController?.setNavigationBarHidden(false, animated: true)
         
@@ -44,6 +48,7 @@ class HomeViewController: UIViewController {
         navigationItem.titleView = imageView
         
     }
+    
 }
 //MARK: - UITableViewDelegate
 extension HomeViewController:UITableViewDelegate{
