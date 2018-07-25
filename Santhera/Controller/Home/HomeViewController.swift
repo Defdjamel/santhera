@@ -10,25 +10,25 @@ import Foundation
 import UIKit
 import PDFKit
 import AppImageViewer
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private let homePatientRecentCellId = "HomePatientRecentCell"
     private let homeBotCellId = "HomeBotCell"
     private let homeAccuityCellId = "HomeAccuityCell"
     private let homeDocumentsCellId = "HomeDocumentsCell"
-    //var popvc : PopupInfoViewController!
     
     override func viewDidLoad() {
         self.tableView.register(UINib.init(nibName: homePatientRecentCellId, bundle: Bundle.main), forCellReuseIdentifier: homePatientRecentCellId)
         self.tableView.register(UINib.init(nibName: homeBotCellId, bundle: Bundle.main), forCellReuseIdentifier: homeBotCellId)
         self.tableView.register(UINib.init(nibName: homeAccuityCellId, bundle: Bundle.main), forCellReuseIdentifier: homeAccuityCellId)
         self.tableView.register(UINib.init(nibName: homeDocumentsCellId, bundle: Bundle.main), forCellReuseIdentifier: homeDocumentsCellId)
-        
-    }
-    override func viewDidAppear(_ animated: Bool) {
         setNavLogo()
-        
+        configureNavBarBtn()
+    }
+  
+    override func viewDidAppear(_ animated: Bool) {
+       self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     func setNavLogo(){
@@ -44,6 +44,7 @@ class HomeViewController: UIViewController {
         navigationItem.titleView = imageView
         
     }
+    
 }
 //MARK: - UITableViewDelegate
 extension HomeViewController:UITableViewDelegate{
@@ -93,7 +94,7 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
-             return HomePatientRecentCell.getHeight()
+            return PatientManager.sharedInstance.getRecentPatients().count > 0 ? HomePatientRecentCell.getHeight() : 0
         case 1:
             return HomeBotCell.getHeight()
         case 2:
@@ -141,7 +142,13 @@ extension HomeViewController : HomeDocumentCellDelegate {
 }
 //MARK: - HomePatientRecentCellDelegate
 extension HomeViewController : HomePatientRecentCellDelegate {
-    func HomePatientRecentCellDidSelectMore(_ homePatientRecentCell: HomePatientRecentCell) {
+    func homePatientRecentCell(_ homePatientRecentCell: HomePatientRecentCell, DidSelectPatient patient: Patient) {
+        let vc =  UIStoryboard(name: "Patients", bundle: nil).instantiateViewController(withIdentifier: "PaitentDetailsViewController") as! PaitentDetailsViewController
+        vc.currentPatient = patient
+        self.navigationController?.show(vc, sender: self)
+    }
+  
+    func homePatientRecentCellDidSelectMore(_ homePatientRecentCell: HomePatientRecentCell) {
         self.performSegue(withIdentifier: "HomePatients", sender: self)
     }
 }

@@ -32,4 +32,33 @@ class Patient: Object {
         let predicate =  NSPredicate(format: "isLeftEye = false ")
         return self.tests.filter(predicate).count > 0 ? true : false
     }
+    
+    
+    func removePatientAndData(){
+        let realm = try! Realm()
+        try! realm.write {
+            realm.delete(self.tests)
+            realm.delete(self)
+        }
+    }
+    
+    func updatePatient( firstName: String, lastName: String){
+        let realm = try! Realm()
+        realm.beginWrite()
+        self.lastname = lastName
+        self.firstname = firstName
+        try! realm.commitWrite()
+    }
+    
+    func getLastTestFormatedDate() -> String?{
+        if self.tests.count > 0 {
+            let df = DateFormatter()
+            df.dateStyle = .medium
+            return  df.string(from: (self.tests.last?.date)!)
+        }
+        else {
+            return nil
+        }
+    }
+    
 }

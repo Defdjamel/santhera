@@ -11,7 +11,8 @@ private var HomePatientCollectionViewCellId = "HomePatientCollectionViewCell"
 private let heightPatientCell = 150.0
 
 protocol HomePatientRecentCellDelegate {
-    func  HomePatientRecentCellDidSelectMore(_ homePatientRecentCell: HomePatientRecentCell)
+    func  homePatientRecentCellDidSelectMore(_ homePatientRecentCell: HomePatientRecentCell)
+    func  homePatientRecentCell(_ homePatientRecentCell: HomePatientRecentCell, DidSelectPatient patient: Patient )
 }
 
 
@@ -38,7 +39,7 @@ class HomePatientRecentCell: UITableViewCell , UICollectionViewDataSource,UIColl
     
     //MARK: - Action -
     @IBAction func onClickSeeMore(_ sender: Any) {
-        self.delegate?.HomePatientRecentCellDidSelectMore(self)
+        self.delegate?.homePatientRecentCellDidSelectMore(self)
     }
     
     //MARK: - UICollectionViewDataSource -
@@ -80,7 +81,7 @@ class HomePatientRecentCell: UITableViewCell , UICollectionViewDataSource,UIColl
         return 20
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       
+       self.delegate?.homePatientRecentCell(self, DidSelectPatient: patients[indexPath.row])
     }
     
     

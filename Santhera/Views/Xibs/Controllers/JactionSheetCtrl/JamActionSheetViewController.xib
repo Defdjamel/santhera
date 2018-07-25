@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JamActionSheetViewController" customModule="Santhera" customModuleProvider="target">
             <connections>
                 <outlet property="actionSheetView" destination="cpt-Or-aV3" id="Mu8-ip-5Ud"/>
+                <outlet property="backgroundView" destination="Ky9-kl-CFn" id="iIx-LW-rc1"/>
                 <outlet property="collectionView" destination="piJ-Gu-FFM" id="FPz-fD-KFP"/>
                 <outlet property="heightActionSheetView" destination="vQJ-jk-ec3" id="1lS-XS-FYA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -22,6 +23,10 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ky9-kl-CFn">
+                    <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpt-Or-aV3">
                     <rect key="frame" x="0.0" y="558" width="375" height="220"/>
                     <subviews>
@@ -52,8 +57,12 @@
             </subviews>
             <color key="backgroundColor" red="1" green="0.78039217000000005" blue="0.85882353779999998" alpha="1" colorSpace="deviceRGB"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ky9-kl-CFn" secondAttribute="bottom" id="81P-Oe-WpG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ky9-kl-CFn" secondAttribute="trailing" id="9lr-73-eIP"/>
                 <constraint firstItem="cpt-Or-aV3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="O5y-zK-hYf"/>
                 <constraint firstItem="cpt-Or-aV3" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="VN8-1m-eLc"/>
+                <constraint firstItem="Ky9-kl-CFn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="d8Y-Id-yWQ"/>
+                <constraint firstItem="Ky9-kl-CFn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="fn5-5d-fEl"/>
                 <constraint firstItem="cpt-Or-aV3" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="jrH-JZ-uSi"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

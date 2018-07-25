@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PaitentDetailsViewController: UIViewController {
+class PaitentDetailsViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private let PatientsListTestCellId = "PatientsListTestCell"
@@ -22,6 +22,9 @@ class PaitentDetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
         configure()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
     
     func configure(){
         self.title = L("patient_details_title")
@@ -29,6 +32,7 @@ class PaitentDetailsViewController: UIViewController {
         self.tableView.register(UINib.init(nibName: PatientDetailsHeaderCellId, bundle: Bundle.main), forCellReuseIdentifier: PatientDetailsHeaderCellId)
         self.tableView.register(UINib.init(nibName: PatientResumeTestCellId, bundle: Bundle.main), forCellReuseIdentifier: PatientResumeTestCellId)
         self.addRightButton()
+    
     }
 
     func addRightButton(){
@@ -43,14 +47,46 @@ class PaitentDetailsViewController: UIViewController {
         let actionSheetCtrl =  JamActionSheetViewController()
         actionSheetCtrl.delegate = self
         let object =  [jamActionSheetBtn.init(name: L("patient_edit_btn") ,colorText: UIColor.white,fontText: UIFont.systemFont(ofSize: 18, weight: .semibold ), colorBackground:UIColor.cobalt ),
-                       jamActionSheetBtn.init(name:  L("patient_delete_bnt"),colorText: UIColor.white,fontText: UIFont.systemFont(ofSize: 18, weight: .semibold ), colorBackground:UIColor.windowsBlue),
-                       jamActionSheetBtn.init(name:  L("patient_cancel_bnt"),colorText: UIColor.cobalt, fontText: UIFont.systemFont(ofSize: 18, weight: .bold ),colorBackground:UIColor.white)]
+                       jamActionSheetBtn.init(name:  L("patient_delete_btn"),colorText: UIColor.white,fontText: UIFont.systemFont(ofSize: 18, weight: .semibold ), colorBackground:UIColor.windowsBlue),
+                       jamActionSheetBtn.init(name:  L("patient_cancel_btn"),colorText: UIColor.cobalt, fontText: UIFont.systemFont(ofSize: 18, weight: .bold ),colorBackground:UIColor.white)]
         actionSheetCtrl.show(fromCtrl: self.navigationController!,obj:object)
         
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    func showAlertDelete(){
+      
+        let alert = PopupGenericViewController()
+        alert.showWithTitle(title: L("popup_delete_patient_title"), subtitle: L("popup_delete_patient_subtitle"), icon: #imageLiteral(resourceName: "icAlerte"),
+                        buttons: [ popupGenerecBtn.init(id: "cancel", name: L("patient_delete_cancel_btn"), colorText: UIColor.cobalt, fontText: UIFont.systemFont(ofSize: 18, weight: .bold ), colorBackground: UIColor.white), popupGenerecBtn.init(id: "delete", name: L("patient_delete_confirm_btn"), colorText: UIColor.white, fontText: UIFont.systemFont(ofSize: 18, weight: .bold ), colorBackground: UIColor.cobalt)]
+            , fromCtrl: self, done: { (buttonSelected, ctrl) in
+                
+                ctrl.dismissView()
+                if buttonSelected.id == "delete" {
+                    self.currentPatient.removePatientAndData()
+                    self.navigationController?.popToRootViewController(animated: true)
+                }
+            
+        }) { (ctrl) in
+            
+        }
+    }
+    func goToEditPatientCtrl(){
+        self.performSegue(withIdentifier: "editPatient", sender: self)
+    }
+    
+    
+    // MARK: - Navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if let vc = segue.destination as? NewPatientViewController {
+                vc.currentPatient = currentPatient
+            
+        }
     }
     
 }
@@ -136,7 +172,14 @@ extension PaitentDetailsViewController: UITableViewDataSource {
 //MARK: - JamActionSheetDelegate
 extension PaitentDetailsViewController: JamActionSheetDelegate{
     func JamActionSheet(_ JamActionSheet: JamActionSheetViewController, DidSelect indexPath: IndexPath) {
-        
+        switch indexPath.row {
+        case 1:
+            self.showAlertDelete()
+        case 0:
+            self.goToEditPatientCtrl()
+        default:
+           return
+        }
     }
     
     func jamActionSheetViewCellXibName(_ JamActionSheet: JamActionSheetViewController) -> String {

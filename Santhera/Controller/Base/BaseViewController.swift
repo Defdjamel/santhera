@@ -1,19 +1,20 @@
 //
-//  PopupInfoViewController.swift
+//  BaseViewController.swift
 //  Santhera
 //
-//  Created by james on 16/07/2018.
+//  Created by james on 24/07/2018.
 //  Copyright © 2018 Wopata. All rights reserved.
 //
 
 import UIKit
 
-class PopupInfoViewController: PopupBaseViewController {
+class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        configureNavBarBtn()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +22,14 @@ class PopupInfoViewController: PopupBaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    func configureNavBarBtn(){
+        self.navigationController?.navigationBar.tintColor = UIColor.black
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
+       
+    }
+
     /*
     // MARK: - Navigation
 

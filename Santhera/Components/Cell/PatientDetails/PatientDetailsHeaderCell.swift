@@ -26,6 +26,13 @@ class PatientDetailsHeaderCell: UITableViewCell {
     func setObj(obj: Any){
         if let patient = obj as? Patient{
             self.lblName.text = "\(patient.firstname) \(patient.lastname)"
+            self.lblBadge.text = "\(patient.tests.count)"
+            if let date =  patient.getLastTestFormatedDate() {
+                lblLastTestDate.text = L("last_test_date") + " : " + date
+            }
+            else{
+                lblLastTestDate.text = L("patient_test_no_test")
+            }
         }
     }
     

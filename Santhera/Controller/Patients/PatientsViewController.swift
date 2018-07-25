@@ -10,7 +10,7 @@ import UIKit
 private var HomePatientCollectionViewCellId = "HomePatientCollectionViewCell"
 private let heightPatientCell = 150.0
 
-class PatientsViewController: UIViewController {
+class PatientsViewController: BaseViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -24,13 +24,35 @@ class PatientsViewController: UIViewController {
         addKeyboardObs()
        
     }
+    override func viewWillAppear(_ animated: Bool) {
+        if searchBar.text?.count > 0 {
+            self.filterByText(text: searchBar.text!)
+        }
+        else{
+            resetFilter()
+        }
+    }
     func configure(){
         self.title = L("patients_title")
         self.searchBar.placeholder = L("patients_searchBar_placeholder")
         patients = PatientManager.sharedInstance.getAllPatients()
         // Do any additional setup after loading the view.
         self.collectionView.register(UINib.init(nibName: HomePatientCollectionViewCellId , bundle: Bundle.main), forCellWithReuseIdentifier: HomePatientCollectionViewCellId )
+        addRightButton()
     }
+    func addRightButton(){
+        let  menu_button_ = UIBarButtonItem(image: #imageLiteral(resourceName: "icAddPatient"),
+                                            style: UIBarButtonItemStyle.plain ,
+                                            target: self, action:  #selector(OnNewPatientClicked) )
+        menu_button_.tintColor = UIColor.black
+        self.navigationItem.rightBarButtonItem =  menu_button_
+        
+       
+    }
+    @objc func OnNewPatientClicked(){
+        self.performSegue(withIdentifier: "newPatient", sender: self)
+    }
+    
     func addKeyboardObs(){
         NotificationCenter.default.addObserver(self, selector: #selector(SHKeyboardViewController.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(SHKeyboardViewController.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -41,8 +63,16 @@ class PatientsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
- // MARK: - Navigation
-
+    func resetFilter(){
+        patients = PatientManager.sharedInstance.getAllPatients()
+        self.collectionView.reloadData()
+    }
+    func filterByText(text: String){
+        patients = PatientManager.sharedInstance.getAllPatientsFilterText(text: text)
+        self.collectionView.reloadData()
+    }
+    
+    // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
@@ -54,15 +84,6 @@ class PatientsViewController: UIViewController {
         }
     }
     
-    func resetFilter(){
-        patients = PatientManager.sharedInstance.getAllPatients()
-        self.collectionView.reloadData()
-    }
-    func filterByText(text: String){
-        patients = PatientManager.sharedInstance.getAllPatientsFilterText(text: text)
-        self.collectionView.reloadData()
-    }
-
 }
 
 //MARK: - UICollectionViewDelegateFlowLayout

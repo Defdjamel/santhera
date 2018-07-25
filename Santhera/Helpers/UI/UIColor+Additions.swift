@@ -2,7 +2,7 @@
 //  UIColor+Additions.swift
 //  Santhera - iOS
 //
-//  Generated on Zeplin. (20/07/2018).
+//  Generated on Zeplin. (23/07/2018).
 //  Copyright (c) 2018 __MyCompanyName__. All rights reserved.
 //
 
