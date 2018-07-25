@@ -49,4 +49,16 @@ class Patient: Object {
         self.firstname = firstName
         try! realm.commitWrite()
     }
+    
+    func getLastTestFormatedDate() -> String?{
+        if self.tests.count > 0 {
+            let df = DateFormatter()
+            df.dateStyle = .medium
+            return  df.string(from: (self.tests.last?.date)!)
+        }
+        else {
+            return nil
+        }
+    }
+    
 }

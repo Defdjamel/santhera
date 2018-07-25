@@ -25,6 +25,7 @@
 "patient_test_no_eye" = "aucun test";
 "patient_test_eye_left" = "Oeil gauche";
 "patient_test_eye_right" = "Oeil droit";
+"patient_test_no_test" = "aucun test";
 "test_numbers" = "tests";
 "patient_edit_btn" = "Modifier les informations";
 "patient_delete_btn" = "Supprimer le patient";

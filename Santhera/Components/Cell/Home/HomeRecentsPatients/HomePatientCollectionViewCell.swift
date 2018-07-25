@@ -24,6 +24,17 @@ class HomePatientCollectionViewCell: UICollectionViewCell {
         
         if let patient = obj as? Patient{
             self.lblName.text = "\(patient.firstname) \(patient.lastname)"
+            self.lblBadge.text = "\(patient.tests.count)"
+            if let date = patient.getLastTestFormatedDate() {
+                self.lblLastTestDate.text = date
+                hideLastTest(value: false)
+            }else {
+                hideLastTest(value: true)
+            }
         }
+    }
+    func hideLastTest(value: Bool){
+        self.lblLastTestDate.isHidden = value
+        self.lblLastTestTitle.isHidden = value
     }
 }
