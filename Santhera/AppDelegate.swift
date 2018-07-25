@@ -22,8 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         loadRealm()
         Fabric.with([Crashlytics.self])
         DocumentManager.sharedInstance.updateJsonDocuments()
-        //PatientManager.sharedInstance.createTestUsers()
-        //TestManager.sharedInstance.createTestObjects()
+        PatientManager.sharedInstance.createTestUsers()
+        TestManager.sharedInstance.createTestObjects()
         
         return true
     }
