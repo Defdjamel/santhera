@@ -142,7 +142,13 @@ extension HomeViewController : HomeDocumentCellDelegate {
 }
 //MARK: - HomePatientRecentCellDelegate
 extension HomeViewController : HomePatientRecentCellDelegate {
-    func HomePatientRecentCellDidSelectMore(_ homePatientRecentCell: HomePatientRecentCell) {
+    func homePatientRecentCell(_ homePatientRecentCell: HomePatientRecentCell, DidSelectPatient patient: Patient) {
+        let vc =  UIStoryboard(name: "Patients", bundle: nil).instantiateViewController(withIdentifier: "PaitentDetailsViewController") as! PaitentDetailsViewController
+        vc.currentPatient = patient
+        self.navigationController?.show(vc, sender: self)
+    }
+  
+    func homePatientRecentCellDidSelectMore(_ homePatientRecentCell: HomePatientRecentCell) {
         self.performSegue(withIdentifier: "HomePatients", sender: self)
     }
 }

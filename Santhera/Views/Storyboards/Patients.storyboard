@@ -273,7 +273,7 @@
         <!--Paitent Details View Controller-->
         <scene sceneID="Qos-MB-BTe">
             <objects>
-                <viewController id="NM4-Vq-Fvm" customClass="PaitentDetailsViewController" customModule="Santhera" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PaitentDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NM4-Vq-Fvm" customClass="PaitentDetailsViewController" customModule="Santhera" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XTM-pZ-sqb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -318,6 +318,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dT1-jr-kGp"/>
+        <segue reference="6zn-FR-5kV"/>
     </inferredMetricsTieBreakers>
 </document>
