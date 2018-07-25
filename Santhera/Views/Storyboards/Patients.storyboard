@@ -328,9 +328,6 @@
         <namedColor name="paleBlue">
             <color red="0.88200002908706665" green="0.94099998474121094" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="paleBlue">
-            <color red="0.88200002909999997" green="0.94099998470000001" blue="0.99199998379999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="paleGrey">
             <color red="0.95300000905990601" green="0.96100002527236938" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
