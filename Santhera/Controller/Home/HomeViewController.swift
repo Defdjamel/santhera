@@ -29,6 +29,7 @@ class HomeViewController: BaseViewController {
   
     override func viewDidAppear(_ animated: Bool) {
        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.tableView.reloadData()
     }
     
     func setNavLogo(){
@@ -66,6 +67,7 @@ extension HomeViewController: UITableViewDataSource {
             // Configure the cell...
             cell.patients = PatientManager.sharedInstance.getRecentPatients()
             cell.delegate = self
+            cell.collectionView.reloadData()
             return cell
         }
         if indexPath.row == 1 {
