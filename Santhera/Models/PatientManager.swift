@@ -16,6 +16,7 @@ class PatientManager: NSObject {
         let patient = Patient()
         let realm = try! Realm()
         realm.beginWrite()
+        patient.id = Patient.incrementID()
         realm.add(patient)
         patient.lastname = lastName
         patient.firstname = firstName
@@ -27,8 +28,14 @@ class PatientManager: NSObject {
     
     func getRecentPatients() -> Array<Patient> {
         let realm = try! Realm()
-        let p = realm.objects(Patient.self)
-        return Array(p)
+        let tests = realm.objects(Test.self).sorted(byKeyPath: "date", ascending: true)
+        var users : Array<Patient> = []
+        for t in tests {// remove double
+            if !users.contains(t.patient!) , users.count < 5 {
+                 users.append(t.patient!)
+            }
+        }
+        return users
     }
     func getAllPatients() -> Array<Patient> {
         let realm = try! Realm()
@@ -48,6 +55,7 @@ class PatientManager: NSObject {
             let patient = Patient()
             let realm = try! Realm()
             realm.beginWrite()
+            patient.id = Patient.incrementID()
             realm.add(patient)
             patient.firstname =  "prénom \(i)"
             patient.lastname =  "nom \(i)"

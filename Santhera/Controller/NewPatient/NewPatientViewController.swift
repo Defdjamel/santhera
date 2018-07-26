@@ -17,8 +17,6 @@ class NewPatientViewController: UIViewController {
     @IBOutlet weak var txtfName: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         configure()
         addKeyboardObs()
         

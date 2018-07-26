@@ -23,6 +23,17 @@ class TestManager: NSObject {
             test.isLeftEye = (i % 2 == 0 ? true: false)
             try! realm.commitWrite()
         }
+        for i in 1...10 {
+            let test = Test()
+            let realm = try! Realm()
+            realm.beginWrite()
+            realm.add(test)
+            test.date =  Date().addingTimeInterval(TimeInterval(i * -60))
+            test.patient = PatientManager.sharedInstance.getAllPatients().last
+            test.isLeftEye = (i % 2 == 0 ? true: false)
+            try! realm.commitWrite()
+        }
+        
     }
     func removeAll(){
         let realm = try! Realm()
