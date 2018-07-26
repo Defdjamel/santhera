@@ -58,7 +58,7 @@ class Patient: Object {
         if self.tests.count > 0 {
             let df = DateFormatter()
             df.dateStyle = .medium
-            return  df.string(from: (self.tests.last?.date)!)
+            return  df.string(from: (self.tests.first?.date)!)
         }
         else {
             return nil

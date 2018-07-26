@@ -28,7 +28,7 @@ class PatientManager: NSObject {
     
     func getRecentPatients() -> Array<Patient> {
         let realm = try! Realm()
-        let tests = realm.objects(Test.self).sorted(byKeyPath: "date", ascending: true)
+        let tests = realm.objects(Test.self).sorted(byKeyPath: "date", ascending: false)
         var users : Array<Patient> = []
         for t in tests {// remove double
             if !users.contains(t.patient!) , users.count < 5 {
@@ -51,14 +51,20 @@ class PatientManager: NSObject {
     
     func createTestUsers(){
         removeAllPatients()
-        for i in 1...10 {
+        let usersTest =  [
+        ["firstName":"Alberto","lastName":"BAGGIO"],
+        ["firstName":"Joakim","lastName":"Fernando"],
+        ["firstName":"Gigi","lastName":"L'AMOROSO"],
+        ["firstName":"Kris","lastName":"Kross"],
+        ["firstName":"Luka","lastName":"Modrić"]]
+        for user in usersTest {
             let patient = Patient()
             let realm = try! Realm()
             realm.beginWrite()
             patient.id = Patient.incrementID()
             realm.add(patient)
-            patient.firstname =  "prénom \(i)"
-            patient.lastname =  "nom \(i)"
+            patient.firstname =  user["firstName"]!
+            patient.lastname =   user["lastName"]!
             try! realm.commitWrite()
         }
     }

@@ -10,10 +10,23 @@ import UIKit
 
 class PatientTestResumeCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var lblTime: UILabel!
+    @IBOutlet weak var imgTest: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-    
+    func setTest(test: Test){
+        let df =  DateFormatter()
+        df.dateStyle = .short
+        self.lblDate.text = df.string(from: test.date!)
+        df.timeStyle = .short
+        df.dateStyle = .none
+        self.lblTime.text = df.string(from: test.date!)
+            self.imgTest.image = UIImage.init(contentsOfFile: test.file_url)
+        
+        
+    }
 
 }

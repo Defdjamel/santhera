@@ -63,7 +63,7 @@ class PatientResumeTestCell: UITableViewCell {
         //1st Test
         let df = DateFormatter()
         df.dateStyle = .medium
-        if let test  = patient.tests.first {
+        if let test  = patient.tests.last {
             self.lblSubtitle.text =  df.string(from: test.date!)
         }
         else {

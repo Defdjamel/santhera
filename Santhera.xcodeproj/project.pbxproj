@@ -70,6 +70,8 @@
 		1ABAAE502101C5D00098B22B /* JamActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAAE4E2101C5D00098B22B /* JamActionSheetViewController.swift */; };
 		1ABAAE512101C5D00098B22B /* JamActionSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABAAE4F2101C5D00098B22B /* JamActionSheetViewController.xib */; };
 		1ABAAE582101DBC30098B22B /* JCustomActionSheetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABAAE562101DBC30098B22B /* JCustomActionSheetCell.xib */; };
+		1ACBB4112109FC8300AB1BF2 /* test_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACBB40F2109FC8300AB1BF2 /* test_1.png */; };
+		1ACBB4122109FC8300AB1BF2 /* test_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACBB4102109FC8300AB1BF2 /* test_2.png */; };
 		274D09A42099F29000765337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274D09A32099F29000765337 /* AppDelegate.swift */; };
 		274D09A92099F29000765337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274D09A72099F29000765337 /* Main.storyboard */; };
 		274D09AB2099F29200765337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 274D09AA2099F29200765337 /* Assets.xcassets */; };
@@ -232,6 +234,8 @@
 		1ABAAE4E2101C5D00098B22B /* JamActionSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JamActionSheetViewController.swift; sourceTree = "<group>"; };
 		1ABAAE4F2101C5D00098B22B /* JamActionSheetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JamActionSheetViewController.xib; sourceTree = "<group>"; };
 		1ABAAE562101DBC30098B22B /* JCustomActionSheetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JCustomActionSheetCell.xib; sourceTree = "<group>"; };
+		1ACBB40F2109FC8300AB1BF2 /* test_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_1.png; sourceTree = "<group>"; };
+		1ACBB4102109FC8300AB1BF2 /* test_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_2.png; sourceTree = "<group>"; };
 		1C9F21C47809DA59B38CBCBC /* Pods-Santhera.inhouse.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Santhera.inhouse.xcconfig"; path = "Pods/Target Support Files/Pods-Santhera/Pods-Santhera.inhouse.xcconfig"; sourceTree = "<group>"; };
 		274D09A02099F29000765337 /* Santhera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Santhera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		274D09A32099F29000765337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -406,6 +410,7 @@
 		1A2D984320F4AF9F0022288F /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				1ACBB40E2109FC7400AB1BF2 /* tests */,
 				1A2D984E20F7405A0022288F /* documents */,
 				1A2D984C20F7403F0022288F /* documents.json */,
 				EA52282520BFF85B00752C29 /* Localizable.strings */,
@@ -722,6 +727,15 @@
 			path = JamActionSheet;
 			sourceTree = "<group>";
 		};
+		1ACBB40E2109FC7400AB1BF2 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				1ACBB40F2109FC8300AB1BF2 /* test_1.png */,
+				1ACBB4102109FC8300AB1BF2 /* test_2.png */,
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
 		274D09972099F29000765337 = {
 			isa = PBXGroup;
 			children = (
@@ -1035,11 +1049,13 @@
 				1ABAAE0B20FC9AEB0098B22B /* ThumbnailGridCell.xib in Resources */,
 				1A2D985620F743970022288F /* image_1.jpg in Resources */,
 				1ABAAE2C20FF3AC80098B22B /* PatientDetailsHeaderCell.xib in Resources */,
+				1ACBB4122109FC8300AB1BF2 /* test_2.png in Resources */,
 				EA52282720BFF85B00752C29 /* Localizable.strings in Resources */,
 				1ABAAE1720FCC7F00098B22B /* PopupInfoViewController.xib in Resources */,
 				274D09AE2099F29200765337 /* LaunchScreen.storyboard in Resources */,
 				1ABAAE582101DBC30098B22B /* JCustomActionSheetCell.xib in Resources */,
 				1A2D986720F7860B0022288F /* HomePatientRecentCell.xib in Resources */,
+				1ACBB4112109FC8300AB1BF2 /* test_1.png in Resources */,
 				1A2D985120F742BF0022288F /* pdf_2.pdf in Resources */,
 				1A2D985220F742BF0022288F /* pdf_1.pdf in Resources */,
 				274D09AB2099F29200765337 /* Assets.xcassets in Resources */,

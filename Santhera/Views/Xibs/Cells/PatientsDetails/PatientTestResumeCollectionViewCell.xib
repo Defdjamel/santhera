@@ -13,15 +13,32 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PatientTestResumeCollectionViewCell" customModule="Santhera" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="184" height="176"/>
+            <rect key="frame" x="0.0" y="0.0" width="140" height="187"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="184" height="176"/>
+                <rect key="frame" x="0.0" y="0.0" width="140" height="187"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o46-tg-6Dh">
-                        <rect key="frame" x="0.0" y="0.0" width="184" height="176"/>
+                        <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lLa-0d-Rya">
+                                <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="140" id="BEn-DQ-uRD"/>
+                            <constraint firstItem="lLa-0d-Rya" firstAttribute="leading" secondItem="o46-tg-6Dh" secondAttribute="leading" id="RF3-7X-o7g"/>
+                            <constraint firstAttribute="trailing" secondItem="lLa-0d-Rya" secondAttribute="trailing" id="e3b-qP-jk7"/>
+                            <constraint firstItem="lLa-0d-Rya" firstAttribute="top" secondItem="o46-tg-6Dh" secondAttribute="top" id="gSz-n0-dec"/>
+                            <constraint firstAttribute="bottom" secondItem="lLa-0d-Rya" secondAttribute="bottom" id="led-IP-cNx"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="8"/>
@@ -47,29 +64,52 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layerMasksToBounds" value="NO"/>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXU-8a-PIC">
+                        <rect key="frame" x="0.0" y="150" width="38" height="17"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZsK-95-gv9">
+                        <rect key="frame" x="0.0" y="172" width="33" height="16"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                        <color key="textColor" name="windowsBlue"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="kXU-8a-PIC" firstAttribute="top" secondItem="o46-tg-6Dh" secondAttribute="bottom" constant="10" id="3aR-hP-NNX"/>
+                <constraint firstItem="ZsK-95-gv9" firstAttribute="top" secondItem="kXU-8a-PIC" secondAttribute="bottom" constant="5" id="69M-ol-Z9f"/>
                 <constraint firstAttribute="trailing" secondItem="o46-tg-6Dh" secondAttribute="trailing" id="91o-Yp-tBb"/>
                 <constraint firstItem="o46-tg-6Dh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="D4i-Ov-xDd"/>
+                <constraint firstItem="kXU-8a-PIC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="FYk-X6-MQJ"/>
                 <constraint firstItem="o46-tg-6Dh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ff6-kE-mnO"/>
-                <constraint firstAttribute="bottom" secondItem="o46-tg-6Dh" secondAttribute="bottom" id="h0a-Z7-Bjg"/>
+                <constraint firstItem="ZsK-95-gv9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="yL6-Ea-uar"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="184" height="176"/>
+            <size key="customSize" width="140" height="187"/>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="boolean" keyPath="layerMasksToBounds" value="NO"/>
                 <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                     <color key="value" red="0.1330000013" green="0.22699999809999999" blue="0.53299999239999996" alpha="0.15034269555214724" colorSpace="custom" customColorSpace="sRGB"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
-            <point key="canvasLocation" x="-12" y="35"/>
+            <connections>
+                <outlet property="imgTest" destination="lLa-0d-Rya" id="QIf-zm-itp"/>
+                <outlet property="lblDate" destination="kXU-8a-PIC" id="XNL-Jy-dJk"/>
+                <outlet property="lblTime" destination="ZsK-95-gv9" id="Jd3-6i-fqW"/>
+            </connections>
+            <point key="canvasLocation" x="-34" y="40.5"/>
         </collectionViewCell>
     </objects>
     <resources>
         <namedColor name="paleBlue">
             <color red="0.88200002909999997" green="0.94099998470000001" blue="0.99199998379999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="windowsBlue">
+            <color red="0.25900000333786011" green="0.54500001668930054" blue="0.79199999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
