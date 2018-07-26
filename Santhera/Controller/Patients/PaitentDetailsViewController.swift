@@ -65,7 +65,7 @@ class PaitentDetailsViewController: BaseViewController {
                 ctrl.dismissView()
                 if buttonSelected.id == "delete" {
                     self.currentPatient.removePatientAndData()
-                    self.navigationController?.popToRootViewController(animated: true)
+                    self.navigationController?.popViewController(animated: true)
                 }
             
         }) { (ctrl) in
