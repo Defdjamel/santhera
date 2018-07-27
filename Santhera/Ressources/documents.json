@@ -6,21 +6,21 @@
         "type": "pdf",
         "name": "Génétique",
         "file": "pdf_1.pdf",
-        "thumbnail": "pdf_thumb.png",
+        "thumbnail": "thumb_1.png",
         "isActive": true
       },
       {
         "type": "pdf",
         "name": "Diagnostique",
         "file": "pdf_2.pdf",
-        "thumbnail": "pdf_thumb.png",
+        "thumbnail": "thumb_2.png",
         "isActive": true
       },
       {
         "type": "pdf",
         "name": "Documents",
         "file": "pdf_3.pdf",
-        "thumbnail": "pdf_thumb.png",
+        "thumbnail": "thumb_3.png",
         "isActive": true
       },
       {
