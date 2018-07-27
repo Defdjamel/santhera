@@ -21,7 +21,7 @@ class TestManager: NSObject {
             test.date =  Date().addingTimeInterval(TimeInterval(i * -22000))
             test.patient = PatientManager.sharedInstance.getAllPatients().first
             test.isLeftEye = (i % 2 == 0 ? true: false)
-           test.file_url = Bundle.main.path(forResource: (i % 3 == 0 ?  "test_1.png":  "test_2.png"), ofType: nil)!
+           test.file_name =  (i % 3 == 0 ?  "test_1.png":  "test_2.png")
             try! realm.commitWrite()
         }
         for i in 1...6 {
@@ -32,7 +32,7 @@ class TestManager: NSObject {
             test.date =  Date().addingTimeInterval(TimeInterval(i * -63000))
             test.patient = PatientManager.sharedInstance.getAllPatients().last
             test.isLeftEye = (i % 2 == 0 ? true: false)
-            test.file_url = Bundle.main.path(forResource: (i % 3 == 0 ?  "test_1.png":  "test_2.png"), ofType: nil)!
+            test.file_name =  (i % 3 == 0 ?  "test_1.png":  "test_2.png")
             try! realm.commitWrite()
         }
         

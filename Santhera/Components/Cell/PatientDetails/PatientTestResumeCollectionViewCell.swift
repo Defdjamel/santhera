@@ -19,12 +19,12 @@ class PatientTestResumeCollectionViewCell: UICollectionViewCell {
     }
     func setTest(test: Test){
         let df =  DateFormatter()
-        df.dateStyle = .short
+        df.dateFormat = "E d MMMM"
         self.lblDate.text = df.string(from: test.date!)
         df.timeStyle = .short
         df.dateStyle = .none
         self.lblTime.text = df.string(from: test.date!)
-            self.imgTest.image = UIImage.init(contentsOfFile: test.file_url)
+        self.imgTest.image = UIImage.init(named: test.file_name)
         
         
     }
