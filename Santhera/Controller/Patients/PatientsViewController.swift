@@ -36,7 +36,6 @@ class PatientsViewController: BaseViewController {
         self.title = L("patients_title")
         self.searchBar.placeholder = L("patients_searchBar_placeholder")
         patients = PatientManager.sharedInstance.getAllPatients()
-        // Do any additional setup after loading the view.
         self.collectionView.register(UINib.init(nibName: HomePatientCollectionViewCellId , bundle: Bundle.main), forCellWithReuseIdentifier: HomePatientCollectionViewCellId )
         addRightButton()
     }

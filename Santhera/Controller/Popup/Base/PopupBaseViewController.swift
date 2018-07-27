@@ -13,8 +13,6 @@ class PopupBaseViewController: UIViewController,UIGestureRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         self.view.alpha=0;
         self.view.backgroundColor = UIColor.init(white: 0, alpha: 0.7)
         self.view.frame = window.bounds

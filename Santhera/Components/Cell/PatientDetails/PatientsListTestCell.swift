@@ -7,9 +7,8 @@
 //
 
 import UIKit
-private let heightCollectionView = 180.0
+private let heightCollectionView = 200.0
 private var PatientTestResumeCollectionViewCellId = "PatientTestResumeCollectionViewCell"
-private let heightCell = 140.0
 private let widthCell = 140.0
 class PatientsListTestCell: UITableViewCell {
     var testsPatient : Array<Test> = []
@@ -58,7 +57,7 @@ extension PatientsListTestCell : UICollectionViewDelegateFlowLayout{
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: CGFloat(widthCell), height: CGFloat(heightCell ))
+        return CGSize(width: CGFloat(widthCell), height: CGFloat(heightCollectionView  ))
     }
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 00.0 , left: 20.0 , bottom: 0.0, right: 20.0)
@@ -91,7 +90,7 @@ extension PatientsListTestCell : UICollectionViewDataSource{
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PatientTestResumeCollectionViewCellId ,
                                                       for: indexPath) as! PatientTestResumeCollectionViewCell
-        
+        cell.setTest(test: testsPatient[indexPath.row])
         
         return cell
     }

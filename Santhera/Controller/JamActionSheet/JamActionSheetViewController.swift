@@ -36,7 +36,6 @@ class JamActionSheetViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         self.view.frame = (UIApplication.shared.keyWindow?.bounds)!
         addGestureRecognizer()
         jamActionSheetCollectionViewCellId = (self.delegate?.jamActionSheetViewCellXibName(self))!

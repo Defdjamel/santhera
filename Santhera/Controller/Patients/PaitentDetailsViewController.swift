@@ -19,7 +19,6 @@ class PaitentDetailsViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         configure()
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -66,7 +65,7 @@ class PaitentDetailsViewController: BaseViewController {
                 ctrl.dismissView()
                 if buttonSelected.id == "delete" {
                     self.currentPatient.removePatientAndData()
-                    self.navigationController?.popToRootViewController(animated: true)
+                    self.navigationController?.popViewController(animated: true)
                 }
             
         }) { (ctrl) in

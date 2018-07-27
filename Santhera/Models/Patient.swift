@@ -13,6 +13,10 @@ class Patient: Object {
     @objc dynamic var firstname = ""
     @objc dynamic var lastname = ""
    
+    @objc dynamic var id = 0
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 
     var testsLeftEye: Array<Test> { // read-only properties are automatically ignored
         let predicate =  NSPredicate(format: "isLeftEye = true ")
@@ -54,11 +58,15 @@ class Patient: Object {
         if self.tests.count > 0 {
             let df = DateFormatter()
             df.dateStyle = .medium
-            return  df.string(from: (self.tests.last?.date)!)
+            return  df.string(from: (self.tests.first?.date)!)
         }
         else {
             return nil
         }
     }
     
+    class func incrementID() -> Int {
+        let realm = try! Realm()
+        return (realm.objects(Patient.self).max(ofProperty: "id") as Int? ?? 0) + 1
+    }
 }

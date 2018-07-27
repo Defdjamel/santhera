@@ -25,6 +25,7 @@ class HomePatientRecentCell: UITableViewCell , UICollectionViewDataSource,UIColl
         super.awakeFromNib()
         // Initialization code
         self.collectionView.register(UINib.init(nibName: HomePatientCollectionViewCellId , bundle: Bundle.main), forCellWithReuseIdentifier: HomePatientCollectionViewCellId )
+        self.collectionView.reloadData()
         
     }
 
