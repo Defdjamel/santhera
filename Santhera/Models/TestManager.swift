@@ -10,6 +10,29 @@ import UIKit
 import RealmSwift
 class TestManager: NSObject {
     static let sharedInstance = TestManager()
+    
+    func createTestWithImage(image: UIImage, patient: Patient?) -> Test{
+         let realm = try! Realm()
+         realm.beginWrite()
+        let test = Test()
+        test.date  = Date()
+        if patient != nil {
+            
+        }
+        
+        //save image to document directory
+        let nameImage = "\(Date().timeIntervalSince1970)"
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let fileURL = dir.appendingPathComponent(nameImage)
+            if let data = UIImagePNGRepresentation(image) {
+              try? data.write(to: fileURL)
+            }
+         
+            test.file_name = nameImage
+        }
+        try! realm.commitWrite()
+        return test
+    }
    
     func createTestObjects(){
         removeAll()

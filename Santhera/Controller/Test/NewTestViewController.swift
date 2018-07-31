@@ -10,10 +10,10 @@ import UIKit
 
 class NewTestViewController: UIViewController {
     var imagePicker = UIImagePickerController()
+    var currentTest: Test!
 
     @IBOutlet weak var cropGrid: UIImageView!
     @IBOutlet weak var cameraViewContainer: UIView!
-    var imageCropped  : UIImage!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,6 +26,9 @@ class NewTestViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
 
      //MARK: - IBAction
     @IBAction func onClickBack(_ sender: Any) {
@@ -41,6 +44,7 @@ class NewTestViewController: UIViewController {
     private func openCamera(){
         if !UIImagePickerController.isSourceTypeAvailable(.camera){
             print("camera not available!")
+            return
         }
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
@@ -57,6 +61,9 @@ class NewTestViewController: UIViewController {
         imagePicker.cameraViewTransform = imagePicker.cameraViewTransform.scaledBy(x: scale, y: scale)
         
     }
+    private func createTest(image: UIImage){
+        
+    }
     
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -64,11 +71,9 @@ class NewTestViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if let vc = segue.destination as? DiagnosticViewController {
-            vc.imageCropped = imageCropped
+            vc.currentTest = currentTest
         }
     }
-    
-    
 
 }
 
@@ -84,8 +89,10 @@ extension NewTestViewController: UIImagePickerControllerDelegate, UINavigationCo
             let height =  cropGrid.frame.height * scale
             let x = pickedImage.size.width / 2 - ( cropGrid.frame.width/2 * scale)
             let width =  cropGrid.frame.width * scale
-            imageCropped =  pickedImage.croppedInRect2(rect: CGRect(x: x, y: y, width: width, height: height))
+            let imageCropped =  pickedImage.croppedInRect2(rect: CGRect(x: x, y: y, width: width, height: height))
             print(imageCropped.size)
+            currentTest = TestManager.sharedInstance.createTestWithImage(image: imageCropped, patient: nil)
+            
             self.performSegue(withIdentifier: "diagnostic", sender: self)
         }
     }
