@@ -18,7 +18,6 @@ class TestManager: NSObject {
             let number = Int.random(lower: 3, upper: 10)
             let date = Date().addingTimeInterval(TimeInterval(p * -86400))
             for i in 1...number {
-                
                 let test = Test()
                 let realm = try! Realm()
                 realm.beginWrite()
@@ -31,10 +30,8 @@ class TestManager: NSObject {
             }
             p += 1
         }
-        
-        
-        
     }
+    
     func removeAll(){
         let realm = try! Realm()
         let d = realm.objects(Test.self)

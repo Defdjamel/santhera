@@ -39,3 +39,5 @@
 "edit_patient_title" = "Informations du patient";
 "new_patient_title" = "Informations du patient";
 "btn_edit_info" = "Enregister les modifications";
+"new_test_title" = "Scanner votre grille d’Amsler";
+"new_test_subtitle" = "Veillez à ce que votre feuille soit lisible et bien centrée dans le cadre ci-dessous.";

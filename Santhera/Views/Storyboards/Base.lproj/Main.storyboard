@@ -51,6 +51,9 @@
                                                 <color key="value" red="0.1330000013" green="0.22699999809999999" blue="0.53299999239999996" alpha="0.70455090107361962" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="qUu-sl-BUs" kind="presentation" identifier="NewTest" id="Zdm-EM-aa2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -93,10 +96,17 @@
             </objects>
             <point key="canvasLocation" x="1691" y="31"/>
         </scene>
+        <!--TestPatient-->
+        <scene sceneID="nkZ-Ww-yVo">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TestPatient" id="qUu-sl-BUs" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="07s-5T-ZKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1744" y="306"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="KuM-gG-eSc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dwU-td-kyI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gwi-2w-pri" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NRh-by-hKV">
@@ -111,6 +121,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="R4A-CF-LqD"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dwU-td-kyI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="166" y="32"/>
         </scene>

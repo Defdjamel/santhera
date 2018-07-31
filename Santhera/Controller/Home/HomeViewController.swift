@@ -18,6 +18,7 @@ class HomeViewController: BaseViewController {
     private let homeAccuityCellId = "HomeAccuityCell"
     private let homeDocumentsCellId = "HomeDocumentsCell"
     
+    //MARK: - LifeCycle
     override func viewDidLoad() {
         self.tableView.register(UINib.init(nibName: homePatientRecentCellId, bundle: Bundle.main), forCellReuseIdentifier: homePatientRecentCellId)
         self.tableView.register(UINib.init(nibName: homeBotCellId, bundle: Bundle.main), forCellReuseIdentifier: homeBotCellId)
@@ -32,7 +33,8 @@ class HomeViewController: BaseViewController {
         self.tableView.reloadData()
     }
     
-    func setNavLogo(){
+    //MARK: - Private methods
+    private func setNavLogo(){
         let nav = self.navigationController?.navigationBar
        
         nav?.barStyle = UIBarStyle.default
@@ -46,7 +48,10 @@ class HomeViewController: BaseViewController {
         
     }
     
+     //MARK: - Private IBAction
+    
 }
+
 //MARK: - UITableViewDelegate
 extension HomeViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
