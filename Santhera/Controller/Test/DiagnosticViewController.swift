@@ -9,28 +9,34 @@
 import UIKit
 private let DiagCaptureCellId = "DiagCaptureCell"
 private let DiagDateCellId = "DiagDateCell"
-private let DiagSelectEyeCellCellId = "DiagSelectEyeCellCell"
+private let DiagSelectEyeCellId = "DiagSelectEyeCell"
 private let DiagSelectPatientCellId = "DiagSelectPatientCell"
+private let DiagCommentCellId = "DiagCommentCell"
 
 
 class DiagnosticViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var btnSave: buttonValidate!
     var currentTest: Test!
-   
-    var imageCropped  : UIImage!
+    var textCommentView : UITextView?
+    //var imageCropped  : UIImage!
+    
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         self.tableView.register(UINib.init(nibName: DiagCaptureCellId, bundle: Bundle.main), forCellReuseIdentifier: DiagCaptureCellId)
         self.tableView.register(UINib.init(nibName: DiagDateCellId, bundle: Bundle.main), forCellReuseIdentifier: DiagDateCellId)
-        self.tableView.register(UINib.init(nibName: DiagSelectEyeCellCellId, bundle: Bundle.main), forCellReuseIdentifier: DiagSelectEyeCellCellId)
+        self.tableView.register(UINib.init(nibName: DiagSelectEyeCellId, bundle: Bundle.main), forCellReuseIdentifier: DiagSelectEyeCellId)
         self.tableView.register(UINib.init(nibName: DiagSelectPatientCellId, bundle: Bundle.main), forCellReuseIdentifier: DiagSelectPatientCellId)
+        self.tableView.register(UINib.init(nibName: DiagCommentCellId, bundle: Bundle.main), forCellReuseIdentifier: DiagCommentCellId)
        
-      
+        updateBtnSave()
+        addKeyboardObs()
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,7 +44,24 @@ class DiagnosticViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    // MARK: - privates methods
+    private func updateBtnSave(){
+        
+    }
+   private func addKeyboardObs(){
+        NotificationCenter.default.addObserver(self, selector: #selector(SHKeyboardViewController.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(SHKeyboardViewController.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    private func hideKeyboard(){
+        textCommentView?.resignFirstResponder()
+    }
+    
+    // MARK: - IBActions
+    @IBAction func onClickBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    @IBAction func onClickSave(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 
@@ -57,7 +80,7 @@ extension DiagnosticViewController: UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
@@ -71,15 +94,22 @@ extension DiagnosticViewController: UITableViewDataSource {
             return cell
         }
         if indexPath.row == 2 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: DiagSelectEyeCellCellId, for: indexPath) as! DiagSelectEyeCellCell
-
+            let cell = tableView.dequeueReusableCell(withIdentifier: DiagSelectEyeCellId, for: indexPath) as! DiagSelectEyeCell
+            cell.delegate = self
             return cell
         }
         if indexPath.row == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: DiagSelectPatientCellId, for: indexPath) as! DiagSelectPatientCell
-            
+            cell.delegate = self
             return cell
         }
+        if indexPath.row == 4 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: DiagCommentCellId, for: indexPath) as! DiagCommentCell
+            cell.txtView.delegate = self
+            textCommentView =  cell.txtView
+            return cell
+        }
+        
        
         return UITableViewCell.init()
     }
@@ -95,14 +125,57 @@ extension DiagnosticViewController: UITableViewDataSource {
         case 1:
             return DiagDateCell.getHeight()
         case 2:
-            return DiagSelectEyeCellCell.getHeight()
+            return DiagSelectEyeCell.getHeight()
         case 3:
             return DiagSelectPatientCell.getHeight()
+        case 4:
+            return DiagCommentCell.getHeight()
         default:
             return 0
         }
     }
 }
 extension DiagnosticViewController:   UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.hideKeyboard()
+    }
+}
 
+//MARK: - Keyboard
+extension DiagnosticViewController {
+    
+    @objc open func keyboardWillShow(_ notification: Foundation.Notification) {
+        if let rectValue = (notification as NSNotification).userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue {
+            let kbRect = view.convert(rectValue.cgRectValue, from: nil)
+            bottomConstraint.constant =  kbRect.size.height
+            self.tableView.scrollToBottom()
+        }
+    }
+    @objc open func keyboardWillHide(_ notification: Foundation.Notification) {
+        bottomConstraint.constant = 0
+    }
+    
+}
+//MARK: - UITextViewDelegate
+extension DiagnosticViewController : UITextViewDelegate{
+    func textViewDidChange(_ textView: UITextView){
+        print("text Change")
+    }
+}
+
+//MARK: - DiagSelectEyeCellDelegate
+extension DiagnosticViewController : DiagSelectEyeCellDelegate{
+    func diagSelectEyeCell(_ diagSelectEyeCell: DiagSelectEyeCell, DidSelectIsEyeLeft value: Bool) {
+        currentTest.isLeftEye = value
+        self.hideKeyboard()
+        self.updateBtnSave()
+    }
+}
+//MARK: - DiagSelectEyeCellDelegate
+extension DiagnosticViewController : DiagSelectPatientCellDelegate{
+    func diagSelectPatientCell(DidSelectAddPatient diagSelectPatientCell: DiagSelectPatientCell) {
+        self.hideKeyboard()
+    }
+    
+    
 }

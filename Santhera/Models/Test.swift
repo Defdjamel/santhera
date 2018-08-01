@@ -13,6 +13,7 @@ class Test: Object {
         @objc dynamic var date : Date? = nil
         @objc dynamic var isLeftEye = true //default Left
         @objc dynamic var file_name = ""
+        @objc dynamic var comment = ""
 
     var imageUrl: URL? { // read-only properties are automatically ignored
         if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {

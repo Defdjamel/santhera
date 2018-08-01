@@ -41,3 +41,9 @@
 "btn_edit_info" = "Enregister les modifications";
 "new_test_title" = "Scanner votre grille d’Amsler";
 "new_test_subtitle" = "Veillez à ce que votre feuille soit lisible et bien centrée dans le cadre ci-dessous.";
+"diag_nav_title" = "Diagnostic";
+"diag_btn_eye_left" = "Oeil gauche";
+"diag_btn_eye_right" = "Oeil droit";
+"diag_btn_add_patient" = "Ajouter un patient ";
+"btn_save" = "Enregistrer";
+"diag_comment_title" = "Remarques";

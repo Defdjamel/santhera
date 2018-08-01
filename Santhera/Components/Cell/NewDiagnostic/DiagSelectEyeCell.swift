@@ -7,11 +7,15 @@
 //
 
 import UIKit
+protocol DiagSelectEyeCellDelegate {
+    func diagSelectEyeCell(_ diagSelectEyeCell: DiagSelectEyeCell, DidSelectIsEyeLeft value: Bool)
+}
 
-class DiagSelectEyeCellCell: UITableViewCell {
+class DiagSelectEyeCell: UITableViewCell {
 
     @IBOutlet weak var btnLeft: UIButton!
     @IBOutlet weak var btnRight: UIButton!
+    var delegate : DiagSelectEyeCellDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -43,9 +47,11 @@ class DiagSelectEyeCellCell: UITableViewCell {
     @IBAction func onClickLeft(_ sender: Any) {
         selectButton(button: self.btnLeft)
         deSelectButton(button: self.btnRight)
+        self.delegate?.diagSelectEyeCell(self, DidSelectIsEyeLeft: true)
     }
     @IBAction func onClickRight(_ sender: Any) {
         selectButton(button: self.btnRight)
         deSelectButton(button: self.btnLeft)
+        self.delegate?.diagSelectEyeCell(self, DidSelectIsEyeLeft: false)
     }
 }

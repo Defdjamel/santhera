@@ -7,8 +7,12 @@
 //
 
 import UIKit
+protocol DiagSelectPatientCellDelegate {
+    func diagSelectPatientCell(DidSelectAddPatient diagSelectPatientCell: DiagSelectPatientCell)
+}
 
 class DiagSelectPatientCell: UITableViewCell {
+    var delegate : DiagSelectPatientCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,7 +25,14 @@ class DiagSelectPatientCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    //MARK: - class methods
     class func getHeight() -> CGFloat {
         return 100
     }
+    
+    //MARK: - IBAction
+    @IBAction func onClickSelectPatient(_ sender: Any) {
+        self.delegate?.diagSelectPatientCell(DidSelectAddPatient: self)
+    }
+    
 }
