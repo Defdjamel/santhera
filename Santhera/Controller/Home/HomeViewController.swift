@@ -55,6 +55,8 @@ class HomeViewController: BaseViewController {
 //MARK: - UITableViewDelegate
 extension HomeViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+    
     }
 }
 //MARK: - UITableViewDataSource
@@ -133,7 +135,6 @@ extension HomeViewController : HomeDocumentCellDelegate {
     func showAlertDocumentInvalid(){
         let  popvc = PopupInfoViewController()
         popvc.showViewFromCtrl(controller: self)
-        
     }
     func openPDF(document: Document) {
         let urlString = document.file_url
@@ -159,3 +160,4 @@ extension HomeViewController : HomePatientRecentCellDelegate {
         self.performSegue(withIdentifier: "HomePatients", sender: self)
     }
 }
+

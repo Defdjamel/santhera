@@ -68,7 +68,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.32156863810000003" green="0.34117648010000001" blue="0.40784314269999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="GcI-MK-PEQ" firstAttribute="top" secondItem="Jv3-H8-5sl" secondAttribute="top" constant="30" id="9gv-TG-WGE"/>
                                             <constraint firstAttribute="trailing" secondItem="BUS-ix-Qga" secondAttribute="trailing" constant="20" id="A1c-sO-jCC"/>
@@ -93,7 +93,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.32156863810000003" green="0.34117648010000001" blue="0.40784314269999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="JHw-dh-TRc" firstAttribute="centerY" secondItem="BNd-1F-62L" secondAttribute="centerY" id="nWL-Ek-bNX"/>
                                             <constraint firstItem="JHw-dh-TRc" firstAttribute="centerX" secondItem="BNd-1F-62L" secondAttribute="centerX" id="uSj-zE-NUt"/>
@@ -162,45 +162,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zfP-9F-suM" userLabel="header">
-                                <rect key="frame" x="0.0" y="20" width="375" height="40"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4f-1A-27M">
-                                        <rect key="frame" x="10" y="0.0" width="50" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="whm-2h-naz"/>
-                                        </constraints>
-                                        <state key="normal" image="icBackNav"/>
-                                        <connections>
-                                            <action selector="onClickBack:" destination="bYG-Om-guh" eventType="touchUpInside" id="9yV-Ep-NNA"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="diag_nav_title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3m1-Xe-uPs">
-                                        <rect key="frame" x="133.5" y="10" width="107.5" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="F4f-1A-27M" firstAttribute="top" secondItem="zfP-9F-suM" secondAttribute="top" id="7aL-Fk-gd0"/>
-                                    <constraint firstItem="F4f-1A-27M" firstAttribute="leading" secondItem="zfP-9F-suM" secondAttribute="leading" constant="10" id="Alj-0C-ZeP"/>
-                                    <constraint firstAttribute="height" constant="40" id="T8h-wQ-AnB"/>
-                                    <constraint firstAttribute="bottom" secondItem="F4f-1A-27M" secondAttribute="bottom" id="TVc-gT-LIw"/>
-                                    <constraint firstItem="3m1-Xe-uPs" firstAttribute="centerY" secondItem="zfP-9F-suM" secondAttribute="centerY" id="fWp-F2-TKU"/>
-                                    <constraint firstItem="3m1-Xe-uPs" firstAttribute="centerX" secondItem="zfP-9F-suM" secondAttribute="centerX" id="t4E-RL-OR3"/>
-                                </constraints>
-                            </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sBK-fw-lpR">
-                                <rect key="frame" x="0.0" y="60" width="375" height="547"/>
-                                <color key="backgroundColor" name="cobalt"/>
-                                <color key="sectionIndexBackgroundColor" name="frenchBlue"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="bYG-Om-guh" id="LSH-fW-fdk"/>
-                                    <outlet property="delegate" destination="bYG-Om-guh" id="0lO-HB-rre"/>
-                                </connections>
-                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rUr-Bh-9XT">
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <subviews>
@@ -222,6 +183,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <color key="backgroundColor" red="0.97254902119999997" green="0.97647058959999999" blue="0.98039215800000001" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="0ot-br-nNC"/>
                                     <constraint firstItem="xHT-rZ-2Xd" firstAttribute="centerX" secondItem="rUr-Bh-9XT" secondAttribute="centerX" id="H9D-nA-nUt"/>
@@ -247,6 +209,48 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zfP-9F-suM" userLabel="header">
+                                <rect key="frame" x="0.0" y="20" width="375" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4f-1A-27M">
+                                        <rect key="frame" x="10" y="0.0" width="50" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="whm-2h-naz"/>
+                                        </constraints>
+                                        <state key="normal" image="icBackNav"/>
+                                        <connections>
+                                            <action selector="onClickBack:" destination="bYG-Om-guh" eventType="touchUpInside" id="9yV-Ep-NNA"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[diag_nav_title]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3m1-Xe-uPs">
+                                        <rect key="frame" x="127" y="10" width="120.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="diag_nav_title"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="F4f-1A-27M" firstAttribute="top" secondItem="zfP-9F-suM" secondAttribute="top" id="7aL-Fk-gd0"/>
+                                    <constraint firstItem="F4f-1A-27M" firstAttribute="leading" secondItem="zfP-9F-suM" secondAttribute="leading" constant="10" id="Alj-0C-ZeP"/>
+                                    <constraint firstAttribute="height" constant="40" id="T8h-wQ-AnB"/>
+                                    <constraint firstAttribute="bottom" secondItem="F4f-1A-27M" secondAttribute="bottom" id="TVc-gT-LIw"/>
+                                    <constraint firstItem="3m1-Xe-uPs" firstAttribute="centerY" secondItem="zfP-9F-suM" secondAttribute="centerY" id="fWp-F2-TKU"/>
+                                    <constraint firstItem="3m1-Xe-uPs" firstAttribute="centerX" secondItem="zfP-9F-suM" secondAttribute="centerX" id="t4E-RL-OR3"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sBK-fw-lpR">
+                                <rect key="frame" x="0.0" y="60" width="375" height="547"/>
+                                <color key="backgroundColor" name="cobalt"/>
+                                <color key="sectionIndexBackgroundColor" name="frenchBlue"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="bYG-Om-guh" id="LSH-fW-fdk"/>
+                                    <outlet property="delegate" destination="bYG-Om-guh" id="0lO-HB-rre"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" name="cobalt"/>
                         <constraints>

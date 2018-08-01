@@ -30,9 +30,10 @@ class DiagSelectEyeCell: UITableViewCell {
     class func getHeight() -> CGFloat {
         return 85
     }
+    
     //MARK: - private methods
     private func initButtonState(){
-        selectButton(button: self.btnLeft)
+        deSelectButton(button: self.btnLeft)
         deSelectButton(button: self.btnRight)
     }
     private func selectButton(button: UIButton){

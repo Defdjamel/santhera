@@ -9,20 +9,38 @@
 import UIKit
 private var HomePatientCollectionViewCellId = "HomePatientCollectionViewCell"
 private let heightPatientCell = 150.0
+private let heightBtnSave : CGFloat = 60
+
+protocol PatientsViewControllerDelegate {
+    func patientsViewController(_ patientsViewController: PatientsViewController, DidSelect patient: Patient)
+}
 
 class PatientsViewController: BaseViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var heightBtnSaveConstraint: NSLayoutConstraint!
+    @IBOutlet weak var btnSaveContainer: UIView!
+    @IBOutlet weak var btnSave: buttonValidate!
+    
     var patients : Array<Patient> = []
     var patientsFilter : Array<Patient> = []
+    var isPatientSelectable = false
+    var patientsSelected : Array<Patient> = []
+    var delegate : PatientsViewControllerDelegate?
     
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
         addKeyboardObs()
+        updateBtnSave()
        
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     override func viewWillAppear(_ animated: Bool) {
         if searchBar.text?.count > 0 {
@@ -32,43 +50,61 @@ class PatientsViewController: BaseViewController {
             resetFilter()
         }
     }
-    func configure(){
+    
+    // MARK: - Private method
+    private func configure(){
         self.title = L("patients_title")
         self.searchBar.placeholder = L("patients_searchBar_placeholder")
         patients = PatientManager.sharedInstance.getAllPatients()
         self.collectionView.register(UINib.init(nibName: HomePatientCollectionViewCellId , bundle: Bundle.main), forCellWithReuseIdentifier: HomePatientCollectionViewCellId )
         addRightButton()
+       
+        btnSave.isHidden = !isPatientSelectable
+        heightBtnSaveConstraint.constant = isPatientSelectable ? heightBtnSave : 0
     }
-    func addRightButton(){
+    private func addRightButton(){
         let  menu_button_ = UIBarButtonItem(image: #imageLiteral(resourceName: "icAddPatient"),
                                             style: UIBarButtonItemStyle.plain ,
                                             target: self, action:  #selector(OnNewPatientClicked) )
         menu_button_.tintColor = UIColor.black
         self.navigationItem.rightBarButtonItem =  menu_button_
-        
-       
     }
+    private func isPatientSelected(patient: Patient) -> Bool{
+        return  patientsSelected.contains(patient) ? true : false
+    }
+    private func selectPatient(patient: Patient){
+        patientsSelected.removeAll()
+        patientsSelected.append(patient)
+        self.collectionView.reloadData()
+        updateBtnSave()
+    }
+    private func addKeyboardObs(){
+        NotificationCenter.default.addObserver(self, selector: #selector(SHKeyboardViewController.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(SHKeyboardViewController.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    private func updateBtnSave(){
+        btnSave.isEnabled =  patientsSelected.count > 0  ? true : false
+    }
+    
+    private func resetFilter(){
+        patients = PatientManager.sharedInstance.getAllPatients()
+        self.collectionView.reloadData()
+    }
+    private func filterByText(text: String){
+        patients = PatientManager.sharedInstance.getAllPatientsFilterText(text: text)
+        self.collectionView.reloadData()
+    }
+   
+    
+    // MARK: - IBAction
     @objc func OnNewPatientClicked(){
         self.performSegue(withIdentifier: "newPatient", sender: self)
     }
     
-    func addKeyboardObs(){
-        NotificationCenter.default.addObserver(self, selector: #selector(SHKeyboardViewController.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(SHKeyboardViewController.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func resetFilter(){
-        patients = PatientManager.sharedInstance.getAllPatients()
-        self.collectionView.reloadData()
-    }
-    func filterByText(text: String){
-        patients = PatientManager.sharedInstance.getAllPatientsFilterText(text: text)
-        self.collectionView.reloadData()
+    @IBAction func onClickSave(_ sender: Any) {
+        if patientsSelected.count > 0 , let patient = patientsSelected.first {
+            self.delegate?.patientsViewController(self, DidSelect: patient)
+        }
     }
     
     // MARK: - Navigation
@@ -107,7 +143,12 @@ extension PatientsViewController: UICollectionViewDelegateFlowLayout{
 //MARK: - UICollectionViewDelegate
 extension PatientsViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "patientDetails", sender: self)
+        if isPatientSelectable {
+            selectPatient(patient: patients[indexPath.row])
+        }else {
+             self.performSegue(withIdentifier: "patientDetails", sender: self)
+        }
+       
     }
 }
 
@@ -131,7 +172,12 @@ extension PatientsViewController: UICollectionViewDataSource{
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomePatientCollectionViewCellId ,
                                                       for: indexPath) as! HomePatientCollectionViewCell
-        cell.setObj(obj: patients[indexPath.row])
+        let patient = patients[indexPath.row]
+        cell.setObj(obj: patient )
+        
+        if isPatientSelectable{
+            cell.setPatientSelected(value: self.isPatientSelected(patient: patient))
+        }
         
         return cell
     }

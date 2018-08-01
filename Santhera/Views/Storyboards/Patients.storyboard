@@ -13,13 +13,13 @@
         <!--Patients View Controller-->
         <scene sceneID="ArV-7b-XJ0">
             <objects>
-                <viewController id="v4A-ng-EAu" customClass="PatientsViewController" customModule="Santhera" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PatientsList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="v4A-ng-EAu" customClass="PatientsViewController" customModule="Santhera" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mrz-Aa-HOl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="o2g-Jm-9sQ">
-                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
+                                <rect key="frame" x="0.0" y="76" width="375" height="531"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eCZ-UD-Hy2">
                                     <size key="itemSize" width="50" height="50"/>
@@ -58,23 +58,74 @@
                                     <outlet property="delegate" destination="v4A-ng-EAu" id="P7W-LV-LwK"/>
                                 </connections>
                             </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a0A-fo-KDC">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dA-JX-whS" customClass="buttonValidate" customModule="Santhera" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                        <color key="backgroundColor" name="cobalt"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="[btn_save]">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" red="0.71764707569999997" green="0.73333334920000004" blue="0.74509805439999999" alpha="1" colorSpace="deviceRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="btn_save"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onClickSave:" destination="v4A-ng-EAu" eventType="touchUpInside" id="JOH-wz-2Tx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="5dA-JX-whS" firstAttribute="top" secondItem="a0A-fo-KDC" secondAttribute="top" id="3az-YM-It9"/>
+                                    <constraint firstAttribute="bottom" secondItem="5dA-JX-whS" secondAttribute="bottom" id="6JE-1V-Iaq"/>
+                                    <constraint firstItem="5dA-JX-whS" firstAttribute="centerY" secondItem="a0A-fo-KDC" secondAttribute="centerY" id="Eob-EO-YXt"/>
+                                    <constraint firstItem="5dA-JX-whS" firstAttribute="centerX" secondItem="a0A-fo-KDC" secondAttribute="centerX" id="YO2-Pb-c7j"/>
+                                    <constraint firstItem="5dA-JX-whS" firstAttribute="leading" secondItem="a0A-fo-KDC" secondAttribute="leading" id="efE-MY-svt"/>
+                                    <constraint firstAttribute="height" constant="60" id="qk0-Io-IL5"/>
+                                    <constraint firstAttribute="trailing" secondItem="5dA-JX-whS" secondAttribute="trailing" id="wb7-K4-IqM"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.1330000013" green="0.22699999809999999" blue="0.53299999239999996" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="-4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="a0A-fo-KDC" firstAttribute="trailing" secondItem="dWQ-gw-bWs" secondAttribute="trailing" id="FmJ-b9-063"/>
                             <constraint firstItem="fjb-q5-eWW" firstAttribute="top" secondItem="dWQ-gw-bWs" secondAttribute="top" id="HTz-UV-w0P"/>
+                            <constraint firstItem="a0A-fo-KDC" firstAttribute="leading" secondItem="dWQ-gw-bWs" secondAttribute="leading" id="LU6-7V-5oT"/>
+                            <constraint firstItem="a0A-fo-KDC" firstAttribute="top" secondItem="o2g-Jm-9sQ" secondAttribute="bottom" id="PGv-6M-xCT"/>
+                            <constraint firstItem="dWQ-gw-bWs" firstAttribute="bottom" secondItem="a0A-fo-KDC" secondAttribute="bottom" id="QTx-xB-9wi"/>
                             <constraint firstItem="o2g-Jm-9sQ" firstAttribute="trailing" secondItem="dWQ-gw-bWs" secondAttribute="trailing" id="bA9-lZ-aUc"/>
                             <constraint firstItem="o2g-Jm-9sQ" firstAttribute="leading" secondItem="dWQ-gw-bWs" secondAttribute="leading" id="huT-WD-AGN"/>
                             <constraint firstItem="o2g-Jm-9sQ" firstAttribute="top" secondItem="fjb-q5-eWW" secondAttribute="bottom" id="ogZ-xN-fRq"/>
                             <constraint firstItem="fjb-q5-eWW" firstAttribute="trailing" secondItem="dWQ-gw-bWs" secondAttribute="trailing" id="tVA-rP-sWR"/>
                             <constraint firstItem="fjb-q5-eWW" firstAttribute="leading" secondItem="dWQ-gw-bWs" secondAttribute="leading" id="zMD-qC-f65"/>
-                            <constraint firstItem="dWQ-gw-bWs" firstAttribute="bottom" secondItem="o2g-Jm-9sQ" secondAttribute="bottom" id="zfg-fU-k6t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dWQ-gw-bWs"/>
                     </view>
                     <navigationItem key="navigationItem" id="wOg-c2-LCj"/>
                     <connections>
-                        <outlet property="bottomConstraint" destination="zfg-fU-k6t" id="4a2-CO-5e7"/>
+                        <outlet property="bottomConstraint" destination="QTx-xB-9wi" id="cfk-Hn-ffy"/>
+                        <outlet property="btnSave" destination="5dA-JX-whS" id="lYa-4r-SqM"/>
+                        <outlet property="btnSaveContainer" destination="a0A-fo-KDC" id="exw-Ce-mrX"/>
                         <outlet property="collectionView" destination="o2g-Jm-9sQ" id="lfd-AY-ZLw"/>
+                        <outlet property="heightBtnSaveConstraint" destination="qk0-Io-IL5" id="YQw-S9-cdf"/>
                         <outlet property="searchBar" destination="fjb-q5-eWW" id="FP9-r3-RgU"/>
                         <segue destination="NM4-Vq-Fvm" kind="show" identifier="patientDetails" id="EKI-zy-ToE"/>
                         <segue destination="f4D-CB-bdI" kind="show" identifier="newPatient" id="dT1-jr-kGp"/>
@@ -323,6 +374,9 @@
     </scenes>
     <resources>
         <namedColor name="cobalt">
+            <color red="0.1330000013" green="0.22699999809999999" blue="0.53299999239999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="cobalt">
             <color red="0.13300000131130219" green="0.22699999809265137" blue="0.53299999237060547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="paleBlue">
@@ -333,6 +387,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6zn-FR-5kV"/>
+        <segue reference="dT1-jr-kGp"/>
     </inferredMetricsTieBreakers>
 </document>

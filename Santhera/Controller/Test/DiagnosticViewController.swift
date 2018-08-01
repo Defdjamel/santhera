@@ -7,17 +7,21 @@
 //
 
 import UIKit
+import RealmSwift
 private let DiagCaptureCellId = "DiagCaptureCell"
 private let DiagDateCellId = "DiagDateCell"
 private let DiagSelectEyeCellId = "DiagSelectEyeCell"
 private let DiagSelectPatientCellId = "DiagSelectPatientCell"
 private let DiagCommentCellId = "DiagCommentCell"
+private let DiagEditPatientCellId = "DiagEditPatientCell"
+
 
 
 class DiagnosticViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var btnSave: buttonValidate!
     var currentTest: Test!
+    var isEyeLeftSelect : Bool!
     var textCommentView : UITextView?
     //var imageCropped  : UIImage!
     
@@ -31,9 +35,11 @@ class DiagnosticViewController: UIViewController {
         self.tableView.register(UINib.init(nibName: DiagSelectEyeCellId, bundle: Bundle.main), forCellReuseIdentifier: DiagSelectEyeCellId)
         self.tableView.register(UINib.init(nibName: DiagSelectPatientCellId, bundle: Bundle.main), forCellReuseIdentifier: DiagSelectPatientCellId)
         self.tableView.register(UINib.init(nibName: DiagCommentCellId, bundle: Bundle.main), forCellReuseIdentifier: DiagCommentCellId)
+        self.tableView.register(UINib.init(nibName: DiagEditPatientCellId, bundle: Bundle.main), forCellReuseIdentifier: DiagEditPatientCellId)
        
         updateBtnSave()
         addKeyboardObs()
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
@@ -46,6 +52,12 @@ class DiagnosticViewController: UIViewController {
     
     // MARK: - privates methods
     private func updateBtnSave(){
+        if isEyeLeftSelect != nil, currentTest.patient != nil {
+           self.btnSave.isEnabled = true
+        }
+        else {
+            self.btnSave.isEnabled = false
+        }
         
     }
    private func addKeyboardObs(){
@@ -61,6 +73,14 @@ class DiagnosticViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func onClickSave(_ sender: Any) {
+         let realm = try! Realm()
+         realm.beginWrite()
+        if let comment = textCommentView?.text  {
+            currentTest.comment = comment
+        }
+        realm.add(currentTest)
+        try! realm.commitWrite()
+        self.navigationController?.popToRootViewController(animated: true)
     }
     /*
     // MARK: - Navigation
@@ -99,15 +119,23 @@ extension DiagnosticViewController: UITableViewDataSource {
             return cell
         }
         if indexPath.row == 3 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: DiagSelectPatientCellId, for: indexPath) as! DiagSelectPatientCell
-            cell.delegate = self
-            return cell
+            if let patient = currentTest.patient  {
+                let cell = tableView.dequeueReusableCell(withIdentifier: DiagEditPatientCellId, for: indexPath) as! DiagEditPatientCell
+                cell.setPatient(patient: patient)
+                cell.delegate = self
+                return cell
+            }else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: DiagSelectPatientCellId, for: indexPath) as! DiagSelectPatientCell
+                cell.delegate = self
+                return cell
+            }
         }
         if indexPath.row == 4 {
             let cell = tableView.dequeueReusableCell(withIdentifier: DiagCommentCellId, for: indexPath) as! DiagCommentCell
             cell.txtView.delegate = self
             textCommentView =  cell.txtView
             return cell
+            
         }
         
        
@@ -127,7 +155,7 @@ extension DiagnosticViewController: UITableViewDataSource {
         case 2:
             return DiagSelectEyeCell.getHeight()
         case 3:
-            return DiagSelectPatientCell.getHeight()
+            return (currentTest.patient != nil) ?  DiagEditPatientCell.getHeight() : DiagSelectPatientCell.getHeight()
         case 4:
             return DiagCommentCell.getHeight()
         default:
@@ -167,6 +195,7 @@ extension DiagnosticViewController : UITextViewDelegate{
 extension DiagnosticViewController : DiagSelectEyeCellDelegate{
     func diagSelectEyeCell(_ diagSelectEyeCell: DiagSelectEyeCell, DidSelectIsEyeLeft value: Bool) {
         currentTest.isLeftEye = value
+        isEyeLeftSelect = value
         self.hideKeyboard()
         self.updateBtnSave()
     }
@@ -174,7 +203,32 @@ extension DiagnosticViewController : DiagSelectEyeCellDelegate{
 //MARK: - DiagSelectEyeCellDelegate
 extension DiagnosticViewController : DiagSelectPatientCellDelegate{
     func diagSelectPatientCell(DidSelectAddPatient diagSelectPatientCell: DiagSelectPatientCell) {
+        let vc =  UIStoryboard(name: "Patients", bundle: nil).instantiateViewController(withIdentifier: "PatientsList") as! PatientsViewController
+        vc.isPatientSelectable = true
+        vc.delegate = self
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.navigationController?.show(vc, sender: self)
         self.hideKeyboard()
+    }
+    
+    
+}
+//MARK: - PatientsViewControllerDelegate
+extension DiagnosticViewController: PatientsViewControllerDelegate{
+    func patientsViewController(_ patientsViewController: PatientsViewController, DidSelect patient: Patient) {
+        patientsViewController.navigationController?.popViewController(animated: true)
+        currentTest.patient = patient
+        updateBtnSave()
+        self.tableView.reloadData()
+    }
+    
+    
+}
+extension DiagnosticViewController: DiagEditPatientCellDelegate {
+    func diagEditPatientCell(DidRemovePatient DiagEditPatientCell: DiagEditPatientCell) {
+        currentTest.patient = nil
+        self.tableView.reloadData()
+        updateBtnSave()
     }
     
     

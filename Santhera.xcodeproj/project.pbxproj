@@ -85,6 +85,8 @@
 		1ACB2A4321119C1000247E10 /* DiagCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB2A4121119C1000247E10 /* DiagCommentCell.swift */; };
 		1ACB2A4421119C1000247E10 /* DiagCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACB2A4221119C1000247E10 /* DiagCommentCell.xib */; };
 		1ACB2A462111AB1E00247E10 /* UITableView+Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB2A452111AB1E00247E10 /* UITableView+Scroll.swift */; };
+		1ACB2A4A2111E2F600247E10 /* DiagEditPatientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB2A482111E2F600247E10 /* DiagEditPatientCell.swift */; };
+		1ACB2A4B2111E2F600247E10 /* DiagEditPatientCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACB2A492111E2F600247E10 /* DiagEditPatientCell.xib */; };
 		1ACBB4112109FC8300AB1BF2 /* test_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACBB40F2109FC8300AB1BF2 /* test_1.png */; };
 		1ACBB4122109FC8300AB1BF2 /* test_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACBB4102109FC8300AB1BF2 /* test_2.png */; };
 		1ACBB41C210B025200AB1BF2 /* thumb_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACBB419210B025200AB1BF2 /* thumb_2.png */; };
@@ -267,6 +269,8 @@
 		1ACB2A4121119C1000247E10 /* DiagCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagCommentCell.swift; sourceTree = "<group>"; };
 		1ACB2A4221119C1000247E10 /* DiagCommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiagCommentCell.xib; sourceTree = "<group>"; };
 		1ACB2A452111AB1E00247E10 /* UITableView+Scroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Scroll.swift"; sourceTree = "<group>"; };
+		1ACB2A482111E2F600247E10 /* DiagEditPatientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagEditPatientCell.swift; sourceTree = "<group>"; };
+		1ACB2A492111E2F600247E10 /* DiagEditPatientCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiagEditPatientCell.xib; sourceTree = "<group>"; };
 		1ACBB40F2109FC8300AB1BF2 /* test_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_1.png; sourceTree = "<group>"; };
 		1ACBB4102109FC8300AB1BF2 /* test_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_2.png; sourceTree = "<group>"; };
 		1ACBB419210B025200AB1BF2 /* thumb_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb_2.png; sourceTree = "<group>"; };
@@ -787,6 +791,8 @@
 				1ACB2A3721109CAC00247E10 /* DiagSelectEyeCell.xib */,
 				1ACB2A3B2110A54800247E10 /* DiagSelectPatientCell.xib */,
 				1ACB2A4221119C1000247E10 /* DiagCommentCell.xib */,
+				1ACB2A482111E2F600247E10 /* DiagEditPatientCell.swift */,
+				1ACB2A492111E2F600247E10 /* DiagEditPatientCell.xib */,
 			);
 			path = NewDiagnostic;
 			sourceTree = "<group>";
@@ -1145,6 +1151,7 @@
 				1ABAAE4121007E130098B22B /* PatientTestResumeCollectionViewCell.xib in Resources */,
 				EA52282020BFF2EB00752C29 /* fastlane in Resources */,
 				1ABAAE512101C5D00098B22B /* JamActionSheetViewController.xib in Resources */,
+				1ACB2A4B2111E2F600247E10 /* DiagEditPatientCell.xib in Resources */,
 				1A2D987220F79AD00022288F /* HomeBotCell.xib in Resources */,
 				1ACB2A3921109CAC00247E10 /* DiagSelectEyeCell.xib in Resources */,
 				1A2D985E20F77BC40022288F /* pdf_thumb.png in Resources */,
@@ -1335,6 +1342,7 @@
 				EAA5AA8C20C1708F0020464C /* SHSKProductExtension.swift in Sources */,
 				1ABAAE1020FC9AEB0098B22B /* ActionMenuViewController.swift in Sources */,
 				1ABAAE4021007E130098B22B /* PatientTestResumeCollectionViewCell.swift in Sources */,
+				1ACB2A4A2111E2F600247E10 /* DiagEditPatientCell.swift in Sources */,
 				EAA5AA9220C1708F0020464C /* SHUINavigationBarExtension.swift in Sources */,
 				EAA5AAB520C1708F0020464C /* SHNumberExtension.swift in Sources */,
 				EAA5AAC320C1708F0020464C /* SHNamedEntity.swift in Sources */,

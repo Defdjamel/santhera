@@ -11,7 +11,7 @@ import RealmSwift
 class Test: Object {
         @objc dynamic var patient: Patient?
         @objc dynamic var date : Date? = nil
-        @objc dynamic var isLeftEye = true //default Left
+        @objc dynamic var isLeftEye : Bool = true //default Left
         @objc dynamic var file_name = ""
         @objc dynamic var comment = ""
 
