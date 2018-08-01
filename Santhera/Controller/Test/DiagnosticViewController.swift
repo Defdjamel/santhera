@@ -80,7 +80,7 @@ class DiagnosticViewController: UIViewController {
         }
         realm.add(currentTest)
         try! realm.commitWrite()
-        self.navigationController?.popToRootViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation
