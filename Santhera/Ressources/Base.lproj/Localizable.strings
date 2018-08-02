@@ -47,3 +47,10 @@
 "diag_btn_add_patient" = "Ajouter un patient ";
 "btn_save" = "Enregistrer";
 "diag_comment_title" = "Remarques";
+"test_resume_patient" = "Patient";
+"resume_test_no_comment" = "Pas de remarque";
+"resume_test_btn_delete" = "Supprimer ce test";
+"popup_delete_test_title" = "Attention!";
+"popup_delete_test_subtitle" = "Vous êtes sur le point de supprimer ce test.
+Souhaitez vous continuer ? ";
+"diag_resume_nav_title" = "Diagnostic";

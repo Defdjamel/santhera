@@ -92,6 +92,11 @@
 		1ACBB41C210B025200AB1BF2 /* thumb_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACBB419210B025200AB1BF2 /* thumb_2.png */; };
 		1ACBB41D210B025200AB1BF2 /* thumb_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACBB41A210B025200AB1BF2 /* thumb_3.png */; };
 		1ACBB41E210B025200AB1BF2 /* thumb_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACBB41B210B025200AB1BF2 /* thumb_1.png */; };
+		1AEC0D3621132D8F00BAB7EA /* DiagnosticResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC0D3521132D8F00BAB7EA /* DiagnosticResumeViewController.swift */; };
+		1AEC0D3A21133F4C00BAB7EA /* DiagResumeCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC0D3821133F4C00BAB7EA /* DiagResumeCommentCell.swift */; };
+		1AEC0D3B21133F4C00BAB7EA /* DiagResumeCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AEC0D3921133F4C00BAB7EA /* DiagResumeCommentCell.xib */; };
+		1AEC0D3E2113446B00BAB7EA /* DiagResumeDeleteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC0D3C2113446B00BAB7EA /* DiagResumeDeleteCell.swift */; };
+		1AEC0D3F2113446B00BAB7EA /* DiagResumeDeleteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AEC0D3D2113446B00BAB7EA /* DiagResumeDeleteCell.xib */; };
 		274D09A42099F29000765337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274D09A32099F29000765337 /* AppDelegate.swift */; };
 		274D09A92099F29000765337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274D09A72099F29000765337 /* Main.storyboard */; };
 		274D09AB2099F29200765337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 274D09AA2099F29200765337 /* Assets.xcassets */; };
@@ -276,6 +281,11 @@
 		1ACBB419210B025200AB1BF2 /* thumb_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb_2.png; sourceTree = "<group>"; };
 		1ACBB41A210B025200AB1BF2 /* thumb_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb_3.png; sourceTree = "<group>"; };
 		1ACBB41B210B025200AB1BF2 /* thumb_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb_1.png; sourceTree = "<group>"; };
+		1AEC0D3521132D8F00BAB7EA /* DiagnosticResumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticResumeViewController.swift; sourceTree = "<group>"; };
+		1AEC0D3821133F4C00BAB7EA /* DiagResumeCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagResumeCommentCell.swift; sourceTree = "<group>"; };
+		1AEC0D3921133F4C00BAB7EA /* DiagResumeCommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiagResumeCommentCell.xib; sourceTree = "<group>"; };
+		1AEC0D3C2113446B00BAB7EA /* DiagResumeDeleteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagResumeDeleteCell.swift; sourceTree = "<group>"; };
+		1AEC0D3D2113446B00BAB7EA /* DiagResumeDeleteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiagResumeDeleteCell.xib; sourceTree = "<group>"; };
 		1C9F21C47809DA59B38CBCBC /* Pods-Santhera.inhouse.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Santhera.inhouse.xcconfig"; path = "Pods/Target Support Files/Pods-Santhera/Pods-Santhera.inhouse.xcconfig"; sourceTree = "<group>"; };
 		274D09A02099F29000765337 /* Santhera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Santhera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		274D09A32099F29000765337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -438,6 +448,7 @@
 			children = (
 				1A16ABC2210F3ADF00A2F568 /* NewTestViewController.swift */,
 				1ACB2A29210F891700247E10 /* DiagnosticViewController.swift */,
+				1AEC0D3521132D8F00BAB7EA /* DiagnosticResumeViewController.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -538,6 +549,7 @@
 		1A2D985F20F780210022288F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				1AEC0D3721133F2100BAB7EA /* ResumeDiagnostic */,
 				1ACB2A2D21105BEF00247E10 /* NewDiagnostic */,
 				1A04CE722105D03000324520 /* JactionSheet */,
 				1ABAAE2420FF2D920098B22B /* PatientsDetails */,
@@ -701,6 +713,7 @@
 		1ABAAE3B20FF7DD30098B22B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				1AEC0D4021134F3700BAB7EA /* ResumeDiagnostic */,
 				1ACB2A472111AF1200247E10 /* NewDiagnostic */,
 				1A04CE742105D29900324520 /* JamActionSheet */,
 				1ABAAE432100889F0098B22B /* Home */,
@@ -791,7 +804,6 @@
 				1ACB2A3721109CAC00247E10 /* DiagSelectEyeCell.xib */,
 				1ACB2A3B2110A54800247E10 /* DiagSelectPatientCell.xib */,
 				1ACB2A4221119C1000247E10 /* DiagCommentCell.xib */,
-				1ACB2A482111E2F600247E10 /* DiagEditPatientCell.swift */,
 				1ACB2A492111E2F600247E10 /* DiagEditPatientCell.xib */,
 			);
 			path = NewDiagnostic;
@@ -800,6 +812,7 @@
 		1ACB2A472111AF1200247E10 /* NewDiagnostic */ = {
 			isa = PBXGroup;
 			children = (
+				1ACB2A482111E2F600247E10 /* DiagEditPatientCell.swift */,
 				1ACB2A2E21105CC300247E10 /* DiagCaptureCell.swift */,
 				1ACB2A32211060A600247E10 /* DiagDateCell.swift */,
 				1ACB2A3621109CAC00247E10 /* DiagSelectEyeCell.swift */,
@@ -816,6 +829,24 @@
 				1ACBB4102109FC8300AB1BF2 /* test_2.png */,
 			);
 			path = tests;
+			sourceTree = "<group>";
+		};
+		1AEC0D3721133F2100BAB7EA /* ResumeDiagnostic */ = {
+			isa = PBXGroup;
+			children = (
+				1AEC0D3921133F4C00BAB7EA /* DiagResumeCommentCell.xib */,
+				1AEC0D3D2113446B00BAB7EA /* DiagResumeDeleteCell.xib */,
+			);
+			path = ResumeDiagnostic;
+			sourceTree = "<group>";
+		};
+		1AEC0D4021134F3700BAB7EA /* ResumeDiagnostic */ = {
+			isa = PBXGroup;
+			children = (
+				1AEC0D3821133F4C00BAB7EA /* DiagResumeCommentCell.swift */,
+				1AEC0D3C2113446B00BAB7EA /* DiagResumeDeleteCell.swift */,
+			);
+			path = ResumeDiagnostic;
 			sourceTree = "<group>";
 		};
 		274D09972099F29000765337 = {
@@ -1137,6 +1168,7 @@
 				1ACBB4122109FC8300AB1BF2 /* test_2.png in Resources */,
 				EA52282720BFF85B00752C29 /* Localizable.strings in Resources */,
 				1ABAAE1720FCC7F00098B22B /* PopupInfoViewController.xib in Resources */,
+				1AEC0D3F2113446B00BAB7EA /* DiagResumeDeleteCell.xib in Resources */,
 				274D09AE2099F29200765337 /* LaunchScreen.storyboard in Resources */,
 				1ABAAE582101DBC30098B22B /* JCustomActionSheetCell.xib in Resources */,
 				1A2D986720F7860B0022288F /* HomePatientRecentCell.xib in Resources */,
@@ -1164,6 +1196,7 @@
 				1A2D985420F742EA0022288F /* pdf_3.pdf in Resources */,
 				1A16ABC5210F3B2900A2F568 /* TestPatient.storyboard in Resources */,
 				1A2D988020F88DA80022288F /* HomeDocumentCollectionViewCell.xib in Resources */,
+				1AEC0D3B21133F4C00BAB7EA /* DiagResumeCommentCell.xib in Resources */,
 				1A2D986B20F78B2F0022288F /* HomePatientCollectionViewCell.xib in Resources */,
 				1ABAAE3020FF41470098B22B /* PatientResumeTestCell.xib in Resources */,
 				1ABAAE2820FF2F980098B22B /* PatientsListTestCell.xib in Resources */,
@@ -1313,6 +1346,7 @@
 				EAA5AA8D20C1708F0020464C /* SHCreditCardValidator.swift in Sources */,
 				EAA5AAAF20C1708F0020464C /* SHNSTimeIntervalExtension.swift in Sources */,
 				1ABAAE502101C5D00098B22B /* JamActionSheetViewController.swift in Sources */,
+				1AEC0D3621132D8F00BAB7EA /* DiagnosticResumeViewController.swift in Sources */,
 				EAA5AAC220C1708F0020464C /* SHManagedObjectContext+CascadeSave.swift in Sources */,
 				1A04CE772105D29900324520 /* JActionSheetCollectionViewCell.swift in Sources */,
 				1ABAAE0820FC9AEB0098B22B /* ThumbnailGridCell.swift in Sources */,
@@ -1336,6 +1370,7 @@
 				1ACB2A2C210F9DE800247E10 /* UIImage+Crop.swift in Sources */,
 				1A04CE782105D29900324520 /* JCustomActionSheetCell.swift in Sources */,
 				1A2D986620F7860B0022288F /* HomePatientRecentCell.swift in Sources */,
+				1AEC0D3A21133F4C00BAB7EA /* DiagResumeCommentCell.swift in Sources */,
 				EAA5AAA720C1708F0020464C /* SHUIButtonExtension.swift in Sources */,
 				EAA5AA9120C1708F0020464C /* SHRightImageButton.swift in Sources */,
 				EAA5AAA620C1708F0020464C /* SHNavigationControllerExtention.swift in Sources */,
@@ -1392,6 +1427,7 @@
 				EAA5AAAC20C1708F0020464C /* SHNSDateFormatterExtension.swift in Sources */,
 				1ABAAE3620FF44240098B22B /* Test.swift in Sources */,
 				EAA5AABE20C1708F0020464C /* SHNSObjectExtension.swift in Sources */,
+				1AEC0D3E2113446B00BAB7EA /* DiagResumeDeleteCell.swift in Sources */,
 				EAA5AA9820C1708F0020464C /* SHDatePickerController.swift in Sources */,
 				1ACB2A3021105CC300247E10 /* DiagCaptureCell.swift in Sources */,
 				1ABAAE1620FCC7F00098B22B /* PopupInfoViewController.swift in Sources */,

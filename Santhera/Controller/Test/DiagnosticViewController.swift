@@ -58,7 +58,6 @@ class DiagnosticViewController: UIViewController {
         else {
             self.btnSave.isEnabled = false
         }
-        
     }
    private func addKeyboardObs(){
         NotificationCenter.default.addObserver(self, selector: #selector(SHKeyboardViewController.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)

@@ -23,8 +23,9 @@ class PaitentDetailsViewController: BaseViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         self.tableView.reloadData()
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
-    
+   
     func configure(){
         self.title = L("patient_details_title")
         self.tableView.register(UINib.init(nibName: PatientsListTestCellId, bundle: Bundle.main), forCellReuseIdentifier: PatientsListTestCellId)
@@ -137,6 +138,7 @@ extension PaitentDetailsViewController: UITableViewDataSource {
             // Configure the cell...
             cell.setTests(tests: currentPatient.testsRightEye)
             cell.lblTitle.text = L("patient_test_eye_right")
+            cell.delegate = self
             return cell
         }
         if indexPath.section == 4 {
@@ -144,6 +146,7 @@ extension PaitentDetailsViewController: UITableViewDataSource {
             // Configure the cell...
              cell.lblTitle.text = L("patient_test_eye_left")
              cell.setTests(tests: currentPatient.testsLeftEye)
+            cell.delegate = self
             return cell
         }
         return UITableViewCell.init()
@@ -167,6 +170,7 @@ extension PaitentDetailsViewController: UITableViewDataSource {
         }
     }
 }
+
 //MARK: - JamActionSheetDelegate
 extension PaitentDetailsViewController: JamActionSheetDelegate{
     func JamActionSheet(_ JamActionSheet: JamActionSheetViewController, DidSelect indexPath: IndexPath) {
@@ -186,4 +190,16 @@ extension PaitentDetailsViewController: JamActionSheetDelegate{
     func jamActionSheetViewCellHeight(_ JamActionSheet: JamActionSheetViewController, Object: Any) -> CGFloat {
         return 60.0
     }
+}
+
+//MARK: - PatientsListTestCellDelegate
+extension PaitentDetailsViewController: PatientsListTestCellDelegate{
+    func patientsListTestCell(_ patientsListTestCell: PatientsListTestCell, DidSelect test: Test) {
+        print(test.file_name)
+        let vc =  UIStoryboard(name: "TestPatient", bundle: nil).instantiateViewController(withIdentifier: "DiagnosticResumeViewController") as! DiagnosticResumeViewController
+        vc.currentTest = test
+        self.navigationController?.show(vc, sender: self)
+    }
+    
+    
 }

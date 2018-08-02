@@ -10,11 +10,18 @@ import UIKit
 private let heightCollectionView = 200.0
 private var PatientTestResumeCollectionViewCellId = "PatientTestResumeCollectionViewCell"
 private let widthCell = 140.0
+
+protocol PatientsListTestCellDelegate {
+    func patientsListTestCell(_ patientsListTestCell: PatientsListTestCell, DidSelect test: Test)
+}
+
 class PatientsListTestCell: UITableViewCell {
     var testsPatient : Array<Test> = []
+    var delegate : PatientsListTestCellDelegate?
     @IBOutlet weak var btnTestNumber: UIButton!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -40,14 +47,12 @@ class PatientsListTestCell: UITableViewCell {
         
     }
     
-   
- 
-   
 }
 //MARK: - UICollectionViewDelegate
 extension PatientsListTestCell : UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let test = testsPatient[indexPath.row]
+        self.delegate?.patientsListTestCell(self, DidSelect: test)
     }
 }
 

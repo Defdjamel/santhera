@@ -277,6 +277,78 @@
             </objects>
             <point key="canvasLocation" x="818.39999999999998" y="-28.335832083958024"/>
         </scene>
+        <!--Diagnostic Resume View Controller-->
+        <scene sceneID="cem-cb-acj">
+            <objects>
+                <viewController storyboardIdentifier="DiagnosticResumeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xQ0-Nv-ikS" customClass="DiagnosticResumeViewController" customModule="Santhera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wxl-qJ-UBb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fhz-jS-bXb" userLabel="header">
+                                <rect key="frame" x="0.0" y="20" width="375" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFR-J0-8y8">
+                                        <rect key="frame" x="10" y="0.0" width="50" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="XL5-hu-rMT"/>
+                                        </constraints>
+                                        <state key="normal" image="icBackNav"/>
+                                        <connections>
+                                            <action selector="onClickBack:" destination="xQ0-Nv-ikS" eventType="touchUpInside" id="5OH-kO-9EN"/>
+                                            <action selector="onClickBack:" destination="bYG-Om-guh" eventType="touchUpInside" id="GFW-Ks-FNo"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[diag_resume_nav_title]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EO9-BH-EfC">
+                                        <rect key="frame" x="94" y="10" width="187.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="diag_resume_nav_title"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="EO9-BH-EfC" firstAttribute="centerY" secondItem="Fhz-jS-bXb" secondAttribute="centerY" id="IWt-YH-MSj"/>
+                                    <constraint firstAttribute="height" constant="40" id="JeH-Ia-2fs"/>
+                                    <constraint firstAttribute="bottom" secondItem="qFR-J0-8y8" secondAttribute="bottom" id="XMu-fA-VIP"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="chx-k6-2wb"/>
+                                    <constraint firstItem="EO9-BH-EfC" firstAttribute="centerX" secondItem="Fhz-jS-bXb" secondAttribute="centerX" id="lqu-Zh-B5U"/>
+                                    <constraint firstItem="qFR-J0-8y8" firstAttribute="top" secondItem="Fhz-jS-bXb" secondAttribute="top" id="m0C-0I-1dD"/>
+                                    <constraint firstItem="qFR-J0-8y8" firstAttribute="leading" secondItem="Fhz-jS-bXb" secondAttribute="leading" constant="10" id="sFf-Ew-zca"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K5s-xB-wbC">
+                                <rect key="frame" x="0.0" y="68" width="375" height="599"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="xQ0-Nv-ikS" id="IWL-YC-VGE"/>
+                                    <outlet property="delegate" destination="xQ0-Nv-ikS" id="Mq9-Wf-hsL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="cobalt"/>
+                        <constraints>
+                            <constraint firstItem="K5s-xB-wbC" firstAttribute="top" secondItem="Fhz-jS-bXb" secondAttribute="bottom" constant="8" id="271-1h-zUx"/>
+                            <constraint firstItem="Fhz-jS-bXb" firstAttribute="leading" secondItem="JwA-8K-Wae" secondAttribute="leading" id="WqY-qs-bwW"/>
+                            <constraint firstAttribute="trailing" secondItem="Fhz-jS-bXb" secondAttribute="trailing" id="ckq-cb-mKe"/>
+                            <constraint firstItem="K5s-xB-wbC" firstAttribute="trailing" secondItem="JwA-8K-Wae" secondAttribute="trailing" id="etw-Xx-498"/>
+                            <constraint firstItem="Fhz-jS-bXb" firstAttribute="top" secondItem="JwA-8K-Wae" secondAttribute="top" id="fsY-tD-vG2"/>
+                            <constraint firstItem="K5s-xB-wbC" firstAttribute="bottom" secondItem="JwA-8K-Wae" secondAttribute="bottom" id="oWH-je-zhi"/>
+                            <constraint firstItem="K5s-xB-wbC" firstAttribute="leading" secondItem="JwA-8K-Wae" secondAttribute="leading" id="zgT-a9-ciY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JwA-8K-Wae"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="K5s-xB-wbC" id="RsT-fP-PBx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ib-Q7-6eh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-930.39999999999998" y="678.71064467766121"/>
+        </scene>
     </scenes>
     <resources>
         <image name="icBack" width="24" height="24"/>
@@ -285,10 +357,10 @@
         <image name="icInformations" width="24" height="24"/>
         <image name="icScan" width="260" height="260"/>
         <namedColor name="cobalt">
-            <color red="0.1330000013" green="0.22699999809999999" blue="0.53299999239999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.13300000131130219" green="0.22699999809265137" blue="0.53299999237060547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="cobalt">
-            <color red="0.13300000131130219" green="0.22699999809265137" blue="0.53299999237060547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.1330000013" green="0.22699999809999999" blue="0.53299999239999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="frenchBlue">
             <color red="0.28999999170000001" green="0.42399999500000002" blue="0.70200002189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

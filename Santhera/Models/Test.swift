@@ -22,4 +22,11 @@ class Test: Object {
         }
         return nil
     }
+    
+    func remove(){
+        let realm = try! Realm()
+        try! realm.write {
+            realm.delete(self)
+        }
+    }
 }
