@@ -11,6 +11,7 @@ import UIKit
 class NewTestViewController: UIViewController {
     var imagePicker = UIImagePickerController()
     var currentTest: Test!
+    var currentPatient: Patient!
 
     @IBOutlet weak var cropGrid: UIImageView!
     @IBOutlet weak var cameraViewContainer: UIView!
@@ -92,7 +93,9 @@ extension NewTestViewController: UIImagePickerControllerDelegate, UINavigationCo
             let imageCropped =  pickedImage.croppedInRect2(rect: CGRect(x: x, y: y, width: width, height: height))
             print(imageCropped.size)
             currentTest = TestManager.sharedInstance.createTestWithImage(image: imageCropped, patient: nil)
-            
+            if currentPatient !=  nil {
+                currentTest.patient = currentPatient
+            }
             self.performSegue(withIdentifier: "diagnostic", sender: self)
         }
     }

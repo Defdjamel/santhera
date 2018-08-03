@@ -24,11 +24,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vTx-YW-yrn">
-                                <rect key="frame" x="10" y="10" width="10" height="10"/>
-                                <color key="backgroundColor" name="cobalt"/>
+                                <rect key="frame" x="10" y="10" width="20" height="20"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icChoice" translatesAutoresizingMaskIntoConstraints="NO" id="qkg-Gb-yRe">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="10" id="KAY-Yf-3d7"/>
-                                    <constraint firstAttribute="width" constant="10" id="Uv0-Xc-MLC"/>
+                                    <constraint firstAttribute="bottom" secondItem="qkg-Gb-yRe" secondAttribute="bottom" id="2qk-QQ-AEi"/>
+                                    <constraint firstAttribute="height" constant="20" id="KAY-Yf-3d7"/>
+                                    <constraint firstItem="qkg-Gb-yRe" firstAttribute="top" secondItem="vTx-YW-yrn" secondAttribute="top" id="M4B-UO-n4N"/>
+                                    <constraint firstAttribute="width" constant="20" id="Uv0-Xc-MLC"/>
+                                    <constraint firstItem="qkg-Gb-yRe" firstAttribute="leading" secondItem="vTx-YW-yrn" secondAttribute="leading" id="h1f-Vc-1EA"/>
+                                    <constraint firstAttribute="trailing" secondItem="qkg-Gb-yRe" secondAttribute="trailing" id="r6s-nq-v76"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -182,10 +191,8 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="icChoice" width="20" height="20"/>
         <image name="icPatient" width="20" height="20"/>
-        <namedColor name="cobalt">
-            <color red="0.13300000131130219" green="0.22699999809265137" blue="0.53299999237060547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="greyblue15">
             <color red="0.48199999329999998" green="0.61599999670000005" blue="0.72899997230000002" alpha="0.15000000599999999" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -17,6 +17,7 @@ class PaitentDetailsViewController: BaseViewController {
     
     var currentPatient : Patient!
 
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
@@ -25,8 +26,12 @@ class PaitentDetailsViewController: BaseViewController {
         self.tableView.reloadData()
         self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
-   
-    func configure(){
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    //MARK: - Private methods
+    private func configure(){
         self.title = L("patient_details_title")
         self.tableView.register(UINib.init(nibName: PatientsListTestCellId, bundle: Bundle.main), forCellReuseIdentifier: PatientsListTestCellId)
         self.tableView.register(UINib.init(nibName: PatientDetailsHeaderCellId, bundle: Bundle.main), forCellReuseIdentifier: PatientDetailsHeaderCellId)
@@ -35,14 +40,35 @@ class PaitentDetailsViewController: BaseViewController {
     
     }
 
-    func addRightButton(){
+    private func addRightButton(){
        let  menu_button_ = UIBarButtonItem(image: #imageLiteral(resourceName: "icSettings"),
                                            style: UIBarButtonItemStyle.plain ,
                                            target: self, action:  #selector(OnMenuClicked) )
         menu_button_.tintColor = UIColor.cobalt
        self.navigationItem.rightBarButtonItem =  menu_button_
     }
+    private func showAlertDelete(){
+        
+        let alert = PopupGenericViewController()
+        alert.showWithTitle(title: L("popup_delete_patient_title"), subtitle: L("popup_delete_patient_subtitle"), icon: #imageLiteral(resourceName: "icAlerte"),
+                            buttons: [ popupGenerecBtn.init(id: "cancel", name: L("patient_delete_cancel_btn"), colorText: UIColor.cobalt, fontText: UIFont.systemFont(ofSize: 18, weight: .bold ), colorBackground: UIColor.white), popupGenerecBtn.init(id: "delete", name: L("patient_delete_confirm_btn"), colorText: UIColor.white, fontText: UIFont.systemFont(ofSize: 18, weight: .bold ), colorBackground: UIColor.cobalt)]
+            , fromCtrl: self, done: { (buttonSelected, ctrl) in
+                
+                ctrl.dismissView()
+                if buttonSelected.id == "delete" {
+                    self.currentPatient.removePatientAndData()
+                    self.navigationController?.popViewController(animated: true)
+                }
+                
+        }) { (ctrl) in
+            
+        }
+    }
+    func goToEditPatientCtrl(){
+        self.performSegue(withIdentifier: "editPatient", sender: self)
+    }
     
+    //MARK: - IBAction
     @objc func OnMenuClicked(){
         let actionSheetCtrl =  JamActionSheetViewController()
         actionSheetCtrl.delegate = self
@@ -52,30 +78,7 @@ class PaitentDetailsViewController: BaseViewController {
         actionSheetCtrl.show(fromCtrl: self.navigationController!,obj:object)
         
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    func showAlertDelete(){
-      
-        let alert = PopupGenericViewController()
-        alert.showWithTitle(title: L("popup_delete_patient_title"), subtitle: L("popup_delete_patient_subtitle"), icon: #imageLiteral(resourceName: "icAlerte"),
-                        buttons: [ popupGenerecBtn.init(id: "cancel", name: L("patient_delete_cancel_btn"), colorText: UIColor.cobalt, fontText: UIFont.systemFont(ofSize: 18, weight: .bold ), colorBackground: UIColor.white), popupGenerecBtn.init(id: "delete", name: L("patient_delete_confirm_btn"), colorText: UIColor.white, fontText: UIFont.systemFont(ofSize: 18, weight: .bold ), colorBackground: UIColor.cobalt)]
-            , fromCtrl: self, done: { (buttonSelected, ctrl) in
-                
-                ctrl.dismissView()
-                if buttonSelected.id == "delete" {
-                    self.currentPatient.removePatientAndData()
-                    self.navigationController?.popViewController(animated: true)
-                }
-            
-        }) { (ctrl) in
-            
-        }
-    }
-    func goToEditPatientCtrl(){
-        self.performSegue(withIdentifier: "editPatient", sender: self)
-    }
+   
     
     
     // MARK: - Navigation
@@ -85,7 +88,9 @@ class PaitentDetailsViewController: BaseViewController {
         // Pass the selected object to the new view controller.
         if let vc = segue.destination as? NewPatientViewController {
                 vc.currentPatient = currentPatient
-            
+        }
+        if let nc = segue.destination as? UINavigationController , let vc = nc.viewControllers.first as? NewTestViewController {
+            vc.currentPatient = self.currentPatient
         }
     }
     

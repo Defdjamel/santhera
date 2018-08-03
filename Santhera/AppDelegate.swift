@@ -23,8 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Fabric.with([Crashlytics.self])
         if  PatientManager.sharedInstance.getAllPatients().count == 0 {
             DocumentManager.sharedInstance.updateJsonDocuments()
-            PatientManager.sharedInstance.createTestUsers()
-            TestManager.sharedInstance.createTestObjects()
+            //PatientManager.sharedInstance.createTestUsers()
+            //TestManager.sharedInstance.createTestObjects()
         }
         return true
     }

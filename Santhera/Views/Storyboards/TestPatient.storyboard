@@ -359,9 +359,6 @@
         <namedColor name="cobalt">
             <color red="0.13300000131130219" green="0.22699999809265137" blue="0.53299999237060547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="cobalt">
-            <color red="0.1330000013" green="0.22699999809999999" blue="0.53299999239999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="frenchBlue">
             <color red="0.28999999170000001" green="0.42399999500000002" blue="0.70200002189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

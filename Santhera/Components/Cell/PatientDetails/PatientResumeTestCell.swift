@@ -86,7 +86,7 @@ class PatientResumeTestCell: UITableViewCell {
     }
     
     func configureTestEye(test: Test){
-        self.imgLogo.image = #imageLiteral(resourceName: "icEyes")
+        self.imgLogo.image = #imageLiteral(resourceName: "icPatient_2")
          self.lblTitle.text = L("patient_resume_eye")
         if test.isLeftEye {
             self.lblSubtitle.text = L("patient_test_eye_left")
@@ -95,7 +95,7 @@ class PatientResumeTestCell: UITableViewCell {
         }
     }
     func configureTestPatient(test: Test){
-        self.imgLogo.image = #imageLiteral(resourceName: "icPatient")
+        self.imgLogo.image = #imageLiteral(resourceName: "icEyes")
         guard let patient =  test.patient else {
             return
         }
