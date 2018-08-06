@@ -75,8 +75,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wad-jC-BwV">
-                                <rect key="frame" x="56.5" y="80" width="37.5" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wad-jC-BwV">
+                                <rect key="frame" x="8" y="80" width="134" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -133,6 +133,8 @@
                             <constraint firstItem="sIf-MJ-y9S" firstAttribute="top" secondItem="bfQ-JS-4xN" secondAttribute="top" id="WUX-ik-63V"/>
                             <constraint firstItem="sIf-MJ-y9S" firstAttribute="centerX" secondItem="bfQ-JS-4xN" secondAttribute="trailing" id="YFj-n0-B7Y"/>
                             <constraint firstItem="jGp-pR-LXc" firstAttribute="centerX" secondItem="K1i-3l-PU5" secondAttribute="centerX" id="e3N-DU-8Ab"/>
+                            <constraint firstItem="Wad-jC-BwV" firstAttribute="leading" secondItem="K1i-3l-PU5" secondAttribute="leading" constant="8" id="jlZ-i7-s2L"/>
+                            <constraint firstAttribute="trailing" secondItem="Wad-jC-BwV" secondAttribute="trailing" constant="8" id="kzw-wX-sGz"/>
                             <constraint firstItem="vTx-YW-yrn" firstAttribute="top" secondItem="K1i-3l-PU5" secondAttribute="top" constant="10" id="v0I-rd-Yle"/>
                             <constraint firstItem="bfQ-JS-4xN" firstAttribute="centerX" secondItem="K1i-3l-PU5" secondAttribute="centerX" id="vRK-sD-iC1"/>
                             <constraint firstItem="Wad-jC-BwV" firstAttribute="centerX" secondItem="K1i-3l-PU5" secondAttribute="centerX" id="wgV-9L-byd"/>
