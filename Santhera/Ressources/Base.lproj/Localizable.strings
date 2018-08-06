@@ -54,3 +54,16 @@
 "popup_delete_test_subtitle" = "Vous êtes sur le point de supprimer ce test.
 Souhaitez vous continuer ? ";
 "diag_resume_nav_title" = "Diagnostic";
+"btn_download_grille" = "Télécharger la grille";
+"scan_test_title" = "Test d’auto-surveillante";
+"scan_test_subtitle" = "Œil par œil, à l'aide de la grille d'Amsler nous allons surveiller votre vue.";
+"step_title_1" = "Étapes n°1 :";
+"step_subtitle_1" = "Téléchargez la grille d’Amsler .";
+"step_title_2" = "Étapes n°2 :";
+"step_subtitle_2" = "Placez-vous à une distance de 35-40 cm de la grille.";
+"step_title_3" = "Étapes n°3 :";
+"step_subtitle_3" = "Cachez-vous l’œil non concerné et regarder le centre de la grille.";
+"step_title_4" = "Étapes n°4 :";
+"step_subtitle_4" = "Dessinez la forme que vous voyez.";
+"step_title_5" = "Étapes n°5 :";
+"step_subtitle_5" = "Scannez votre feuille une fois les étapes précédantes finies.";
