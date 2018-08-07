@@ -39,3 +39,31 @@
 "edit_patient_title" = "Informations du patient";
 "new_patient_title" = "Informations du patient";
 "btn_edit_info" = "Enregister les modifications";
+"new_test_title" = "Scanner votre grille d’Amsler";
+"new_test_subtitle" = "Veillez à ce que votre feuille soit lisible et bien centrée dans le cadre ci-dessous.";
+"diag_nav_title" = "Diagnostic";
+"diag_btn_eye_left" = "Oeil gauche";
+"diag_btn_eye_right" = "Oeil droit";
+"diag_btn_add_patient" = "Ajouter un patient ";
+"btn_save" = "Enregistrer";
+"diag_comment_title" = "Remarques";
+"test_resume_patient" = "Patient";
+"resume_test_no_comment" = "Pas de remarque";
+"resume_test_btn_delete" = "Supprimer ce test";
+"popup_delete_test_title" = "Attention!";
+"popup_delete_test_subtitle" = "Vous êtes sur le point de supprimer ce test.
+Souhaitez vous continuer ? ";
+"diag_resume_nav_title" = "Diagnostic";
+"btn_download_grille" = "Télécharger la grille";
+"scan_test_title" = "Test d’auto-surveillante";
+"scan_test_subtitle" = "Œil par œil, à l'aide de la grille d'Amsler nous allons surveiller votre vue.";
+"step_title_1" = "Étapes n°1 :";
+"step_subtitle_1" = "Téléchargez la grille d’Amsler .";
+"step_title_2" = "Étapes n°2 :";
+"step_subtitle_2" = "Placez-vous à une distance de 35-40 cm de la grille.";
+"step_title_3" = "Étapes n°3 :";
+"step_subtitle_3" = "Cachez-vous l’œil non concerné et regarder le centre de la grille.";
+"step_title_4" = "Étapes n°4 :";
+"step_subtitle_4" = "Dessinez la forme que vous voyez.";
+"step_title_5" = "Étapes n°5 :";
+"step_subtitle_5" = "Scannez votre feuille une fois les étapes précédantes finies.";

@@ -14,10 +14,12 @@ class HomePatientCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblLastTestDate: UILabel!
     @IBOutlet weak var lblLastTestTitle: UILabel!
+    @IBOutlet weak var selectIconView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         self.lblLastTestTitle.text = L("last_test_date") + " :"
+        selectIconView.isHidden = true
     }
 
     func setObj(obj: Any){
@@ -31,6 +33,15 @@ class HomePatientCollectionViewCell: UICollectionViewCell {
             }else {
                 hideLastTest(value: true)
             }
+        }
+    }
+    func setPatientSelected(value: Bool){
+        if value {
+            self.contentView.alpha = 1.0
+             selectIconView.isHidden = false
+        }else{
+            self.contentView.alpha = 0.5
+             selectIconView.isHidden = true
         }
     }
     func hideLastTest(value: Bool){

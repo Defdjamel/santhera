@@ -11,7 +11,7 @@ import Fabric
 import Crashlytics
 import RealmSwift
 
-let schemaVersionRealm : UInt64 = 7
+let schemaVersionRealm : UInt64 = 8
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,8 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Fabric.with([Crashlytics.self])
         if  PatientManager.sharedInstance.getAllPatients().count == 0 {
             DocumentManager.sharedInstance.updateJsonDocuments()
-            PatientManager.sharedInstance.createTestUsers()
-            TestManager.sharedInstance.createTestObjects()
+            //PatientManager.sharedInstance.createTestUsers()
+            //TestManager.sharedInstance.createTestObjects()
         }
         return true
     }

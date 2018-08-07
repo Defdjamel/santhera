@@ -20,7 +20,6 @@ protocol JamActionSheetDelegate {
     func JamActionSheet(_ JamActionSheet: JamActionSheetViewController, DidSelect indexPath: IndexPath)
 }
 
-
 class JamActionSheetViewController: UIViewController {
     typealias SelectBlock = ( _ object : Any,  _ sender : JamActionSheetViewController ) -> ()
     typealias CancelBlock = (  _ sender : JamActionSheetViewController ) -> ()

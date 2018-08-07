@@ -20,11 +20,11 @@ class Patient: Object {
 
     var testsLeftEye: Array<Test> { // read-only properties are automatically ignored
         let predicate =  NSPredicate(format: "isLeftEye = true ")
-        return Array(self.tests.filter(predicate))
+        return Array(self.tests.filter(predicate).sorted(byKeyPath: "date", ascending: false))
     }
     var testsRightEye: Array<Test> { // read-only properties are automatically ignored
         let predicate =  NSPredicate(format: "isLeftEye = false ")
-        return Array(self.tests.filter(predicate))
+        return Array(self.tests.filter(predicate).sorted(byKeyPath: "date", ascending: false))
     }
     
     func hasLeftEyeTest() -> Bool{
@@ -58,7 +58,7 @@ class Patient: Object {
         if self.tests.count > 0 {
             let df = DateFormatter()
             df.dateStyle = .medium
-            return  df.string(from: (self.tests.first?.date)!)
+            return  df.string(from: (self.tests.sorted(byKeyPath: "date", ascending: false).first?.date)!)
         }
         else {
             return nil

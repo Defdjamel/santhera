@@ -56,7 +56,10 @@ class PatientManager: NSObject {
         ["firstName":"Joakim","lastName":"Fernando"],
         ["firstName":"Gigi","lastName":"L'AMOROSO"],
         ["firstName":"Kris","lastName":"Kross"],
-        ["firstName":"Luka","lastName":"Modrić"]]
+        ["firstName":"Luka","lastName":"Modrić"],
+        ["firstName":"PimPam","lastName":"POOM"],
+        ["firstName":"Mickey","lastName":"Mouse"],
+        ["firstName":"Gilbert","lastName":"Montagnet"],]
         for user in usersTest {
             let patient = Patient()
             let realm = try! Realm()

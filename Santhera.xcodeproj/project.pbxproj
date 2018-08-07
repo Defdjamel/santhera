@@ -12,6 +12,8 @@
 		1A04CE772105D29900324520 /* JActionSheetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A04CE752105D29900324520 /* JActionSheetCollectionViewCell.swift */; };
 		1A04CE782105D29900324520 /* JCustomActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A04CE762105D29900324520 /* JCustomActionSheetCell.swift */; };
 		1A04CE7B2105EEB400324520 /* NewPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A04CE7A2105EEB400324520 /* NewPatientViewController.swift */; };
+		1A16ABC3210F3ADF00A2F568 /* NewTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A16ABC2210F3ADF00A2F568 /* NewTestViewController.swift */; };
+		1A16ABC5210F3B2900A2F568 /* TestPatient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A16ABC4210F3B2900A2F568 /* TestPatient.storyboard */; };
 		1A2D984D20F7403F0022288F /* documents.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D984C20F7403F0022288F /* documents.json */; };
 		1A2D985120F742BF0022288F /* pdf_2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D984F20F742BE0022288F /* pdf_2.pdf */; };
 		1A2D985220F742BF0022288F /* pdf_1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D985020F742BE0022288F /* pdf_1.pdf */; };
@@ -70,11 +72,35 @@
 		1ABAAE502101C5D00098B22B /* JamActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAAE4E2101C5D00098B22B /* JamActionSheetViewController.swift */; };
 		1ABAAE512101C5D00098B22B /* JamActionSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABAAE4F2101C5D00098B22B /* JamActionSheetViewController.xib */; };
 		1ABAAE582101DBC30098B22B /* JCustomActionSheetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABAAE562101DBC30098B22B /* JCustomActionSheetCell.xib */; };
+		1ACB2A2A210F891700247E10 /* DiagnosticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB2A29210F891700247E10 /* DiagnosticViewController.swift */; };
+		1ACB2A2C210F9DE800247E10 /* UIImage+Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB2A2B210F9DE800247E10 /* UIImage+Crop.swift */; };
+		1ACB2A3021105CC300247E10 /* DiagCaptureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB2A2E21105CC300247E10 /* DiagCaptureCell.swift */; };
+		1ACB2A3121105CC300247E10 /* DiagCaptureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACB2A2F21105CC300247E10 /* DiagCaptureCell.xib */; };
+		1ACB2A34211060A600247E10 /* DiagDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB2A32211060A600247E10 /* DiagDateCell.swift */; };
+		1ACB2A35211060A600247E10 /* DiagDateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACB2A33211060A600247E10 /* DiagDateCell.xib */; };
+		1ACB2A3821109CAC00247E10 /* DiagSelectEyeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB2A3621109CAC00247E10 /* DiagSelectEyeCell.swift */; };
+		1ACB2A3921109CAC00247E10 /* DiagSelectEyeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACB2A3721109CAC00247E10 /* DiagSelectEyeCell.xib */; };
+		1ACB2A3C2110A54800247E10 /* DiagSelectPatientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB2A3A2110A54800247E10 /* DiagSelectPatientCell.swift */; };
+		1ACB2A3D2110A54800247E10 /* DiagSelectPatientCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACB2A3B2110A54800247E10 /* DiagSelectPatientCell.xib */; };
+		1ACB2A4321119C1000247E10 /* DiagCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB2A4121119C1000247E10 /* DiagCommentCell.swift */; };
+		1ACB2A4421119C1000247E10 /* DiagCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACB2A4221119C1000247E10 /* DiagCommentCell.xib */; };
+		1ACB2A462111AB1E00247E10 /* UITableView+Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB2A452111AB1E00247E10 /* UITableView+Scroll.swift */; };
+		1ACB2A4A2111E2F600247E10 /* DiagEditPatientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB2A482111E2F600247E10 /* DiagEditPatientCell.swift */; };
+		1ACB2A4B2111E2F600247E10 /* DiagEditPatientCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACB2A492111E2F600247E10 /* DiagEditPatientCell.xib */; };
 		1ACBB4112109FC8300AB1BF2 /* test_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACBB40F2109FC8300AB1BF2 /* test_1.png */; };
 		1ACBB4122109FC8300AB1BF2 /* test_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACBB4102109FC8300AB1BF2 /* test_2.png */; };
 		1ACBB41C210B025200AB1BF2 /* thumb_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACBB419210B025200AB1BF2 /* thumb_2.png */; };
 		1ACBB41D210B025200AB1BF2 /* thumb_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACBB41A210B025200AB1BF2 /* thumb_3.png */; };
 		1ACBB41E210B025200AB1BF2 /* thumb_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACBB41B210B025200AB1BF2 /* thumb_1.png */; };
+		1AEC0D3621132D8F00BAB7EA /* DiagnosticResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC0D3521132D8F00BAB7EA /* DiagnosticResumeViewController.swift */; };
+		1AEC0D3A21133F4C00BAB7EA /* DiagResumeCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC0D3821133F4C00BAB7EA /* DiagResumeCommentCell.swift */; };
+		1AEC0D3B21133F4C00BAB7EA /* DiagResumeCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AEC0D3921133F4C00BAB7EA /* DiagResumeCommentCell.xib */; };
+		1AEC0D3E2113446B00BAB7EA /* DiagResumeDeleteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC0D3C2113446B00BAB7EA /* DiagResumeDeleteCell.swift */; };
+		1AEC0D3F2113446B00BAB7EA /* DiagResumeDeleteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AEC0D3D2113446B00BAB7EA /* DiagResumeDeleteCell.xib */; };
+		1AF6110C2118770B0007231D /* Grille_Goldmann.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1AF6110B2118770B0007231D /* Grille_Goldmann.pdf */; };
+		1AF6110F211877E20007231D /* InstructionsScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF6110E211877E20007231D /* InstructionsScanViewController.swift */; };
+		1AF6111321187EA40007231D /* InstructionStepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF6111121187EA40007231D /* InstructionStepCell.swift */; };
+		1AF6111421187EA40007231D /* InstructionStepCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AF6111221187EA40007231D /* InstructionStepCell.xib */; };
 		274D09A42099F29000765337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274D09A32099F29000765337 /* AppDelegate.swift */; };
 		274D09A92099F29000765337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274D09A72099F29000765337 /* Main.storyboard */; };
 		274D09AB2099F29200765337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 274D09AA2099F29200765337 /* Assets.xcassets */; };
@@ -179,6 +205,8 @@
 		1A04CE752105D29900324520 /* JActionSheetCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JActionSheetCollectionViewCell.swift; sourceTree = "<group>"; };
 		1A04CE762105D29900324520 /* JCustomActionSheetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCustomActionSheetCell.swift; sourceTree = "<group>"; };
 		1A04CE7A2105EEB400324520 /* NewPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPatientViewController.swift; sourceTree = "<group>"; };
+		1A16ABC2210F3ADF00A2F568 /* NewTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTestViewController.swift; sourceTree = "<group>"; };
+		1A16ABC4210F3B2900A2F568 /* TestPatient.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestPatient.storyboard; sourceTree = "<group>"; };
 		1A2D984C20F7403F0022288F /* documents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = documents.json; sourceTree = "<group>"; };
 		1A2D984F20F742BE0022288F /* pdf_2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pdf_2.pdf; sourceTree = "<group>"; };
 		1A2D985020F742BE0022288F /* pdf_1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pdf_1.pdf; sourceTree = "<group>"; };
@@ -237,11 +265,35 @@
 		1ABAAE4E2101C5D00098B22B /* JamActionSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JamActionSheetViewController.swift; sourceTree = "<group>"; };
 		1ABAAE4F2101C5D00098B22B /* JamActionSheetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JamActionSheetViewController.xib; sourceTree = "<group>"; };
 		1ABAAE562101DBC30098B22B /* JCustomActionSheetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JCustomActionSheetCell.xib; sourceTree = "<group>"; };
+		1ACB2A29210F891700247E10 /* DiagnosticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticViewController.swift; sourceTree = "<group>"; };
+		1ACB2A2B210F9DE800247E10 /* UIImage+Crop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Crop.swift"; sourceTree = "<group>"; };
+		1ACB2A2E21105CC300247E10 /* DiagCaptureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagCaptureCell.swift; sourceTree = "<group>"; };
+		1ACB2A2F21105CC300247E10 /* DiagCaptureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiagCaptureCell.xib; sourceTree = "<group>"; };
+		1ACB2A32211060A600247E10 /* DiagDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagDateCell.swift; sourceTree = "<group>"; };
+		1ACB2A33211060A600247E10 /* DiagDateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiagDateCell.xib; sourceTree = "<group>"; };
+		1ACB2A3621109CAC00247E10 /* DiagSelectEyeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagSelectEyeCell.swift; sourceTree = "<group>"; };
+		1ACB2A3721109CAC00247E10 /* DiagSelectEyeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiagSelectEyeCell.xib; sourceTree = "<group>"; };
+		1ACB2A3A2110A54800247E10 /* DiagSelectPatientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagSelectPatientCell.swift; sourceTree = "<group>"; };
+		1ACB2A3B2110A54800247E10 /* DiagSelectPatientCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiagSelectPatientCell.xib; sourceTree = "<group>"; };
+		1ACB2A4121119C1000247E10 /* DiagCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagCommentCell.swift; sourceTree = "<group>"; };
+		1ACB2A4221119C1000247E10 /* DiagCommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiagCommentCell.xib; sourceTree = "<group>"; };
+		1ACB2A452111AB1E00247E10 /* UITableView+Scroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Scroll.swift"; sourceTree = "<group>"; };
+		1ACB2A482111E2F600247E10 /* DiagEditPatientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagEditPatientCell.swift; sourceTree = "<group>"; };
+		1ACB2A492111E2F600247E10 /* DiagEditPatientCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiagEditPatientCell.xib; sourceTree = "<group>"; };
 		1ACBB40F2109FC8300AB1BF2 /* test_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_1.png; sourceTree = "<group>"; };
 		1ACBB4102109FC8300AB1BF2 /* test_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_2.png; sourceTree = "<group>"; };
 		1ACBB419210B025200AB1BF2 /* thumb_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb_2.png; sourceTree = "<group>"; };
 		1ACBB41A210B025200AB1BF2 /* thumb_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb_3.png; sourceTree = "<group>"; };
 		1ACBB41B210B025200AB1BF2 /* thumb_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb_1.png; sourceTree = "<group>"; };
+		1AEC0D3521132D8F00BAB7EA /* DiagnosticResumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticResumeViewController.swift; sourceTree = "<group>"; };
+		1AEC0D3821133F4C00BAB7EA /* DiagResumeCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagResumeCommentCell.swift; sourceTree = "<group>"; };
+		1AEC0D3921133F4C00BAB7EA /* DiagResumeCommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiagResumeCommentCell.xib; sourceTree = "<group>"; };
+		1AEC0D3C2113446B00BAB7EA /* DiagResumeDeleteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagResumeDeleteCell.swift; sourceTree = "<group>"; };
+		1AEC0D3D2113446B00BAB7EA /* DiagResumeDeleteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiagResumeDeleteCell.xib; sourceTree = "<group>"; };
+		1AF6110B2118770B0007231D /* Grille_Goldmann.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Grille_Goldmann.pdf; sourceTree = "<group>"; };
+		1AF6110E211877E20007231D /* InstructionsScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsScanViewController.swift; sourceTree = "<group>"; };
+		1AF6111121187EA40007231D /* InstructionStepCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionStepCell.swift; sourceTree = "<group>"; };
+		1AF6111221187EA40007231D /* InstructionStepCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstructionStepCell.xib; sourceTree = "<group>"; };
 		1C9F21C47809DA59B38CBCBC /* Pods-Santhera.inhouse.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Santhera.inhouse.xcconfig"; path = "Pods/Target Support Files/Pods-Santhera/Pods-Santhera.inhouse.xcconfig"; sourceTree = "<group>"; };
 		274D09A02099F29000765337 /* Santhera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Santhera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		274D09A32099F29000765337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -399,9 +451,21 @@
 			path = NewPatient;
 			sourceTree = "<group>";
 		};
+		1A16ABC1210F399D00A2F568 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				1A16ABC2210F3ADF00A2F568 /* NewTestViewController.swift */,
+				1ACB2A29210F891700247E10 /* DiagnosticViewController.swift */,
+				1AEC0D3521132D8F00BAB7EA /* DiagnosticResumeViewController.swift */,
+				1AF6110E211877E20007231D /* InstructionsScanViewController.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		1A2D984220F4AB4D0022288F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1A16ABC1210F399D00A2F568 /* Test */,
 				1A6D561B2107566900DA1A36 /* Base */,
 				1A04CE792105E98000324520 /* NewPatient */,
 				1ABAAE4D2101C3FD0098B22B /* JamActionSheet */,
@@ -416,6 +480,7 @@
 		1A2D984320F4AF9F0022288F /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				1AF6110B2118770B0007231D /* Grille_Goldmann.pdf */,
 				1ACBB40E2109FC7400AB1BF2 /* tests */,
 				1A2D984E20F7405A0022288F /* documents */,
 				1A2D984C20F7403F0022288F /* documents.json */,
@@ -462,6 +527,7 @@
 				274D09AC2099F29200765337 /* LaunchScreen.storyboard */,
 				274D09A72099F29000765337 /* Main.storyboard */,
 				1ABAAE2020FE17050098B22B /* Patients.storyboard */,
+				1A16ABC4210F3B2900A2F568 /* TestPatient.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -493,6 +559,9 @@
 		1A2D985F20F780210022288F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				1AF6111021187E6F0007231D /* InstructionScan */,
+				1AEC0D3721133F2100BAB7EA /* ResumeDiagnostic */,
+				1ACB2A2D21105BEF00247E10 /* NewDiagnostic */,
 				1A04CE722105D03000324520 /* JactionSheet */,
 				1ABAAE2420FF2D920098B22B /* PatientsDetails */,
 				1A2D987320F7A14E0022288F /* Home */,
@@ -655,6 +724,9 @@
 		1ABAAE3B20FF7DD30098B22B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				1AF6111521188BA80007231D /* InstructionScan */,
+				1AEC0D4021134F3700BAB7EA /* ResumeDiagnostic */,
+				1ACB2A472111AF1200247E10 /* NewDiagnostic */,
 				1A04CE742105D29900324520 /* JamActionSheet */,
 				1ABAAE432100889F0098B22B /* Home */,
 				1ABAAE42210088110098B22B /* PatientDetails */,
@@ -736,6 +808,32 @@
 			path = JamActionSheet;
 			sourceTree = "<group>";
 		};
+		1ACB2A2D21105BEF00247E10 /* NewDiagnostic */ = {
+			isa = PBXGroup;
+			children = (
+				1ACB2A2F21105CC300247E10 /* DiagCaptureCell.xib */,
+				1ACB2A33211060A600247E10 /* DiagDateCell.xib */,
+				1ACB2A3721109CAC00247E10 /* DiagSelectEyeCell.xib */,
+				1ACB2A3B2110A54800247E10 /* DiagSelectPatientCell.xib */,
+				1ACB2A4221119C1000247E10 /* DiagCommentCell.xib */,
+				1ACB2A492111E2F600247E10 /* DiagEditPatientCell.xib */,
+			);
+			path = NewDiagnostic;
+			sourceTree = "<group>";
+		};
+		1ACB2A472111AF1200247E10 /* NewDiagnostic */ = {
+			isa = PBXGroup;
+			children = (
+				1ACB2A482111E2F600247E10 /* DiagEditPatientCell.swift */,
+				1ACB2A2E21105CC300247E10 /* DiagCaptureCell.swift */,
+				1ACB2A32211060A600247E10 /* DiagDateCell.swift */,
+				1ACB2A3621109CAC00247E10 /* DiagSelectEyeCell.swift */,
+				1ACB2A3A2110A54800247E10 /* DiagSelectPatientCell.swift */,
+				1ACB2A4121119C1000247E10 /* DiagCommentCell.swift */,
+			);
+			path = NewDiagnostic;
+			sourceTree = "<group>";
+		};
 		1ACBB40E2109FC7400AB1BF2 /* tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -743,6 +841,40 @@
 				1ACBB4102109FC8300AB1BF2 /* test_2.png */,
 			);
 			path = tests;
+			sourceTree = "<group>";
+		};
+		1AEC0D3721133F2100BAB7EA /* ResumeDiagnostic */ = {
+			isa = PBXGroup;
+			children = (
+				1AEC0D3921133F4C00BAB7EA /* DiagResumeCommentCell.xib */,
+				1AEC0D3D2113446B00BAB7EA /* DiagResumeDeleteCell.xib */,
+			);
+			path = ResumeDiagnostic;
+			sourceTree = "<group>";
+		};
+		1AEC0D4021134F3700BAB7EA /* ResumeDiagnostic */ = {
+			isa = PBXGroup;
+			children = (
+				1AEC0D3821133F4C00BAB7EA /* DiagResumeCommentCell.swift */,
+				1AEC0D3C2113446B00BAB7EA /* DiagResumeDeleteCell.swift */,
+			);
+			path = ResumeDiagnostic;
+			sourceTree = "<group>";
+		};
+		1AF6111021187E6F0007231D /* InstructionScan */ = {
+			isa = PBXGroup;
+			children = (
+				1AF6111221187EA40007231D /* InstructionStepCell.xib */,
+			);
+			path = InstructionScan;
+			sourceTree = "<group>";
+		};
+		1AF6111521188BA80007231D /* InstructionScan */ = {
+			isa = PBXGroup;
+			children = (
+				1AF6111121187EA40007231D /* InstructionStepCell.swift */,
+			);
+			path = InstructionScan;
 			sourceTree = "<group>";
 		};
 		274D09972099F29000765337 = {
@@ -865,6 +997,8 @@
 		EAA5AA5320C1708F0020464C /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				1ACB2A452111AB1E00247E10 /* UITableView+Scroll.swift */,
+				1ACB2A2B210F9DE800247E10 /* UIImage+Crop.swift */,
 				1A2D985B20F757DE0022288F /* UIColor+Additions.swift */,
 				EAA5AA5420C1708F0020464C /* SHRightImageButton.swift */,
 				EAA5AA5520C1708F0020464C /* SHUINavigationBarExtension.swift */,
@@ -1055,18 +1189,21 @@
 				1ABAAE2120FE17050098B22B /* Patients.storyboard in Resources */,
 				1A2D984D20F7403F0022288F /* documents.json in Resources */,
 				1A2D987C20F7AF700022288F /* HomeDocumentsCell.xib in Resources */,
+				1ACB2A3D2110A54800247E10 /* DiagSelectPatientCell.xib in Resources */,
 				1ABAAE0B20FC9AEB0098B22B /* ThumbnailGridCell.xib in Resources */,
 				1A2D985620F743970022288F /* image_1.jpg in Resources */,
 				1ABAAE2C20FF3AC80098B22B /* PatientDetailsHeaderCell.xib in Resources */,
 				1ACBB4122109FC8300AB1BF2 /* test_2.png in Resources */,
 				EA52282720BFF85B00752C29 /* Localizable.strings in Resources */,
 				1ABAAE1720FCC7F00098B22B /* PopupInfoViewController.xib in Resources */,
+				1AEC0D3F2113446B00BAB7EA /* DiagResumeDeleteCell.xib in Resources */,
 				274D09AE2099F29200765337 /* LaunchScreen.storyboard in Resources */,
 				1ABAAE582101DBC30098B22B /* JCustomActionSheetCell.xib in Resources */,
 				1A2D986720F7860B0022288F /* HomePatientRecentCell.xib in Resources */,
 				1ACBB41D210B025200AB1BF2 /* thumb_3.png in Resources */,
 				1ACBB4112109FC8300AB1BF2 /* test_1.png in Resources */,
 				1A2D985120F742BF0022288F /* pdf_2.pdf in Resources */,
+				1ACB2A35211060A600247E10 /* DiagDateCell.xib in Resources */,
 				1A2D985220F742BF0022288F /* pdf_1.pdf in Resources */,
 				274D09AB2099F29200765337 /* Assets.xcassets in Resources */,
 				1ABAAE0D20FC9AEB0098B22B /* iconPdfReader.xcassets in Resources */,
@@ -1074,18 +1211,26 @@
 				1ABAAE4121007E130098B22B /* PatientTestResumeCollectionViewCell.xib in Resources */,
 				EA52282020BFF2EB00752C29 /* fastlane in Resources */,
 				1ABAAE512101C5D00098B22B /* JamActionSheetViewController.xib in Resources */,
+				1ACB2A4B2111E2F600247E10 /* DiagEditPatientCell.xib in Resources */,
 				1A2D987220F79AD00022288F /* HomeBotCell.xib in Resources */,
+				1ACB2A3921109CAC00247E10 /* DiagSelectEyeCell.xib in Resources */,
 				1A2D985E20F77BC40022288F /* pdf_thumb.png in Resources */,
 				1ACBB41E210B025200AB1BF2 /* thumb_1.png in Resources */,
+				1ACB2A4421119C1000247E10 /* DiagCommentCell.xib in Resources */,
 				1ABAAE0920FC9AEB0098B22B /* SearchResultsCell.xib in Resources */,
 				1A04CE6F2105BDA300324520 /* PopupGenericViewController.xib in Resources */,
 				1ACBB41C210B025200AB1BF2 /* thumb_2.png in Resources */,
 				274D09A92099F29000765337 /* Main.storyboard in Resources */,
 				1A2D985420F742EA0022288F /* pdf_3.pdf in Resources */,
+				1A16ABC5210F3B2900A2F568 /* TestPatient.storyboard in Resources */,
 				1A2D988020F88DA80022288F /* HomeDocumentCollectionViewCell.xib in Resources */,
+				1AF6110C2118770B0007231D /* Grille_Goldmann.pdf in Resources */,
+				1AEC0D3B21133F4C00BAB7EA /* DiagResumeCommentCell.xib in Resources */,
+				1AF6111421187EA40007231D /* InstructionStepCell.xib in Resources */,
 				1A2D986B20F78B2F0022288F /* HomePatientCollectionViewCell.xib in Resources */,
 				1ABAAE3020FF41470098B22B /* PatientResumeTestCell.xib in Resources */,
 				1ABAAE2820FF2F980098B22B /* PatientsListTestCell.xib in Resources */,
+				1ACB2A3121105CC300247E10 /* DiagCaptureCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1231,16 +1376,20 @@
 				EAA5AA8D20C1708F0020464C /* SHCreditCardValidator.swift in Sources */,
 				EAA5AAAF20C1708F0020464C /* SHNSTimeIntervalExtension.swift in Sources */,
 				1ABAAE502101C5D00098B22B /* JamActionSheetViewController.swift in Sources */,
+				1AEC0D3621132D8F00BAB7EA /* DiagnosticResumeViewController.swift in Sources */,
 				EAA5AAC220C1708F0020464C /* SHManagedObjectContext+CascadeSave.swift in Sources */,
 				1A04CE772105D29900324520 /* JActionSheetCollectionViewCell.swift in Sources */,
 				1ABAAE0820FC9AEB0098B22B /* ThumbnailGridCell.swift in Sources */,
+				1ACB2A3821109CAC00247E10 /* DiagSelectEyeCell.swift in Sources */,
 				EAA5AAA320C1708F0020464C /* SHUIImageExtension.swift in Sources */,
 				EAA5AA9520C1708F0020464C /* SHUIAlertController.swift in Sources */,
 				1A2D987F20F88DA80022288F /* HomeDocumentCollectionViewCell.swift in Sources */,
 				1A04CE6E2105BDA300324520 /* PopupGenericViewController.swift in Sources */,
 				EAA5AAAD20C1708F0020464C /* SHDateFormatterProximity.swift in Sources */,
+				1A16ABC3210F3ADF00A2F568 /* NewTestViewController.swift in Sources */,
 				1ABAAE4921008D9D0098B22B /* DocumentManager.swift in Sources */,
 				EAA5AAA120C1708F0020464C /* SHCircleView.swift in Sources */,
+				1ACB2A3C2110A54800247E10 /* DiagSelectPatientCell.swift in Sources */,
 				EA52281E20BFF0C000752C29 /* HomeViewController.swift in Sources */,
 				1A6D56192107170C00DA1A36 /* buttonValidate.swift in Sources */,
 				1A2D987120F79AD00022288F /* HomeBotCell.swift in Sources */,
@@ -1248,14 +1397,17 @@
 				EAA5AA8F20C1708F0020464C /* SHKeyboardViewController.swift in Sources */,
 				1A2D986A20F78B2F0022288F /* HomePatientCollectionViewCell.swift in Sources */,
 				1ABAAE2F20FF41470098B22B /* PatientResumeTestCell.swift in Sources */,
+				1ACB2A2C210F9DE800247E10 /* UIImage+Crop.swift in Sources */,
 				1A04CE782105D29900324520 /* JCustomActionSheetCell.swift in Sources */,
 				1A2D986620F7860B0022288F /* HomePatientRecentCell.swift in Sources */,
+				1AEC0D3A21133F4C00BAB7EA /* DiagResumeCommentCell.swift in Sources */,
 				EAA5AAA720C1708F0020464C /* SHUIButtonExtension.swift in Sources */,
 				EAA5AA9120C1708F0020464C /* SHRightImageButton.swift in Sources */,
 				EAA5AAA620C1708F0020464C /* SHNavigationControllerExtention.swift in Sources */,
 				EAA5AA8C20C1708F0020464C /* SHSKProductExtension.swift in Sources */,
 				1ABAAE1020FC9AEB0098B22B /* ActionMenuViewController.swift in Sources */,
 				1ABAAE4021007E130098B22B /* PatientTestResumeCollectionViewCell.swift in Sources */,
+				1ACB2A4A2111E2F600247E10 /* DiagEditPatientCell.swift in Sources */,
 				EAA5AA9220C1708F0020464C /* SHUINavigationBarExtension.swift in Sources */,
 				EAA5AAB520C1708F0020464C /* SHNumberExtension.swift in Sources */,
 				EAA5AAC320C1708F0020464C /* SHNamedEntity.swift in Sources */,
@@ -1271,10 +1423,13 @@
 				EAA5AA9A20C1708F0020464C /* SHIBInspectableExtension.swift in Sources */,
 				1ABAAE0720FC9AEB0098B22B /* PdfSearchViewController.swift in Sources */,
 				1ABAAE2B20FF3AC80098B22B /* PatientDetailsHeaderCell.swift in Sources */,
+				1ACB2A462111AB1E00247E10 /* UITableView+Scroll.swift in Sources */,
 				EAA5AA9C20C1708F0020464C /* SHUIScrollViewExtension.swift in Sources */,
+				1ACB2A34211060A600247E10 /* DiagDateCell.swift in Sources */,
 				EAA5AAAB20C1708F0020464C /* SHTextField.swift in Sources */,
 				1ABAAE4B21008E5A0098B22B /* PatientManager.swift in Sources */,
 				EAA5AA9020C1708F0020464C /* SHLocalizationHelper.swift in Sources */,
+				1ACB2A4321119C1000247E10 /* DiagCommentCell.swift in Sources */,
 				EAA5AAB720C1708F0020464C /* SHOperation.swift in Sources */,
 				EAA5AAC020C1708F0020464C /* SHMulticastDelegate.swift in Sources */,
 				1A2D987B20F7AF700022288F /* HomeDocumentsCell.swift in Sources */,
@@ -1292,6 +1447,7 @@
 				1A2D987620F7A23D0022288F /* HomeAccuityCell.swift in Sources */,
 				EAA5AABC20C1708F0020464C /* URLRequestExtension.swift in Sources */,
 				1ABAAE3D20FF83C30098B22B /* TestManager.swift in Sources */,
+				1ACB2A2A210F891700247E10 /* DiagnosticViewController.swift in Sources */,
 				EAA5AAA220C1708F0020464C /* SHPopupPresentationController.swift in Sources */,
 				1ABAAE1120FC9AEB0098B22B /* AppearanceViewController.swift in Sources */,
 				1ABAAE2720FF2F980098B22B /* PatientsListTestCell.swift in Sources */,
@@ -1301,9 +1457,13 @@
 				EAA5AAAC20C1708F0020464C /* SHNSDateFormatterExtension.swift in Sources */,
 				1ABAAE3620FF44240098B22B /* Test.swift in Sources */,
 				EAA5AABE20C1708F0020464C /* SHNSObjectExtension.swift in Sources */,
+				1AEC0D3E2113446B00BAB7EA /* DiagResumeDeleteCell.swift in Sources */,
 				EAA5AA9820C1708F0020464C /* SHDatePickerController.swift in Sources */,
+				1AF6110F211877E20007231D /* InstructionsScanViewController.swift in Sources */,
+				1ACB2A3021105CC300247E10 /* DiagCaptureCell.swift in Sources */,
 				1ABAAE1620FCC7F00098B22B /* PopupInfoViewController.swift in Sources */,
 				EAA5AA9E20C1708F0020464C /* SHAttributedLabel.swift in Sources */,
+				1AF6111321187EA40007231D /* InstructionStepCell.swift in Sources */,
 				EAA5AA9620C1708F0020464C /* SHPagedScrollView.swift in Sources */,
 				EAA5AA9420C1708F0020464C /* SHCommonInitView.swift in Sources */,
 				EAA5AAA020C1708F0020464C /* SHUIViewControllerExtension.swift in Sources */,

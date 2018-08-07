@@ -19,6 +19,40 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6T4-he-AkP">
+                        <rect key="frame" x="20" y="6" width="30" height="30"/>
+                        <color key="backgroundColor" name="paleBlue"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="148-GJ-dTM"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="CU1-wx-UNW"/>
+                            <constraint firstAttribute="height" constant="30" id="ED3-Se-4Bz"/>
+                            <constraint firstAttribute="width" constant="30" id="eRo-k2-QRv"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" red="0.2590000033" green="0.54500001669999998" blue="0.79199999570000001" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="7"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" name="windowsBlue"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="4" height="4"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layerMasksToBounds" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PpX-8b-kyn" userLabel="separator">
                         <rect key="frame" x="0.0" y="43" width="320" height="1"/>
                         <color key="backgroundColor" red="0.13300000131130219" green="0.22699999809265137" blue="0.53299999237060547" alpha="0.14999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
@@ -26,7 +60,7 @@
                             <constraint firstAttribute="height" constant="1" id="50C-Cs-R0n"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icEyes" translatesAutoresizingMaskIntoConstraints="NO" id="Pvr-ec-Iyo">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icEyes" translatesAutoresizingMaskIntoConstraints="NO" id="Pvr-ec-Iyo">
                         <rect key="frame" x="20" y="7" width="30" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="W6c-Sv-Lcb"/>
@@ -54,8 +88,10 @@
                     <constraint firstItem="TAL-SS-MWX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Oye-gk-Jdx"/>
                     <constraint firstItem="CxV-G0-RgD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Srs-4a-uP6"/>
                     <constraint firstAttribute="trailing" secondItem="TAL-SS-MWX" secondAttribute="trailing" constant="20" id="WCc-IR-SAH"/>
+                    <constraint firstItem="6T4-he-AkP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="XuX-q1-nS1"/>
                     <constraint firstItem="Pvr-ec-Iyo" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="af6-as-afz"/>
                     <constraint firstItem="CxV-G0-RgD" firstAttribute="leading" secondItem="Pvr-ec-Iyo" secondAttribute="trailing" constant="15" id="gfb-Vo-pAH"/>
+                    <constraint firstItem="6T4-he-AkP" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="pra-JF-qCX"/>
                     <constraint firstItem="Pvr-ec-Iyo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="yXn-cB-f9W"/>
                 </constraints>
                 <userDefinedRuntimeAttributes>
@@ -77,6 +113,12 @@
         <image name="icEyes" width="30" height="30"/>
         <namedColor name="cobalt">
             <color red="0.13300000131130219" green="0.22699999809265137" blue="0.53299999237060547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="paleBlue">
+            <color red="0.88200002909999997" green="0.94099998470000001" blue="0.99199998379999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="windowsBlue">
+            <color red="0.2590000033" green="0.54500001669999998" blue="0.79199999570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

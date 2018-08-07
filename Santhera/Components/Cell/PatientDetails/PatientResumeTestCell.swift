@@ -11,6 +11,7 @@ import UIKit
 enum resumeType: Int {
     case eye
     case firstTest
+    case patient
 }
 
 class PatientResumeTestCell: UITableViewCell {
@@ -38,6 +39,17 @@ class PatientResumeTestCell: UITableViewCell {
             configureEye(patient: patient)
         case .firstTest:
             configureFirstTest(patient: patient)
+        default:
+            return
+            
+        }
+    }
+    func setTest(test: Test,type: resumeType){
+        if type == .eye {
+            configureTestEye(test: test)
+        }
+        if type == .patient {
+            configureTestPatient(test: test)
         }
     }
     func configureEye(patient: Patient){
@@ -71,6 +83,24 @@ class PatientResumeTestCell: UITableViewCell {
         }
         
         self.imgLogo.image = #imageLiteral(resourceName: "icFirstTest")
+    }
+    
+    func configureTestEye(test: Test){
+        self.imgLogo.image = #imageLiteral(resourceName: "icPatient_2")
+         self.lblTitle.text = L("patient_resume_eye")
+        if test.isLeftEye {
+            self.lblSubtitle.text = L("patient_test_eye_left")
+        }else{
+             self.lblSubtitle.text = L("patient_test_eye_right")
+        }
+    }
+    func configureTestPatient(test: Test){
+        self.imgLogo.image = #imageLiteral(resourceName: "icEyes")
+        guard let patient =  test.patient else {
+            return
+        }
+        self.lblTitle.text = L("test_resume_patient")
+        self.lblSubtitle.text = "\(patient.firstname) \(patient.lastname)"
     }
     class func getHeight() -> CGFloat {
         return 44

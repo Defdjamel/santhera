@@ -24,8 +24,7 @@ class PatientTestResumeCollectionViewCell: UICollectionViewCell {
         df.timeStyle = .short
         df.dateStyle = .none
         self.lblTime.text = df.string(from: test.date!)
-        self.imgTest.image = UIImage.init(named: test.file_name)
-        
+       self.imgTest.image =  UIImage.init(contentsOfFile: (test.imageUrl?.path)! )
         
     }
 
