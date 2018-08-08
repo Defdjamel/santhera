@@ -31,10 +31,10 @@ class DocumentManager: NSObject {
             document.name =  name
         }
         if let file_name = item.object(forKey: "file") as? String {
-            document.file_url =   Bundle.main.path(forResource: file_name, ofType: nil)!
+            document.file_name =   file_name
         }
         if let thumb_name = item.object(forKey: "thumbnail") as? String {
-            document.thumb_url =  Bundle.main.path(forResource: thumb_name, ofType: nil)!
+            document.thumb_name = thumb_name
         }
         if let type = item.object(forKey: "type") as? String {
             if type ==  DocumentType.image.rawValue {

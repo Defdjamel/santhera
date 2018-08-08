@@ -110,9 +110,9 @@ extension PaitentDetailsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 3:
-            return  currentPatient.testsLeftEye.count > 0 ? 1 : 0
-        case 4:
             return  currentPatient.testsRightEye.count > 0 ? 1 : 0
+        case 4:
+            return  currentPatient.testsLeftEye.count > 0 ? 1 : 0
         default:
             return 1
         }
