@@ -14,6 +14,14 @@
 		1A04CE7B2105EEB400324520 /* NewPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A04CE7A2105EEB400324520 /* NewPatientViewController.swift */; };
 		1A16ABC3210F3ADF00A2F568 /* NewTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A16ABC2210F3ADF00A2F568 /* NewTestViewController.swift */; };
 		1A16ABC5210F3B2900A2F568 /* TestPatient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A16ABC4210F3B2900A2F568 /* TestPatient.storyboard */; };
+		1A2A0E9E211C3FF200129F9A /* step_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A2A0E9C211C3FF200129F9A /* step_2.json */; };
+		1A2A0E9F211C3FF200129F9A /* step_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A2A0E9D211C3FF200129F9A /* step_1.json */; };
+		1A2A0EA2211C45B900129F9A /* BotNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A0EA1211C45B900129F9A /* BotNode.swift */; };
+		1A2A0EA4211C471200129F9A /* BotNodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A0EA3211C471200129F9A /* BotNodeManager.swift */; };
+		1A2A0EA6211C6C9B00129F9A /* BotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A0EA5211C6C9B00129F9A /* BotViewController.swift */; };
+		1A2A0EA8211C6CA800129F9A /* Bot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A2A0EA7211C6CA800129F9A /* Bot.storyboard */; };
+		1A2A0EAC211C833600129F9A /* BotMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A0EAA211C833600129F9A /* BotMessageCell.swift */; };
+		1A2A0EAD211C833600129F9A /* BotMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2A0EAB211C833600129F9A /* BotMessageCell.xib */; };
 		1A2D984D20F7403F0022288F /* documents.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D984C20F7403F0022288F /* documents.json */; };
 		1A2D985120F742BF0022288F /* pdf_2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D984F20F742BE0022288F /* pdf_2.pdf */; };
 		1A2D985220F742BF0022288F /* pdf_1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D985020F742BE0022288F /* pdf_1.pdf */; };
@@ -207,6 +215,14 @@
 		1A04CE7A2105EEB400324520 /* NewPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPatientViewController.swift; sourceTree = "<group>"; };
 		1A16ABC2210F3ADF00A2F568 /* NewTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTestViewController.swift; sourceTree = "<group>"; };
 		1A16ABC4210F3B2900A2F568 /* TestPatient.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestPatient.storyboard; sourceTree = "<group>"; };
+		1A2A0E9C211C3FF200129F9A /* step_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = step_2.json; sourceTree = "<group>"; };
+		1A2A0E9D211C3FF200129F9A /* step_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = step_1.json; sourceTree = "<group>"; };
+		1A2A0EA1211C45B900129F9A /* BotNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotNode.swift; sourceTree = "<group>"; };
+		1A2A0EA3211C471200129F9A /* BotNodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotNodeManager.swift; sourceTree = "<group>"; };
+		1A2A0EA5211C6C9B00129F9A /* BotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotViewController.swift; sourceTree = "<group>"; };
+		1A2A0EA7211C6CA800129F9A /* Bot.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bot.storyboard; sourceTree = "<group>"; };
+		1A2A0EAA211C833600129F9A /* BotMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotMessageCell.swift; sourceTree = "<group>"; };
+		1A2A0EAB211C833600129F9A /* BotMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BotMessageCell.xib; sourceTree = "<group>"; };
 		1A2D984C20F7403F0022288F /* documents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = documents.json; sourceTree = "<group>"; };
 		1A2D984F20F742BE0022288F /* pdf_2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pdf_2.pdf; sourceTree = "<group>"; };
 		1A2D985020F742BE0022288F /* pdf_1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pdf_1.pdf; sourceTree = "<group>"; };
@@ -462,9 +478,36 @@
 			path = Test;
 			sourceTree = "<group>";
 		};
+		1A2A0E9B211C3FD900129F9A /* Bot */ = {
+			isa = PBXGroup;
+			children = (
+				1A2A0E9D211C3FF200129F9A /* step_1.json */,
+				1A2A0E9C211C3FF200129F9A /* step_2.json */,
+			);
+			path = Bot;
+			sourceTree = "<group>";
+		};
+		1A2A0EA0211C450600129F9A /* Bot */ = {
+			isa = PBXGroup;
+			children = (
+				1A2A0EA5211C6C9B00129F9A /* BotViewController.swift */,
+			);
+			path = Bot;
+			sourceTree = "<group>";
+		};
+		1A2A0EA9211C81E800129F9A /* Bot */ = {
+			isa = PBXGroup;
+			children = (
+				1A2A0EAA211C833600129F9A /* BotMessageCell.swift */,
+				1A2A0EAB211C833600129F9A /* BotMessageCell.xib */,
+			);
+			path = Bot;
+			sourceTree = "<group>";
+		};
 		1A2D984220F4AB4D0022288F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1A2A0EA0211C450600129F9A /* Bot */,
 				1A16ABC1210F399D00A2F568 /* Test */,
 				1A6D561B2107566900DA1A36 /* Base */,
 				1A04CE792105E98000324520 /* NewPatient */,
@@ -480,6 +523,7 @@
 		1A2D984320F4AF9F0022288F /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				1A2A0E9B211C3FD900129F9A /* Bot */,
 				1AF6110B2118770B0007231D /* Grille_Goldmann.pdf */,
 				1ACBB40E2109FC7400AB1BF2 /* tests */,
 				1A2D984E20F7405A0022288F /* documents */,
@@ -508,6 +552,8 @@
 				1ABAAE4A21008E5A0098B22B /* PatientManager.swift */,
 				1ABAAE3520FF44240098B22B /* Test.swift */,
 				1ABAAE3C20FF83C30098B22B /* TestManager.swift */,
+				1A2A0EA3211C471200129F9A /* BotNodeManager.swift */,
+				1A2A0EA1211C45B900129F9A /* BotNode.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -528,6 +574,7 @@
 				274D09A72099F29000765337 /* Main.storyboard */,
 				1ABAAE2020FE17050098B22B /* Patients.storyboard */,
 				1A16ABC4210F3B2900A2F568 /* TestPatient.storyboard */,
+				1A2A0EA7211C6CA800129F9A /* Bot.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -559,6 +606,7 @@
 		1A2D985F20F780210022288F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				1A2A0EA9211C81E800129F9A /* Bot */,
 				1AF6111021187E6F0007231D /* InstructionScan */,
 				1AEC0D3721133F2100BAB7EA /* ResumeDiagnostic */,
 				1ACB2A2D21105BEF00247E10 /* NewDiagnostic */,
@@ -1200,7 +1248,9 @@
 				274D09AE2099F29200765337 /* LaunchScreen.storyboard in Resources */,
 				1ABAAE582101DBC30098B22B /* JCustomActionSheetCell.xib in Resources */,
 				1A2D986720F7860B0022288F /* HomePatientRecentCell.xib in Resources */,
+				1A2A0E9E211C3FF200129F9A /* step_2.json in Resources */,
 				1ACBB41D210B025200AB1BF2 /* thumb_3.png in Resources */,
+				1A2A0EA8211C6CA800129F9A /* Bot.storyboard in Resources */,
 				1ACBB4112109FC8300AB1BF2 /* test_1.png in Resources */,
 				1A2D985120F742BF0022288F /* pdf_2.pdf in Resources */,
 				1ACB2A35211060A600247E10 /* DiagDateCell.xib in Resources */,
@@ -1226,9 +1276,11 @@
 				1A2D988020F88DA80022288F /* HomeDocumentCollectionViewCell.xib in Resources */,
 				1AF6110C2118770B0007231D /* Grille_Goldmann.pdf in Resources */,
 				1AEC0D3B21133F4C00BAB7EA /* DiagResumeCommentCell.xib in Resources */,
+				1A2A0E9F211C3FF200129F9A /* step_1.json in Resources */,
 				1AF6111421187EA40007231D /* InstructionStepCell.xib in Resources */,
 				1A2D986B20F78B2F0022288F /* HomePatientCollectionViewCell.xib in Resources */,
 				1ABAAE3020FF41470098B22B /* PatientResumeTestCell.xib in Resources */,
+				1A2A0EAD211C833600129F9A /* BotMessageCell.xib in Resources */,
 				1ABAAE2820FF2F980098B22B /* PatientsListTestCell.xib in Resources */,
 				1ACB2A3121105CC300247E10 /* DiagCaptureCell.xib in Resources */,
 			);
@@ -1391,6 +1443,7 @@
 				EAA5AAA120C1708F0020464C /* SHCircleView.swift in Sources */,
 				1ACB2A3C2110A54800247E10 /* DiagSelectPatientCell.swift in Sources */,
 				EA52281E20BFF0C000752C29 /* HomeViewController.swift in Sources */,
+				1A2A0EA6211C6C9B00129F9A /* BotViewController.swift in Sources */,
 				1A6D56192107170C00DA1A36 /* buttonValidate.swift in Sources */,
 				1A2D987120F79AD00022288F /* HomeBotCell.swift in Sources */,
 				EAA5AAB020C1708F0020464C /* NumbersConvertion.swift in Sources */,
@@ -1404,6 +1457,7 @@
 				EAA5AAA720C1708F0020464C /* SHUIButtonExtension.swift in Sources */,
 				EAA5AA9120C1708F0020464C /* SHRightImageButton.swift in Sources */,
 				EAA5AAA620C1708F0020464C /* SHNavigationControllerExtention.swift in Sources */,
+				1A2A0EA2211C45B900129F9A /* BotNode.swift in Sources */,
 				EAA5AA8C20C1708F0020464C /* SHSKProductExtension.swift in Sources */,
 				1ABAAE1020FC9AEB0098B22B /* ActionMenuViewController.swift in Sources */,
 				1ABAAE4021007E130098B22B /* PatientTestResumeCollectionViewCell.swift in Sources */,
@@ -1412,6 +1466,7 @@
 				EAA5AAB520C1708F0020464C /* SHNumberExtension.swift in Sources */,
 				EAA5AAC320C1708F0020464C /* SHNamedEntity.swift in Sources */,
 				1A2D986D20F78D620022288F /* Patient.swift in Sources */,
+				1A2A0EAC211C833600129F9A /* BotMessageCell.swift in Sources */,
 				EAA5AABA20C1708F0020464C /* SHComparisonHelpers.swift in Sources */,
 				EAA5AAA420C1708F0020464C /* SHUIViewExtension.swift in Sources */,
 				EAA5AAB920C1708F0020464C /* SHNSDataExtension.swift in Sources */,
@@ -1441,6 +1496,7 @@
 				274D09A42099F29000765337 /* AppDelegate.swift in Sources */,
 				EAA5AABF20C1708F0020464C /* SHNSTimerExtension.swift in Sources */,
 				EAA5AAA920C1708F0020464C /* SHUITextFieldExtension.swift in Sources */,
+				1A2A0EA4211C471200129F9A /* BotNodeManager.swift in Sources */,
 				EAA5AAAA20C1708F0020464C /* SHGif.swift in Sources */,
 				1ABAAE0C20FC9AEB0098B22B /* OutlineCell.swift in Sources */,
 				EAA5AA9720C1708F0020464C /* SHStatusBarNavigationController.swift in Sources */,

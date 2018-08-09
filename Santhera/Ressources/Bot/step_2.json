@@ -1,0 +1,20 @@
+[
+ {
+   "type": "s",
+   "key": "step1_question3",
+   "parent": "",
+   "goto": ""
+ },
+ {
+   "type": "o",
+   "key": "select_yes",
+   "parent": "step1_question3",
+   "goto": "not_optical_neuropathy"
+ },
+ {
+   "type": "o",
+   "key": "select_no",
+   "parent": "step1_question3",
+   "goto": "not_optical_neuropathy"
+ }
+]

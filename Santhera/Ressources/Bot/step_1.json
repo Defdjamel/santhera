@@ -1,0 +1,114 @@
+[
+ {
+   "type": "m",
+   "key": "welcome_bot",
+   "parent": "",
+   "goto": "step1_start",
+   "args": ""
+ },
+ {
+   "type": "m",
+   "key": "step1_start",
+   "parent": "",
+   "goto": "step1_start2",
+   "args": ""
+ },
+ {
+   "type": "m",
+   "key": "step1_start2",
+   "parent": "",
+   "goto": "step1_question1",
+   "args": ""
+ },
+ {
+   "type": "s",
+   "key": "step1_question1",
+   "parent": "",
+   "goto": "",
+   "args": ""
+ },
+ {
+   "type": "o",
+   "key": "select_yes",
+   "parent": "step1_question1",
+   "goto": "step1_question2",
+   "args": ""
+ },
+ {
+   "type": "o",
+   "key": "select_no",
+   "parent": "step1_question1",
+   "goto": "not_optical_neuropathy",
+   "args": ""
+ },
+ {
+   "type": "o",
+   "key": "select_maybe",
+   "parent": "step1_question1",
+   "goto": "step1_document",
+   "args": ""
+ },
+ {
+   "type": "s",
+   "key": "step1_question2",
+   "parent": "",
+   "goto": "",
+   "args": ""
+ },
+ {
+   "type": "o",
+   "key": "select_yes",
+   "parent": "step1_question2",
+   "goto": "step1_question3",
+   "args": ""
+ },
+ {
+   "type": "o",
+   "key": "select_no",
+   "parent": "step1_question2",
+   "goto": "not_optical_neuropathy",
+   "args": ""
+ },
+ {
+   "type": "o",
+   "key": "select_no",
+   "parent": "step1_question2",
+   "goto": "redirect",
+   "args": ""
+ },
+ {
+   "type": "b",
+   "key": "not_optical_neuropathy",
+   "parent": "",
+   "goto": "",
+   "args": ""
+ },
+ {
+   "type": "e",
+   "key": "redirect",
+   "parent": "",
+   "goto": "after_redirect",
+   "args": ""
+ },
+ {
+   "type": "m",
+   "key": "after_redirect",
+   "parent": "",
+   "goto": "",
+   "args": ""
+ },
+ {
+   "type": "d",
+   "key": "step1_document",
+   "parent": "",
+   "goto": "",
+   "args": "document_name"
+ },
+ {
+   "type": "b",
+   "key": "Step1_end",
+   "parent": "",
+   "goto": "",
+   "args": ""
+ }
+]

@@ -82,11 +82,20 @@
                     <connections>
                         <outlet property="tableView" destination="IDn-Ik-MW4" id="FZH-lI-V5I"/>
                         <segue destination="Zdd-0v-7sG" kind="show" identifier="HomePatients" id="lSg-cd-Est"/>
+                        <segue destination="36z-eq-Rbq" kind="show" identifier="Bot" id="Dg0-7s-LaE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="972" y="31.934032983508249"/>
+        </scene>
+        <!--Bot-->
+        <scene sceneID="fN6-5h-CcB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Bot" id="36z-eq-Rbq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hGg-bD-Mc9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1667" y="-90"/>
         </scene>
         <!--Patients-->
         <scene sceneID="xR7-nf-NAS">

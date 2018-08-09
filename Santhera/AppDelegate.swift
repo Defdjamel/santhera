@@ -11,7 +11,7 @@ import Fabric
 import Crashlytics
 import RealmSwift
 
-let schemaVersionRealm : UInt64 = 10
+let schemaVersionRealm : UInt64 = 11
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

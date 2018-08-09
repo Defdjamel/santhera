@@ -47,6 +47,9 @@ class HomeViewController: BaseViewController {
         navigationItem.titleView = imageView
         
     }
+    private func goToBot(){
+        self.performSegue(withIdentifier: "Bot", sender: self)
+    }
     
      //MARK: - Private IBAction
     
@@ -55,7 +58,12 @@ class HomeViewController: BaseViewController {
 //MARK: - UITableViewDelegate
 extension HomeViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       
+        switch indexPath.row {
+        case 1:
+            self.goToBot()
+        default:
+            return
+        }
     
     }
 }
