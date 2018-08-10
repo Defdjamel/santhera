@@ -49,10 +49,7 @@ class BotNodeManager: NSObject {
         }
        
         if let type = item.object(forKey: "type") as? String {
-            if type ==  NodeType.message.rawValue {
-                node.type =  NodeType.message.rawValue
-            }
-            
+                node.type = type
         }
         if let goto = item.object(forKey: "goto") as? String {
             node.goto =  goto
@@ -75,6 +72,13 @@ class BotNodeManager: NSObject {
             return nil
         }
         return p
+        
+    }
+    func getNodeWithParentKey(key: String) -> [BotNode] {
+        let realm = try! Realm()
+        let predicate =  NSPredicate(format: "self.parent = [cd] '\(key)'  ")
+        
+       return Array(realm.objects(BotNode.self).filter(predicate))
         
     }
     

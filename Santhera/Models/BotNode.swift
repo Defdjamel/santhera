@@ -10,10 +10,10 @@ import UIKit
 import RealmSwift
 
 enum NodeType: String {
-    case message = "message"
-    case document = "document"
-    case question = "question"
-    case questionChoice = "questionChoice"
+    case message = "m"
+    case document = "d"
+    case question = "s"
+    case questionChoice = "o"
 }
 class BotNode : Object {
     @objc dynamic var key = ""

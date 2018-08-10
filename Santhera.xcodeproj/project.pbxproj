@@ -22,6 +22,10 @@
 		1A2A0EA8211C6CA800129F9A /* Bot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A2A0EA7211C6CA800129F9A /* Bot.storyboard */; };
 		1A2A0EAC211C833600129F9A /* BotMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A0EAA211C833600129F9A /* BotMessageCell.swift */; };
 		1A2A0EAD211C833600129F9A /* BotMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2A0EAB211C833600129F9A /* BotMessageCell.xib */; };
+		1A2A0EB1211D7CFE00129F9A /* BotChoicesSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A0EB0211D7CFE00129F9A /* BotChoicesSelectorView.swift */; };
+		1A2A0EB3211D846200129F9A /* BotChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A0EB2211D846200129F9A /* BotChoiceView.swift */; };
+		1A2A0EB5211D846900129F9A /* BotChoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2A0EB4211D846900129F9A /* BotChoiceView.xib */; };
+		1A2A0EB7211D869700129F9A /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A0EB6211D869700129F9A /* UIView+Nib.swift */; };
 		1A2D984D20F7403F0022288F /* documents.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D984C20F7403F0022288F /* documents.json */; };
 		1A2D985120F742BF0022288F /* pdf_2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D984F20F742BE0022288F /* pdf_2.pdf */; };
 		1A2D985220F742BF0022288F /* pdf_1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D985020F742BE0022288F /* pdf_1.pdf */; };
@@ -223,6 +227,10 @@
 		1A2A0EA7211C6CA800129F9A /* Bot.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bot.storyboard; sourceTree = "<group>"; };
 		1A2A0EAA211C833600129F9A /* BotMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotMessageCell.swift; sourceTree = "<group>"; };
 		1A2A0EAB211C833600129F9A /* BotMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BotMessageCell.xib; sourceTree = "<group>"; };
+		1A2A0EB0211D7CFE00129F9A /* BotChoicesSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotChoicesSelectorView.swift; sourceTree = "<group>"; };
+		1A2A0EB2211D846200129F9A /* BotChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotChoiceView.swift; sourceTree = "<group>"; };
+		1A2A0EB4211D846900129F9A /* BotChoiceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BotChoiceView.xib; sourceTree = "<group>"; };
+		1A2A0EB6211D869700129F9A /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
 		1A2D984C20F7403F0022288F /* documents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = documents.json; sourceTree = "<group>"; };
 		1A2D984F20F742BE0022288F /* pdf_2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pdf_2.pdf; sourceTree = "<group>"; };
 		1A2D985020F742BE0022288F /* pdf_1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pdf_1.pdf; sourceTree = "<group>"; };
@@ -498,8 +506,11 @@
 		1A2A0EA9211C81E800129F9A /* Bot */ = {
 			isa = PBXGroup;
 			children = (
+				1A2A0EB0211D7CFE00129F9A /* BotChoicesSelectorView.swift */,
 				1A2A0EAA211C833600129F9A /* BotMessageCell.swift */,
 				1A2A0EAB211C833600129F9A /* BotMessageCell.xib */,
+				1A2A0EB2211D846200129F9A /* BotChoiceView.swift */,
+				1A2A0EB4211D846900129F9A /* BotChoiceView.xib */,
 			);
 			path = Bot;
 			sourceTree = "<group>";
@@ -1045,6 +1056,7 @@
 		EAA5AA5320C1708F0020464C /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				1A2A0EB6211D869700129F9A /* UIView+Nib.swift */,
 				1ACB2A452111AB1E00247E10 /* UITableView+Scroll.swift */,
 				1ACB2A2B210F9DE800247E10 /* UIImage+Crop.swift */,
 				1A2D985B20F757DE0022288F /* UIColor+Additions.swift */,
@@ -1269,6 +1281,7 @@
 				1ACB2A4421119C1000247E10 /* DiagCommentCell.xib in Resources */,
 				1ABAAE0920FC9AEB0098B22B /* SearchResultsCell.xib in Resources */,
 				1A04CE6F2105BDA300324520 /* PopupGenericViewController.xib in Resources */,
+				1A2A0EB5211D846900129F9A /* BotChoiceView.xib in Resources */,
 				1ACBB41C210B025200AB1BF2 /* thumb_2.png in Resources */,
 				274D09A92099F29000765337 /* Main.storyboard in Resources */,
 				1A2D985420F742EA0022288F /* pdf_3.pdf in Resources */,
@@ -1465,8 +1478,10 @@
 				EAA5AA9220C1708F0020464C /* SHUINavigationBarExtension.swift in Sources */,
 				EAA5AAB520C1708F0020464C /* SHNumberExtension.swift in Sources */,
 				EAA5AAC320C1708F0020464C /* SHNamedEntity.swift in Sources */,
+				1A2A0EB3211D846200129F9A /* BotChoiceView.swift in Sources */,
 				1A2D986D20F78D620022288F /* Patient.swift in Sources */,
 				1A2A0EAC211C833600129F9A /* BotMessageCell.swift in Sources */,
+				1A2A0EB1211D7CFE00129F9A /* BotChoicesSelectorView.swift in Sources */,
 				EAA5AABA20C1708F0020464C /* SHComparisonHelpers.swift in Sources */,
 				EAA5AAA420C1708F0020464C /* SHUIViewExtension.swift in Sources */,
 				EAA5AAB920C1708F0020464C /* SHNSDataExtension.swift in Sources */,
@@ -1509,6 +1524,7 @@
 				1ABAAE2720FF2F980098B22B /* PatientsListTestCell.swift in Sources */,
 				EAA5AA8E20C1708F0020464C /* SHNotificationExtension.swift in Sources */,
 				EAA5AAB320C1708F0020464C /* SHIntExtension.swift in Sources */,
+				1A2A0EB7211D869700129F9A /* UIView+Nib.swift in Sources */,
 				EAA5AA9920C1708F0020464C /* SHCALayerExtension.swift in Sources */,
 				EAA5AAAC20C1708F0020464C /* SHNSDateFormatterExtension.swift in Sources */,
 				1ABAAE3620FF44240098B22B /* Test.swift in Sources */,

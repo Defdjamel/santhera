@@ -15,6 +15,8 @@ private let firstKeyBot = "welcome_bot"
 private let insertMessageDelay = 0.6
 
 class BotViewController: UIViewController {
+    @IBOutlet weak var heightSelectorChoice: NSLayoutConstraint!
+    @IBOutlet weak var selectorChoices: BotChoicesSelectorView!
     @IBOutlet weak var tableView: UITableView!
     var botNodes :  Array<BotNode> = []
     //MARK: lifeCycle
@@ -24,10 +26,13 @@ class BotViewController: UIViewController {
         // Do any additional setup after loading the view.
         BotNodeManager.sharedInstance.updateBotFromJsonFile()
         self.tableView.register(UINib.init(nibName: BotMessageCellId, bundle: Bundle.main), forCellReuseIdentifier: BotMessageCellId)
+        selectorChoices.delegate = self
+        displaySelectorView(value:false)
         
     }
     override func viewDidAppear(_ animated: Bool) {
         startBot()
+      
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -37,7 +42,7 @@ class BotViewController: UIViewController {
     //MARK: Private Methods
     private func startBot(){
         botNodes.removeAll()
-       addNodeWithKey(key: firstKeyBot)
+        addNodeWithKey(key: firstKeyBot)
         
     }
     private func addNodeWithKey(key: String){
@@ -57,6 +62,16 @@ class BotViewController: UIViewController {
         let indexPath = IndexPath.init(row: botNodes.count - 1 , section: 0 )
         tableView.insertRows(at: [indexPath], with: UITableViewRowAnimation.left)
         tableView.scrollToBottom()
+        
+        
+        if node.type == NodeType.question.rawValue {
+              displaySelectorView(value: true)
+            let choices = BotNodeManager.sharedInstance.getNodeWithParentKey(key: node.key)
+            self.selectorChoices.setChoices(choices: choices)
+          
+        }else {
+            displaySelectorView(value: false)
+        }
         goToNextNode()
        
     }
@@ -71,7 +86,12 @@ class BotViewController: UIViewController {
         }
         addNodeWithKey(key: goToKey)
     }
-
+    private func displaySelectorView(value: Bool){
+       
+        heightSelectorChoice.constant = value ? 90 : 0
+        selectorChoices.layoutIfNeeded()
+        selectorChoices.needsUpdateConstraints()
+    }
     /*
     // MARK: - Navigation
 
@@ -101,7 +121,7 @@ extension BotViewController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let node =  botNodes[indexPath.row]
-        if indexPath.section == 0 {
+        if node.type == NodeType.message.rawValue || node.type == NodeType.question.rawValue {
             let cell = tableView.dequeueReusableCell(withIdentifier: BotMessageCellId, for: indexPath) as! BotMessageCell
             // Configure the cell...
             cell.setNodeBot(botNode: node)
@@ -109,6 +129,15 @@ extension BotViewController: UITableViewDataSource {
         }
        
         return UITableViewCell.init()
+    }
+    
+    
+}
+
+//MARK: - BotChoicesSelectorViewDelegate
+extension BotViewController: BotChoicesSelectorViewDelegate {
+    func BotChoicesSelectorView(_ botChoicesSelectorView: BotChoicesSelectorView, DidSelect botNode: BotNode) {
+         addNodeWithKey(key: botNode.goto)
     }
     
     
