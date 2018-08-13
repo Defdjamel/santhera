@@ -10,6 +10,7 @@ target 'Santhera' do
   pod 'Crashlytics'
   pod 'RealmSwift'
   pod 'AppImageViewer'
+  pod 'NVActivityIndicatorView'
 
   target 'SantheraTests' do
     inherit! :search_paths

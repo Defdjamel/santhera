@@ -14,6 +14,7 @@ enum NodeType: String {
     case document = "d"
     case question = "s"
     case questionChoice = "o"
+    case stop = "b"
 }
 class BotNode : Object {
     @objc dynamic var key = ""

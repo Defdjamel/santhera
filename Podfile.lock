@@ -3,6 +3,9 @@ PODS:
   - Crashlytics (3.10.1):
     - Fabric (~> 1.7.5)
   - Fabric (1.7.6)
+  - NVActivityIndicatorView (4.2.0):
+    - NVActivityIndicatorView/Presenter (= 4.2.0)
+  - NVActivityIndicatorView/Presenter (4.2.0)
   - Realm (3.5.0):
     - Realm/Headers (= 3.5.0)
   - Realm/Headers (3.5.0)
@@ -13,6 +16,7 @@ DEPENDENCIES:
   - AppImageViewer
   - Crashlytics
   - Fabric
+  - NVActivityIndicatorView
   - RealmSwift
 
 SPEC REPOS:
@@ -20,6 +24,7 @@ SPEC REPOS:
     - AppImageViewer
     - Crashlytics
     - Fabric
+    - NVActivityIndicatorView
     - Realm
     - RealmSwift
 
@@ -27,9 +32,10 @@ SPEC CHECKSUMS:
   AppImageViewer: 57330743b4c8b007ab05ad2e57cdaac931c951ab
   Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
   Fabric: f8d42c893bb187326a7968b62abe55c36a987a46
+  NVActivityIndicatorView: 75c9634073e03b31d7e2748cd2417feab1206195
   Realm: 0378021c424e4e2bd6a0e63b27881e929d9b9ad1
   RealmSwift: 3322562622fda2ad596985ead4d8d8be30cf838c
 
-PODFILE CHECKSUM: 1fbdccd5fda1b04b9abdccfd0cfa58f8b6b279ba
+PODFILE CHECKSUM: f671eb1799d04858c4c323e6ef4e5cfe0339a0e4
 
 COCOAPODS: 1.5.3

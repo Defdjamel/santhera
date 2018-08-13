@@ -9,6 +9,7 @@
 import UIKit
 
 private let BotMessageCellId = "BotMessageCell"
+private let BotSelectionCellId = "BotSelectionCell"
 
 
 private let firstKeyBot = "welcome_bot"
@@ -26,6 +27,7 @@ class BotViewController: UIViewController {
         // Do any additional setup after loading the view.
         BotNodeManager.sharedInstance.updateBotFromJsonFile()
         self.tableView.register(UINib.init(nibName: BotMessageCellId, bundle: Bundle.main), forCellReuseIdentifier: BotMessageCellId)
+         self.tableView.register(UINib.init(nibName: BotSelectionCellId, bundle: Bundle.main), forCellReuseIdentifier: BotSelectionCellId)
         selectorChoices.delegate = self
         displaySelectorView(value:false)
         
@@ -57,23 +59,23 @@ class BotViewController: UIViewController {
     }
     
     private func addNode(node: BotNode){
-        botNodes.append(node)
+        CATransaction.begin()
+        CATransaction.setCompletionBlock({
+            print("end anim")
+            self.tableView.reloadData()
+        })
+        tableView.beginUpdates()
        
+        botNodes.append(node)
         let indexPath = IndexPath.init(row: botNodes.count - 1 , section: 0 )
         tableView.insertRows(at: [indexPath], with: UITableViewRowAnimation.left)
         tableView.scrollToBottom()
         
+        tableView.endUpdates()
+        CATransaction.commit()
         
-        if node.type == NodeType.question.rawValue {
-              displaySelectorView(value: true)
-            let choices = BotNodeManager.sharedInstance.getNodeWithParentKey(key: node.key)
-            self.selectorChoices.setChoices(choices: choices)
-          
-        }else {
-            displaySelectorView(value: false)
-        }
+        updateSelectorView()
         goToNextNode()
-       
     }
     private func goToNextNode(){
         guard  let node  = botNodes.last else {
@@ -81,16 +83,42 @@ class BotViewController: UIViewController {
         }
          let goToKey = node.goto
         if goToKey.isEmpty{
-            print("goToKey empty!💣")
+            print("goToKey empty!💣",node.key)
             return
         }
         addNodeWithKey(key: goToKey)
+    }
+    private func updateSelectorView(){
+        guard let node = botNodes.last else {
+            return
+        }
+        if node.type == NodeType.question.rawValue {
+        displaySelectorView(value: true)
+        let choices = BotNodeManager.sharedInstance.getNodeWithParentKey(key: node.key)
+        self.selectorChoices.setChoices(choices: choices)
+    
+        }else {
+        displaySelectorView(value: false)
+        }
     }
     private func displaySelectorView(value: Bool){
        
         heightSelectorChoice.constant = value ? 90 : 0
         selectorChoices.layoutIfNeeded()
         selectorChoices.needsUpdateConstraints()
+    }
+    private func isLastNodeQuesionSelection(node: BotNode) -> Bool{
+        var isLast = false
+        for item in botNodes {
+             if item.type == NodeType.questionChoice.rawValue {
+                if item == node {
+                    isLast = true
+                }else {
+                      isLast = false
+                }
+            }
+        }
+        return isLast
     }
     /*
     // MARK: - Navigation
@@ -106,6 +134,14 @@ class BotViewController: UIViewController {
 //MARK: - UITableViewDelegate
 extension BotViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let node =  botNodes[indexPath.row]
+        if node.type == NodeType.questionChoice.rawValue {
+            // remove all row after indexPath
+            botNodes.removeLast( botNodes.count -  indexPath.row)
+            self.tableView.reloadData()
+             updateSelectorView()
+            
+        }
     }
 }
 //MARK: - UITableViewDataSource
@@ -121,23 +157,28 @@ extension BotViewController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let node =  botNodes[indexPath.row]
-        if node.type == NodeType.message.rawValue || node.type == NodeType.question.rawValue {
+        if node.type == NodeType.message.rawValue || node.type == NodeType.question.rawValue || node.type == NodeType.stop.rawValue {
             let cell = tableView.dequeueReusableCell(withIdentifier: BotMessageCellId, for: indexPath) as! BotMessageCell
             // Configure the cell...
             cell.setNodeBot(botNode: node)
             return cell
+        }else if node.type == NodeType.questionChoice.rawValue {
+            let cell = tableView.dequeueReusableCell(withIdentifier: BotSelectionCellId, for: indexPath) as! BotSelectionCell
+             cell.setNodeBot(botNode: node)
+            cell.setEditable(value: self.isLastNodeQuesionSelection(node: node))
+            return cell
         }
-       
         return UITableViewCell.init()
     }
-    
     
 }
 
 //MARK: - BotChoicesSelectorViewDelegate
 extension BotViewController: BotChoicesSelectorViewDelegate {
     func BotChoicesSelectorView(_ botChoicesSelectorView: BotChoicesSelectorView, DidSelect botNode: BotNode) {
-         addNodeWithKey(key: botNode.goto)
+        displaySelectorView(value: false)
+        addNode(node: botNode)// add choice
+        //addNodeWithKey(key: botNode.goto) // next node...
     }
     
     

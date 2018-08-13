@@ -26,6 +26,8 @@
 		1A2A0EB3211D846200129F9A /* BotChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A0EB2211D846200129F9A /* BotChoiceView.swift */; };
 		1A2A0EB5211D846900129F9A /* BotChoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2A0EB4211D846900129F9A /* BotChoiceView.xib */; };
 		1A2A0EB7211D869700129F9A /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A0EB6211D869700129F9A /* UIView+Nib.swift */; };
+		1A2A0EBA211DE16100129F9A /* BotSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A0EB8211DE16100129F9A /* BotSelectionCell.swift */; };
+		1A2A0EBB211DE16100129F9A /* BotSelectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2A0EB9211DE16100129F9A /* BotSelectionCell.xib */; };
 		1A2D984D20F7403F0022288F /* documents.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D984C20F7403F0022288F /* documents.json */; };
 		1A2D985120F742BF0022288F /* pdf_2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D984F20F742BE0022288F /* pdf_2.pdf */; };
 		1A2D985220F742BF0022288F /* pdf_1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D985020F742BE0022288F /* pdf_1.pdf */; };
@@ -231,6 +233,8 @@
 		1A2A0EB2211D846200129F9A /* BotChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotChoiceView.swift; sourceTree = "<group>"; };
 		1A2A0EB4211D846900129F9A /* BotChoiceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BotChoiceView.xib; sourceTree = "<group>"; };
 		1A2A0EB6211D869700129F9A /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
+		1A2A0EB8211DE16100129F9A /* BotSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotSelectionCell.swift; sourceTree = "<group>"; };
+		1A2A0EB9211DE16100129F9A /* BotSelectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BotSelectionCell.xib; sourceTree = "<group>"; };
 		1A2D984C20F7403F0022288F /* documents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = documents.json; sourceTree = "<group>"; };
 		1A2D984F20F742BE0022288F /* pdf_2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pdf_2.pdf; sourceTree = "<group>"; };
 		1A2D985020F742BE0022288F /* pdf_1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pdf_1.pdf; sourceTree = "<group>"; };
@@ -511,6 +515,8 @@
 				1A2A0EAB211C833600129F9A /* BotMessageCell.xib */,
 				1A2A0EB2211D846200129F9A /* BotChoiceView.swift */,
 				1A2A0EB4211D846900129F9A /* BotChoiceView.xib */,
+				1A2A0EB8211DE16100129F9A /* BotSelectionCell.swift */,
+				1A2A0EB9211DE16100129F9A /* BotSelectionCell.xib */,
 			);
 			path = Bot;
 			sourceTree = "<group>";
@@ -1287,6 +1293,7 @@
 				1A2D985420F742EA0022288F /* pdf_3.pdf in Resources */,
 				1A16ABC5210F3B2900A2F568 /* TestPatient.storyboard in Resources */,
 				1A2D988020F88DA80022288F /* HomeDocumentCollectionViewCell.xib in Resources */,
+				1A2A0EBB211DE16100129F9A /* BotSelectionCell.xib in Resources */,
 				1AF6110C2118770B0007231D /* Grille_Goldmann.pdf in Resources */,
 				1AEC0D3B21133F4C00BAB7EA /* DiagResumeCommentCell.xib in Resources */,
 				1A2A0E9F211C3FF200129F9A /* step_1.json in Resources */,
@@ -1369,12 +1376,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Santhera/Pods-Santhera-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AppImageViewer/AppImageViewer.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppImageViewer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
@@ -1500,6 +1509,7 @@
 				1ABAAE4B21008E5A0098B22B /* PatientManager.swift in Sources */,
 				EAA5AA9020C1708F0020464C /* SHLocalizationHelper.swift in Sources */,
 				1ACB2A4321119C1000247E10 /* DiagCommentCell.swift in Sources */,
+				1A2A0EBA211DE16100129F9A /* BotSelectionCell.swift in Sources */,
 				EAA5AAB720C1708F0020464C /* SHOperation.swift in Sources */,
 				EAA5AAC020C1708F0020464C /* SHMulticastDelegate.swift in Sources */,
 				1A2D987B20F7AF700022288F /* HomeDocumentsCell.swift in Sources */,
