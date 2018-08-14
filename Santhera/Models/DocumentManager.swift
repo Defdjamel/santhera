@@ -70,7 +70,15 @@ class DocumentManager: NSObject {
                 print("documents.json opening  failed!")
             }
         }
-        
-        
     }
+    func getDocumentWithName(key: String) -> Document?{
+        let realm = try! Realm()
+        let predicate =  NSPredicate(format: "self.name = '\(key)'  ")
+        let p = realm.objects(Document.self).filter(predicate)
+        if p.count > 0 {
+            return p.first
+        }
+        return nil
+    }
+    
 }

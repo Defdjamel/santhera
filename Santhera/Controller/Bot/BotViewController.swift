@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import AppImageViewer
+import PDFKit
 
 private let BotMessageCellId = "BotMessageCell"
 private let BotSelectionCellId = "BotSelectionCell"
+private let BotDocumentCellId = "BotDocumentCell"
 
 
 private let firstKeyBot = "welcome_bot"
@@ -20,6 +23,7 @@ class BotViewController: UIViewController {
     @IBOutlet weak var selectorChoices: BotChoicesSelectorView!
     @IBOutlet weak var tableView: UITableView!
     var botNodes :  Array<BotNode> = []
+    
     //MARK: lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +31,14 @@ class BotViewController: UIViewController {
         // Do any additional setup after loading the view.
         BotNodeManager.sharedInstance.updateBotFromJsonFile()
         self.tableView.register(UINib.init(nibName: BotMessageCellId, bundle: Bundle.main), forCellReuseIdentifier: BotMessageCellId)
-         self.tableView.register(UINib.init(nibName: BotSelectionCellId, bundle: Bundle.main), forCellReuseIdentifier: BotSelectionCellId)
+        self.tableView.register(UINib.init(nibName: BotSelectionCellId, bundle: Bundle.main), forCellReuseIdentifier: BotSelectionCellId)
+        self.tableView.register(UINib.init(nibName: BotDocumentCellId, bundle: Bundle.main), forCellReuseIdentifier: BotDocumentCellId)
         selectorChoices.delegate = self
         displaySelectorView(value:false)
-        
+         startBot()
     }
-    override func viewDidAppear(_ animated: Bool) {
-        startBot()
+    override func viewWillAppear(_ animated: Bool) {
+         self.navigationController?.setNavigationBarHidden(false, animated: false)
       
     }
     override func didReceiveMemoryWarning() {
@@ -57,7 +62,6 @@ class BotViewController: UIViewController {
         }
         
     }
-    
     private func addNode(node: BotNode){
         CATransaction.begin()
         CATransaction.setCompletionBlock({
@@ -65,12 +69,10 @@ class BotViewController: UIViewController {
             self.tableView.reloadData()
         })
         tableView.beginUpdates()
-       
         botNodes.append(node)
         let indexPath = IndexPath.init(row: botNodes.count - 1 , section: 0 )
         tableView.insertRows(at: [indexPath], with: UITableViewRowAnimation.left)
         tableView.scrollToBottom()
-        
         tableView.endUpdates()
         CATransaction.commit()
         
@@ -120,6 +122,22 @@ class BotViewController: UIViewController {
         }
         return isLast
     }
+   
+    func showAlertDocumentInvalid(){
+        let  popvc = PopupInfoViewController()
+        popvc.showViewFromCtrl(controller: self)
+    }
+    func openPDF(document: Document) {
+        let urlString = document.file_url
+        let url = URL.init(fileURLWithPath: urlString)
+        let pdfDocument = PDFDocument.init(url: url)
+        let storyBoard : UIStoryboard = UIStoryboard(name: "PdfReader", bundle:nil)
+        let pdfReaderNC = storyBoard.instantiateViewController(withIdentifier: "pdfReaderNC") as! UINavigationController
+        let pdfReaderVC = pdfReaderNC.viewControllers.first as! PdfReaderViewController
+        pdfReaderVC.pdfDocument = pdfDocument
+        pdfReaderVC.isShareable = true
+        self.navigationController?.show(pdfReaderVC, sender: self)
+    }
     /*
     // MARK: - Navigation
 
@@ -142,6 +160,29 @@ extension BotViewController: UITableViewDelegate{
              updateSelectorView()
             
         }
+        if node.type == NodeType.document.rawValue {
+            if  let document = DocumentManager.sharedInstance.getDocumentWithName(key: node.arg) {
+                
+                if document.type == DocumentType.pdf.rawValue {
+                    openPDF(document: document)
+                }
+                else  if document.type == DocumentType.image.rawValue {
+                    guard let cell = self.tableView.cellForRow(at: indexPath) else{
+                        return
+                    }
+                    let image =  UIImage.init(named: document.file_url)
+                    let appImage = ViewerImage.appImage(forImage:image!)
+                    let viewer = AppImageViewer(originImage: image!, photos: [appImage], animatedFromView: cell)
+                    viewer.isCustomShare = true
+                    present(viewer, animated: true, completion: nil)
+                }
+                else {
+                    showAlertDocumentInvalid()
+                }
+                
+            }
+        }
+        
     }
 }
 //MARK: - UITableViewDataSource
@@ -167,7 +208,12 @@ extension BotViewController: UITableViewDataSource {
              cell.setNodeBot(botNode: node)
             cell.setEditable(value: self.isLastNodeQuesionSelection(node: node))
             return cell
+        }else if node.type == NodeType.document.rawValue {
+            let cell = tableView.dequeueReusableCell(withIdentifier: BotDocumentCellId, for: indexPath) as! BotDocumentCell
+            cell.setNodeBot(botNode: node)
+            return cell
         }
+        
         return UITableViewCell.init()
     }
     

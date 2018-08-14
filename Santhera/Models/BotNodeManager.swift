@@ -57,7 +57,7 @@ class BotNodeManager: NSObject {
         if let parent = item.object(forKey: "parent") as? String {
             node.parent =  parent
         }
-        if let arg = item.object(forKey: "arg") as? String {
+        if let arg = item.object(forKey: "args") as? String {
             node.arg =  arg
         }
         

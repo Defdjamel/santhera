@@ -51,6 +51,8 @@
 		1A2D988020F88DA80022288F /* HomeDocumentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D987E20F88DA80022288F /* HomeDocumentCollectionViewCell.xib */; };
 		1A6D56192107170C00DA1A36 /* buttonValidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6D56182107170C00DA1A36 /* buttonValidate.swift */; };
 		1A6D561D2107569100DA1A36 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6D561C2107569100DA1A36 /* BaseViewController.swift */; };
+		1AA08FFB2123115F007BCB5D /* BotDocumentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA08FF92123115F007BCB5D /* BotDocumentCell.swift */; };
+		1AA08FFC2123115F007BCB5D /* BotDocumentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA08FFA2123115F007BCB5D /* BotDocumentCell.xib */; };
 		1ABAAE0420FC9AEB0098B22B /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAADF620FC9AEA0098B22B /* BookmarkViewController.swift */; };
 		1ABAAE0520FC9AEB0098B22B /* PdfSearchResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAADF720FC9AEA0098B22B /* PdfSearchResultsCell.swift */; };
 		1ABAAE0620FC9AEB0098B22B /* PdfReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAADF820FC9AEA0098B22B /* PdfReaderViewController.swift */; };
@@ -258,6 +260,8 @@
 		1A2D987E20F88DA80022288F /* HomeDocumentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeDocumentCollectionViewCell.xib; sourceTree = "<group>"; };
 		1A6D56182107170C00DA1A36 /* buttonValidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonValidate.swift; sourceTree = "<group>"; };
 		1A6D561C2107569100DA1A36 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		1AA08FF92123115F007BCB5D /* BotDocumentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotDocumentCell.swift; sourceTree = "<group>"; };
+		1AA08FFA2123115F007BCB5D /* BotDocumentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BotDocumentCell.xib; sourceTree = "<group>"; };
 		1ABAADF620FC9AEA0098B22B /* BookmarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
 		1ABAADF720FC9AEA0098B22B /* PdfSearchResultsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfSearchResultsCell.swift; sourceTree = "<group>"; };
 		1ABAADF820FC9AEA0098B22B /* PdfReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfReaderViewController.swift; sourceTree = "<group>"; };
@@ -510,13 +514,10 @@
 		1A2A0EA9211C81E800129F9A /* Bot */ = {
 			isa = PBXGroup;
 			children = (
-				1A2A0EB0211D7CFE00129F9A /* BotChoicesSelectorView.swift */,
-				1A2A0EAA211C833600129F9A /* BotMessageCell.swift */,
 				1A2A0EAB211C833600129F9A /* BotMessageCell.xib */,
-				1A2A0EB2211D846200129F9A /* BotChoiceView.swift */,
 				1A2A0EB4211D846900129F9A /* BotChoiceView.xib */,
-				1A2A0EB8211DE16100129F9A /* BotSelectionCell.swift */,
 				1A2A0EB9211DE16100129F9A /* BotSelectionCell.xib */,
+				1AA08FFA2123115F007BCB5D /* BotDocumentCell.xib */,
 			);
 			path = Bot;
 			sourceTree = "<group>";
@@ -679,6 +680,18 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		1AA08FFD21232403007BCB5D /* Bot */ = {
+			isa = PBXGroup;
+			children = (
+				1A2A0EB0211D7CFE00129F9A /* BotChoicesSelectorView.swift */,
+				1A2A0EAA211C833600129F9A /* BotMessageCell.swift */,
+				1A2A0EB2211D846200129F9A /* BotChoiceView.swift */,
+				1A2A0EB8211DE16100129F9A /* BotSelectionCell.swift */,
+				1AA08FF92123115F007BCB5D /* BotDocumentCell.swift */,
+			);
+			path = Bot;
+			sourceTree = "<group>";
+		};
 		1ABAADF520FC9AEA0098B22B /* PdfReader */ = {
 			isa = PBXGroup;
 			children = (
@@ -789,6 +802,7 @@
 		1ABAAE3B20FF7DD30098B22B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				1AA08FFD21232403007BCB5D /* Bot */,
 				1AF6111521188BA80007231D /* InstructionScan */,
 				1AEC0D4021134F3700BAB7EA /* ResumeDiagnostic */,
 				1ACB2A472111AF1200247E10 /* NewDiagnostic */,
@@ -1256,6 +1270,7 @@
 				1A2D984D20F7403F0022288F /* documents.json in Resources */,
 				1A2D987C20F7AF700022288F /* HomeDocumentsCell.xib in Resources */,
 				1ACB2A3D2110A54800247E10 /* DiagSelectPatientCell.xib in Resources */,
+				1AA08FFC2123115F007BCB5D /* BotDocumentCell.xib in Resources */,
 				1ABAAE0B20FC9AEB0098B22B /* ThumbnailGridCell.xib in Resources */,
 				1A2D985620F743970022288F /* image_1.jpg in Resources */,
 				1ABAAE2C20FF3AC80098B22B /* PatientDetailsHeaderCell.xib in Resources */,
@@ -1471,6 +1486,7 @@
 				EAA5AAB020C1708F0020464C /* NumbersConvertion.swift in Sources */,
 				EAA5AA8F20C1708F0020464C /* SHKeyboardViewController.swift in Sources */,
 				1A2D986A20F78B2F0022288F /* HomePatientCollectionViewCell.swift in Sources */,
+				1AA08FFB2123115F007BCB5D /* BotDocumentCell.swift in Sources */,
 				1ABAAE2F20FF41470098B22B /* PatientResumeTestCell.swift in Sources */,
 				1ACB2A2C210F9DE800247E10 /* UIImage+Crop.swift in Sources */,
 				1A04CE782105D29900324520 /* JCustomActionSheetCell.swift in Sources */,
