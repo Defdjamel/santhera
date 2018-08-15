@@ -35,6 +35,7 @@ class BotViewController: UIViewController {
         self.tableView.register(UINib.init(nibName: BotDocumentCellId, bundle: Bundle.main), forCellReuseIdentifier: BotDocumentCellId)
         selectorChoices.delegate = self
         displaySelectorView(value:false)
+        setNavLogo()
          startBot()
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -47,6 +48,19 @@ class BotViewController: UIViewController {
     }
     
     //MARK: Private Methods
+    private func setNavLogo(){
+        let nav = self.navigationController?.navigationBar
+        
+        nav?.barStyle = UIBarStyle.default
+        nav?.barTintColor = UIColor.white
+        
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 20))
+        imageView.contentMode = .scaleAspectFit
+        imageView.backgroundColor = UIColor.clear
+        imageView.image = #imageLiteral(resourceName: "logo_navbar")
+        navigationItem.titleView = imageView
+        
+    }
     private func startBot(){
         botNodes.removeAll()
         addNodeWithKey(key: firstKeyBot)
@@ -155,9 +169,11 @@ extension BotViewController: UITableViewDelegate{
         let node =  botNodes[indexPath.row]
         if node.type == NodeType.questionChoice.rawValue {
             // remove all row after indexPath
+            if isLastNodeQuesionSelection(node: node){
             botNodes.removeLast( botNodes.count -  indexPath.row)
             self.tableView.reloadData()
              updateSelectorView()
+            }
             
         }
         if node.type == NodeType.document.rawValue {
