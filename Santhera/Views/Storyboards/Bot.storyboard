@@ -29,6 +29,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FEo-8L-Qq4" customClass="BotChoicesSelectorView" customModule="Santhera" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="577" width="375" height="90"/>
                                 <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="exS-tA-j5A">
+                                        <rect key="frame" x="0.0" y="70" width="375" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="DYY-ou-dKx"/>
+                                        </constraints>
+                                        <color key="pageIndicatorTintColor" red="0.13300000131130219" green="0.22699999809265137" blue="0.53299999237060547" alpha="0.4990294286809816" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="currentPageIndicatorTintColor" red="0.1330000013" green="0.22699999809999999" blue="0.53299999239999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </pageControl>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cVW-Xg-46o" userLabel="separator">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
                                         <color key="backgroundColor" red="0.13300000131130219" green="0.22699999809265137" blue="0.53299999237060547" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
@@ -39,11 +47,17 @@
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FfB-XB-B5w">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="FEo-8L-Qq4" id="dhN-dP-xJ1"/>
+                                        </connections>
                                     </scrollView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="exS-tA-j5A" firstAttribute="leading" secondItem="FEo-8L-Qq4" secondAttribute="leading" id="13i-ED-5Ib"/>
+                                    <constraint firstAttribute="trailing" secondItem="exS-tA-j5A" secondAttribute="trailing" id="7cR-KD-rjF"/>
                                     <constraint firstItem="cVW-Xg-46o" firstAttribute="top" secondItem="FEo-8L-Qq4" secondAttribute="top" id="Ef3-SR-ZfO"/>
+                                    <constraint firstAttribute="bottom" secondItem="exS-tA-j5A" secondAttribute="bottom" id="KnV-XB-Znm"/>
                                     <constraint firstItem="FfB-XB-B5w" firstAttribute="top" secondItem="FEo-8L-Qq4" secondAttribute="top" id="Vnd-Mu-sIz"/>
                                     <constraint firstAttribute="trailing" secondItem="FfB-XB-B5w" secondAttribute="trailing" id="ZPo-E9-YXd"/>
                                     <constraint firstItem="cVW-Xg-46o" firstAttribute="leading" secondItem="FEo-8L-Qq4" secondAttribute="leading" id="bkW-vM-4X0"/>
@@ -67,6 +81,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <outlet property="pageControl" destination="exS-tA-j5A" id="b0Q-9t-4iU"/>
                                     <outlet property="scrollView" destination="FfB-XB-B5w" id="wOh-c0-0iM"/>
                                 </connections>
                             </view>

@@ -122,6 +122,7 @@ class BotViewController: UIViewController {
         heightSelectorChoice.constant = value ? 90 : 0
         selectorChoices.layoutIfNeeded()
         selectorChoices.needsUpdateConstraints()
+        selectorChoices.isHidden = !value
     }
     private func isLastNodeQuesionSelection(node: BotNode) -> Bool{
         var isLast = false
